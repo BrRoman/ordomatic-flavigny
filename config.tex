@@ -1,0 +1,274 @@
+\documentclass[twoside]{article}
+
+% Géométrie de la page :
+\usepackage{geometry}
+\geometry{paperwidth=10.5cm, paperheight=16.5cm, inner=0.75cm, outer=0.75cm, tmargin=0.5cm, bmargin=0.5cm, includehead}
+
+% Choix d'une police principale :
+\usepackage{luatextra}
+\setmainfont{Garamond Premier Pro}% La police Adobe Garamond Pro en petites cap. ne plaît pas à LaTeX.
+%\setmainfont{Adobe Garamond Pro}%[ItalicFont = Adobe Garamond Pro Italic]
+% Polices de page de garde :
+\newfontfamily{\FontFlyLeaf}{Silentium Pro Roman I}
+
+% Césures etc. :
+\usepackage[latin]{babel}
+\usepackage{array}
+\usepackage{enumitem}
+
+% Mise en forme des titres de sections (? Janvier, février etc. ?) :
+\usepackage[explicit]{titlesec}
+\titleformat{\section}{}{}{0cm}{\center\MakeUppercase{#1}}
+
+% Entêtes et pieds de pages :
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[CE]{\textbf{\rightmark}}
+% Le [CO] étant variable sera défini dans le fichier maître par programmation.
+\renewcommand{\sectionmark}[1]{\markright{#1 \CurrentYear{}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\parindent}{0cm}
+\setlength{\headsep}{0.3cm} % Distance entre le header ("Cyclus liturgicus etc.") et le corps du texte.
+
+% Tableaux spéciaux sur plusieurs pages :
+\usepackage{longtable}
+
+% Pour forcer l'usage des césures (cf. mail Thierry Masson), ATTENTION DANGER (entêtes et autres blocs bizarres) :
+\pretolerance = -1 
+\tolerance = 2000 
+
+% Pour augmenter l'approche des caractères :
+\usepackage{soul}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commandes et environnements :
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Espace fine :
+\DeclareRobustCommand{\mynobreakthinspace}{%
+\leavevmode\nobreak\hspace{0.08em}}
+\def~{\mynobreakthinspace{}}
+
+% Environnement Boîte (utile chaque fois qu'on veut commencer par un espace vertical avant le paragraphe) :
+\newenvironment{ParBox}[2]
+{
+\setlength{\parindent}{0cm}
+\begin{center}
+\parbox{8.5cm}{\vspace{#1} #2}}
+{
+\end{center}
+\par}
+\newcommand{\ApplyParBox}[2]{\begin{ParBox}{#1}{#2}\end{ParBox}}
+
+% Style de paragraphe NewMonthTitres :
+\newenvironment{ParStyleNewMonthTitles}[1]
+{
+\setlength{\parskip}{0cm}
+\fontsize{14}{13}\selectfont
+\bfseries
+\section{#1}}{}
+\newcommand{\ApplyNewMonthTitles}[1]{\begin{ParStyleNewMonthTitles}{#1}\end{ParStyleNewMonthTitles}}
+
+% Style de paragraphe NewMonthSousTitres :
+\newenvironment{ParStyleNewMonthSubTitles}[1]
+{
+\fontsize{12}{13}\selectfont
+\bfseries
+\itshape
+\begin{center}
+\MakeUppercase{#1}}
+{
+\end{center}}
+\newcommand{\ApplyNewMonthSubTitles}[1]{\begin{ParStyleNewMonthSubTitles}{#1}\end{ParStyleNewMonthSubTitles}}
+
+% Commande nouveau mois pour entêtes :
+\newcommand{\NewMonthForHeader}[1]{\renewcommand{\leftmark}{\normalfont{#1}}}
+
+% Style de paragraphe GeneralitiesTitres1 :
+\newenvironment{ParStyleGenerTitleHuge}[1]
+{
+\fontsize{15}{19}\selectfont
+\setlength{\parskip}{-0.5cm}
+\begin{center}
+\MakeUppercase{\textbf{#1}}}
+{
+\end{center}}
+\newcommand{\ApplyGenerTitleHuge}[1]{\begin{ParStyleGenerTitleHuge}{#1}\end{ParStyleGenerTitleHuge}}
+
+% Style de paragraphe GeneralitiesTitres2 :
+\newenvironment{ParStyleGenerTitleLarge}[1]
+{
+\fontsize{12}{14.5}\selectfont
+\setlength{\parskip}{-0.5cm}
+\begin{center}
+\MakeUppercase{\textbf{#1}}}
+{
+\end{center}}
+\newcommand{\ApplyGenerTitleLarge}[1]{\begin{ParStyleGenerTitleLarge}{#1}\end{ParStyleGenerTitleLarge}}
+
+% Style de paragraphe GeneralitiesSousTitres :
+\newenvironment{ParStyleGenerSubTitle}[1]
+{
+\fontsize{11.5}{14}\selectfont
+\begin{center}
+\textbf{#1}}
+{
+\end{center}
+\par}
+\newcommand{\ApplyGenerSubTitle}[1]{\begin{ParStyleGenerSubTitle}{#1}\end{ParStyleGenerSubTitle}}
+
+% Style de paragraphe GeneralitiesListes :
+\newenvironment{ParStyleGenerList}
+{
+\fontsize{9.5}{10.5}\selectfont
+\setlength{\parskip}{0.5cm}
+\begin{itemize}
+[label = -,
+labelwidth = 0.3cm,
+partopsep = -0.5cm,
+itemsep = 0cm,
+leftmargin = 0.5cm]}{
+\end{itemize}}
+\newcommand{\ApplyGenerList}[1]{\begin{ParStyleGenerList}#1\end{ParStyleGenerList}}
+
+% Style de paragraphe Anniv :
+\newenvironment{ParStyleAnniv}
+{
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.5cm}
+\fontsize{9.5}{10.5}\selectfont
+\itshape}
+{
+\par}
+\newcommand{\ApplyAnniv}[1]{\begin{ParStyleAnniv}#1\end{ParStyleAnniv}}
+
+% Style de paragraphe HebdoPsalt :
+\newenvironment{ParStyleHebdoPsalt}
+{
+\fontsize{11.5}{13}\selectfont
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0cm}
+\itshape
+\begin{center}}
+{
+\end{center}
+\par}
+\newcommand{\ApplyHebdoPsalt}[1]{\begin{ParStyleHebdoPsalt}#1\end{ParStyleHebdoPsalt}}
+
+% Style de paragraphe Header :
+\newenvironment{ParStyleHeader}
+{
+\fontsize{11}{12}\selectfont
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.3cm}
+\setlength{\tabcolsep}{0cm}
+\begin{tabular}{p{0.7cm} p{8.3cm}}}
+{
+\end{tabular}
+\par}
+\newcommand{\ApplyHeader}[1]{\begin{ParStyleHeader}#1\end{ParStyleHeader}}
+
+% Style de paragraphe Body :
+\newenvironment{ParStyleBody}
+{
+\fontsize{10}{11.5}\selectfont
+\begin{itemize}
+[label = -,
+labelwidth = 0.3cm,
+partopsep = 0cm,
+itemsep = 0cm,
+leftmargin = 0.7cm]}
+{
+\end{itemize}}
+\newcommand{\ApplyBody}[1]{\begin{ParStyleBody}#1\end{ParStyleBody}}
+
+% Style de paragraphe LecturesHeader :
+\newenvironment{ParStyleLectHeader}
+{
+\fontsize{10}{11}\selectfont
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0cm}
+\bfseries
+\begin{center}}
+{
+\end{center}
+\par}
+\newcommand{\ApplyLectHeader}[1]{\begin{ParStyleLectHeader}#1\end{ParStyleLectHeader}}
+
+% Style de paragraphe LecturesBody :
+\newenvironment{ParStyleLectBody}
+{
+\fontsize{9}{10.5}\selectfont
+\begin{list}{}{
+\setlength{\labelwidth}{1.2cm}% largeur de la boîte englobant le label
+\setlength{\labelsep}{0.1cm}% espace entre paragraphe et l’étiquette
+\setlength{\leftmargin}{1.8cm}% marge de gauche - Normalement \labelwidth+\labelsep, mais ça marche pas. - En pratique mettre \labelwidth + \labelsep + la \leftmargin du Style Body. Ainsi les lectures sont alignées sur les items des paragraphes Body.
+\setlength{\itemsep}{-0.05cm}% espace entre les items.
+\renewcommand{\makelabel}[1]{\raggedleft{##1}\hfill}}}
+{
+\end{list}}
+\newcommand{\ApplyLectBody}[1]{\begin{ParStyleLectBody}#1\end{ParStyleLectBody}}
+
+% Style de paragraphe LecturesTriduum :
+\newenvironment{ParStyleLectTrid}
+{
+\fontsize{9}{10.5}\selectfont
+\setlength{\parskip}{-0.2cm}}
+{}
+\newcommand{\ApplyLectTriduum}[1]{\begin{ParStyleLectTrid}#1\end{ParStyleLectTrid}}
+
+% Style de paragraphe Préface féries :
+\newenvironment{ParStylePrefaceFeries}
+{
+\fontsize{9}{10.5}\selectfont
+\begin{itemize}
+[label = -,
+labelwidth = 0.3cm,
+partopsep = 0cm,
+itemsep = 0cm,
+leftmargin = 0.5cm]}
+{
+\end{itemize}}
+\newcommand{\ApplyPrefaceFeries}[1]{\begin{ParStylePrefaceFeries}#1\end{ParStylePrefaceFeries}}
+
+
+% Symboles spéciaux :
+% Abstinence :
+\catcode`\ł=\active
+\defł{{\fontspec{Menlo} \symbol{10063}}}
+% Jeûne et abstinence :
+\catcode`\µ=\active
+\defµ{{\fontspec{Menlo} \symbol{9724}}}
+% 1er vendredi du mois :
+\catcode`\£=\active
+\def£{{\fontspec{Menlo} \symbol{10070}}}
+% 1er samedi du mois :
+\catcode`\§=\active
+\def§{{\fontspec{Menlo} \symbol{10037}}}
+% 1er dimanche du mois :
+\catcode`\ŧ=\active
+\defŧ{{\fontspec{Menlo} \symbol{10016}}}
+% Fête précepte :
+\catcode`\¬=\active
+\def¬{{\fontspec{Menlo} \symbol{9670}}}
+% Fête demi-précepte :
+\catcode`\þ=\active
+\defþ{{\fontspec{Menlo} \symbol{10061}}}
+% Antienne :
+\catcode`\ø=\active
+\defø{{\fontspec{FlavGaramond} \symbol{8721}}}
+% Répons :
+\catcode`\¶=\active
+\def¶{{\fontspec{FlavGaramond} \symbol{164}}}
+% Verset :
+\catcode`\ß=\active
+\defß{{\fontspec{FlavGaramond} \symbol{8730}}}
+% Croix :
+\catcode`\†=\active
+\def†{{\fontspec{FlavGaramond} \symbol{8224}}}
+
