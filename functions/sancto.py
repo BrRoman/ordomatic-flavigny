@@ -1095,15 +1095,17 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     
     transfiguration_date = datetime.date(current_year, 8, 6)
     transfiguration = dict_sancto[transfiguration_date] = {}
-    transfiguration["force"] = 90
-    transfiguration["I_vesp"] = "\n\\item I Vesperæ festi sequentis."
     if transfiguration_date.weekday() == 6:
+        transfiguration["I_vesp"] = "\n\\item I Vesperæ festi sequentis."
+        transfiguration["force"] = 90
         num_dim_ap_pentec = (transfiguration_date - pentecote).days // 7
         num_dim_per_annum = f_roman_numbers(num_dim_ap_pentec + 35 - nb_dim_ap_pentec)
         num_summer = " - " + f_num_summer(transfiguration_date)[0] + f_num_summer(transfiguration_date)[1]
         text_ap_pentec = f_roman_numbers(num_dim_ap_pentec) + " post Pentecosten" + num_summer
         text_dim = " \\textbf{\\textsc{Dominica " + num_dim_per_annum + " per annum}}" + " ("+ text_ap_pentec + ")"
-    else: text_dim = ""
+    else:
+        transfiguration["force"] = 70
+        text_dim = ""
     transfiguration["header"] = text_dim + " - \\textbf{\\textsc{in Transfiguratione Domini}} - \\textbf{festum} - \\textit{Alb.}"
     evang_mc = {"A": "Mt \\textbf{17}, 1-9", "B": "Mc \\textbf{9}, 2-10", "C": "Lc \\textbf{9}, 28b-36"}
     if transfiguration_date.weekday() == 6:
@@ -1114,7 +1116,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         lectures_mc = "Dan \\textbf{7}, 9-10.13-14" + " / " + evang_mc[year_letter]
     transfiguration["body"] = "\n\\item ad Horas et Completorium, tonus proprius pro hymnis.\n\\item in MC: lectiones propriæ: " + lectures_mc + " ; præfatio propria."
     if even_year: vesp_festi = "\n\\item Vesperæ festi." if transfiguration_date.weekday() == 5 else ""
-    else: vesp_festi = "\n\\item Vesperæ festi; ad Magnificat: ø \\textit{Christus Iesus} (AM 997)." if transfiguration_date.weekday() == 5 else "\n\\item ad Magnificat: ø \\textit{Christus Iesus} (AM 997)."
+    else: vesp_festi = ("\n\\item Vesperæ festi; ad Magnificat: ø \\textit{Christus Iesus} (AM 997)." if transfiguration_date.weekday() == 5 else "\n\\item ad Magnificat: ø \\textit{Christus Iesus} (AM 997).") if transfiguration_date.weekday() != 6 else ""
     transfiguration["II_vesp"] = vesp_festi
     
     saint_dominique_date = datetime.date(current_year, 8, 8)
