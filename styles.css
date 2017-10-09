@@ -5,26 +5,6 @@ h1, h2{
     color: brown;
     text-align: center;}
 
-<<<<<<< HEAD
-#output{
-    align-items: flex-start;
-    display: none;
-    flex-direction: column;
-    margin-top: 20px;
-    padding-left: 50px;
-    width: 500px;}
-||||||| parent of 81e87d3... OK, except pdf in new tab.
-#annee{
-    margin-left: 10px;
-    margin-right: 10px;}
-
-#input{
-    align-items: center;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;}
-=======
 #annee{
     margin-left: 10px;
     margin-right: 10px;}
@@ -49,7 +29,6 @@ h1, h2{
     position: fixed;
     top: 0;
     width: 100%}
->>>>>>> 81e87d3... OK, except pdf in new tab.
 
 #page{
     align-items: center;
@@ -58,26 +37,3 @@ h1, h2{
     justify-content: center;
     width: 100%;}
 
-<<<<<<< HEAD
-.jour{
-    color: red;
-    font-weight: bold;
-    margin-bottom: 8px;
-    margin-left: 10px;
-    margin-top: 30px;}
-
-.label{
-    width: 100px;}
-
-
-
-
-
-||||||| parent of 81e87d3... OK, except pdf in new tab.
-#retour{
-    border: 2px solid purple;
-    padding: 20px;}
-
-
-=======
->>>>>>> 81e87d3... OK, except pdf in new tab.

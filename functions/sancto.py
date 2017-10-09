@@ -1356,13 +1356,13 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saints_come_damien = dict_sancto[saints_come_damien_date] = {}
     saints_come_damien["force"] = 20
     saints_come_damien["header"] = " - Ss. Cosmæ et Damiani, martyrum - \\textit{memoria minor} - \\textit{Vir.} (olim die 27 huius)."
-    saints_come_damien["body"] = "\n\\item ad Benedictus: ø \\textit{Astiterunt }in tono I g (AM 929).\n\\item \\textit{in ML: Rub.}\n\\item in MC: \\textit{Rub.}"
+    saints_come_damien["body"] = "\n\\item ad Benedictus: ø \\textit{Sanctorum precibus} in tono VIII g (AM 829).\n\\item \\textit{in ML: Rub.}\n\\item in MC: \\textit{Rub.}"
     
     saint_vincent_de_paul_date = datetime.date(current_year, 9, 27)
     saint_vincent_de_paul = dict_sancto[saint_vincent_de_paul_date] = {}
     saint_vincent_de_paul["force"] = 40
     saint_vincent_de_paul["header"] = " - \\textsc{S. Vincentii de Paul}, presbyteri - \\textbf{memoria maior} - \\textit{Alb.} (olim die 19 iulii)."
-    saint_vincent_de_paul["body"] = "\n\\item ad Vigilias: lectio in supplemento 172.\n\\item ad Benedictus: ø \\textit{Sanctorum precibus} (AM 829).\n\\item \\textit{in ML: Missa in proprio sanctorum vel in PAL.}\n\\item in MC: præfatio II de sanctis."
+    saint_vincent_de_paul["body"] = "\n\\item ad Vigilias: lectio in supplemento 172.\n\\item ad Benedictus: ø \\textit{Amen dico vobis} in tono I f (AM 829).\n\\item \\textit{in ML: Missa in proprio sanctorum vel in PAL.}\n\\item in MC: præfatio II de sanctis."
     saint_vincent_de_paul["II_vesp"] = "\n\\item ad Magnificat: ø \\textit{O viri} in tono I d (AM 973)."
     
     saints_archanges_date = datetime.date(current_year, 9, 29)
