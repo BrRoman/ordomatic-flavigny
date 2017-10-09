@@ -1,3 +1,4 @@
+# Création du dictionnaire contenant les lectures (typiquement celles qu'on trouve après les dimanches), qui sera utilisé dans le temporal et le sanctoral.
 
 lectiones = {}
 lectiones["hebdo_1_adv"] = {}

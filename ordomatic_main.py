@@ -6,7 +6,6 @@ from functions.tempo import *
 from functions.sancto import *
 from functions.ordo_write import *
 
-#ordo_year = int(input("Entrez l'année de l'ordo : "))
 ordo_year = int(sys.argv[1])
 even_year = True if ordo_year % 2 == 0 else False
 
