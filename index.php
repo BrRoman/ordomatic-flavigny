@@ -13,7 +13,7 @@
             </h2>
 
             <div id="input">
-                <label for="annee">Année de l'ordo : </label><input id="annee" type="number" name="annee" value=<?php print(getdate()["year"]); ?> /><input id="go" type="button" value="Go !" />
+                <label for="annee">Année de l'ordo : </label><input id="annee" type="number" name="annee" style='width:70px' value=<?php print(getdate()["year"]); ?> /><input id="go" type="button" value="Go !" />
             </div>
         </div>
         <div id="overlay_wait">
