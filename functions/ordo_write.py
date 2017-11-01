@@ -245,7 +245,7 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
             dict_new_day["II_vesp"] = "" # Le dernier samedi de l'année liturgique, les IIe Vêpres sont les Ières Vêpres de l'année suivante.
         
         # Antiennes du dernier dimanche de l'année à caser à la dernière férie libre :
-        if new_day_date.year == current_year and new_day_date.month == 11 and new_day_date.day == ult_ant:
+        if new_day_date.year == current_year and new_day_date.month == 11 and new_day_date.day == ult_ant != 1:
             dict_new_day["body"] = "\n\\item ad Benedictus: ø \\textit{Cum videritis} (AM 617).\n\\item ad Magnificat: ø \\textit{Amen dico vobis} (AM 618)."
         if new_day_date.year == current_year and new_day_date.month == 12 and new_day_date.day == ult_ant == 1:
             dict_new_day["body"] = "\n\\item ad Benedictus: ø \\textit{Cum videritis} (AM 617).\n\\item \\textit{in ML (Alb.) : Missa de sacratissimo Corde Iesu \\emph{(Gloria)}.}\n\\item MC1V\n\\item ad Magnificat: ø \\textit{Amen dico vobis} (AM 618)."
