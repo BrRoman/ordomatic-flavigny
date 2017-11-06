@@ -75,7 +75,9 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_andre["force"] = 70
     saint_andre["anniv"] = "Cras incipiunt preces novendiales ante sollemnitatem Immaculatæ Conceptionis Beatæ Mariæ Virginis."
     saint_andre["header"] = " - \\textbf{\\textsc{S. Andreæ, apostoli}} - \\textbf{festum} - \\textit{Rub.}"
-    var_benedictus = "\\item ad Benedictus: ø \\textit{Unus ex duobus} (AM 754)." if not even_year else ""
+    year = saint_andre_date.year
+    even = year % 2 == 0
+    var_benedictus = "\\item ad Benedictus: ø \\textit{Unus ex duobus} (AM 754)." if even else ""
     saint_andre["body"] = var_benedictus + "\\item in MC: lectiones propriæ: Rom \\textbf{10}, 9-18 / Mt \\textbf{4}, 18-22 ; præfatio II de Apostolis."
     
     # DÉCEMBRE:
@@ -1657,7 +1659,9 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_andre["force"] = 70
     saint_andre["anniv"] = "Cras incipiunt preces novendiales ante sollemnitatem Immaculatæ Conceptionis Beatæ Mariæ Virginis."
     saint_andre["header"] = " - \\textbf{\\textsc{S. Andreæ, apostoli}} - \\textbf{festum} - \\textit{Rub.}"
-    var_benedictus = "\\item ad Benedictus: ø \\textit{Unus ex duobus} (AM 754)." if not even_year else ""
+    year = saint_andre_date.year
+    even = year % 2 == 0
+    var_benedictus = "\\item ad Benedictus: ø \\textit{Unus ex duobus} (AM 754)." if even else ""
     saint_andre["body"] = var_benedictus + "\\item in MC: lectiones propriæ: Rom \\textbf{10}, 9-18 / Mt \\textbf{4}, 18-22 ; præfatio II de Apostolis."
     
     return(dict_sancto)
