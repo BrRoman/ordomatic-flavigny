@@ -28,7 +28,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     ###################################
     # ENTRER ICI LES MESSES MANUELLES :
     ###################################
-    
+    """
     # Anniversaire de l'élection du Pape :
     anniv_pape_date = datetime.date(current_year, 3, 13) # Attention : ça peut être current_year - 1.
     anniv_pape = dict_sancto[anniv_pape_date] = {}
@@ -57,6 +57,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     messe_defunts = dict_sancto[messe_defunts_date] = {}
     messe_defunts["force"] = 10
     messe_defunts["body"] = "\n\\item in MC (\\textit{Nigr}) : Missa defunctorum pro omnibus benefactoribus nostris defunctis (MR 1225) ; lectiones propriæ : Ap \\textbf{20}, 11 – \\textbf{21}, 1 / Io \\textbf{14}, 1-6 ; præfatio V de defunctis."
+    """
     
     # Semailles et récoltes : voir ordo_write.py.
     
@@ -1537,7 +1538,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sainte_elisabeth_trinite_date = datetime.date(current_year, 11, 8)
     sainte_elisabeth_trinite = dict_sancto[sainte_elisabeth_trinite_date] = {}
     sainte_elisabeth_trinite["force"] = 20
-    sainte_elisabeth_trinite["header"] = " - \\textsc{Sanctæ Elisabeth a Trinitate}, virginis - \\textbf{memoria minor} - \\textit{Vir.}"
+    sainte_elisabeth_trinite["header"] = " - \\textsc{Sanctæ Elisabeth a Trinitate}, virginis - memoria minor - \\textit{Vir.}"
     sainte_elisabeth_trinite["body"] = "\n\\item ad Benedictus: ø \\textit{O Beata} (AM 1131) ; oratio in supplemento 184.\n\\item \\textit{in ML (Alb.): Missa pro virgine tantum.}\n\\item in MC \\textit{(Alb.)}: collecta propria ; Commune virginum (MR 947)."
     
     dedicace_latran_date = datetime.date(current_year, 11, 9)
@@ -1650,6 +1651,14 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sainte_catherine_laboure["force"] = 20
     sainte_catherine_laboure["header"] = " - S. Catharinæ Labouré, virginis - memoria minor - \\textit{Vir.}"
     sainte_catherine_laboure["body"] = "\n\\item ad Benedictus: ø \\textit{Veni sponsa} (AM 678) ; oratio in supplemento 192.\n\\item \\textit{in ML (Alb.): Missa pro virgine tantum.}\n\\item in MC \\textit{(Alb.)}: Collecta propria ; Commune virginum (MR 950)."
+    
+    saint_andre_date = datetime.date(current_year, 11, 30)
+    saint_andre = dict_sancto[saint_andre_date] = {}
+    saint_andre["force"] = 70
+    saint_andre["anniv"] = "Cras incipiunt preces novendiales ante sollemnitatem Immaculatæ Conceptionis Beatæ Mariæ Virginis."
+    saint_andre["header"] = " - \\textbf{\\textsc{S. Andreæ, apostoli}} - \\textbf{festum} - \\textit{Rub.}"
+    var_benedictus = "\\item ad Benedictus: ø \\textit{Unus ex duobus} (AM 754)." if not even_year else ""
+    saint_andre["body"] = var_benedictus + "\\item in MC: lectiones propriæ: Rom \\textbf{10}, 9-18 / Mt \\textbf{4}, 18-22 ; præfatio II de Apostolis."
     
     return(dict_sancto)
     
