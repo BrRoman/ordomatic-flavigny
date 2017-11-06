@@ -26,4 +26,4 @@
 - 15 août : LouisXIII (espace).
 - St Pie X oraison page 157.
 - Lectiones SO novembre à mettre juste avant le lundi et non pas avant le dimanche.
-
+- Saint André : faire une config. si année CIVILE paire, et une autre si impaire.
