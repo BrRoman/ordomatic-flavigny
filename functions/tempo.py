@@ -811,7 +811,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
                 num_summer = f_num_summer(christ_roi_date)[0] if f_num_summer(christ_roi_date)[0] == "III" else ("V" if even_year else "IV")
                 christ_roi["header"] = "\\textbf{\\textsc{Dominica XXXIV per annum} - \\MakeUppercase{Domini nostri Jesu Christi Universorum Regis}} (XXIV post Pentecosten - " + num_summer + " novembris) - \\textbf{sollemnitas minor} - \\textit{Alb}."
                 christ_roi["body"] = "\n\\item ad Vigilias : in nocturno II : lectiones 5 et 6 cum ¶ lectionis 8 ; in nocturno III : lectiones 11 et 12. Pro breviario vetere : lectiones II nocturni in supplemento 52.\n\\item in MC : præfatio propria."
-                num_pref_dim, num_pref_fer = f_num_prefaces(34)
+                num_pref_dim, num_pref_fer = f_num_prefaces(33)
                 christ_roi["preface_feries"] = "\n\\item in feriis: præfatio communis " + num_pref_fer + ", nisi aliter notetur."
                 current_lectiones = lectiones["hebdo_34_per_annum"]
                 lectiones_feries = "\n\\ApplyLectHeader{" + current_lectiones["header_feries"] + "}"
