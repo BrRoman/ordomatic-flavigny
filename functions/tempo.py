@@ -838,7 +838,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
                 # Création du Dimanche per annum (sous la forme "Dim. X per annum (Y post Pentecosten, Z Augusti)"):
                 new_dim = dict_tempo[new_dim_date] = {}
                 new_dim["force"] = 80
-                new_dim["generalities"] = "\n\\medskip\n\\ApplyGenerList{\\item ad Vigilias: lectiones Nocturnorum I et II sumuntur in supplemento 56*. Et sic in feriis hebdomadæ II novembris.}\n\\medskip" if num_summer == " - II novembris" else ("\n\\medskip\n\\ApplyGenerList{\\item ad Vigilias: in feriis, lectiones SO.}\n\\medskip" if num_summer == " - I novembris" else "")
+                #new_dim["generalities"] = "\n\\medskip\n\\ApplyGenerList{\\item ad Vigilias: lectiones Nocturnorum I et II sumuntur in supplemento 52*. Et sic in feriis hebdomadæ II novembris.}\n\\medskip" if num_summer == " - II novembris" else ("\n\\medskip\n\\ApplyGenerList{\\item ad Vigilias: in feriis, lectiones SO.}\n\\medskip" if num_summer == " - I novembris" else "")
                 new_dim["I_vesp"] = "\n\\item I Vesperæ dominicæ sequentis" + (" (hymnus tono hiemali)" if num_summer == " - I octobris" else "") + "." + ("}\n\\medskip\n\\ApplyPrefaceFeries{\n\\item a dominica I octobris usque ad Adventum: dicitur hymnus hiemalis ad Vigilias, Laudes et Vesperas." if num_summer == " - I octobris" else "")
                 new_dim["hebdo_psalt"] = "- hebdomada " + hebdo_psalterii[((new_dim_date - datetime.date(2011, 11, 27)).days // 7) % 2] + " psalterii -"
                 new_dim["num_day"] = "\\textbf{" + str(new_dim_date.day) + "} &"
@@ -848,6 +848,8 @@ def dict_tempo_create(current_year, even_year, year_letter):
                 elif i == 3: body_special = "\n\\item Officium totum dicitur ut in dominicis per annum præter antiphonas ad Benedictus et Magnificat. \n\\item ad Vigilias pro breviario vetere: lectiones ut in breviario (dominica infra octavam Ss. Cordis Iesu), sed lectiones II nocturni in supplemento 49; ¶ dominicæ IV post Pentecosten in supplemento 50."
                 elif num_summer == " - I augusti": body_special = "\n\\item ad Vigilias: lectiones nocturnorum I et II sumendæ sunt e dominica I augusti, lectiones nocturni III e dominica post Pentecosten, et sic usque ad Adventum." 
                 elif num_summer == " - V octobris": body_special = "\n\\item ad Vigilias: lectiones nocturnorum I et II in supplemento 51*." 
+                elif num_summer == " - I novembris": body_special = "\n\\item ad Vigilias: in feriis, lectiones SO."
+                elif num_summer == " - II novembris": body_special = "\n\\item ad Vigilias: lectiones Nocturnorum I et II sumuntur in supplemento 52*. Et sic in feriis hebdomadæ II novembris."
                 else: body_special = ""
                 new_dim["body"] = body_special + "\n\\item in MC:" + (" pro lectione secunda et evangelio sumitur formula brevior (Heb \\textbf{11}, 1-2.8-12 / Lc \\textbf{12}, 35-40);" if num_dim_per_annum == "XIX" and year_letter == "C" else "") + " præfatio " + num_pref_dim + " de dominicis."
                 new_dim["preface_feries"] = "\n\\item in feriis: præfatio communis " + num_pref_fer + ", nisi aliter notetur."
