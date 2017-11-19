@@ -1004,13 +1004,14 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     
     nd_mont_carmel_date = datetime.date(current_year, 7, 16)
     nd_mont_carmel = dict_sancto[nd_mont_carmel_date] = {}
-    nd_mont_carmel["force"] = 40
     nd_mont_carmel["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus RP Benedicti Mariæ \\textsc{Constantin}, sacerdotis, qui die 16 iulii 1965, in Abbatia Dominæ Nostræ Mayliliensis, obdormivit in Domino."
     ant_bened = "\\item ad Benedictus: ø \\textit{Gloria Libani} (AM 971)." if even_year else "\\item ad Benedictus: ø \\textit{Caput tuum} (AM 971)."
     if nd_mont_carmel_date.weekday() == 5:
+        nd_mont_carmel["force"] = 40
         nd_mont_carmel["header"] = " - Beatæ Mariæ Virginis de Monte Carmelo - \\textbf{\\textit{memoria maior}} - \\textit{Alb.}"
         nd_mont_carmel["body"] = "\n\\item officium totum dicitur de Maria in sabbato præter orationem et ø ad Benedictus.\n\\item ad Vigilias: lectio sabbato 3 (in supplemento 204 pro breviario vetere)." + ant_bened + "\\item in MC \\textit{(Alb.)}: CM 32 ; præfatio I de Beata Maria Virgine."
     else: 
+        nd_mont_carmel["force"] = 20
         nd_mont_carmel["header"] = " - Beatæ Mariæ Virginis de Monte Carmelo - \\textit{memoria minor} - \\textit{Vir.}"
         nd_mont_carmel["body"] = ant_bened + "\\item \\textit{in ML: Alb.}\n\\item in MC \\textit{(Alb.)}: CM 32 ; præfatio I de Beata Maria Virgine."
     
