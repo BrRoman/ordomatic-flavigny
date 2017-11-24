@@ -1655,7 +1655,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_clement = dict_sancto[saint_clement_date] = {}
     saint_clement["force"] = 40
     saint_clement["header"] = " - \\textsc{S. Clementis I}, papæ et martyris - \\textbf{memoria maior} - \\textit{Rub.}"
-    saint_clement["body"] = "\n\\item ad Laudes, Vesperas et Horas minores: antiphonæ propriæ.\n\\item in MC: Commune martyrum (MR 917) ; lectiones propriæ: 1 Cor \\textbf{1}, 10-13.17-18 / Io \\textbf{13}, 12-17; præfatio de sanctis martyribus."
+    saint_clement["body"] = "\n\\item ad Laudes, Vesperas et Horas minores: antiphonæ propriæ.\n\\item in MC: Commune martyrum (MR 917) ; lectiones propriæ: 1 P \\textbf{5}, 10-13 / Mt \\textbf{16}, 12-17; præfatio de sanctis martyribus."
     saint_clement["II_vesp"] = "\n\\item ad Vesperas: a capitulo ut in II Vesperis de Communi unius martyris ; ad Magnificat: ø \\textit{Dedisti} (AM 1148)."
     
     saint_andre_dung_lac_date = datetime.date(current_year, 11, 24)
