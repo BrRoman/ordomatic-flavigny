@@ -819,7 +819,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
                 for j in range(6):
                     lectiones_feries += "\n\\item[" + f_transf_weekday(j) + "] " + current_lectiones[j][even_year_num] + " / " + current_lectiones[j][2]
                 lectiones_feries += "}"
-                christ_roi["II_vesp"] = "\n\\Vesperæ sollemnitatis ; ad benedictionem Sanctissimi Sacramenti recitetur \\textit{Actus dedicationis humani generis Iesu Christo Regi} : indulgentia plenaria.\n\\ApplyLectHeader{" + current_lectiones["header_dim"] + "}\n\\ApplyLectBody{\\item[Anno " + year_letter + "] " + current_lectiones["dim"][year_letter] + "}\n\\smallskip" + lectiones_feries
+                christ_roi["II_vesp"] = "\n\\item Vesperæ sollemnitatis ; ad benedictionem Sanctissimi Sacramenti recitetur \\textit{Actus dedicationis humani generis Iesu Christo Regi} : indulgentia plenaria.\n\\ApplyLectHeader{" + current_lectiones["header_dim"] + "}\n\\ApplyLectBody{\\item[Anno " + year_letter + "] " + current_lectiones["dim"][year_letter] + "}\n\\smallskip" + lectiones_feries
 
             else:
                 # Numéro du Dimanche per annum:
