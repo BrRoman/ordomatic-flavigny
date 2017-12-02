@@ -21,7 +21,6 @@ def dict_tempo_create(current_year, even_year, year_letter):
     sabb_1_adv["num_day"] = "\\textbf{" + str(sabb_1_adv_date.day) + "} &" + " Sabbato"
     sabb_1_adv["symbols"] = "".join(f_symbols(sabb_1_adv_date))
     sabb_1_adv["header"] = " - de eo - \\textit{Viol.}"
-    sabb_1_adv["body"] = "\n\\item \\textit{in ML (Alb.)  : Immaculati Cordis Beatæ Mariæ Virginis.}" if sabb_1_adv_date.day < 8 else ""
     
     # 2 premiers dimanches de l'Avent et leurs féries:
     for i in range(2):
