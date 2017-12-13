@@ -93,7 +93,7 @@ mc_bmv[11][3] = "\n\\item ad Vigilias : lectio de memoria sabbato 3 (in supple
 mc_bmv[11][4] = "\n\\item ad Vigilias lectio de memoria sabbato 4 (in supplemento 212 pro breviario vetere).\n\\item in MC : \\textit{Beatæ Mariæ Virginis, titulo Imago et Mater Ecclesiæ III} (CM 27) ; præfatio I de Beata Maria Virgine."
 mc_bmv[11][5] = "\n\\item ad Vigilias lectio de memoria sabbato 5 (in supplemento 212 pro breviario vetere).\n\\item in MC : \\textit{Beatæ Mariæ Virginis, universorum Reginæ} (CM 29) ; præfatio I de Beata Maria Virgine."
 mc_bmv[12] = {}
-mc_bmv[12][1] = "\n\\item ad Vigilias lectio de memoria sabbato 1 (in supplemento 195 pro breviario vetere).\n\\item in MC : \\textit{Beatæ Mariæ Virginis, universorum Reginæ} (CM 29) ; præfatio I de Beata Maria Virgine."
+mc_bmv[12][1] = "\n\\item ad Vigilias lectio de memoria sabbato 1 (in supplemento 195 pro breviario vetere).\n\\item ad Benedictus : ø \\textit{Beata es} (AM 1074).\n\\item \\textit{in ML : Immaculati Cordis Beatæ Mariæ Virginis.}\n\\item in MC : \\textit{Beatæ Mariæ Virginis, universorum Reginæ} (CM 29) ; præfatio I de Beata Maria Virgine."
 
 # Jour où il faudra insérer les dernières antiennes de l'année (Cum videritis etc.).
 # Le 1er chiffre indique le jour du Christ-Roi, le 2e indique le jour de la 1ère férie libre (en remontant à partir du 1er dim. de l'Avent) :

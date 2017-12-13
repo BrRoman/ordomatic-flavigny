@@ -21,7 +21,6 @@ def dict_tempo_create(current_year, even_year, year_letter):
     sabb_1_adv["num_day"] = "\\textbf{" + str(sabb_1_adv_date.day) + "} &" + " Sabbato"
     sabb_1_adv["symbols"] = "".join(f_symbols(sabb_1_adv_date))
     sabb_1_adv["header"] = " - de eo - \\textit{Viol.}"
-    sabb_1_adv["body"] = "\n\\item \\textit{in ML (Alb.)  : Immaculati Cordis Beatæ Mariæ Virginis.}" if sabb_1_adv_date.day < 8 else ""
     
     # 2 premiers dimanches de l'Avent et leurs féries:
     for i in range(2):
@@ -299,7 +298,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     bapteme["hebdo_psalt"] = "- hebdomada " + hebdo_psalterii[((bapteme_date - datetime.date(2011, 11, 27)).days // 7) % 2] + " psalterii -"
     bapteme["num_day"] = "\\textbf{" + str(bapteme_date.day) + "} &"
     bapteme["symbols"] = "".join(f_symbols(bapteme_date)) + (" " if f_symbols(bapteme_date) != "" else "")
-    num_dim_post_nat = "II" if noel_date.weekday() == 6 else "III"
+    num_dim_post_nat = "II" if noel_date.weekday() == 6 or noel_date.weekday() == 0 else "III"
     bapteme["header"] = " \\textbf{\\textsc{Dominica " + num_dim_post_nat + " post Nativitatem - Dominica in Baptismate Domini}} (I post Epiphaniam) - \\textbf{festum} - \\textit{Alb}."
     lect_bapteme = {"A": "Is \\textbf{42}, 1-4.6-7 / Act \\textbf{10}, 34-38 / Mt \\textbf{3}, 13-17", "B": "Is \\textbf{55}, 1-11 / 1 Io \\textbf{5}, 1-9 / Mc \\textbf{1}, 7-11", "C": "Is \\textbf{40}, 1-5.9-11 / Tit \\textbf{2}, 11-14 ; \\textbf{3}, 4-7 / Lc \\textbf{3}, 15-16.21-22"}
     bapteme["body"] = "\\item ad Vigilias: olim die 13 ianuarii pro breviario 62 ; in octava Epiphaniæ vel in supplemento 41 pro breviario vetere ; in I nocturno lectiones e dominica I post Epiphaniam cum responsorio \\textit{Hodie in Iordane} (post lectionem I).\n\\item ad Laudes et Horas minores: antiphonæ propriæ in variationibus 37, reliqua ut in festo Epiphaniæ excepta oratione in variationibus 38 vel in die octava Epiphaniæ.\n\\item \\textit{in ML: Missa in Commemoratione Baptismatis Domini Nostri Iesu Christi.}\n\\item in MC: lectiones propriæ: " + lect_bapteme[year_letter] + " ; præfatio propria."
@@ -819,7 +818,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
                 for j in range(6):
                     lectiones_feries += "\n\\item[" + f_transf_weekday(j) + "] " + current_lectiones[j][even_year_num] + " / " + current_lectiones[j][2]
                 lectiones_feries += "}"
-                christ_roi["II_vesp"] = "\n\\item Vesperæ sollemnitatis ; Vesperæ sollemnitatis ; ad benedictionem Sanctissimi Sacramenti recitetur \\textit{Actus dedicationis humani generis Iesu Christo Regi} : indulgentia plenaria.\n\\ApplyLectHeader{" + current_lectiones["header_dim"] + "}\n\\ApplyLectBody{\\item[Anno " + year_letter + "] " + current_lectiones["dim"][year_letter] + "}\n\\smallskip" + lectiones_feries
+                christ_roi["II_vesp"] = "\n\\item Vesperæ sollemnitatis ; ad benedictionem Sanctissimi Sacramenti recitetur \\textit{Actus dedicationis humani generis Iesu Christo Regi} : indulgentia plenaria.\n\\ApplyLectHeader{" + current_lectiones["header_dim"] + "}\n\\ApplyLectBody{\\item[Anno " + year_letter + "] " + current_lectiones["dim"][year_letter] + "}\n\\smallskip" + lectiones_feries
 
             else:
                 # Numéro du Dimanche per annum:
