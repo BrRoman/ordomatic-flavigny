@@ -1149,7 +1149,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     
     sainte_claire_date = datetime.date(current_year, 8, 11)
     sainte_claire = dict_sancto[sainte_claire_date] = {}
-    sainte_claire["force"] = 20
+    sainte_claire["force"] = 40
     sainte_claire["header"] = " - S. Claræ, virginis - memoria minor - \\textit{Alb.} (olim die 12 huius)."
     ant_bened = "\\item ad Benedictus: ø \\textit{Dedit mihi} (AM 819)."
     sainte_claire["body"] = ant_bened + "\\item in MC: Commune virginum (MR 947)."
@@ -1157,7 +1157,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     
     sainte_jeanne_chantal_date = datetime.date(current_year, 8, 12)
     sainte_jeanne_chantal = dict_sancto[sainte_jeanne_chantal_date] = {}
-    sainte_jeanne_chantal["force"] = 20
+    sainte_jeanne_chantal["force"] = 40
     sainte_jeanne_chantal["header"] = " - S. Ioannæ Franciscæ Frémiot de Chantal, viduæ - memoria minor - \\textit{Alb.}"
     sainte_jeanne_chantal["body"] = "\n\\item ad Benedictus: ø \\textit{Date ei} (AM 688) ; oratio in supplemento 60*.\n\\item \\textit{in ML: olim die 21 augusti.}\n\\item in MC: Commune sanctorum et sanctarum (MR 962)."
     
@@ -1337,13 +1337,13 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     
     saint_seine_date = datetime.date(current_year, 9, 19)
     saint_seine = dict_sancto[saint_seine_date] = {}
-    saint_seine["force"] = 20
+    saint_seine["force"] = 40
     saint_seine["header"] = " - S. Sequani, abbatis - memoria minor - \\textit{Vir.}"
     saint_seine["body"] = "\n\\item ad Benedictus: ø \\textit{Serve bone} (AM 673) ; oratio in supplemento 172.\n\\item \\textit{in ML (Alb.): Missa pro abbate.}\n\\item in MC \\textit{(Alb.)}: collecta propria ; Commune sanctorum et sanctarum (MR 958)."
     
     saint_just_breteniere_date = datetime.date(current_year, 9, 20)
     saint_just_breteniere = dict_sancto[saint_just_breteniere_date] = {}
-    saint_just_breteniere["force"] = 20
+    saint_just_breteniere["force"] = 40
     saint_just_breteniere["header"] = " - S. Iusti de Bretenières, presbyteri et martyris - memoria minor - \\textit{Vir.}"
     saint_just_breteniere["body"] = "\n\\item ad Benedictus: ø \\textit{Alias oves} (AM 486) ; oratio in supplemento 172.\n\\item \\textit{in ML (Rub.): Missa pro martyre non pontifice.}\n\\item in MC \\textit{(Rub.)}: collecta propria ; Commune martyrum (MR 917)."
     
@@ -1360,7 +1360,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     
     saint_padre_pio_date = datetime.date(current_year, 9, 23)
     saint_padre_pio = dict_sancto[saint_padre_pio_date] = {}
-    saint_padre_pio["force"] = 20
+    saint_padre_pio["force"] = 40
     saint_padre_pio["header"] = " - S. Pii de Pietrelcina, presbyteri - memoria minor - \\textit{Vir.}"
     saint_padre_pio["body"] = "\n\\item ad Benedictus: ø \\textit{Vivo autem} (AM 1128) ; oratio in supplemento 172*.\n\\item \\textit{in ML (Alb.): Missa pro confessore non pontifice.}\n\\item in MC \\textit{(Alb.)}: Commune sanctorum et sanctarum (MR 961)."
     
@@ -1555,7 +1555,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     
     sainte_elisabeth_trinite_date = datetime.date(current_year, 11, 8)
     sainte_elisabeth_trinite = dict_sancto[sainte_elisabeth_trinite_date] = {}
-    sainte_elisabeth_trinite["force"] = 20
+    sainte_elisabeth_trinite["force"] = 40
     sainte_elisabeth_trinite["header"] = " - \\textsc{Sanctæ Elisabeth a Trinitate}, virginis - memoria minor - \\textit{Vir.}"
     sainte_elisabeth_trinite["body"] = "\n\\item ad Benedictus: ø \\textit{O Beata} (AM 1131) ; oratio in supplemento 184.\n\\item \\textit{in ML (Alb.): Missa pro virgine tantum.}\n\\item in MC \\textit{(Alb.)}: collecta propria ; Commune virginum (MR 947)."
     
@@ -1660,13 +1660,13 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     
     saint_andre_dung_lac_date = datetime.date(current_year, 11, 24)
     saint_andre_dung_lac = dict_sancto[saint_andre_dung_lac_date] = {}
-    saint_andre_dung_lac["force"] = 20
+    saint_andre_dung_lac["force"] = 40
     saint_andre_dung_lac["header"] = " - Ss. Andreæ Dung Lac, Presbyteri et Sociorum, martyrum - memoria minor - \\textit{Vir.}"
     saint_andre_dung_lac["body"] = "\n\\item ad Benedictus: ø \\textit{Omnes sancti} (AM 647) ; oratio in supplemento 192*.\n\\item \\textit{in ML (Rub.): Missa pro pluribus martyribus.}\n\\item in MC: \\textit{Rub.}"
     
     sainte_catherine_laboure_date = datetime.date(current_year, 11, 25)
     sainte_catherine_laboure = dict_sancto[sainte_catherine_laboure_date] = {}
-    sainte_catherine_laboure["force"] = 20
+    sainte_catherine_laboure["force"] = 40
     sainte_catherine_laboure["header"] = " - S. Catharinæ Labouré, virginis - memoria minor - \\textit{Vir.}"
     sainte_catherine_laboure["body"] = "\n\\item ad Benedictus: ø \\textit{Veni sponsa} (AM 678) ; oratio in supplemento 192.\n\\item \\textit{in ML (Alb.): Missa pro virgine tantum.}\n\\item in MC \\textit{(Alb.)}: Collecta propria ; Commune virginum (MR 950)."
     
