@@ -148,7 +148,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     elif dim_4_adv_date.day == 23: ant_bened_special = "\n\\item ad Benedictus: ø Ecce completa sunt (AM 220)."
     else: ant_bened_special = ""
     dim_4_adv["body"] = ("\\item ad Vigilias: in I nocturno lectiones e dominica IV Adventus." + ant_bened_special) if dim_4_adv_date.day != 24 else "\\item ad Vigilias: Officium fit de Vigilia Nativitatis Domini in dominica præter lectiones I nocturni in supplemento 20 ; invitatorium \\textit{Hodie scietis}.\n\\item ad Laudes et Horas minores: ø \\textit{Iudæa} (AM 232) cum psalmis festivis.\n\\item \\textit{in ML: Missa de Vigilia.}\n\\item in MC: Missa de dominica IV Adventus ; cantus Missæ \\textit{Hodie} de Vigilia omittuntur."
-    dim_4_adv["II_vesp"] = "\\item I Vesperæ sollemnitatis sequentis.\n\\item Completorium omittitur ab his qui solemnem Vigiliam et Missam in nocte intersunt.}\n\\ApplyGenerSubTitle{Ad mensam:}\n\\ApplyGenerList{\\item benedictio de Nativitate.\n\\vspace{1cm}" if dim_4_adv_date.day == 24 else ""
+    dim_4_adv["II_vesp"] = "\\item I Vesperæ sollemnitatis sequentis.\n\\item Completorium omittitur ab his qui solemnem Vigiliam et Missam in nocte intersunt." if dim_4_adv_date.day == 24 else ""
     current_lectiones = lectiones["hebdo_4_adv"]
     dim_4_adv["lectiones_header"] = "\n" + current_lectiones["header"]
     lectiones_body = "\n\\item[Dom. " + year_letter + "] " + current_lectiones["dim"][year_letter]
@@ -612,7 +612,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
         new_day["generalities"] = "\n\\newpage\n\\ApplyParBox{1cm}{\\ApplyGenerTitleHuge{Tempus paschale II}}\n\n\\ApplyGenerTitleLarge{post Ascensionem Domini}\n\\ApplyGenerSubTitle{in Ofﬁcio :}\n\\ApplyGenerList{\n\\item ordinarium invenitur in variationibus 17 et in supplemento 46 pro breviario vetere.\n\\item ad Benedictus et Magnificat : antiphonæ ut in die Ascensionis, nisi aliter notetur.\n\\item ad Vesperas : in Ofﬁcio dominicali et feriali, cantantur ¶ \\textit{Spiritus Paraclitus} et hymnus \\textit{Veni Creator} (AM 518).}\n\\ApplyGenerSubTitle{in ML et MC :}\n\\ApplyGenerList{\n\\item præfatio de Ascensione dicitur, etiam in ceteris Missis quæ præfatione propria carent.\n\\item in feriis : præfatio I de Ascensione, nisi aliter notetur.}\n\\medskip" if i == 0 else ""
         new_day["num_day"] = "\\textbf{" + str(new_day_date.day) + "} & " +  f_transf_weekday(new_day_date.weekday())
         new_day["symbols"] = "".join(f_symbols(new_day_date, "TP"))
-        new_day["header"] = " - de ea - \\textit{Alb}."
+        new_day["header"] = " - de ea - \\textit{Alb}." if i != 1 else " - de eo - \\textit{Alb}."
         new_day["body"] = "\n\\item ad Benedictus : ø \\textit{Regina cæli} (AM 718)." if i == 1 else ""
         new_day["body"] += "\n\\item \\textit{in ML: Missa de sacratissimo Corde Iesu (\\emph{Gloria}).}" if new_day_date.day < 8 and new_day_date.weekday() == 4 else ""
     
