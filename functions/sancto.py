@@ -35,25 +35,25 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     anniv_pape["anniv"] = "Cras recurrit anniversarium electionis S.S. D.N. Francisci, quem Dominus viviﬁcet et beatum faciat (2013)."
     
     # 1ère Messe défunts :
-    messe_defunts_date = datetime.date(current_year, 1,  23)
+    messe_defunts_date = datetime.date(current_year, 2,  4)
     messe_defunts = dict_sancto[messe_defunts_date] = {}
     messe_defunts["force"] = 10
     messe_defunts["body"] = "\n\\item in MC (\\textit{Nigr.}) : Missa defunctorum pro omnibus benefactoribus nostris defunctis (MR 1225) ; lectiones propriæ : Rom \\textbf{5}, 6b-11 / Mt \\textbf{5}, 1-12a ; præfatio II de defunctis." 
     
     # 2e Messe défunts :
-    messe_defunts_date = datetime.date(current_year, 6, 18)
+    messe_defunts_date = datetime.date(current_year, 7, 1)
     messe_defunts = dict_sancto[messe_defunts_date] = {}
     messe_defunts["force"] = 10
     messe_defunts["body"] = "\n\\item in MC (\\textit{Nigr.}) : Missa defunctorum pro omnibus benefactoribus nostris defunctis (MR 1225) ; lectiones propriæ : Rom \\textbf{8}, 14-17 / Lc \\textbf{12}, 35-38.40 ; præfatio III de defunctis."
     
     # 3e Messe défunts :
-    messe_defunts_date = datetime.date(current_year, 9, 10)
+    messe_defunts_date = datetime.date(current_year, 9, 2)
     messe_defunts = dict_sancto[messe_defunts_date] = {}
     messe_defunts["force"] = 10
     messe_defunts["body"] = "\n\\item in MC (\\textit{Nigr.}) : Missa defunctorum pro omnibus benefactoribus nostris defunctis (MR 1225) ; lectiones propriæ : 1 Io \\textbf{3}, 14.16-20 / Io \\textbf{5}, 24-29 ; præfatio IV de defunctis."
     
     # 4e Messe défunts :
-    messe_defunts_date = datetime.date(current_year, 11, 19)
+    messe_defunts_date = datetime.date(current_year, 11, 26)
     messe_defunts = dict_sancto[messe_defunts_date] = {}
     messe_defunts["force"] = 10
     messe_defunts["body"] = "\n\\item in MC (\\textit{Nigr.}) : Missa defunctorum pro omnibus benefactoribus nostris defunctis (MR 1225) ; lectiones propriæ : Ap \\textbf{20}, 11 – \\textbf{21}, 1 / Io \\textbf{14}, 1-6 ; præfatio V de defunctis."
@@ -648,7 +648,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_joseph_artisan["force"] = 40
     saint_joseph_artisan["header"] = " - \\textsc{S. Ioseph Opificis} - \\textbf{memoria maior} - \\textit{Alb.}"
     lect_mc = " Col \\textbf{3}, 14-15.17.23-24" if even_year else " Gen \\textbf{1}, 26–\\textbf{2}, 3"
-    saint_joseph_artisan["body"] = "\n\\item in Officio: oratio \\textit{Rerum conditor} in supplemento 118* vel in breviario 62: Officium schema I).\n\\item ad Vigilias: Officium schema I, præter sequentia: antiphonæ, psalmi et ß de feria ; lectio in supplemento 118 ; in II nocturno lectio brevis et ß ut ad sextam (in breviario 62: Officium schema I).\n\\item ad Laudes, Vesperas et Horas minores: omnia ut in AM 886, præter orationem ut supra.\n\\item in MC: lectiones propriæ:" + lect_mc + "/ Mt \\textbf{13}, 54-58 ; præfatio propria \\textit{(Et te in commemoratione)}."
+    saint_joseph_artisan["body"] = "\n\\item in Officio: oratio \\textit{Rerum conditor} in supplemento 118* vel in breviario 62 (Officium schema I).\n\\item ad Vigilias: Officium schema I, præter sequentia: antiphonæ, psalmi et ß de feria ; lectio in supplemento 118 ; in II nocturno lectio brevis et ß ut ad Sextam (in breviario 62: Officium schema I).\n\\item ad Laudes, Vesperas et Horas minores: omnia ut in AM 886, præter orationem ut supra.\n\\item in MC: lectiones propriæ:" + lect_mc + "/ Mt \\textbf{13}, 54-58 ; præfatio propria \\textit{(Et te in commemoratione)}."
     
     saint_athanase_date = datetime.date(current_year, 5, 2)
     saint_athanase = dict_sancto[saint_athanase_date] = {}
