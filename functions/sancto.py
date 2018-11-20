@@ -620,7 +620,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     dedicace_dijon = dict_sancto[dedicace_dijon_date] = {}
     dedicace_dijon["force"] = 70
     dedicace_dijon["header"] = " - \\textbf{\\textsc{In Dedicatione Ecclesiæ Cathedralis Divionensis}} - \\textbf{festum} - \\textit{Alb.}"
-    dedicace_dijon["body"] = "\n\\item Omnia de Communi dedicationis ecclesiæ ritu paschali: in fine cuiuslibet responsorii, ante versum, additur \\textit{Alleluia} nisi iam habeatur.\n\\item \\textit{in ML: præfatio de dedicatione ecclesiæ \\emph{(Gloria, Credo)}.}\n\\item in MC: Missa de Communi dedicationis ecclesiæ (MR 895) ; lectiones propriæ: Apoc \\textbf{21}, 1-5a / Io \\textbf{2}, 13-22 ; præfatio de dedicatione ecclesiæ."
+    dedicace_dijon["body"] = "\n\\item Omnia de Communi dedicationis ecclesiæ ritu paschali: in fine cuiuslibet responsorii, ante versum, additur \\textit{Alleluia} nisi iam habeatur.\n\\item \\textit{in ML: præfatio de dedicatione ecclesiæ \\emph{(Gloria, Credo)}.}\n\\item in MC: Missa de Communi dedicationis ecclesiæ (MR 895) ; lectiones propriæ: Apoc \\textbf{21}, 1-5a / Io \\textbf{2}, 13-22 ; præfatio de dedicatione ecclesiæ II."
     
     saint_louis_marie_date = datetime.date(current_year, 4, 28)
     saint_louis_marie = dict_sancto[saint_louis_marie_date] = {}
