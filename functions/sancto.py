@@ -811,6 +811,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_charles_lwanga_date = datetime.date(current_year, 6, 3)
     saint_charles_lwanga = dict_sancto[saint_charles_lwanga_date] = {}
     saint_charles_lwanga["force"] = 40
+    saint_charles_lwanga["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus RP Francisci Xavier Mariæ \\textsc{Gaillot-Drevon}, sacerdotis, qui die 3 iunii 2018 obdormivit in Domino."
     saint_charles_lwanga["header"] = " - \\textsc{Ss. Caroli Lwanga et Sociorum}, martyrum - \\textbf{memoria maior} - \\textit{Rub.}"
     if saint_charles_lwanga_date < paques + datetime.timedelta(days = 49):
         ant_bened = "\n\\item ad Benedictus: ø \\textit{Lux perpetua} (AM 632)."
