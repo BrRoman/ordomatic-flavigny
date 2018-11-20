@@ -200,7 +200,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     noel["generalities"] = "\n\\ApplyGenerSubTitle{ad mensam:}\n\\ApplyGenerList{\\item benedictio de Nativitate.}" + ("\n\\vspace{1cm}" if noel_date.weekday() != 6 else "") # Car si dimanche, alors "Hebdomada n psalterii", et du coup espace.
     noel["num_day"] = "\\textbf{" + str(noel_date.day) + "} & " + f_transf_weekday(noel_date.weekday())
     noel["symbols"] = "".join(f_symbols(noel_date))
-    noel["header"] = ("Dominica - " if noel_date.weekday() == 6 else "") + "¬ \\textbf{\\MakeUppercase{In Nativitate Domini Nostri Iesu Christi} - sollemnitas maior cum octava} - \\textit{Alb}."
+    noel["header"] = ("Dominica - " if noel_date.weekday() == 6 else " - ") + "¬ \\textbf{\\MakeUppercase{In Nativitate Domini Nostri Iesu Christi} - sollemnitas maior cum octava} - \\textit{Alb}."
     noel["hebdo_psalt"] = "- hebdomada " + hebdo_psalterii[((noel_date - datetime.date(2011, 11, 27)).days // 7) % 2] + " psalterii -" if noel_date.weekday() == 6 else ""
     hebdo_psalt_noel = "II" if even_year else "I"# Cette donnée servira pour la Ste Famille.
     noel["body"] = "\\item ad Vigilias: psalmi hebdomadæ " + hebdo_psalt_noel + ".\n\\item hodie omnes sacerdotes tres Missas celebrare possunt, dummodo hæ suo tempore celebrentur.\n\\item in omnibus Missis Nativitatis ad verba symboli \\textit{Et incarnatus est} omnes genua ﬂectunt.\n\\item ad Missam in nocte: ad hymnum \\textit{Gloria} pulsantur campanæ ; præfatio I de Nativitate Domini ; \\textit{Communicantes} proprium hodie et per totam octavam.\n\\item Laudes in aurora celebrantur.\n\\item ad Missam in die: præfatio II de Nativitate Domini.\n\\item Vesperæ sollemnitatis ; benedictio Sanctissimi Sacramenti."
@@ -239,7 +239,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
         ste_famille_magnif = "\\item ad Magnificat: ø \\textit{Fili, quid fecisti} (AM 303)."
     # Cas le plus fréquent, on annonce les lectiones du 29 au 31 :
     if ste_famille_date.day != 30 and ste_famille_date.day != 31:
-        ste_famille["body"] = "\\item Officium dicitur de dominica infra octavam Nativitatis, præter orationem in Supplemento * ; invitatorium proprium in supplemento 59.\n\\item ad Vigilias: psalmi hebdomadæ " + hebdo_psalt_vigiles + "." + ste_famille_bened + "\\item \\textit{in ML: Missa dominicæ I post Epiphaniam, Sanctæ Familiæ, cum præfatione et \\emph{Communicantes} de Nativitate.}\n\\item in MC: præfatio II de Nativitate."
+        ste_famille["body"] = "\\item Officium dicitur de dominica infra octavam Nativitatis, præter orationem in Supplemento 22* ; invitatorium proprium in supplemento 59.\n\\item ad Vigilias: psalmi hebdomadæ " + hebdo_psalt_vigiles + "." + ste_famille_bened + "\\item \\textit{in ML: Missa dominicæ I post Epiphaniam, Sanctæ Familiæ, cum præfatione et \\emph{Communicantes} de Nativitate.}\n\\item in MC: præfatio II de Nativitate."
         current_lectiones = lectiones["ste_famille"]
         ste_famille["lectiones_header"] = "\n" + current_lectiones["header"]
         lectiones_body = "\n\\item[Dom. " + year_letter + "] " + current_lectiones["dim"][year_letter]
@@ -251,7 +251,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     else:
         current_lectiones = lectiones["ste_famille"]
         lectiones_mc = current_lectiones["dim"][year_letter] if ste_famille_date.weekday() == 6 else current_lectiones["feria"]
-        ste_famille["body"] = "\\item Officium dicitur de dominica infra octavam Nativitatis ; invitatorium proprium in supplemento 59.\n\\item ad Vigilias: psalmi hebdomadæ " + hebdo_psalt_vigiles + ste_famille_bened + "\\item \\textit{in ML: Missa dominicæ I post Epiphaniam, Sanctæ Familiæ, cum præfatione et \\emph{Communicantes} de Nativitate.}\n\\item in MC: lectiones propriæ : " + lectiones_mc + "; præfatio II de Nativitate."
+        ste_famille["body"] = "\\item Officium dicitur de dominica infra octavam Nativitatis, præter orationem in Supplemento 22* ; invitatorium proprium in supplemento 59.\n\\item ad Vigilias: psalmi hebdomadæ " + hebdo_psalt_vigiles + "." + ste_famille_bened + "\\item \\textit{in ML: Missa dominicæ I post Epiphaniam, Sanctæ Familiæ, cum præfatione et \\emph{Communicantes} de Nativitate.}\n\\item in MC: lectiones propriæ : " + lectiones_mc + "; præfatio II de Nativitate."
     ste_famille["II_vesp"] = ste_famille_magnif
     
     # Octave de Noël:
