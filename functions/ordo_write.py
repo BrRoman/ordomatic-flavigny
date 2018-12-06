@@ -283,7 +283,7 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
         i = 1 if i == 2 else 2 # Pour alterner d'un vendredi sur l'autre.
     
     # Écriture du fichier TeX :
-    file_out = open(os.path.abspath(".") + "/ordo.tex", "w", encoding="utf-8")
+    file_out = open(os.path.abspath(".") + "/ordo/" + str(current_year) + ".tex", "w", encoding="utf-8")
     file_out.write(text_ordo)
     file_out.close()
 

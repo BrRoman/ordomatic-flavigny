@@ -21,7 +21,7 @@
             <p>Votre ordo est en cours de préparation…</p>
             <p>Veuillez patienter quelques instants…</p>
         </div>
-        <form id="overlay_download" action="ordo.pdf" target="_blank">
+        <form id="overlay_download" action="" target="_blank">
             Votre ordo est prêt !</br>
             <input id="view" type="submit" value="Afficher" style="margin-top:20px" />
         </form>
