@@ -64,8 +64,10 @@ def dict_tempo_create(current_year, even_year, year_letter):
     if dim_3_adv_date.day == 17:
         dim_3_adv["generalities"] = generalities
         txt_vigiles = "\\item ad Vigilias: in I nocturno lectiones e dominica III Adventus."
-    else:
+    elif dim_3_adv_date.day < 16:
         txt_vigiles = "\\item ad Vigilias: continuatur invitatorium \\textit{Regem venturum} usque ad diem 16 decembris."
+    else:
+        txt_vigiles = ""
     dim_3_adv["I_vesp"] = "\\item I Vesperæ dominicæ sequentis."
     dim_3_adv["hebdo_psalt"] = "- hebdomada " + hebdo_psalterii[((dim_3_adv_date - datetime.date(2011, 11, 27)).days // 7) % 2] + " psalterii -"
     dim_3_adv["num_day"] = "\\textbf{" + str(dim_3_adv_date.day) + "} &"
