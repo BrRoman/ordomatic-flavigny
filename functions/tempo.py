@@ -146,8 +146,8 @@ def dict_tempo_create(current_year, even_year, year_letter):
     dim_4_adv["num_day"] = "\\textbf{" + str(dim_4_adv_date.day) + "} &"
     dim_4_adv["symbols"] = "".join(f_symbols(dim_4_adv_date))
     dim_4_adv["header"] = " \\textbf{\\textsc{Dominica IV Adventus}} - de ea - \\textit{Viol.}"
-    if dim_4_adv_date.day == 21: ant_bened_special = "\n\\item ad Benedictus: ø Nolite timere (AM 219)."
-    elif dim_4_adv_date.day == 23: ant_bened_special = "\n\\item ad Benedictus: ø Ecce completa sunt (AM 220)."
+    if dim_4_adv_date.day == 21: ant_bened_special = "\n\\item ad Benedictus: ø \\textit{Nolite timere (AM 219)}."
+    elif dim_4_adv_date.day == 23: ant_bened_special = "\n\\item ad Benedictus: ø \\textit{Ecce completa sunt (AM 220)}."
     else: ant_bened_special = ""
     dim_4_adv["body"] = ("\\item ad Vigilias: in I nocturno lectiones e dominica IV Adventus." + ant_bened_special) if dim_4_adv_date.day != 24 else "\\item ad Vigilias: Officium fit de Vigilia Nativitatis Domini in dominica præter lectiones I nocturni in supplemento 20 ; invitatorium \\textit{Hodie scietis}.\n\\item ad Laudes et Horas minores: ø \\textit{Iudæa} (AM 232) cum psalmis festivis.\n\\item \\textit{in ML: Missa de Vigilia.}\n\\item in MC: Missa de dominica IV Adventus ; cantus Missæ \\textit{Hodie} de Vigilia omittuntur."
     dim_4_adv["II_vesp"] = "\\item I Vesperæ sollemnitatis sequentis.\n\\item Completorium omittitur ab his qui solemnem Vigiliam et Missam in nocte intersunt.}\n\\ApplyGenerSubTitle{Ad mensam:}\n\\ApplyGenerList{\\item benedictio de Nativitate.\n\\vspace{1cm}" if dim_4_adv_date.day == 24 else ""
