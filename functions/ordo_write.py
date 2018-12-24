@@ -7,8 +7,8 @@ from functions.various import *
 
 def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, ordo_start, nb_days, paques, christ_roi):
     #Entrer ici les dates des MC votives semailles et récoltes :
-    date_semailles = datetime.date(current_year, 5, 22)
-    date_recoltes = datetime.date(current_year, 9, 22)
+    date_semailles = datetime.date(current_year, 5, 29)
+    date_recoltes = datetime.date(current_year, 9, 18)
 
     text_ordo = "\input{config.tex}"
     text_ordo += "\n\\fancyhead[CO]{\\textbf{Cyclus liturgicus " + year_letter + ("/II" if even_year else "/I") + "}}"
@@ -283,7 +283,7 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
         i = 1 if i == 2 else 2 # Pour alterner d'un vendredi sur l'autre.
     
     # Écriture du fichier TeX :
-    file_out = open(os.path.abspath(".") + "/ordo.tex", "w", encoding="utf-8")
+    file_out = open(os.path.abspath(".") + "/ordo/" + str(current_year) + ".tex", "w", encoding="utf-8")
     file_out.write(text_ordo)
     file_out.close()
 
