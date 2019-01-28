@@ -363,7 +363,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     else:
         lectures_mc = " Mal \\textbf{3}, 1-4"
     aspersion = " aspersio omittitur;" if presentation_date.weekday() == 6 else ""
-    presentation["body"] = "\n\\item in MC: ante Missam conventualem peragitur benedictio ac processio candelarum. Post processionem cantantur introitus Missæ et psalmodia Tertiæ ;" + aspersion + " lectiones propriæ:" + lectures_mc + " / Lc \\textit{2}, 22-40 ; præfatio propria.\n\\item post Completorium dicitur ø \\textit{Ave Regina Cælorum}."
+    vepres = "\n\\item Vesperæ Festi." if presentation_date.weekday() == 5 else ""
+    presentation["body"] = "\n\\item in MC: ante Missam conventualem peragitur benedictio ac processio candelarum. Post processionem cantantur introitus Missæ et psalmodia Tertiæ ;" + aspersion + " lectiones propriæ:" + lectures_mc + " / Lc \\textit{2}, 22-40 ; præfatio propria." + vepres + "\n\\item post Completorium dicitur ø \\textit{Ave Regina Cælorum}."
     # Si 1er vendredi du mois, reporter le jeûne au lendemain:
     if presentation_date.weekday() == 4:
         dict_tempo[presentation_date]["symbols"] = dict_tempo[presentation_date]["symbols"].replace(" µ", " ł")
