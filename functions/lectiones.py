@@ -283,7 +283,7 @@ lectiones["hebdo_2_per_annum"]["dim"]["C"] = "Is \\textbf{62}, 1-5 / 1 Co \\text
 lectiones["hebdo_2_per_annum"][0] = {0: "1 Sam \\textbf{15}, 16-23", 1: "Hebr \\textbf{5}, 1-10", 2: "Mc \\textbf{2}, 18-22"}
 lectiones["hebdo_2_per_annum"][1] = {0: "1 Sam \\textbf{16}, 1-13", 1: "Hebr \\textbf{6}, 10-20", 2: "Mc, \\textbf{2}, 23-28"}
 lectiones["hebdo_2_per_annum"][2] = {0: "1 Sam \\textbf{17}, 32-33.37.40-51", 1: "Hebr \\textbf{7}, 1-3.15-17", 2: "Mc \\textbf{3}, 1-6"}
-lectiones["hebdo_2_per_annum"][3] = {0: "1 Sam \\textbf{18}, 6-9 ; \\textbf{19}, 1-7", 1: "Hebr \\textbf{7}, 25–8, 6", 2: "Mc \\textbf{3}, 7-12"}
+lectiones["hebdo_2_per_annum"][3] = {0: "1 Sam \\textbf{18}, 6-9 ; \\textbf{19}, 1-7", 1: "Hebr \\textbf{7}, 25–\\textbf{8}, 6", 2: "Mc \\textbf{3}, 7-12"}
 lectiones["hebdo_2_per_annum"][4] = {0: "1 Sam \\textbf{24}, 3-21", 1: "Hebr \\textbf{8}, 6-13", 2: "Mc \\textbf{3}, 13-19"}
 lectiones["hebdo_2_per_annum"][5] = {0: "2 Sam \\textbf{1}, 1-4.11-12.19.23-27", 1: "Hebr \\textbf{9}, 2-3.11-14", 2: "Mc \\textbf{3}, 20-21"}
 
