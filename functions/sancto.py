@@ -696,7 +696,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     else:
         office = ""
         messe_lue = ""
-    saint_matthias["body"] = office + messe_lue + "\\item in MC: lectiones propriæ: Act \\textbf{1}, 15-17.20a.20c-26 / Io \\textbf{15}, 9-17 ; præfatio II de Apostolis."
+    saint_matthias["body"] = office + messe_lue + "\\item in MC: lectiones propriæ: Ac \\textbf{1}, 15-17.20a.20c-26 / Io \\textbf{15}, 9-17 ; præfatio II de Apostolis."
     
     saint_pacome_date = datetime.date(current_year, 5, 15)
     saint_pacome = dict_sancto[saint_pacome_date] = {}
