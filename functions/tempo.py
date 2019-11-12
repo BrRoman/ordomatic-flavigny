@@ -851,7 +851,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
                 elif num_summer == " - V octobris": body_special = "\n\\item ad Vigilias: lectiones nocturnorum I et II in supplemento 51*." 
                 elif num_summer == " - II novembris": body_special = "\n\\item ad Vigilias: lectiones Nocturnorum I et II sumuntur in supplemento 52*. Et sic in feriis hebdomadæ II novembris."
                 else: body_special = ""
-                new_dim["body"] = body_special + "\n\\item in MC:" + (" pro lectione secunda et evangelio sumitur formula brevior (Heb \\textbf{11}, 1-2.8-12 / Lc \\textbf{12}, 35-40);" if num_dim_per_annum == "XIX" and year_letter == "C" else "") + " præfatio " + num_pref_dim + " de dominicis."
+                new_dim["body"] = body_special + "\n\\item in MC: præfatio " + num_pref_dim + " de dominicis."
                 new_dim["preface_feries"] = "\n\\item in feriis: præfatio communis " + num_pref_fer + ", nisi aliter notetur."
                 if num_summer == " - I novembris": new_dim["preface_feries"] += "\n\\item ad Vigilias: in feriis, lectiones SO." 
                 current_lectiones = lectiones["hebdo_" + str(i + 35 - nb_dim_ap_pentec) + "_per_annum"]
