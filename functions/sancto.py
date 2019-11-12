@@ -1476,7 +1476,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     nd_sainte_esperance = dict_sancto[nd_sainte_esperance_date] = {}
     nd_sainte_esperance["force"] = 40
     nd_sainte_esperance["header"] = " - \\textsc{Dominæ Nostræ Sanctæ Spei} - \\textbf{\\textit{memoria maior}} - \\textit{Alb.}"
-    nd_sainte_esperance["body"] = "\n\\item in Officio: oratio in supplemento 182.\n\\item ad Vigilias: lectio in supplemento 181.\n\\item ad Benedictus: ø \\textit{Beata es Maria} (AM 709).\n\\item \\textit{in ML: Missa Sanctissimi Nominis Mariæ (vide ad diem 12 septembris) præter orationem.}\n\\item in MC: CM 37 ; præfatio I de Beata Maria Virgine."
+    nd_sainte_esperance["body"] = "\n\\item in Officio: oratio in supplemento 182.\n\\item ad Vigilias: lectio in supplemento 181.\n\\item \\textit{in ML: Missa Sanctissimi Nominis Mariæ (vide ad diem 12 septembris) præter orationem.}\n\\item in MC: CM 37 ; præfatio I de Beata Maria Virgine."
     
     saint_antoine_marie_claret_date = datetime.date(current_year, 10, 24)
     saint_antoine_marie_claret = dict_sancto[saint_antoine_marie_claret_date] = {}
