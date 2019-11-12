@@ -1572,13 +1572,16 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         text_dim = " \\textbf{\\textsc{Dominica " + num_dim_per_annum + " per annum}}" + " ("+ text_ap_pentec + ")"
     else: text_dim = ""
     dedicace_latran["header"] = text_dim + " - \\textbf{\\textsc{In Dedicatione Basilicæ Lateranensis}} - \\textbf{festum} - \\textit{Alb.}"
+    # Lectures MC:
     if dedicace_latran_date.weekday() == 6:
         lectures_mc = "Ez \\textbf{47}, 1-2.8-9.12 / 1 Co \\textbf{3}, 9b-11.16-17"
     elif even_year:
         lectures_mc = "1 Co \\textbf{3}, 9b-11.16-17"
     else:
         lectures_mc = "Ez \\textbf{47}, 1-2.8-9.12"
-    dedicace_latran["body"] = "\n\\item ad Vigilias: in nocturno II, lectiones de commune Dedicationis ecclesiæ in II nocturno.\n\\item \\textit{in ML: præfatio de dedicatione ecclesiæ.}\n\\item in MC: lectiones propriæ: " + lectures_mc + " / Io \\textbf{2}, 13-22 ; præfatio de dedicatione ecclesiæ II."
+    # Vêpres:
+    text_vepres = "\n\\item Vesperæ festi." if dedicace_latran_date.weekday() == 5 else ""
+    dedicace_latran["body"] = "\n\\item ad Vigilias: in nocturno II, lectiones de commune Dedicationis ecclesiæ in II nocturno.\n\\item \\textit{in ML: præfatio de dedicatione ecclesiæ.}\n\\item in MC: lectiones propriæ: " + lectures_mc + " / Io \\textbf{2}, 13-22 ; præfatio de dedicatione ecclesiæ II." + text_vepres
     
     saint_leon_date = datetime.date(current_year, 11, 10)
     saint_leon = dict_sancto[saint_leon_date] = {}
