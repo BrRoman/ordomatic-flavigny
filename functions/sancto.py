@@ -598,11 +598,12 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         saint_stanislas_ep["body"] = "\n\\item ad Benedictus: ø \\textit{Lux perpetua} (AM 632) ; oratio in supplemento 115.\n\\item \\textit{in ML: Rub.}\n\\item in MC \\textit{(Rub.)}: Commune martyrum (MR 921)."
     
     saint_martin_Ier_date = datetime.date(current_year, 4, 13)
-    saint_martin_Ier = dict_sancto[saint_martin_Ier_date] = {}
-    saint_martin_Ier["force"] = 20
-    saint_martin_Ier["header"] = " - S. Martini I, papæ et martyris - \\textit{memoria minor} - \\textit{Alb.} (olim die 12 novembris)."
-    ant_bened = "\\item ad Benedictus: ø \\textit{Fulgebunt iusti} (AM 633) ; oratio in supplemento 115" if saint_martin_Ier_date > paques else "\\item ad Benedictus: ø \\textit{Qui odit} (AM 642) ; oratio in supplemento 115."
-    saint_martin_Ier["body"] = ant_bened + "\\item \\textit{in ML: Rub.}\n\\item in MC \\textit{(Rub.)}: Commune pastorum (MR 927)."
+    if not is_careme(saint_martin_Ier_date):
+        saint_martin_Ier = dict_sancto[saint_martin_Ier_date] = {}
+        saint_martin_Ier["force"] = 20
+        saint_martin_Ier["header"] = " - S. Martini I, papæ et martyris - \\textit{memoria minor} - \\textit{Alb.} (olim die 12 novembris)."
+        ant_bened = "\\item ad Benedictus: ø \\textit{Fulgebunt iusti} (AM 633) ; oratio in supplemento 115" if saint_martin_Ier_date > paques else "\\item ad Benedictus: ø \\textit{Qui odit} (AM 642) ; oratio in supplemento 115."
+        saint_martin_Ier["body"] = ant_bened + "\\item \\textit{in ML: Rub.}\n\\item in MC \\textit{(Rub.)}: Commune pastorum (MR 927)."
     
     saint_anselme_date = datetime.date(current_year, 4, 21)
     saint_anselme = dict_sancto[saint_anselme_date] = {}
