@@ -651,7 +651,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     dict_tempo["fetes_mobiles"]["pentecote"] = str(pentecote_date.day) + f_transf_month_genitive(pentecote_date.month)
     pentecote = dict_tempo[pentecote_date] = {}
     pentecote["force"] = 120
-    pentecote["I_vesp"] = "\n\\item I Vesperæ sollemnitatis sequentis ; ß \\textit{Benedicamus Domino} cum duobus \\textit{Alleluia}.}\n\\ApplyGenerSubTitle{Ad mensam :}\n\\ApplyGenerList{\n\\item benedictio de Pentecoste."
+    pentecote["I_vesp"] = "\n\\item I Vesperæ sollemnitatis sequentis ; ß \\textit{Benedicamus Domino} cum duobus \\textit{Alleluia}.}\n\\ApplyGenerSubTitle{ad mensam :}\n\\ApplyGenerList{\n\\item benedictio de Pentecoste."
     pentecote["hebdo_psalt"] = "- hebdomada " + hebdo_psalterii[((pentecote_date - datetime.date(2011, 11, 27)).days // 7) % 2] + " psalterii -"
     pentecote["num_day"] = "\\textbf{" + str(pentecote_date.day) + "} &"
     pentecote["symbols"] = "".join(f_symbols(pentecote_date)) + (" " if f_symbols(pentecote_date) != "" else "")
