@@ -97,6 +97,12 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_nicolas["force"] = 9# Pour qu'un éventuel 1er vendredi du mois soit + fort (ML = Sacré-Cœur). 
     saint_nicolas["body"] = "\n\\item \\textit{in ML (Alb.): Missa S. Nicolai.}"
     
+    nd_lorette_date = datetime.date(current_year - 1, 12, 10)
+    nd_lorette = dict_sancto[nd_lorette_date] = {}
+    nd_lorette["force"] = 40
+    nd_lorette["header"] = " - Beatæ Mariæ Virginis Lorettanæ - \\textit{memoria minor} - \\textit{Viol.}"
+    nd_lorette["body"] = "\n\\item ad Benedictus: ø \\textit{Beatam} (AM 711); oratio in supplemento 60*.\n\\item \\textit{in ML: Alb.}\n\\item in MC \\textit{(Alb.)}: Commune Beatæ Mariæ Virginis (MR 905) ; præfatio I de Beata Maria Virgine."
+    
     saint_ambroise_date = datetime.date(current_year - 1, 12, 7)
     saint_ambroise = dict_sancto[saint_ambroise_date] = {}
     saint_ambroise["force"] = 40
