@@ -577,7 +577,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     annonciation["I_vesp"] = "\\item I Vesperæ sollemnitatis sequentis."
     annonciation["header"] = " - þ \\textbf{\\MakeUppercase{In annuntiatione Domini}} - \\textbf{sollemnitas minor} - \\textit{Alb.}"
     annonciation["body"] = "\n\\item in MC: lectiones propriæ: Is \\textbf{7}, 10-14 ; \\textbf{8}, 10 / Hebr \\textbf{10}, 4-10 / Lc \\textbf{1}, 26-38 ; ad verba symboli \\textit{Et incarnatus est} omnes genua ﬂectunt ; præfatio propria."
-    annonciation["II_vesp"] = "\n\\item Vesperæ sollemnitatis" + (" ; benedictio Sanctissimi Sacramenti" if annonciation_date.weekday() > 1 else "") + "."
+    annonciation["II_vesp"] = "\n\\item Vesperæ sollemnitatis" + (" ; benedictio Sanctissimi Sacramenti" if annonciation_date.weekday() == 6 else "") + "."
     # Si vendredi de carême, reporter le jeûne au lendemain:
     if annonciation_date.weekday() == 4 and annonciation_date < paques:
         dict_tempo[annonciation_date]["symbols"] = dict_tempo[annonciation_date]["symbols"].replace(" µ", " ł")
