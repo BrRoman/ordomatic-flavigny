@@ -731,7 +731,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
             # Création du Dimanche per annum :
             new_dim = dict_tempo[new_dim_date] = {}
             new_dim["force"] = 80
-            new_dim["I_vesp"] = "\n\\item I Vesperæ dominicæ sequentis" + forme_extra_I_vesp + "."
+            new_dim["I_vesp"] = "\n\\item I Vesperæ " + ("festi" if new_dim_date.day == 2 and new_dim_date.month == 2 else "dominicæ") + " sequentis" + forme_extra_I_vesp + "."
             new_dim["hebdo_psalt"] = "- hebdomada " + hebdo_psalterii[((new_dim_date - datetime.date(2011, 11, 27)).days // 7) % 2] + " psalterii -"
             new_dim["num_day"] = "\\textbf{" + str(new_dim_date.day) + "} &"
             new_dim["header"] = " \\textbf{\\textsc{Dominica " + num_dim_per_annum + " per annum}} (" + forme_extra + ")" + " - de ea - \\textit{Vir.}"
