@@ -768,7 +768,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
                 if new_day_date.weekday() == 5: # Samedis BMV.
                     new_day["force"] = 30 # Entre mémoire mineure et majeure.
                     new_day["header"] = "  - \\textsc{De Beata} - \\textit{\\textbf{memoria maior}} - \\textit{Alb.}"
-                    new_day["body"] = f_mc_bmv(new_day_date)
+                    new_day["body"] = f_mc_bmv(new_day_date, paques_date)
         if i != 0: new_dim["lectiones_body"] = lectiones_body
                 
     # Dimanches per annum entre la Pentecôte et le Christ-Roi :
@@ -897,7 +897,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
                         new_day["body"] = "\n\\item ad Vigilias : lectio sabbato 3 (in supplemento 202).\n\\item in MC : Beatæ Mariæ Virginis, Matris et mediatricis gratiæ (CM 30) ; præfatio I de Beata Maria Virgine."
                     elif i == nb_dim_ap_pentec - 1:
                         new_day["body"] = mc_bmv[12][1] if new_day_date.month == 12 else mc_bmv[11][5]
-                    else: new_day["body"] = f_mc_bmv(new_day_date)
+                    else: new_day["body"] = f_mc_bmv(new_day_date, paques_date)
         if (i != 0) and (i != 1) and (i != nb_dim_ap_pentec - 1): new_dim["lectiones_body"] = lectiones_body
         
     # Nombre de jours de l'ordo de cette année:

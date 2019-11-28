@@ -4,6 +4,8 @@
 
 # coding: utf-8
 
+import datetime
+
 ##################################################
 # Dictionnaires (base de données) :
 ##################################################
@@ -154,7 +156,7 @@ def f_num_summer(date_dim):
 	num_dim = (date_day // 7) + 1 if (date_day % 7 != 0) else (date_day // 7)
 	return(f_roman_numbers(num_dim), f_transf_month_genitive(date_month))
 
-def f_mc_bmv(date_bmv): # Renvoie le "body" de la messe BMV :
+def f_mc_bmv(date_bmv, paques): # Renvoie le "body" de la messe BMV :
 	if date_bmv.day < 8: num_sam = 1
 	elif date_bmv.day < 15: num_sam = 2
 	elif date_bmv.day < 22: num_sam = 3
@@ -164,7 +166,10 @@ def f_mc_bmv(date_bmv): # Renvoie le "body" de la messe BMV :
 	if current_month == 2 and num_sam == 1:
 		return(mc_bmv[2][1]["before_pres"] if date_bmv.day == 1 else mc_bmv[2][1]["after_pres"])
 	else:
-		return(mc_bmv[current_month][num_sam])
-		
-
-
+		if date_bmv > paques + datetime.timedelta(days = 49) and date_bmv < paques + datetime.timedelta(days = 56):
+			if num_sam == 1:
+				return(mc_bmv[current_month][num_sam].replace("\\textit{in ML : Immaculati Cordis Beatæ Mariæ Virginis.}", "\\textit{in ML (Rub): Missa infra octavam} (Credo)."))
+			else:
+				return(mc_bmv[current_month][num_sam].replace("\n\\item in MC", "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo).\n\\item in MC"))
+		else:
+			return(mc_bmv[current_month][num_sam])
