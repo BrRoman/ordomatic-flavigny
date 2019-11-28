@@ -1052,7 +1052,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sainte_brigitte["force"] = 70
     sainte_brigitte["header"] = " - \\textbf{\\textsc{S. Birgittæ, Europæ Patronæ, Religiosæ}} - \\textbf{festum} - \\textit{Alb.} (olim die 8 octobris)."
     lectures_mc = "Ga \\textbf{2}, 19-20 / Mc \\textbf{3}, 31-35" if even_year else "Tb \\textbf{8}, 4b-7 / Jn \\textbf{15}, 1-8"
-    sainte_brigitte["body"] = "\n\\item in Officio: omnia de Communi nec virginis nec martyris præter sequentia.\n\\item oratio in supplemento 146*.\n\\item ad Vigilias: lectio II nocturni in supplemento 144*.\n\\item \\textit{in ML: præfatio de sanctis.}\n\\item in MC: Commune sanctorum et sanctarum (MR 966) ; lectiones propriæ: " + lectures_mc + " ; præfatio I de sanctis."
+    sainte_brigitte["body"] = "\n\\item in Officio: omnia de Communi nec virginis nec martyris præter sequentia.\n\\item oratio in supplemento 146*.\n\\item ad Vigilias: antiphonæ et psalmi hebdomadæ " + hebdo_psalterii_inv[((sainte_marie_madeleine_date - datetime.date(2011, 11, 27)).days // 7) % 2] + "; lectio II nocturni in supplemento 144*.\n\\item \\textit{in ML: præfatio de sanctis.}\n\\item in MC: Commune sanctorum et sanctarum (MR 966) ; lectiones propriæ: " + lectures_mc + " ; præfatio I de sanctis."
     
     saint_jacques_date = datetime.date(current_year, 7, 25)
     saint_jacques = dict_sancto[saint_jacques_date] = {}
