@@ -22,6 +22,10 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     def is_tp(date):
         if date > paques and date < paques + datetime.timedelta(days = 49): return True
         else: return False
+
+    def is_oct_pent(date):
+        if date > paques + datetime.timedelta(days = 49) and date < paques + datetime.timedelta(days = 56): return True
+        else: return False
     
     dict_sancto = {}
     
@@ -792,7 +796,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_justin = dict_sancto[saint_justin_date] = {}
     saint_justin["force"] = 40
     saint_justin["header"] = " - \\textsc{S. Iustini}, martyris - \\textbf{memoria maior} - \\textit{Rub.} (olim die 14 aprilis)."
-    saint_justin["body"] = "\n\\item in Officio: oratio in supplemento 130.\n\\item Ad Vigilias: lectio in supplemento 130.\n\\item ad Benedictus: ø \\textit{Beati eritis" + ("} cum \\textit{alleluia" if saint_justin_date < paques + datetime.timedelta(days = 49) else "") + "} (AM 1121).\n\\item in MC: præfatio de sanctis martyribus."
+    messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)." if is_oct_pent(saint_justin_date) else ""
+    saint_justin["body"] = "\n\\item in Officio: oratio in supplemento 130.\n\\item ad Vigilias: lectio in supplemento 130.\n\\item ad Benedictus: ø \\textit{Beati eritis" + ("} cum \\textit{alleluia" if saint_justin_date < paques + datetime.timedelta(days = 49) else "") + "} (AM 1121)." + messe_lue + "\n\\item in MC: præfatio de sanctis martyribus."
     
     saint_pothin_date = datetime.date(current_year, 6, 2)
     saint_pothin = dict_sancto[saint_pothin_date] = {}
@@ -805,7 +810,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     else:
         couleur = "\\textit{Vir.}"
         ant_bened = "\\item ad Benedictus: ø \\textit{Vestri capilli} (AM 650) ; oratio in supplemento 131."
-        messe_lue = "\\item \\textit{in ML (Rub.): Missa pro pluribus martyribus extra tempus paschale.}"
+        messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)." if is_oct_pent(saint_pothin_date) else "\\item \\textit{in ML (Rub.): Missa pro pluribus martyribus extra tempus paschale.}"
         messe_conv = "(MR 909)"
     saint_pothin["header"] = " - Ss. Pothini, episcopi et Sociorum, martyrum - \\textit{memoria minor} - " + couleur
     saint_pothin["body"] = ant_bened + messe_lue + "\\item in MC \\textit{(Rub.)}: collecta in MP ; Commune martyrum " + messe_conv + "."
@@ -821,7 +826,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         ant_magnif = "\n\\item ad Magnificat: ø \\textit{Sancti tui} (AM 632)."
     else:
         ant_bened = "\n\\item ad Benedictus: ø \\textit{Et ipsi} (AM 949)."
-        messe_lue = "\n\\item \\textit{in ML (Rub.): Missa pro pluribus martyribus extra tempus paschale.}"
+        messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)." if is_oct_pent(saint_charles_lwanga_date) else "\n\\item \\textit{in ML (Rub.): Missa pro pluribus martyribus extra tempus paschale.}"
         ant_magnif = "\n\\item ad Magnificat: ø \\textit{Isti sunt} in tono I d (AM 929)."
     saint_charles_lwanga["body"] = "\n\\item in Officio: oratio in supplemento 132.\n\\item ad Vigilias: lectio in supplemento 131." + ant_bened + messe_lue + "\\item in MC: præfatio de sanctis martyribus."
     saint_charles_lwanga["II_vesp"] = ant_magnif
@@ -831,7 +836,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_boniface["force"] = 40
     messe_conv = "(MR 921)" if saint_boniface_date < paques + datetime.timedelta(days = 49) else "(MR 915)"
     saint_boniface["header"] = " - \\textsc{S. Bonifatii}, episcopi et martyris - \\textbf{memoria maior} - \\textit{Rub.}"
-    saint_boniface["body"] = "\n\\item in MC: Commune martyrum " + messe_conv + " ; præfatio de sanctis martyribus."
+    messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)." if is_oct_pent(saint_boniface_date) else ""
+    saint_boniface["body"] = messe_lue + "\n\\item in MC: Commune martyrum " + messe_conv + " ; præfatio de sanctis martyribus."
     
     saint_ephrem_date = datetime.date(current_year, 6, 9)
     saint_ephrem = dict_sancto[saint_ephrem_date] = {}
