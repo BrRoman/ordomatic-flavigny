@@ -1,5 +1,5 @@
 # Contient des données sous forme de dictionnaires,
-# et des fonctions utilisées ça et là dans les scripts python d'OrdoMatic.
+# et des fonctions utilisées ça et là dans les scripts python d'Ordomatic.
 
 
 # coding: utf-8

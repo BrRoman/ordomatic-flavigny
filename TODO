@@ -2,7 +2,7 @@
 - Ordo 2007 : bug.
 - Anniv. professions etc.
 - Oraison Ste Famille.
-- MC Ste Vierge le samedi, attribution intelligente des numéros, pour éviter 4e = 5e.
+- Vigiles Ste Vierge le samedi, attribution intelligente des numéros, pour éviter 4e = 5e.
 - Ste Famille : Bizarre, il semble qu'il y ait eu à une époque (2015 au moins) des lectures entièrement différentes pour chaque année.
 - ordo_write.py : commentaire Rogations : Code + propre. Il y a 4 cas : vigile = juste "Ben", festum = rien, mémoires mineures = juste "Magnif", et de ea pas vigiles = les 2. TODO : le cas "les 2" n'a pas été testé (pas d'occurrence en 2014). TODO : 2015 problème : veille de l'Ascension = mémoire mineure.
 - Sancto : saint Grégoire de Nysse (10/01) : Tirer au clair cette histoire de report à après le Baptême.
@@ -16,13 +16,12 @@
 - Féries entre Octave de Noël et Baptême: if new_day_date.day == 7 and new_day_date.weekday() != 6: # TODO: Dans quels cas omet-on les "generalities", et dans quels cas les modifie-t-on ?
 - Féries per annum : new_day["generalities"] = ("\n\\newpage\n\\ApplyParBox{1cm}{\\ApplyGenerTitleHuge{Tempus Per annum}}\n\\ApplyGenerSubTitle{in Ofﬁcio :}\n\\ApplyGenerList{\n\\item in feriis : hebdomada I per annum vel I post Epiphaniam.}\n\\ApplyGenerSubTitle{ad mensam :}\n\\ApplyGenerList{\n\\item benedictio de tempore per annum.}" + lectiones_body + "\n\\ApplyGenerList{\n\\item præfatio communis I, nisi aliter notetur.}\n\\medskip") if i == 0 and j == 0 else "" # TODO : Body = Vigiles… + "in MC : lectiones feriales" à la 1ère férie libre. Pourquoi pas dans le generalities ?
 - Texte spécial pour le 3e samedi de juin, s'il tombe avant la Trinité… :) TODO : Ce cas (rarissime) n'a pas encore été testé. functions/tempo.py-new_day["body"] = "\n\\item ad Vigilias : lectio sabbato 3 (in supplemento 202).\n\\item in MC : Beatæ Mariæ Virginis, Matris et mediatricis gratiæ (CM 30) ; præfatio I de Beata Maria Virgine."
-- Messes Ste Vierge samedi (dictionnaire dans various.py) : ajouter "titulo" là où il n'y en a pas (le nominatif après un génitif fait bizarre).
+- Messes Ste Vierge samedi (dictionnaire dans various.py) : supprimer "titulo" partout.
 - Remplacer partout les tabulations par 4 espaces.
 - Semailles = 1ère férie libre avant l'Ascension (descendre du lundi au mercredi). Récoltes = semaine avant 3e dim. de Septembre (4 temps de sept.) : mercredi ou vendredi, sinon lundi, mardi ou jeudi.
 - Fêtes mobiles de l'année suivante à la fin de l'ordo.
 - 1er samedi du mois de janvier : in ML avant in MC (7/1/2017 par ex.).
 - Erreur référence lecture 23 décembre Malachie (?).
-- Lundi de Pentecôte : supprimer "Benedictio de Pentecoste".
-- PBJ: Lc 22 au lieu de Mt 19 pour saint Benoît ?
-- 23 juillet : sainte Brigitte, changer psaumes de vigiles si même semaine que ste Marie-Madeleine.
-- 15 octobre: hymne propre à Vigiles: le signaler ? (question posée au PBJ le 15/10/19)
+- MC samedi : alterner préfaces I et II.
+- Lundi de Pentecôte: au-dessus des mémoires (saint Justin) ?
+- Octave de Pentecôte : calculer et modifier tous les saints concernés (pour l'instant seuls sont faits saint Justin, saint Pothin, saint Charles Lwanga et saint Boniface), ainsi que toutes les mc_bmv (dans various).

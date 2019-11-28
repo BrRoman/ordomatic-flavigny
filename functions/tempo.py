@@ -887,7 +887,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
                     elif j != 5: # Autres féries de l'octave de Pentecôte, sauf samedi :
                         new_day["force"] = 30 # Entre mémoire mineure et majeure.
                         new_day["body"] = ant_octave_pentec[j]["body"] 
-                        new_day["II_vesp"] = ant_octave_pentec[j]["vesp"] 
+                        new_day["II_vesp"] = ant_octave_pentec[j]["vesp"]
                 if new_day_date.day < 8 and new_day_date.weekday() == 4: # 1er vendredi du mois.
                     new_day["body"] = "\n\\item \\textit{in ML (Alb.) : Missa de sacratissimo Corde Iesu \\emph{(Gloria)}.}" + "\n\\item MC1V" # La balise MC1V ("Messe conventuelle 1er vendredi") sera remplacée tout à la fin (voir ordo_write.py) par l'une des 2 MC possibles.
                 if new_day_date.weekday() == 5: # Samedis BMV.
