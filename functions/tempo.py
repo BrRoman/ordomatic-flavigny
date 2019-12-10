@@ -2,7 +2,7 @@
 
 import datetime
 from functions.lectiones import *
-from functions.various import *
+from functions.various import hebdo_psalterii, ad_omnes_horas, ant_bened_adv_3, ant_bened_adv_4, ant_bened_temps_epiph, ant_magnif_temps_epiph, ant_vepres_vendr_tp, f_num_prefaces, f_mc_bmv, f_num_summer, ant_octave_pentec, mc_bmv,f_symbols, f_transf_month_genitive, f_roman_numbers, f_transf_weekday
 
 def dict_tempo_create(current_year, even_year, year_letter):
     even_year_num = 0 if even_year else 1

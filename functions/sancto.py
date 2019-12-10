@@ -2,7 +2,7 @@
     
 import datetime
 from functions.lectiones import *
-from functions.various import *
+from functions.various import hebdo_psalterii_inv, f_roman_numbers, f_num_summer
     
 def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques, nb_dim_ap_pentec):
     pentecote = paques + datetime.timedelta(days = 49) # Servira pour les solennité qui tombent un dimanche après la Pentecôte.
@@ -17,10 +17,6 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     
     def is_near_paques(date):
         if date >= paques - datetime.timedelta(days = 7) and date <= paques + datetime.timedelta(days = 7): return True
-        else: return False
-    
-    def is_tp(date):
-        if date > paques and date < paques + datetime.timedelta(days = 49): return True
         else: return False
 
     def is_oct_pent(date):
