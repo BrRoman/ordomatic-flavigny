@@ -14,7 +14,7 @@ lectiones["hebdo_1_adv"][1] = "Is \\textbf{11}, 1-10 / Lc \\textbf{10}, 21-24"
 lectiones["hebdo_1_adv"][2] = "Is \\textbf{25}, 6-10a / Mt \\textbf{15}, 29-37"
 lectiones["hebdo_1_adv"][3] = "Is \\textbf{26}, 1-6 / Mt \\textbf{7}, 21.24-27"
 lectiones["hebdo_1_adv"][4] = "Is \\textbf{29}, 17-24 / Mt \\textbf{9}, 27-31"
-lectiones["hebdo_1_adv"][5] = "Is \\textbf{30}, 19-21.23-26 / Mt \\textbf{9}, 35–10, 1.6-8"
+lectiones["hebdo_1_adv"][5] = "Is \\textbf{30}, 19-21.23-26 / Mt \\textbf{9}, 35–\\textbf{10}, 1.6-8"
 
 lectiones["hebdo_2_adv"] = {}
 lectiones["hebdo_2_adv"]["header"] = "Hebdomada II Adventus: lectiones de tempore"
