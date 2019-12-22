@@ -3,7 +3,7 @@
 import os
 import datetime
 import re
-from functions.various import hebdo_psalterii_inv, ult_ant_dict, special_months, f_transf_month
+from functions.various import hebdo_psalterii_inv, ult_ant_dict, special_months, f_transf_month, first_vendr_mc
 
 
 def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, ordo_start, nb_days, paques, christ_roi):
