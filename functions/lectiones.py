@@ -44,7 +44,7 @@ lectiones["hebdo_3_adv"][4] = "Is \\textbf{56}, 1-3a 6-8 / Io \\textbf{5}, 33-36
 lectiones["hebdo_4_adv"] = {}
 lectiones["hebdo_4_adv"]["header"] = "Hebdomada IV Adventus: lectiones de tempore"
 lectiones["hebdo_4_adv"]["dim"] = {}
-lectiones["hebdo_4_adv"]["dim"]["A"] = "Is \\textbf{7}, 10-14 / Rom \\textbf{1}, 1-7 / Mt \\textbf{1}, 18-24"
+lectiones["hebdo_4_adv"]["dim"]["A"] = "Is \\textbf{7}, 10-16 / Rom \\textbf{1}, 1-7 / Mt \\textbf{1}, 18-24"
 lectiones["hebdo_4_adv"]["dim"]["B"] = "2 Sam \\textbf{7}, 1-5.8b-12.14a 16 / Rom \\textbf{16}, 25-27 / Lc \\textbf{1}, 26-38"
 lectiones["hebdo_4_adv"]["dim"]["C"] = "Mic \\textbf{5}, 2-5a / Hebr \\textbf{10}, 5-10 / Lc \\textbf{1}, 39-45"
 
