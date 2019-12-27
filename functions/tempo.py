@@ -278,7 +278,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     dim_2_ap_noel["symbols"] = "".join(f_symbols(dim_2_ap_noel_date))
     dim_2_ap_noel["header"] = " \\textbf{\\textsc{Dominica II post Nativitatem}} - de ea - \\textit{Alb}."
     messe_basse = "\\item \\textit{in ML: Dominica infra octavam Nativitatis vel Missa Sanctissimi Nominis Iesu}." if dim_2_ap_noel_date.day == 3 else "\\item \\textit{in ML: Dominica infra octavam Nativitatis.}"
-    lectures_mc = "Sir \\textbf{24}, 1-4.12-16 / Ep \\textbf{1}, 3-6.15-18 / Io \\textbf{1}, 1-18"
+    lectures_mc = "Si \\textbf{24}, 1-2.8-12 / Ep \\textbf{1}, 3-6.15-18 / Io \\textbf{1}, 1-18"
     lect_propres = " Lectiones propriæ: " + lectures_mc + ";" if dim_2_ap_noel_date.day == 5 else ""
     dim_2_ap_noel["body"] = "\\item ad Vigilias pro breviario vetere: in supplemento 24.\n\\item ad Laudes et Vesperas: antiphonæ et psalmi de psalterio, reliqua ut in dominica infra octavam Nativitatis (AM 266).\n\\item ad Horas minores: antiphonæ de Circumcisione, reliqua ut in dominica infra octavam Nativitatis (AM 266)." + messe_basse + "\\item in MC:" + lect_propres + " præfatio III de Nativitate ."
     if dim_2_ap_noel_date.day != 1 and dim_2_ap_noel_date.day != 5: # Car si 1 : on les met dans les généralités "Tempus Nativitatis I", et si 5 : inutile (lectures dans body + pas de féries à la suite).
