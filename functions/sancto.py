@@ -1019,7 +1019,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         couleur = "\\textit{Vir.}"
         messe_lue = "\\item \\textit{in ML: Alb.}"
         messe_conv = " \\textit{(Alb.)}"
-    saint_ephrem["header"] = " - S. Epræm, diaconi et Ecclesiæ doctoris - \\textit{memoria minor} - " + \
+    saint_ephrem["header"] = " - S. Ephræm, diaconi et Ecclesiæ doctoris - \\textit{memoria minor} - " + \
         couleur + " (olim die 18 iunii)."
     saint_ephrem["body"] = "\n\\item ad Benedictus: ø \\textit{Similabo eum} (AM 669)." + \
         messe_lue + "\\item in MC" + messe_conv + \
@@ -1486,7 +1486,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     assomption[
         "body"] = "\n\\item ad Vigilias: in breviario 62 primum Officium. In nocturno I: lectiones 1 et 2 cum ¶ lectionis 4 ; in nocturno II: lectiones 5 et 6 cum ¶ lectionis 8 ; in nocturno III: lectiones 9, 10, 11 et 12.\n\\item in MC: lectiones propriæ: Apoc \\textbf{11}, 19a ; \\textbf{12}, 1-6a.10ab / 1 Co \\textbf{15}, 20-27a / Lc \\textbf{1}, 39-56 ; præfatio de Assumptione."
     assomption[
-        "II_vesp"] = "\n\\item post Vesperas sollemnitatis incipiuntur Litaniæ Beatæ Mariæ Virginis pro sollemni supplicatione iuxta votum Regis Ludovici XIII et fit processio ; benedictio Sanctissimi Sacramenti.\n\\item ad Completorium: ø \\textit{Ave Regina cælorum} (AM 175)."
+        "II_vesp"] = "\n\\item post Vesperas sollemnitatis incipiuntur Litaniæ Beatæ Mariæ Virginis pro sollemni supplicatione iuxta votum Regis Ludovici \\textsc{xiii} et fit processio ; benedictio Sanctissimi Sacramenti.\n\\item ad Completorium: ø \\textit{Ave Regina cælorum} (AM 175)."
 
     saint_bernard_tolomei_date = datetime.date(current_year, 8, 19)
     saint_bernard_tolomei = dict_sancto[saint_bernard_tolomei_date] = {}
