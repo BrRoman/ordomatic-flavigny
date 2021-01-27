@@ -16,11 +16,20 @@
 - Féries entre Octave de Noël et Baptême: if new_day_date.day == 7 and new_day_date.weekday() != 6: # TODO: Dans quels cas omet-on les "generalities", et dans quels cas les modifie-t-on ?
 - Féries per annum : new_day["generalities"] = ("\n\\newpage\n\\ApplyParBox{1cm}{\\ApplyGenerTitleHuge{Tempus Per annum}}\n\\ApplyGenerSubTitle{in Ofﬁcio :}\n\\ApplyGenerList{\n\\item in feriis : hebdomada I per annum vel I post Epiphaniam.}\n\\ApplyGenerSubTitle{ad mensam :}\n\\ApplyGenerList{\n\\item benedictio de tempore per annum.}" + lectiones_body + "\n\\ApplyGenerList{\n\\item præfatio communis I, nisi aliter notetur.}\n\\medskip") if i == 0 and j == 0 else "" # TODO : Body = Vigiles… + "in MC : lectiones feriales" à la 1ère férie libre. Pourquoi pas dans le generalities ?
 - Texte spécial pour le 3e samedi de juin, s'il tombe avant la Trinité… :) TODO : Ce cas (rarissime) n'a pas encore été testé. functions/tempo.py-new_day["body"] = "\n\\item ad Vigilias : lectio sabbato 3 (in supplemento 202).\n\\item in MC : Beatæ Mariæ Virginis, Matris et mediatricis gratiæ (CM 30) ; præfatio I de Beata Maria Virgine."
-- Messes Ste Vierge samedi (dictionnaire dans various.py) : supprimer "titulo" partout.
 - Remplacer partout les tabulations par 4 espaces.
 - Semailles = 1ère férie libre avant l'Ascension (descendre du lundi au mercredi). Récoltes = semaine avant 3e dim. de Septembre (4 temps de sept.) : mercredi ou vendredi, sinon lundi, mardi ou jeudi.
 - Fêtes mobiles de l'année suivante à la fin de l'ordo.
 - 1er samedi du mois de janvier : in ML avant in MC (7/1/2017 par ex.).
-- Erreur référence lecture 23 décembre Malachie (?).
-- MC samedi : alterner préfaces I et II.
-- Octave de Pentecôte : calculer et modifier tous les saints concernés (pour l'instant seuls sont faits saint Justin, saint Pothin, saint Charles Lwanga et saint Boniface), ainsi que toutes les mc_bmv (dans various).
+- Octave de Pentecôte : calculer et modifier toutes les mc_bmv (dans various).
+- Saint Boniface : 3 cas : TP, entre Pent. et Trin., après Trinité. 2e cas, ajouter cette mention pour les Vigiles : "Ad Vigilias: post lectionem dicitur Responsorium *Iste sanctus*, e Communi Martyris extra Tempus Paschale post primam lectionem I Nocturni."
+- Automatiser le report d'un jour de jeûne au lendemain si festum.
+- Page de garde: variante "évidée" de la même police.
+- 9 janvier 2021: ajouter «- in ML: Missa de sancta Maria in sabbato.
+- Pour les fêtes, il me semblerait plus léger de ne mettre en petites capitales que le nom du saint (e.g. S. Bernardi), en laissant son titre en romain (e.g. abbatis et Ecclesiæ doctoris): comme pour les mémoires majeures, mais en gras.
+- Alterner 1 année sur 2 saint Clément et saint Colomban :
+    \ApplyHeader{\textbf{23} & Feria III - \textsc{S. Columbani}, abbatis - \textbf{memoria maior} - \textit{Alb.}}
+    \ApplyBody{
+        \item in Officio~: oratio in supplemento 193*.
+        \item ad Vigilias~: lectio in supplemento 193*.
+        \item \textit{in ML~: Missa pro abbate.}
+        \item in MC~: collecta in MP~; Commune sanctorum et sanctarum (MR 958)~; præfatio de sanctis virginibus et religiosis.}

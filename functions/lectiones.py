@@ -266,7 +266,7 @@ lectiones["hebdo_7_paques"][4] = "Act \\textbf{25}, 13-21 / Io \\textbf{21}, 15-
 lectiones["hebdo_7_paques"][5] = "Act \\textbf{28}, 16-20.30-31 / Io \\textbf{21}, 20-25"
 
 lectiones["hebdo_1_per_annum"] = {}
-lectiones["hebdo_1_per_annum"]["header"] = "Hebdomada I per Annum: lectiones de tempore"
+lectiones["hebdo_1_per_annum"]["header"] = "Hebdomada I per annum: lectiones de tempore"
 lectiones["hebdo_1_per_annum"][0] = {0: "1 Sam \\textbf{1}, 1-8", 1: "Hebr \\textbf{1}, 1-6", 2: "Mc \\textbf{1}, 14-20"}
 lectiones["hebdo_1_per_annum"][1] = {0: "1 Sam \\textbf{1}, 9-20", 1: "Hebr \\textbf{2}, 5-12", 2: "Mc \\textbf{1}, 21-28"}
 lectiones["hebdo_1_per_annum"][2] = {0: "1 Sam \\textbf{3}, 1-10.19-20", 1: "Hebr \\textbf{2}, 14-18", 2: "Mc \\textbf{1}, 29-39"}
@@ -275,7 +275,7 @@ lectiones["hebdo_1_per_annum"][4] = {0: "1 Sam \\textbf{8}, 4-7.10-22a", 1: "Heb
 lectiones["hebdo_1_per_annum"][5] = {0: "1 Sam \\textbf{9}, 1-4.17-19", 1: "Hebr \\textbf{4}, 12-16", 2: "Mc \\textbf{2}, 13-17"}
 
 lectiones["hebdo_2_per_annum"] = {}
-lectiones["hebdo_2_per_annum"]["header"] = "Hebdomada II per Annum: lectiones de tempore"
+lectiones["hebdo_2_per_annum"]["header"] = "Hebdomada II per annum: lectiones de tempore"
 lectiones["hebdo_2_per_annum"]["dim"] = {}
 lectiones["hebdo_2_per_annum"]["dim"]["A"] = "Is \\textbf{49}, 3.5-6 / 1 Co \\textbf{1}, 1-3 / Io \\textbf{1}, 29-34"
 lectiones["hebdo_2_per_annum"]["dim"]["B"] = "1 Sam \\textbf{3}, 3b-10.19 / 1 Co \\textbf{6}, 13c-15a 17-20 / Io \\textbf{1}, 35-42"
@@ -288,7 +288,7 @@ lectiones["hebdo_2_per_annum"][4] = {0: "1 Sam \\textbf{24}, 3-21", 1: "Hebr \\t
 lectiones["hebdo_2_per_annum"][5] = {0: "2 Sam \\textbf{1}, 1-4.11-12.19.23-27", 1: "Hebr \\textbf{9}, 2-3.11-14", 2: "Mc \\textbf{3}, 20-21"}
 
 lectiones["hebdo_3_per_annum"] = {}
-lectiones["hebdo_3_per_annum"]["header"] = "Hebdomada III per Annum: lectiones de tempore"
+lectiones["hebdo_3_per_annum"]["header"] = "Hebdomada III per annum: lectiones de tempore"
 lectiones["hebdo_3_per_annum"]["dim"] = {}
 lectiones["hebdo_3_per_annum"]["dim"]["A"] = "Is \\textbf{9}, 1-4 / 1 Co \\textbf{1}, 10-13.17 / Mt \\textbf{4}, 12-23"
 lectiones["hebdo_3_per_annum"]["dim"]["B"] = "Ion \\textbf{3}, 1-5.10 / 1 Co \\textbf{7}, 29-31 / Mc \\textbf{1}, 14-20"
@@ -301,7 +301,7 @@ lectiones["hebdo_3_per_annum"][4] = {0: "2 Sam \\textbf{11}, 1-4a 5-10a.13-17", 
 lectiones["hebdo_3_per_annum"][5] = {0: "2 Sam \\textbf{12}, 1-7a 10-17", 1: "Hebr \\textbf{11}, 1-2.8-19", 2: "Mc \\textbf{4}, 35-40"}
 
 lectiones["hebdo_4_per_annum"] = {}
-lectiones["hebdo_4_per_annum"]["header"] = "Hebdomada IV per Annum: lectiones de tempore"
+lectiones["hebdo_4_per_annum"]["header"] = "Hebdomada IV per annum: lectiones de tempore"
 lectiones["hebdo_4_per_annum"]["dim"] = {}
 lectiones["hebdo_4_per_annum"]["dim"]["A"] = "Soph \\textbf{2}, 3 ; \\textbf{3}, 12-13 / 1 Co \\textbf{1}, 26-31 / Mt \\textbf{5}, 1-12a"
 lectiones["hebdo_4_per_annum"]["dim"]["B"] = "Deut \\textbf{18}, 15-20 / 1 Co \\textbf{7}, 32-35 / Mc \\textbf{1}, 21-28"
@@ -314,7 +314,7 @@ lectiones["hebdo_4_per_annum"][4] = {0: "Sir \\textbf{47}, 2-13", 1: "Hebr \\tex
 lectiones["hebdo_4_per_annum"][5] = {0: "1 Reg \\textbf{3}, 4-13", 1: "Hebr \\textbf{13}, 15-17.20-21", 2: "Mc \\textbf{6}, 30-34"}
 
 lectiones["hebdo_5_per_annum"] = {}
-lectiones["hebdo_5_per_annum"]["header"] = "Hebdomada V per Annum: lectiones de tempore"
+lectiones["hebdo_5_per_annum"]["header"] = "Hebdomada V per annum: lectiones de tempore"
 lectiones["hebdo_5_per_annum"]["dim"] = {}
 lectiones["hebdo_5_per_annum"]["dim"]["A"] = "Is \\textbf{58}, 7-10 / 1 Co \\textbf{2}, 1-5 / Mt \\textbf{5}, 13-16"
 lectiones["hebdo_5_per_annum"]["dim"]["B"] = "Iob \\textbf{7}, 1-4.6-7 / 1 Co \\textbf{9}, 16-19.22-23 / Mc \\textbf{1}, 29-39"
@@ -327,7 +327,7 @@ lectiones["hebdo_5_per_annum"][4] = {0: "1 Reg \\textbf{11}, 29-32", 1: "Gn \\te
 lectiones["hebdo_5_per_annum"][5] = {0: "1 Reg \\textbf{12}, 26-32", 1: "Gn \\textbf{3}, 9-24", 2: "Mc \\textbf{8}, 1-10"}
 
 lectiones["hebdo_6_per_annum"] = {}
-lectiones["hebdo_6_per_annum"]["header"] = "Hebdomada VI per Annum: lectiones de tempore"
+lectiones["hebdo_6_per_annum"]["header"] = "Hebdomada VI per annum: lectiones de tempore"
 lectiones["hebdo_6_per_annum"]["dim"] = {}
 lectiones["hebdo_6_per_annum"]["dim"]["A"] = "Sir \\textbf{15}, 16-21 / 1 Co \\textbf{2}, 6-10 / Mt \\textbf{5}, 17-37"
 lectiones["hebdo_6_per_annum"]["dim"]["B"] = "Lev \\textbf{13}, 1-2.44-46 / 1 Co \\textbf{10}, 31–11, 1 / Mc \\textbf{1}, 40-45"
@@ -340,7 +340,7 @@ lectiones["hebdo_6_per_annum"][4] = {0: "Iac \\textbf{2}, 14-24.26", 1: "Gn \\te
 lectiones["hebdo_6_per_annum"][5] = {0: "Iac \\textbf{3}, 1-10", 1: "Hebr \\textbf{11}, 1-7", 2: "Mc \\textbf{9}, 1-12"}
 
 lectiones["hebdo_7_per_annum"] = {}
-lectiones["hebdo_7_per_annum"]["header"] = "Hebdomada VII per Annum: lectiones de tempore"
+lectiones["hebdo_7_per_annum"]["header"] = "Hebdomada VII per annum: lectiones de tempore"
 lectiones["hebdo_7_per_annum"]["dim"] = {}
 lectiones["hebdo_7_per_annum"]["dim"]["A"] = "Lev \\textbf{19}, 1-2.17-18 / 1 Co \\textbf{3}, 16-23 / Mt \\textbf{5}, 38-48"
 lectiones["hebdo_7_per_annum"]["dim"]["B"] = "Is \\textbf{43}, 18-19.21-22.24b-25 / 2 Co \\textbf{1}, 18-22 / Mc \\textbf{2}, 1-12"
@@ -353,7 +353,7 @@ lectiones["hebdo_7_per_annum"][4] = {0: "Iac \\textbf{5}, 9-12", 1: "Sir \\textb
 lectiones["hebdo_7_per_annum"][5] = {0: "Iac \\textbf{5}, 13-20", 1: "Sir \\textbf{17}, 1-13", 2: "Mc \\textbf{10}, 13-16"}
 
 lectiones["hebdo_8_per_annum"] = {}
-lectiones["hebdo_8_per_annum"]["header"] = "Hebdomada VIII per Annum: lectiones de tempore"
+lectiones["hebdo_8_per_annum"]["header"] = "Hebdomada VIII per annum: lectiones de tempore"
 lectiones["hebdo_8_per_annum"]["dim"] = {}
 lectiones["hebdo_8_per_annum"]["dim"]["A"] = "Is \\textbf{49}, 14-15 / 1 Co \\textbf{4}, 1-5 / Mt \\textbf{6}, 24-34"
 lectiones["hebdo_8_per_annum"]["dim"]["B"] = "Os \\textbf{2}, 14b.15b 19-20 / 2 Co \\textbf{3}, 1b-6 / Mc \\textbf{2}, 18-22"
@@ -366,7 +366,7 @@ lectiones["hebdo_8_per_annum"][4] = {0: "1 Petr \\textbf{4}, 7-13", 1: "Sir \\te
 lectiones["hebdo_8_per_annum"][5] = {0: "Iud \\textbf{1}, 20b-25", 1: "Sir \\textbf{51}, 17-27", 2: "Mc \\textbf{11}, 27-33"}
 
 lectiones["hebdo_9_per_annum"] = {}
-lectiones["hebdo_9_per_annum"]["header"] = "Hebdomada IX per Annum: lectiones de tempore"
+lectiones["hebdo_9_per_annum"]["header"] = "Hebdomada IX per annum: lectiones de tempore"
 lectiones["hebdo_9_per_annum"]["dim"] = {}
 lectiones["hebdo_9_per_annum"]["dim"]["A"] = "Deut \\textbf{11}, 18.26-28 / Rom \\textbf{3}, 21-25a 28 / Mt \\textbf{7}, 21-27"
 lectiones["hebdo_9_per_annum"]["dim"]["B"] = "Deut \\textbf{5}, 12-15 / 2 Co \\textbf{4}, 6-11 / Mc \\textbf{2}, 23–3, 6"
@@ -379,7 +379,7 @@ lectiones["hebdo_9_per_annum"][4] = {0: "2 Tim \\textbf{3}, 10-17", 1: "Tob \\te
 lectiones["hebdo_9_per_annum"][5] = {0: "2 Tim \\textbf{4}, 1-8", 1: "Tob \\textbf{12}, 1.5-15.20", 2: "Mc \\textbf{12}, 38-44"}
 
 lectiones["hebdo_10_per_annum"] = {}
-lectiones["hebdo_10_per_annum"]["header"] = "Hebdomada X per Annum: lectiones de tempore"
+lectiones["hebdo_10_per_annum"]["header"] = "Hebdomada X per annum: lectiones de tempore"
 lectiones["hebdo_10_per_annum"]["dim"] = {}
 lectiones["hebdo_10_per_annum"]["dim"]["A"] = "Os \\textbf{6}, 3b-6 / Rom \\textbf{4}, 18-25 / Mt \\textbf{9}, 9-13"
 lectiones["hebdo_10_per_annum"]["dim"]["B"] = "Gn \\textbf{3}, 9-15 / 2 Co \\textbf{4}, 13–5, 1 / Mc \\textbf{3}, 20-35"
@@ -392,7 +392,7 @@ lectiones["hebdo_10_per_annum"][4] = {0: "1 Reg \\textbf{19}, 9a 11-16", 1: "2 C
 lectiones["hebdo_10_per_annum"][5] = {0: "1 Reg \\textbf{19}, 19-21", 1: "2 Co \\textbf{5}, 14-21", 2: "Mt \\textbf{5}, 33-37"}
 
 lectiones["hebdo_11_per_annum"] = {}
-lectiones["hebdo_11_per_annum"]["header"] = "Hebdomada XI per Annum: lectiones de tempore"
+lectiones["hebdo_11_per_annum"]["header"] = "Hebdomada XI per annum: lectiones de tempore"
 lectiones["hebdo_11_per_annum"]["dim"] = {}
 lectiones["hebdo_11_per_annum"]["dim"]["A"] = "Ex \\textbf{19}, 2-6a / Rom \\textbf{5}, 6-11 / Mt \\textbf{9}, 36–10, 8"
 lectiones["hebdo_11_per_annum"]["dim"]["B"] = "Ez \\textbf{17}, 22-24 / 2 Co \\textbf{5}, 6-10 / Mc \\textbf{4}, 26-34"
@@ -405,7 +405,7 @@ lectiones["hebdo_11_per_annum"][4] = {0: "2 Reg \\textbf{11}, 1-4.9-18.20", 1: "
 lectiones["hebdo_11_per_annum"][5] = {0: "2 Chr \\textbf{24}, 17-25", 1: "2 Co \\textbf{12}, 1-10", 2: "Mt \\textbf{6}, 24-34"}
 
 lectiones["hebdo_12_per_annum"] = {}
-lectiones["hebdo_12_per_annum"]["header"] = "Hebdomada XII per Annum: lectiones de tempore"
+lectiones["hebdo_12_per_annum"]["header"] = "Hebdomada XII per annum: lectiones de tempore"
 lectiones["hebdo_12_per_annum"]["dim"] = {}
 lectiones["hebdo_12_per_annum"]["dim"]["A"] = "Ier \\textbf{20}, 10-13 / Rom \\textbf{5}, 12-15 / Mt \\textbf{10}, 26-33 "
 lectiones["hebdo_12_per_annum"]["dim"]["B"] = "Iob \\textbf{38}, 1.8-11 / 2 Co \\textbf{5}, 14-17 / Mc \\textbf{4}, 35-40"
@@ -418,7 +418,7 @@ lectiones["hebdo_12_per_annum"][4] = {0: "2 Reg \\textbf{25}, 1-12", 1: "Gn \\te
 lectiones["hebdo_12_per_annum"][5] = {0: "Lam \\textbf{2}, 2.10-14.18-19", 1: "Gn \\textbf{18}, 1-15", 2: "Mt \\textbf{8}, 5-17"}
 
 lectiones["hebdo_13_per_annum"] = {}
-lectiones["hebdo_13_per_annum"]["header"] = "Hebdomada XIII per Annum: lectiones de tempore"
+lectiones["hebdo_13_per_annum"]["header"] = "Hebdomada XIII per annum: lectiones de tempore"
 lectiones["hebdo_13_per_annum"]["dim"] = {}
 lectiones["hebdo_13_per_annum"]["dim"]["A"] = "2 Reg \\textbf{4}, 8-11.14-16a / Rom \\textbf{6}, 3-4.8-11 / Mt \\textbf{10}, 37-42"
 lectiones["hebdo_13_per_annum"]["dim"]["B"] = "Sap \\textbf{1}, 13-15 ; \\textbf{2}, 23-25 / 2 Co \\textbf{8}, 7.9.13-15 / Mc \\textbf{5}, 21-43"
@@ -431,7 +431,7 @@ lectiones["hebdo_13_per_annum"][4] = {0: "Am \\textbf{8}, 4-6.9-12", 1: "Gn \\te
 lectiones["hebdo_13_per_annum"][5] = {0: "Am \\textbf{9}, 11-15", 1: "Gn \\textbf{27}, 1-5.15-29", 2: "Mt \\textbf{9}, 14-17"}
 
 lectiones["hebdo_14_per_annum"] = {}
-lectiones["hebdo_14_per_annum"]["header"] = "Hebdomada XIV per Annum: lectiones de tempore"
+lectiones["hebdo_14_per_annum"]["header"] = "Hebdomada XIV per annum: lectiones de tempore"
 lectiones["hebdo_14_per_annum"]["dim"] = {}
 lectiones["hebdo_14_per_annum"]["dim"]["A"] = "Zac \\textbf{9}, 9-10 / Rom \\textbf{8}, 9.11-13 / Mt \\textbf{11}, 25-30"
 lectiones["hebdo_14_per_annum"]["dim"]["B"] = "Ez \\textbf{2}, 2-5 / 2 Co \\textbf{12}, 7-10 / Mc \\textbf{6}, 1-6"
@@ -444,7 +444,7 @@ lectiones["hebdo_14_per_annum"][4] = {0: "Os \\textbf{14}, 2-10", 1: "Gn \\textb
 lectiones["hebdo_14_per_annum"][5] = {0: "Is \\textbf{6}, 1-8", 1: "Gn \\textbf{49}, 29-32 ; \\textbf{50}, 15-24", 2: "Mt \\textbf{10}, 24-33"}
 
 lectiones["hebdo_15_per_annum"] = {}
-lectiones["hebdo_15_per_annum"]["header"] = "Hebdomada XV per Annum: lectiones de tempore"
+lectiones["hebdo_15_per_annum"]["header"] = "Hebdomada XV per annum: lectiones de tempore"
 lectiones["hebdo_15_per_annum"]["dim"] = {}
 lectiones["hebdo_15_per_annum"]["dim"]["A"] = "Is \\textbf{55}, 10-11 / Rom \\textbf{8}, 18-23 / Mt \\textbf{13}, 1-23"
 lectiones["hebdo_15_per_annum"]["dim"]["B"] = "Am \\textbf{7}, 12-15 / Ep \\textbf{1}, 3-14 / Mc \\textbf{6}, 7-13"
@@ -457,7 +457,7 @@ lectiones["hebdo_15_per_annum"][4] = {0: "Is \\textbf{38}, 1-6.21-22.7-8", 1: "E
 lectiones["hebdo_15_per_annum"][5] = {0: "Mic \\textbf{2}, 1-5", 1: "Ex \\textbf{12}, 37-42", 2: "Mt \\textbf{12}, 14-21"}
 
 lectiones["hebdo_16_per_annum"] = {}
-lectiones["hebdo_16_per_annum"]["header"] = "Hebdomada XVI per Annum: lectiones de tempore"
+lectiones["hebdo_16_per_annum"]["header"] = "Hebdomada XVI per annum: lectiones de tempore"
 lectiones["hebdo_16_per_annum"]["dim"] = {}
 lectiones["hebdo_16_per_annum"]["dim"]["A"] = "Sap \\textbf{12}, 13.16-19 / Rom \\textbf{8}, 26-27 / Mt \\textbf{13}, 24-43"
 lectiones["hebdo_16_per_annum"]["dim"]["B"] = "Ier \\textbf{23}, 1-6 / Ep \\textbf{2}, 13-18 / Mc \\textbf{6}, 30-34"
@@ -470,7 +470,7 @@ lectiones["hebdo_16_per_annum"][4] = {0: "Ier \\textbf{3}, 14-17", 1: "Ex \\text
 lectiones["hebdo_16_per_annum"][5] = {0: "Ier \\textbf{7}, 1-11", 1: "Ex \\textbf{24}, 3-8", 2: "Mt \\textbf{13}, 24-30"}
 
 lectiones["hebdo_17_per_annum"] = {}
-lectiones["hebdo_17_per_annum"]["header"] = "Hebdomada XVII per Annum: lectiones de tempore"
+lectiones["hebdo_17_per_annum"]["header"] = "Hebdomada XVII per annum: lectiones de tempore"
 lectiones["hebdo_17_per_annum"]["dim"] = {}
 lectiones["hebdo_17_per_annum"]["dim"]["A"] = "1 Reg \\textbf{3}, 5.7-12 / Rom \\textbf{8}, 28-30 / Mt \\textbf{13}, 44-52"
 lectiones["hebdo_17_per_annum"]["dim"]["B"] = "2 Reg \\textbf{4}, 42-44 / Ep \\textbf{4}, 1-6 / Io \\textbf{6}, 1-15"
@@ -483,7 +483,7 @@ lectiones["hebdo_17_per_annum"][4] = {0: "Ier \\textbf{26}, 1-9", 1: "Lev \\text
 lectiones["hebdo_17_per_annum"][5] = {0: "Ier \\textbf{26}, 11-16.24", 1: "Lev \\textbf{25}, 1.8-17", 2: "Mt \\textbf{14}, 1-12"}
 
 lectiones["hebdo_18_per_annum"] = {}
-lectiones["hebdo_18_per_annum"]["header"] = "Hebdomada XVIII per Annum: lectiones de tempore"
+lectiones["hebdo_18_per_annum"]["header"] = "Hebdomada XVIII per annum: lectiones de tempore"
 lectiones["hebdo_18_per_annum"]["dim"] = {}
 lectiones["hebdo_18_per_annum"]["dim"]["A"] = "Is \\textbf{55}, 1-3 / Rom \\textbf{8}, 35.37-39 / Mt \\textbf{14}, 13-21"
 lectiones["hebdo_18_per_annum"]["dim"]["B"] = "Ex \\textbf{16}, 2-4.12-15 / Ep \\textbf{4}, 17.20-24 / Io \\textbf{6}, 24-35"
@@ -496,7 +496,7 @@ lectiones["hebdo_18_per_annum"][4] = {0: "Nah \\textbf{1}, 15 ; \\textbf{2}, 2
 lectiones["hebdo_18_per_annum"][5] = {0: "Hab \\textbf{1}, 12–2, 4", 1: "Deut \\textbf{6}, 4-13", 2: "Mt \\textbf{17}, 14-19"}
 
 lectiones["hebdo_19_per_annum"] = {}
-lectiones["hebdo_19_per_annum"]["header"] = "Hebdomada XIX per Annum: lectiones de tempore"
+lectiones["hebdo_19_per_annum"]["header"] = "Hebdomada XIX per annum: lectiones de tempore"
 lectiones["hebdo_19_per_annum"]["dim"] = {}
 lectiones["hebdo_19_per_annum"]["dim"]["A"] = "1 Reg \\textbf{19}, 9a.11-13a / Rom \\textbf{9}, 1-5 / Mt \\textbf{14}, 22-33"
 lectiones["hebdo_19_per_annum"]["dim"]["B"] = "1 Reg \\textbf{19}, 4-8 / Ep \\textbf{4}, 30–5, 2 / Io \\textbf{6}, 41-52"
@@ -509,7 +509,7 @@ lectiones["hebdo_19_per_annum"][4] = {0: "Ez \\textbf{16}, 1-15.60.63", 1: "Ios 
 lectiones["hebdo_19_per_annum"][5] = {0: "Ez \\textbf{18}, 1-10.13b.30-32", 1: "Ios \\textbf{24}, 14-29", 2: "Mt \\textbf{19}, 13-15"}
 
 lectiones["hebdo_20_per_annum"] = {}
-lectiones["hebdo_20_per_annum"]["header"] = "Hebdomada XX per Annum: lectiones de tempore"
+lectiones["hebdo_20_per_annum"]["header"] = "Hebdomada XX per annum: lectiones de tempore"
 lectiones["hebdo_20_per_annum"]["dim"] = {}
 lectiones["hebdo_20_per_annum"]["dim"]["A"] = "Is \\textbf{56}, 1.6-7 / Rom \\textbf{11}, 13-15.29-32 / Mt \\textbf{15}, 21-28"
 lectiones["hebdo_20_per_annum"]["dim"]["B"] = "Prov \\textbf{9}, 1-6 / Ep \\textbf{5}, 15-20 / Io \\textbf{6}, 51-59"
@@ -522,7 +522,7 @@ lectiones["hebdo_20_per_annum"][4] = {0: "Ez \\textbf{37}, 1-14", 1: "Rut \\text
 lectiones["hebdo_20_per_annum"][5] = {0: "Ez \\textbf{43}, 1-7a", 1: "Rut \\textbf{2}, 1-3.8-11 ; \\textbf{4}, 13-17", 2: "Mt \\textbf{23}, 1-12"}
 
 lectiones["hebdo_21_per_annum"] = {}
-lectiones["hebdo_21_per_annum"]["header"] = "Hebdomada XXI per Annum: lectiones de tempore"
+lectiones["hebdo_21_per_annum"]["header"] = "Hebdomada XXI per annum: lectiones de tempore"
 lectiones["hebdo_21_per_annum"]["dim"] = {}
 lectiones["hebdo_21_per_annum"]["dim"]["A"] = "Is \\textbf{22}, 19-23 / Rom \\textbf{11}, 33-36 / Mt \\textbf{16}, 13-20"
 lectiones["hebdo_21_per_annum"]["dim"]["B"] = "Ios \\textbf{24}, 1-2a.15-17.18b / Ep \\textbf{5}, 21-32 / Io \\textbf{6}, 61-70"
@@ -535,7 +535,7 @@ lectiones["hebdo_21_per_annum"][4] = {0: "1 Co \\textbf{1}, 17-25", 1: "1 Th \\t
 lectiones["hebdo_21_per_annum"][5] = {0: "1 Co \\textbf{1}, 26-31", 1: "1 Th \\textbf{4}, 9-11", 2: "Mt \\textbf{25}, 14-30"}
 
 lectiones["hebdo_22_per_annum"] = {}
-lectiones["hebdo_22_per_annum"]["header"] = "Hebdomada XXII per Annum: lectiones de tempore"
+lectiones["hebdo_22_per_annum"]["header"] = "Hebdomada XXII per annum: lectiones de tempore"
 lectiones["hebdo_22_per_annum"]["dim"] = {}
 lectiones["hebdo_22_per_annum"]["dim"]["A"] = "Ier \\textbf{20}, 7-9 / Rom \\textbf{12}, 1-2 / Mt \\textbf{16}, 21-27"
 lectiones["hebdo_22_per_annum"]["dim"]["B"] = "Deut \\textbf{4}, 1-2.6-8 / Iac \\textbf{1}, 17-18.21b-22.27 / Mc \\textbf{7}, 1-8a 14-15.21-23"
@@ -548,7 +548,7 @@ lectiones["hebdo_22_per_annum"][4] = {0: "1 Co \\textbf{4}, 1-5", 1: "Col \\text
 lectiones["hebdo_22_per_annum"][5] = {0: "1 Co \\textbf{4}, 9-15", 1: "Col \\textbf{1}, 21-23", 2: "Lc \\textbf{6}, 1-5"}
 
 lectiones["hebdo_23_per_annum"] = {}
-lectiones["hebdo_23_per_annum"]["header"] = "Hebdomada XXIII per Annum: lectiones de tempore"
+lectiones["hebdo_23_per_annum"]["header"] = "Hebdomada XXIII per annum: lectiones de tempore"
 lectiones["hebdo_23_per_annum"]["dim"] = {}
 lectiones["hebdo_23_per_annum"]["dim"]["A"] = "Ez \\textbf{33}, 7-9 / Rom \\textbf{13}, 8-10 / Mt \\textbf{18}, 15-20"
 lectiones["hebdo_23_per_annum"]["dim"]["B"] = "Is \\textbf{35}, 4-7a / Iac \\textbf{2}, 1-5 / Mc \\textbf{7}, 31-37"
@@ -561,7 +561,7 @@ lectiones["hebdo_23_per_annum"][4] = {0: "1 Co \\textbf{9}, 16-19.22b-27", 1: "1
 lectiones["hebdo_23_per_annum"][5] = {0: "1 Co \\textbf{10}, 14-22a", 1: "1 Tim \\textbf{1}, 15-17", 2: "Lc \\textbf{6}, 43-49"}
 
 lectiones["hebdo_24_per_annum"] = {}
-lectiones["hebdo_24_per_annum"]["header"] = "Hebdomada XXIV per Annum: lectiones de tempore"
+lectiones["hebdo_24_per_annum"]["header"] = "Hebdomada XXIV per annum: lectiones de tempore"
 lectiones["hebdo_24_per_annum"]["dim"] = {}
 lectiones["hebdo_24_per_annum"]["dim"]["A"] = "Sir \\textbf{27}, 33–28, 9 / Rom \\textbf{14}, 7-9 / Mt \\textbf{18}, 21-35"
 lectiones["hebdo_24_per_annum"]["dim"]["B"] = "Is \\textbf{50}, 5-9a / Iac \\textbf{2}, 14-18 / Mc \\textbf{8}, 27-35"
@@ -574,7 +574,7 @@ lectiones["hebdo_24_per_annum"][4] = {0: "1 Co \\textbf{15}, 12-20", 1: "1 Tim \
 lectiones["hebdo_24_per_annum"][5] = {0: "1 Co \\textbf{15}, 35-37.42-49", 1: "1 Tim \\textbf{6}, 13-16", 2: "Lc \\textbf{8}, 4-15"}
 
 lectiones["hebdo_25_per_annum"] = {}
-lectiones["hebdo_25_per_annum"]["header"] = "Hebdomada XXV per Annum: lectiones de tempore"
+lectiones["hebdo_25_per_annum"]["header"] = "Hebdomada XXV per annum: lectiones de tempore"
 lectiones["hebdo_25_per_annum"]["dim"] = {}
 lectiones["hebdo_25_per_annum"]["dim"]["A"] = "Is \\textbf{55}, 6-9 / Phil \\textbf{1}, 20c-24.27a / Mt \\textbf{20}, 1-16a"
 lectiones["hebdo_25_per_annum"]["dim"]["B"] = "Sap \\textbf{2}, 17-20 / Iac \\textbf{3}, 16–4, 3 / Mc \\textbf{9}, 29-36"
@@ -587,7 +587,7 @@ lectiones["hebdo_25_per_annum"][4] = {0: "Qoh \\textbf{3}, 1-11", 1: "Ag \\textb
 lectiones["hebdo_25_per_annum"][5] = {0: "Qoh \\textbf{11}, 9–12, 8", 1: "Zac \\textbf{2}, 1-5.10-11a", 2: "Lc \\textbf{9}, 44b-45"}
 
 lectiones["hebdo_26_per_annum"] = {}
-lectiones["hebdo_26_per_annum"]["header"] = "Hebdomada XXVI per Annum: lectiones de tempore"
+lectiones["hebdo_26_per_annum"]["header"] = "Hebdomada XXVI per annum: lectiones de tempore"
 lectiones["hebdo_26_per_annum"]["dim"] = {}
 lectiones["hebdo_26_per_annum"]["dim"]["A"] = "Ez \\textbf{18}, 25-28 / Phil \\textbf{2}, 1-11 / Mt \\textbf{21}, 28-32"
 lectiones["hebdo_26_per_annum"]["dim"]["B"] = "Num \\textbf{11}, 25-29 / Iac \\textbf{5}, 1-6 / Mc \\textbf{9}, 37-42.44.46-47"
@@ -600,7 +600,7 @@ lectiones["hebdo_26_per_annum"][4] = {0: "Iob \\textbf{38}, 1.12-21 ; \\textbf
 lectiones["hebdo_26_per_annum"][5] = {0: "Iob \\textbf{42}, 1-3.5-6.12-16", 1: "Bar \\textbf{4}, 5-12.27-29", 2: "Lc \\textbf{10}, 17-24"}
 
 lectiones["hebdo_27_per_annum"] = {}
-lectiones["hebdo_27_per_annum"]["header"] = "Hebdomada XXVII per Annum: lectiones de tempore"
+lectiones["hebdo_27_per_annum"]["header"] = "Hebdomada XXVII per annum: lectiones de tempore"
 lectiones["hebdo_27_per_annum"]["dim"] = {}
 lectiones["hebdo_27_per_annum"]["dim"]["A"] = "Is \\textbf{5}, 1-7 / Phil \\textbf{4}, 6-9 / Mt \\textbf{21}, 33-43"
 lectiones["hebdo_27_per_annum"]["dim"]["B"] = "Gn \\textbf{2}, 18-24 / Hebr \\textbf{2}, 9-11 / Mc \\textbf{10}, 2-16"
@@ -613,7 +613,7 @@ lectiones["hebdo_27_per_annum"][4] = {0: "Gal \\textbf{3}, 7-14", 1: "Ioel \\tex
 lectiones["hebdo_27_per_annum"][5] = {0: "Gal \\textbf{3}, 22-29", 1: "Ioel \\textbf{3}, 12-21", 2: "Lc \\textbf{11}, 27-28"}
 
 lectiones["hebdo_28_per_annum"] = {}
-lectiones["hebdo_28_per_annum"]["header"] = "Hebdomada XXVIII per Annum: lectiones de tempore"
+lectiones["hebdo_28_per_annum"]["header"] = "Hebdomada XXVIII per annum: lectiones de tempore"
 lectiones["hebdo_28_per_annum"]["dim"] = {}
 lectiones["hebdo_28_per_annum"]["dim"]["A"] = "Is \\textbf{25}, 6-10a / Phil \\textbf{4}, 12-14.19-20 / Mt \\textbf{22}, 1-14"
 lectiones["hebdo_28_per_annum"]["dim"]["B"] = "Sap \\textbf{7}, 7-11 / Hebr \\textbf{4}, 12-13 / Mc \\textbf{10}, 17-30"
@@ -626,7 +626,7 @@ lectiones["hebdo_28_per_annum"][4] = {0: "Ep \\textbf{1}, 11-14", 1: "Rom \\text
 lectiones["hebdo_28_per_annum"][5] = {0: "Ep \\textbf{1}, 15-23", 1: "Rom \\textbf{4}, 13.16-18", 2: "Lc \\textbf{12}, 8-12"}
 
 lectiones["hebdo_29_per_annum"] = {}
-lectiones["hebdo_29_per_annum"]["header"] = "Hebdomada XXIX per Annum: lectiones de tempore"
+lectiones["hebdo_29_per_annum"]["header"] = "Hebdomada XXIX per annum: lectiones de tempore"
 lectiones["hebdo_29_per_annum"]["dim"] = {}
 lectiones["hebdo_29_per_annum"]["dim"]["A"] = "Is \\textbf{45}, 1.4-6 / 1 Th \\textbf{1}, 1-5b / Mt \\textbf{22}, 15-21"
 lectiones["hebdo_29_per_annum"]["dim"]["B"] = "Is \\textbf{53}, 10-11 / Hebr \\textbf{4}, 14-16 / Mc \\textbf{10}, 35-45"
@@ -639,7 +639,7 @@ lectiones["hebdo_29_per_annum"][4] = {0: "Ep \\textbf{4}, 1-6", 1: "Rom \\textbf
 lectiones["hebdo_29_per_annum"][5] = {0: "Ep \\textbf{4}, 7-16", 1: "Rom \\textbf{8}, 1-11", 2: "Lc \\textbf{13}, 1-9"}
 
 lectiones["hebdo_30_per_annum"] = {}
-lectiones["hebdo_30_per_annum"]["header"] = "Hebdomada XXX per Annum: lectiones de tempore"
+lectiones["hebdo_30_per_annum"]["header"] = "Hebdomada XXX per annum: lectiones de tempore"
 lectiones["hebdo_30_per_annum"]["dim"] = {}
 lectiones["hebdo_30_per_annum"]["dim"]["A"] = "Ex \\textbf{22}, 21-27 / 1 Th \\textbf{1}, 5c-10 / Mt \\textbf{22}, 34-40"
 lectiones["hebdo_30_per_annum"]["dim"]["B"] = "Ier \\textbf{31}, 7-9 / Hebr \\textbf{5}, 1-6 / Mc \\textbf{10}, 46-52"
@@ -652,7 +652,7 @@ lectiones["hebdo_30_per_annum"][4] = {0: "Phil \\textbf{1}, 1-11", 1: "Rom \\tex
 lectiones["hebdo_30_per_annum"][5] = {0: "Phil \\textbf{1}, 18b-26", 1: "Rom \\textbf{11}, 1-2a.11-12.25-29", 2: "Lc \\textbf{14}, 1.7-11"}
 
 lectiones["hebdo_31_per_annum"] = {}
-lectiones["hebdo_31_per_annum"]["header"] = "Hebdomada XXXI per Annum: lectiones de tempore"
+lectiones["hebdo_31_per_annum"]["header"] = "Hebdomada XXXI per annum: lectiones de tempore"
 lectiones["hebdo_31_per_annum"]["dim"] = {}
 lectiones["hebdo_31_per_annum"]["dim"]["A"] = "Mal \\textbf{1}, 14b– \\textbf{2}, 2b 8-10 / 1 Th \\textbf{2}, 7b-9.13 / Mt \\textbf{23}, 1-12"
 lectiones["hebdo_31_per_annum"]["dim"]["B"] = "Deut \\textbf{6}, 2-6 / Hebr \\textbf{7}, 23-28 / Mc \\textbf{12}, 28b-34"
@@ -665,7 +665,7 @@ lectiones["hebdo_31_per_annum"][4] = {0: "Phil \\textbf{3}, 17–4, 1", 1: "Rom 
 lectiones["hebdo_31_per_annum"][5] = {0: "Phil \\textbf{4}, 10-19", 1: "Rom \\textbf{16}, 3-9.16.22-27", 2: "Lc \\textbf{16}, 9-15"}
 
 lectiones["hebdo_32_per_annum"] = {}
-lectiones["hebdo_32_per_annum"]["header"] = "Hebdomada XXXII per Annum: lectiones de tempore"
+lectiones["hebdo_32_per_annum"]["header"] = "Hebdomada XXXII per annum: lectiones de tempore"
 lectiones["hebdo_32_per_annum"]["dim"] = {}
 lectiones["hebdo_32_per_annum"]["dim"]["A"] = "Sap \\textbf{6}, 13-17 / 1 Th \\textbf{4}, 12-18 / Mt \\textbf{25}, 1-13"
 lectiones["hebdo_32_per_annum"]["dim"]["B"] = "1 Reg \\textbf{17}, 10-16 / Hebr \\textbf{9}, 24-28 / Mc \\textbf{12}, 38-44"
@@ -678,7 +678,7 @@ lectiones["hebdo_32_per_annum"][4] = {0: "2 Io 4-9", 1: "Sap \\textbf{13}, 1-9",
 lectiones["hebdo_32_per_annum"][5] = {0: "3 Io 5-8", 1: "Sap \\textbf{18}, 14-16 ; \\textbf{19}, 6-9", 2: "Lc \\textbf{18}, 1-8"}
 
 lectiones["hebdo_33_per_annum"] = {}
-lectiones["hebdo_33_per_annum"]["header"] = "Hebdomada XXXIII per Annum: lectiones de tempore"
+lectiones["hebdo_33_per_annum"]["header"] = "Hebdomada XXXIII per annum: lectiones de tempore"
 lectiones["hebdo_33_per_annum"]["dim"] = {}
 lectiones["hebdo_33_per_annum"]["dim"]["A"] = "Prov \\textbf{31}, 10-13.19-20.30-31 / 1 Th \\textbf{5}, 1-6 / Mt \\textbf{25}, 14-30"
 lectiones["hebdo_33_per_annum"]["dim"]["B"] = "Dan \\textbf{12}, 1-3 / Hebr \\textbf{10}, 11-14.18 / Mc \\textbf{13}, 24-32"
@@ -692,7 +692,7 @@ lectiones["hebdo_33_per_annum"][5] = {0: "Ap \\textbf{11}, 4-12", 1: "1 Mac \\te
 
 lectiones["hebdo_34_per_annum"] = {}
 lectiones["hebdo_34_per_annum"]["header_dim"] = "Dominica D.N.I.C. Universorum Regis: lectiones"
-lectiones["hebdo_34_per_annum"]["header_feries"] = "Hebdomada XXXIV per Annum: lectiones de tempore"
+lectiones["hebdo_34_per_annum"]["header_feries"] = "Hebdomada XXXIV per annum: lectiones de tempore"
 lectiones["hebdo_34_per_annum"]["dim"] = {}
 lectiones["hebdo_34_per_annum"]["dim"]["A"] = "Ez \\textbf{34}, 11-12.15-17 / 1 Co \\textbf{15}, 20-26a 28 /\\par Mt \\textbf{25}, 31-46"
 lectiones["hebdo_34_per_annum"]["dim"]["B"] = "Dan \\textbf{7}, 13-14 / Ap \\textbf{1}, 5-8 / Io \\textbf{18}, 33b-37"
