@@ -567,7 +567,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         "anniv"] = "Cras recurrit anniversarium fundationis Monasterii nostri (1972)."
     chaire_saint_pierre["header"] = " - \\textbf{\\textsc{Cathedræ S. Petri, apostoli}} - \\textbf{festum} - \\textit{Alb.}"
     chaire_saint_pierre[
-        "body"] = "\n\\item ad Vigilias pro breviario 62: in supplemento 105 ; invitatorium proprium.\n\\item in MC: lectiones propriæ: 1 Petr \\textbf{5}, 1-4 / Mt \\textbf{16}, 13-19 ; præfatio I de Apostolis."
+        "body"] = "\n\\item ad Vigilias pro breviario 62: in supplemento 105 ; invitatorium proprium.\n\\item in MC: lectiones propriæ: 1 Pe \\textbf{5}, 1-4 / Mt \\textbf{16}, 13-19 ; præfatio I de Apostolis."
     chaire_saint_pierre[
         "II_vesp"] = "\n\\item ad Magnificat: ø \\textit{Tu es pastor} (AM 823)."
 
@@ -746,7 +746,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_marc = dict_sancto[saint_marc_date] = {}
     saint_marc["force"] = 70
     saint_marc["header"] = " - \\textbf{\\textsc{S. Marci, evangelistæ}} - \\textbf{festum} - \\textit{Rub.}"
-    saint_marc["body"] = "\n\\item in MC: lectiones propriæ: 1 Petr \\textbf{5}, 5b-14 / Mc \\textbf{16}, 15-20 ; præfatio II de Apostolis."
+    saint_marc["body"] = "\n\\item in MC: lectiones propriæ: 1 Pe \\textbf{5}, 5b-14 / Mc \\textbf{16}, 15-20 ; præfatio II de Apostolis."
 
     dedicace_dijon_date = datetime.date(current_year, 4, 27)
     dedicace_dijon = dict_sancto[dedicace_dijon_date] = {}
