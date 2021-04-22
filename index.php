@@ -2,6 +2,7 @@
 <html>
 	<head>
         <meta charset="utf-8" />
+        <link rel="icon" href="ordomatic.png">
         <link rel="stylesheet" href="styles.css" />
         <title>Ordomatic</title>
 	</head>
