@@ -5,10 +5,10 @@
 \geometry{paperwidth=10.5cm, paperheight=16.5cm, inner=0.75cm, outer=0.75cm, tmargin=0.5cm, bmargin=0.5cm, includehead}
 
 % Choix d'une police principale :
-\usepackage{luatextra}
-\setmainfont{Garamond Premier Pro}% Linux serveur : mettre 'Amiri'.
-% Polices de page de garde :
-\newfontfamily{\FontFlyLeaf}{Silentium Pro Roman I}
+\usepackage{fontspec}
+\setmainfont{Garamond Premier Pro}
+% Police de page de garde :
+\newfontfamily{\FontFlyLeaf}[Path=/usr/share/fonts/opentype/Silentium Pro/]{SilentiumPro-Roman I}
 
 % Césures etc. :
 \usepackage[latin]{babel}
