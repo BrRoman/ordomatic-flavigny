@@ -1,0 +1,190 @@
+- Ordos 2011 et 2038 à voir : pb 3e samedi de juin.
+- Ordo 2007 : bug.
+- Anniv. professions etc.
+- Oraison Ste Famille.
+- Vigiles Ste Vierge le samedi, attribution intelligente des numéros, pour éviter 4e = 5e.
+- Ste Famille : Bizarre, il semble qu'il y ait eu à une époque (2015 au moins) des lectures entièrement différentes pour chaque année.
+- ordo_write.py : commentaire Rogations : Code + propre. Il y a 4 cas : vigile = juste "Ben", festum = rien, mémoires mineures = juste "Magnif", et de ea pas vigiles = les 2. TODO : le cas "les 2" n'a pas été testé (pas d'occurrence en 2014). TODO : 2015 problème : veille de l'Ascension = mémoire mineure.
+- Sancto : saint Grégoire de Nysse (10/01) : Tirer au clair cette histoire de report à après le Baptême.
+- Saint Benoît dimanche : tester que le bon dimanche s'affiche (per annum, post pentec.).
+- Présentation dimanche : tester que le bon dimanche s'affiche pour la forme extraordinaire (Septuagésime, etc.).
+- ND Mont-Carmel samedi.
+- Transfiguration dimanche : il y a des Ières Vêpres, et de plus on calcule quel dimanche (per annum, post Pentecosten).
+- Assomption dimanche : vérifier que bon dimanche (per annum, post Pentecosten, dim. d'août).
+- Toussaint dimanche : vérifier que bon dimanche (per annum, post Pentecosten, dim. de nov).
+- Vérifier les samedis, avec les lectures mariales aux Vigiles. Attention: si le 16/07 tombe un samedi, ce n'est pas la peine (cf. Sancto à ce jour).
+- Féries entre Octave de Noël et Baptême: if new_day_date.day == 7 and new_day_date.weekday() != 6: # TODO: Dans quels cas omet-on les "generalities", et dans quels cas les modifie-t-on ?
+- Féries per annum : new_day["generalities"] = ("\n\\newpage\n\\ApplyParBox{1cm}{\\ApplyGenerTitleHuge{Tempus Per annum}}\n\\ApplyGenerSubTitle{in Ofﬁcio :}\n\\ApplyGenerList{\n\\item in feriis : hebdomada I per annum vel I post Epiphaniam.}\n\\ApplyGenerSubTitle{ad mensam :}\n\\ApplyGenerList{\n\\item benedictio de tempore per annum.}" + lectiones_body + "\n\\ApplyGenerList{\n\\item præfatio communis I, nisi aliter notetur.}\n\\medskip") if i == 0 and j == 0 else "" # TODO : Body = Vigiles… + "in MC : lectiones feriales" à la 1ère férie libre. Pourquoi pas dans le generalities ?
+- Texte spécial pour le 3e samedi de juin, s'il tombe avant la Trinité… :) TODO : Ce cas (rarissime) n'a pas encore été testé. functions/tempo.py-new_day["body"] = "\n\\item ad Vigilias : lectio sabbato 3 (in supplemento 202).\n\\item in MC : Beatæ Mariæ Virginis, Matris et mediatricis gratiæ (CM 30) ; præfatio I de Beata Maria Virgine."
+- Remplacer partout les tabulations par 4 espaces.
+- Semailles = 1ère férie libre avant l'Ascension (descendre du lundi au mercredi). Récoltes = semaine avant 3e dim. de Septembre (4 temps de sept.) : mercredi ou vendredi, sinon lundi, mardi ou jeudi.
+- Fêtes mobiles de l'année suivante à la fin de l'ordo.
+- 1er samedi du mois de janvier : in ML avant in MC (7/1/2017 par ex.).
+- Octave de Pentecôte : calculer et modifier toutes les mc_bmv (dans various).
+- Saint Boniface : 3 cas : TP, entre Pent. et Trin., après Trinité. 2e cas, ajouter cette mention pour les Vigiles : "Ad Vigilias: post lectionem dicitur Responsorium *Iste sanctus*, e Communi Martyris extra Tempus Paschale post primam lectionem I Nocturni."
+- Automatiser le report d'un jour de jeûne au lendemain si festum.
+- Page de garde: variante "évidée" de la même police.
+- 9 janvier 2021: ajouter «- in ML: Missa de sancta Maria in sabbato.
+- Pour les fêtes, il me semblerait plus léger de ne mettre en petites capitales que le nom du saint (e.g. S. Bernardi), en laissant son titre en romain (e.g. abbatis et Ecclesiæ doctoris): comme pour les mémoires majeures, mais en gras.
+- Alterner 1 année sur 2 saint Clément et saint Colomban :
+    \ApplyHeader{\textbf{23} & Feria III - \textsc{S. Columbani}, abbatis - \textbf{memoria maior} - \textit{Alb.}}
+    \ApplyBody{
+        \item in Officio~: oratio in supplemento 193*.
+        \item ad Vigilias~: lectio in supplemento 193*.
+        \item \textit{in ML~: Missa pro abbate.}
+        \item in MC~: collecta in MP~; Commune sanctorum et sanctarum (MR 958)~; præfatio de sanctis virginibus et religiosis.}
+- Dans l’Ordo, pour les MC De Beata, il faudra remplacer «præfatio I/II de BMV» par «præfatio propria».
+- Dans les textes liturgiques, le j a été remplacé par i depuis Pie XII. Donc, dans l’Ordo, il faudrait remplacer partout les j qui se sont introduits furtivement par un i (sauf Jounel, Jogues et Joly, si possible)…
+- Il faudrait que les abréviations utilisées pour les livres bibliques correspondent avec la table donnée en p. 4 (par exemple Io et non pas Jn).
+- 31 juillet ad Magnif. : if pas samedi (autrement dit, le mettre dans le bloc "IIe Vêpres" ?).
+- Dans l’ordo, il y a une petite erreur pour la fête de St Cyprien au 16 septembre. Il est mentionné de chanter l’antienne du Bendictus : Adstitérunt 	alors que c’est : Astitérunt (il faut enlever le d)
+
+I. Sanctoral
+• 11 juin (2022) : pour la ML, les Quatre-Temps de la Pentecôte (Ire classe) priment sur la Saint-Barnabé (IIIe classe) :
+    ◦ in ML (Rub) : Quatuor Temporum Pentecostes (forma Missæ brevior) (Credo).
+• 6 août (2022) : la Transfiguration, fête du Seigneur, prime sur le dimanche, donc « Vesperæ festi ».
+• 22 août (Marie Reine) : pas de Credo en ML (IIIe classe)
+    ◦ in ML : olim die 31 maii (non dicitur Credo).
+• 17 septembre (années impaires) : à la ligne du Benedictus, il manque une espace « tono III g »
+
+II. Temporal
+• Mettre l’oraison des mercredi et vendredi des Quatre-Temps de l’Avent aussi aux vêpres avant le 17 décembre (comme indiqué dans le bréviaire, p. 62 et 65 : « Oratio Præsta / Excita, quæ dicitur ad omnes Horas, etiam ad Vesperas »).
+• IIIe dimanche de Pâques :
+    ◦ ad Vigilias : in nocturno I : lectiones 3 et 4 (cum titulo : De Actibus Apostolórum) ; R/ lectionis 4.
+
+III. Généralités
+• Tons des antiennes : espace insécable entre le mode et la différence (III g)
+• Indiquer les commémoraisons à faire (ML) : Avent et Carême
+• Bénédiction solennelle pour les solennités : ajouter à MC une rubrique « Missa concluditur benedictione sollemni. »
+    ◦ 1 er dimanche de l’Avent
+    ◦ Noël (Messe de la nuit + Messe du jour)
+    ◦ 1 er janvier
+    ◦ Épiphanie
+    ◦ Pâques (Vigile + Messe du jour)
+    ◦ Ascension
+    ◦ Pentecôte
+    ◦ 29 juin : saints Pierre et Paul
+    ◦ 15 août, 8 décembre : B. V. M.
+    ◦ Toussaint
+• Insérer deux variantes : Flavigny/Solignac
+• Carême (MC) :
+    ◦ Mercredi des Cendres et vendredis de carême : Canon à genoux
+
+Le Père Abbé Antoine me signale une petite erreur de référence dans l’Ordo, pour le samedi de la 27ᵉ semaine TO années impaires: Ioel 4, 12-21 au lieu de Ioel 3, 12-21.
+
+Sainte Thérèse 15/10 : simplifier les hymnes: Ad vigilias, Laudes et Vesperas: Hymni proprii. Ensuite il n'y a plus qu'à préciser les ant. de Ben. et Magn.
+
+Pour les commémoraisons en Avent et en Carême, il faudrait trouver une solution… Idem pour le cas où les Quatre-Temps tombent un 23 septembre, par exemple: comme saint Pio est une mémoire obligatoire, la commémoraison est in-dis-pen-sable.
+
+2 novembre : les complies ont disparu.
+
+Début novembre : "lectio *de memoria*" à affiner (ça peut être avant les lectures SO, du coup inutile de préciser "de memoria").
+
+Saint Bénigne à refondre.
+
+Après les corrections 2022, il reste encore quelques moucherons :
+Page 96 (8 septembre), il manque une espace avant la parenthèse: «II(pro».
+Page 85 (24 juillet), c’est la préface I du dimanche (et non pas la VIII) pour le XVIIᵉ dimanche per annum.
+    Idem page 98 (18 septembre), préface I pour le XXVᵉ dimanche per annum.
+    Idem page 112 (13 novembre), préface I pour le XXXIIIᵉ dimanche per annum.
+Page 112 (lundi 14 novembre): MC pour les bienfaiteurs défunts (collision avec les antiennes spéciales Ben. et Magn. ?).
+
+Baptême : refondre.
+
+7/1 : Inverser ML/MC.
+2/2 : He (pas Hebr), et Lc en gras.
+
+Pour l’évangile de ce lundi notre ordo indique Jn 8, 12-20.
+Or, pour les années C, le lectionnaire dit de lire cet évangile lorsque l’évangile de la femme adultère (Jn 8, 1-11) a été lu le dimanche précédent ; donc, lorsque celui-ci n’a pas été lu le dimanche (ce qui est notre cas puisque on a lu celui de l’année A), il faut le lire le lundi.
+En conclusion, l’évangile de ce lundi devrait être Jn 8, 1-11.
+
+11 mai: Ap 19 etc.: suppr. espace en trop.
+
+Dom. VI Paschae : Ap 19 etc. : manque un point(-virgule ?).
+Feria II : "16" en gras.
+
+2022 : saint Bède : "in Officio et in ML": supprimer.
+
+P. Jean Pouchet : "Pour simplifier, il faudrait distinguer entre Fête-Dieu le 24 (avec Saint-Jean-Baptiste le 25) et Sacré-Cœur le 24 (avec Saint-Jean-Baptiste le 23)…"
+
+3e Messe des défunts (septembre): il semble que la référence de l'Évangile ait changé (Jo).
+
+----------------------------------------------------------------------------------------
+
+
+I. Sanctoral
+    • 13 mai (Notre-Dame de Fatima) : au temps pascal, prendre le commun de la Sainte Vierge MR 908.
+    • 25 mai : pendant l’octave de la Pentecôte ajouter (idem 1er juin) :
+        ◦ ad Vigilias : post lectionem dicitur R/ In medio sine Alleluia.
+    • 30 mai (2023) : ML de l’octave de la Pentecôte :
+        ◦ in ML (Rub) : Missa infra octavam (Credo).
+    • 31 mai (2023) : pour la ML, les Quatre-Temps de la Pentecôte (Ire classe) priment sur la Visitation (IIe classe) :
+        ◦ in ML (Rub) : Quatuor Temporum Pentecostes (Credo).
+    • Cœur immaculé de Marie :
+        ◦ ad Benedictus : A/ Beata es (AM 1074).
+        ◦ in MC : MR 761, MS 1662 ; lectiones propriæ : Is 61, 9-11 / Lc 2, 41-51 ; præfatio de Immaculato Corde Beatæ Mariæ Virginis (CM 28).
+    • 2 juin (2023) : ML des Quatre-Temps de la Pentecôte au lieu de la Messe du Sacré-Cœur :
+        ◦ in ML (Rub) : Quatuor Temporum Pentecostes (Credo).
+    • 3 juin (2023) : ML du samedi des Quatre-Temps de la Pentecôte et non pas « Messe dans l’octave » (vaut pour chaque année le samedi de Pentecôte : même erreur en 2024) :
+        ◦ in ML (Rub) : Quatuor Temporum Pentecostes (forma Missæ brevior) (Credo).
+    • 11 juin (2038) : la Saint-Barnabé tombe pendant le temps pascal…
+    • 25 juin (et non pas 23) : nécrologe P. Jean-Marie Pouchet
+    • 28 juin : saint Irénée, docteur de l’Église
+    • 16 juillet (le samedi) : ajouter la page de l’oraison dans le Supplementum
+        ◦ officium totum dicitur de Maria in sabbato præter orationem in supplemento 143 et A/. ad Benedictus.
+    • 22 juillet : modifier la rubrique suite à l’ajout du premier nocturne dans le Supplementum
+        ◦ ad Vigilias : invitatorium proprium ; hymnus proprius ; lectiones in supplemento 143*.
+    • 23 novembre (années impaires) :
+        ◦ S. Columbani, abbatis - memoria maior - Alb.
+        ◦ in Officio : oratio in supplemento 194*.
+        ◦ ad Vigilias : lectio in supplemento 193*.
+        ◦ ad Benedictus : A/. Sancti mei (AM 878)
+        ◦ in ML : Missa pro abbate.
+        ◦ in MC : collecta in MP ; Commune sanctorum et sanctarum (MR 958) ; præfatio de sanctis virginibus et religiosis.
+        ◦ ad Magnificat : A/. Ubi duo (AM 367).
+II. Temporal
+    • Avent :
+        ◦ Changer rubrique dans « in Officio de tempore » :
+Omnes genua flectunt in Officio feriali ad Kyrie eleison. In memoriis minoribus, standum est ad Laudes ; genuflectendum vero ad alias Horas.
+        ◦ Changer la rubrique « in MC »
+In feriis Adventus : omnia cantantur in tono simplici, præter orationem super oblata, quæ semper in tono solemni cantatur (Pater in tono B).
+        ◦ Mettre l’oraison des mercredi et vendredi des Quatre-Temps de l’Avent aussi aux vêpres avant le 17 décembre (comme indiqué dans le bréviaire, p. 62 et 65 : « Oratio Præsta / Excita, quæ dicitur ad omnes Horas, etiam ad Vesperas »).
+    • Noël : office des vigiles du 26 au 31 décembre : on prend toujours le IIe nocturne pour chacune des fêtes (saint Étienne, saint Jean, saints Innocents, Sainte Famille)
+    • Temps de l’Épiphanie (Tempus Nativitatis II) : ajouter à la rubrique « in MC » :
+        ◦ In lectionario in lingua gallica, lectiones pro die 7 ianuarii sumendæ sunt e feria II post Epiphania ; pro die 8, e feria III, et sic in aliis feriis.
+    • Baptême du Seigneur :
+        ◦ Sabbato
+            ▪ I Vesperæ festi sequentis : antiphonæ propriæ AM 305*, reliqua ut in festo Epiphaniæ ; ad Magnificat : A/. Veterem hominem (AM 305*) ; oratio AM 304.
+        ◦ Dominica III post Nativitatem – Dominica in Baptismate Domini (I post Epiphaniam) – festum – Alb.
+            ▪ ad Laudes et Horas minores : antiphonæ propriæ AM 305*, reliqua ut in festo Epiphaniæ ; ad Benedictus : A/. Baptizatur Christus (AM 307*) ; oratio AM 304.
+            ▪ ad Vesperas : antiphonæ e Laudibus, reliqua ut in festo Epiphaniæ ; ad Magnificat : A/. Præcursor Ioannes (AM 308*) ; oratio AM 304.
+    • Per annum
+        ◦ 2e lecture du 4e dimanche C : mettre en gras le ch. 13 (1 Co 12, 31 – 13, 13)
+        ◦ MC De Beata in sabbato : préfaces propres
+    • Carême
+        ◦ Supprimer la mention « Missa concluditur oratione super populum » le dimanche (puisqu’on la dit tous les jours).
+        ◦ Évangile pour le lundi de la 5e semaine de Carême : Jn 8, 1-11 (chaque année, même l’année C, puisque la veille on prend l’évangile de l’année A)
+    • Jeudi Saint : il manque une espace pour la prière universelle « n. 10 »
+    • Vigile pascale : mentionner la prière universelle :
+        ◦ in Missa : ad hymnum Gloria pulsantur campanæ ; post Evangelium, renovatio promissionum baptismalium : indulgentia plenaria ; Or. n. 11 ; præfatio paschalis I (in hac potissimum nocte) ; Communicantes et Hanc igitur propria ; Ite Missa est cum duobus Alleluia.
+    • Laudes de Pâques : on chante uniquement le Ps 150
+        ◦ Ad Laudes, Ps 148 et 149 omittuntur.
+    • Rogations : si elles tombent en même temps qu’une mémoire majeure, ne pas mettre la rubrique « Nihil fit de rogationibus præter antiphonam ad Benedictus et Magnificat ». (Cf. 25 mai 2022 : deux antiennes pour le Benedictus). Mémoire mineure : omettre « ad Benedictus et ».
+III. Généralités
+    • Nécrologe : ajouter Jean-Louis dos Santos (21/12) et P. Germain de la PQV (18/04)
+    • Indiquer les commémoraisons à faire (ML) : Avent et Carême
+    • Ton simple MC féries Avent et Carême
+    • Revoir les lectures des messes des défunts (qui ne sont pas dans le nouveau lectionnaire).
+    • Bénédiction solennelle pour les solennités : ajouter à MC une rubrique « Missa concluditur benedictione sollemni. »
+        ◦ 1er dimanche de l’Avent
+        ◦ Noël (Messe du jour uniquement)
+        ◦ Épiphanie
+        ◦ Pâques (Vigile + Messe du jour)
+        ◦ Ascension
+        ◦ Pentecôte
+        ◦ 29 juin : saints Pierre et Paul
+        ◦ 15 août, 8 décembre : B. V. M.
+        ◦ Toussaint
+    • Insérer deux variantes : Flavigny/Solignac
+    • Carême (MC) :
+        ◦ Mercredi des Cendres et vendredis de carême : Canon à genoux
