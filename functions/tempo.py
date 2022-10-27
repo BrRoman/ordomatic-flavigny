@@ -897,9 +897,9 @@ def dict_tempo_create(current_year, even_year, year_letter):
                 # Quatre-temps de septembre:
                 if num_summer == " - III septembris" and new_day_date.weekday() in [2, 4, 5]:
                     new_day["body"] = "\n\\item \\textit{in ML (Viol.): Quatuor Temporum Septembris (forma Missæ brevior).}"
-                # 1er vendredi du mois:
-                if new_day_date.day < 8 and new_day_date.weekday() == 4:
-                    new_day["body"] = "\n\\item \\textit{in ML (Alb.) : Missa de sacratissimo Corde Iesu \\emph{(Gloria)}.}" + "\n\\item MC1V" # La balise MC1V ("Messe conventuelle 1er vendredi") sera remplacée tout à la fin (voir ordo_write.py) par l'une des 2 MC possibles.
+                # 1er vendredi du mois (hors octave Pentecôte):
+                if new_day_date.day < 8 and new_day_date.weekday() == 4 and not (new_day_date > paques_date + datetime.timedelta(days=49) and new_day_date < paques_date + datetime.timedelta(days=56)):
+                    new_day["body"] = "\n\\item \\textit{in ML (Alb.) : Missa de sacratissimo Corde Iesu \\emph{(Gloria)}.}" + "\n\\item MC1V" # Les balises MC1V ("Messe conventuelle 1er vendredi") seront remplacées ultérieurement alternativement par l'une des 2 MC possibles (voir ordo_write.py).
                 # Samedis BMV:
                 if new_day_date.weekday() == 5:
                     new_day["force"] = 30 
