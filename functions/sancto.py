@@ -1215,7 +1215,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_irenee_date = datetime.date(current_year, 6, 28)
     saint_irenee = dict_sancto[saint_irenee_date] = {}
     saint_irenee["force"] = 40
-    saint_irenee["header"] = " - \\textsc{S. Irenæi}, episcopi et martyris - \\textbf{memoria maior} - \\textit{Rub.}"
+    saint_irenee["header"] = " - \\textsc{S. Irenæi}, episcopi, Ecclesiæ doctoris et martyris - \\textbf{memoria maior} - \\textit{Rub.}"
     saint_irenee[
         "body"] = "\n\\item in Officio: oratio in supplemento 136.\n\\item ad Vigilias: lectio in supplemento 136.\n\\item ad Benedictus: ø \\textit{Qui me confessus} (AM 640).\n\\item \\textit{in ML: olim die 3 iulii.}\n\\item in MC: præfatio de sanctis martyribus."
 
