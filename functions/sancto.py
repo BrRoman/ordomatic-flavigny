@@ -840,7 +840,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     if nd_fatima_date < paques + datetime.timedelta(days=49):
         couleur = "\\textit{Alb.}"
         messe_lue = "\\item \\textit{in ML: Missa de die 11 februarii.}"
-        messe_conv = "\\item in MC: Commune Beatæ Mariæ Virginis (MR 903) ; præfatio I de Beata Maria Virgine."
+        messe_conv = "\\item in MC: Commune Beatæ Mariæ Virginis (MR 908) ; præfatio I de Beata Maria Virgine."
     else:
         couleur = "\\textit{Vir.}"
         messe_lue = "\\item \\textit{in ML (Alb): Missa de die 11 februarii.}"
