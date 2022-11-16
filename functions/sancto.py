@@ -1333,7 +1333,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         nd_mont_carmel["force"] = 40
         nd_mont_carmel[
             "header"] = " - \\textsc{Beatæ Mariæ Virginis de Monte Carmelo} - \\textbf{memoria maior} - \\textit{Alb.}"
-        nd_mont_carmel["body"] = "\n\\item officium totum dicitur de Maria in sabbato præter orationem et ø ad Benedictus.\n\\item ad Vigilias: lectio sabbato 3 (in supplemento 204 pro breviario veteri)." + \
+        nd_mont_carmel["body"] = "\n\\item officium totum dicitur de Maria in sabbato præter orationem in supplemento 143 et ø ad Benedictus.\n\\item ad Vigilias: lectio sabbato 3 (in supplemento 204 pro breviario veteri)." + \
             ant_bened + \
             "\\item in MC \\textit{(Alb.)}: CM 32 ; præfatio I de Beata Maria Virgine."
     else:
