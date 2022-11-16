@@ -700,7 +700,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     coeur_imm_marie["num_day"] = "\\textbf{" + str(coeur_imm_marie_date.day) + "} &" + " Sabbato"
     coeur_imm_marie["symbols"] = " µ" if sacre_coeur_date.day < 8 else "" + f_symbols(coeur_imm_marie_date, "")[1]
     coeur_imm_marie["header"] = " - \\textsc{Immaculati Cordis Beatæ Mariæ Virginis} - \\textbf{memoria maior} - \\textit{Alb}."
-    coeur_imm_marie["body"] = "\\item in Officio: omnia de Communi festorum Beatæ Mariæ Virginis, præter sequentia.\n\\item oratio in supplemento 129.\n\\item ad Vigilias: lectio et ¶ in supplemento 128 ; in II nocturno lectio brevis et ß ut ad Sextam.\n\\item \\textit{in ML: olim die 22 augusti (non dicitur \\emph{Credo}).}\n\\item in MC: MR 761, MS 1662 ; lectiones propriæ: Is \\textbf{61}, 9-11 / Lc \\textbf{2}, 41-51 ; præfatio I de Beata Maria Virgine (\\textit{et te in festivitate})."
+    coeur_imm_marie["body"] = "\\item in Officio: omnia de Communi festorum Beatæ Mariæ Virginis, præter sequentia.\n\\item oratio in supplemento 129.\n\\item ad Vigilias: lectio et ¶ in supplemento 128 ; in II nocturno lectio brevis et ß ut ad Sextam.\n\\item ad Benedictus : ø \\textit{Beata es} (AM 1074).\n\\item \\textit{in ML: olim die 22 augusti (non dicitur \\emph{Credo}).}\n\\item in MC: MR 761, MS 1662 ; lectiones propriæ: Is \\textbf{61}, 9-11 / Lc \\textbf{2}, 41-51 ; præfatio de Immaculato Corde Beatæ Mariæ Virginis (CM 28)."
     
     # Christ-Roi:
     noel_next = datetime.date(current_year, 12, 25)
