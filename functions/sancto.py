@@ -1359,7 +1359,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sainte_marie_madeleine["force"] = 70
     sainte_marie_madeleine["header"] = " - \\textbf{\\textsc{S. Mariæ Magdalenæ}} - \\textbf{festum} - \\textit{Alb.}"
     sainte_marie_madeleine[
-        "body"] = "\n\\item in Officio : omnia de Communi nec virginis nec martyris præter sequentia.\n\\item oratio propria.\n\\item ad Vigilias : invitatorium proprium ; hymnus proprius ; lectio in secundo nocturno in supplemento 143*.\n\\item ad Laudes : hymnus proprius ; ad Benedictus : ø \\textit{In diebus illis} (AM 975).\n\\item in MC : lectiones propriæ : 2 Co \\textbf{5}, 14-17 / Io \\textbf{20}, 1.11-18 ; præfatio propria."
+        "body"] = "\n\\item in Officio : omnia de Communi nec virginis nec martyris præter sequentia.\n\\item oratio propria.\n\\item ad Vigilias : invitatorium proprium ; hymnus proprius ; lectiones in supplemento 143*.\n\\item ad Laudes : hymnus proprius ; ad Benedictus : ø \\textit{In diebus illis} (AM 975).\n\\item in MC : lectiones propriæ : 2 Co \\textbf{5}, 14-17 / Io \\textbf{20}, 1.11-18 ; præfatio propria."
     sainte_marie_madeleine[
         "II_vesp"] = "\n\\item ad Vesperas : hymnus proprius ; ad Magnificat : ø \\textit{Mulier} (AM 978)."
 
