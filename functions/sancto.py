@@ -1981,7 +1981,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     toussaint_date = datetime.date(current_year, 11, 1)
     toussaint = dict_sancto[toussaint_date] = {}
     toussaint["force"] = 110
-    toussaint["I_vesp"] = "\\item I Vesperæ sollemnitatis sequentis."
+    toussaint["I_vesp"] = "\\item I Vesperæ sollemnitatis sequentis (hymnus in folio separato)."
     toussaint[
         "generalities"] = "\\medskip\n\\textit{Plenaria indulgentia, animabus in Purgatorio detentis tantummodo applicabilis, conceditur christifideli qui}\\par \\textit{1° singulis diebus, a primo usque ad octavum novembris, cœmeterium devote visitaverit et, vel mente tantum, pro defunctis exoraverit ;}\\par \\textit{2° die Commemorationis omnium fidelium defunctorum (vel, de consensu Ordinarii, die Dominico antecedenti aut subsequenti aut die sollemnitatis Omnium Sanctorum) ecclesiam aut oratorium pie visitaverit ibique recitaverit \\emph{Pater} et \\emph{Credo}.}\\begin{flushright}\\textit{(Enchiridion Indulgentiarum, concessio n. 29: Pro fidelibus defunctis).}\\end{flushright}"
     if toussaint_date.weekday() == 6:
