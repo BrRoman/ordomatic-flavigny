@@ -129,7 +129,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
         quatre_temps = True if new_day_date.weekday() == 2 or new_day_date.weekday() == 4 or new_day_date.weekday() == 5 else False
         if quatre_temps:
             messe_basse_quatre_temps = "\\item \\textit{in ML: Quatuor Temporum Adventus \\textit{(forma Missæ brevior)}}." if new_day_date.weekday() == 5 else "\\item \\textit{in ML: Quatuor Temporum Adventus}."
-            office_quatre_temps = "\\item in Officio: oratio Quatuor Temporum Adventus." if new_day_date.weekday() == 5 else "\\item in Officio: oratio Quatuor Temporum Adventus, præter ad Vesperas."
+            office_quatre_temps = "\\item in Officio: oratio Quatuor Temporum Adventus." if new_day_date.weekday() == 5 else "\\item in Officio: oratio Quatuor Temporum Adventus, quæ dicitur ad omnes Horas, etiam ad Vesperas."
         else:
             messe_basse_quatre_temps = ""
             office_quatre_temps = ""
