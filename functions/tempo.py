@@ -355,7 +355,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     cendres["num_day"] = "\\textbf{" + str(cendres_date.day) + "} &"
     cendres["symbols"] = " µ"
     cendres["header"] = " \\textsc{Feria IV Cinerum} - \\textit{Viol.}"
-    cendres["body"] = "\n\\item in MC : post Evangelium, benedictio et impositio cinerum ; Or. n. 8 ; præfatio IV de Quadragesima (et sic in feriis sequentibus). Missa concluditur oratione super populum."
+    cendres["body"] = "\n\\item in MC : post Evangelium, benedictio et impositio cinerum ; Or. n. 8 ; præfatio IV de Quadragesima (et sic in feriis sequentibus)."
     current_lectiones = lectiones["post_cineres"]
     cendres["lectiones_header"] = current_lectiones["header"]
     lectiones_body = ""
@@ -385,7 +385,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
         new_dim_careme["header"] = " \\textbf{\\textsc{Dominica " + f_roman_numbers(i + 1) + " in Quadragesima}" + dim_laetare + " - de ea - \\textit{Viol.}"
         lectures_annee_A = " tres lectiones Anno A ;" if (i == 2 or i == 3) and year_letter != "A" else ""
         orgue = "\n\\item hodie pulsantur organa ad Missam, non vero in aliis Horis." if i == 3 else ""
-        new_dim_careme["body"] = orgue + "\n\\item in MC :" + lectures_annee_A + " præfatio propria. " + ("In fine celebrationis missæ, sacerdos cantat orationem super populum." if i == 0 else "Missa concluditur oratione super populum.")
+        new_dim_careme["body"] = orgue + "\n\\item in MC :" + lectures_annee_A + " præfatio propria. "
         new_dim_careme["II_vesp"] = "\n\\item Vesperæ dominicæ." if new_dim_careme_date.month == 3 and (new_dim_careme_date.day == 19 or new_dim_careme_date.day == 25) else ""# Cas où un dimanche de carême tombe pour la saint Joseph ou l'Annonciation : la solennité est reportée et les Vêpres sont celles du dimanche.  
         new_dim_careme["preface_feries"] = "\n\\item in feriis: præfatio " + f_roman_numbers(i + 1) + " de Quadragesima, nisi aliter notetur."
         current_lectiones = lectiones["hebdo_" + str(i + 1) + "_quadr"]
