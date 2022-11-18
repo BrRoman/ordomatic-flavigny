@@ -231,9 +231,9 @@ def dict_tempo_create(current_year, even_year, year_letter):
     # Hebdo_psalt_vigiles:
     hebdo_psalt_vigiles = ""
     if hebdo_psalt_noel == "I" and hebdo_psalterii[((ste_famille_date - datetime.date(2011, 11, 27)).days // 7) % 2] == "I":
-        hebdo_psalt_vigiles = "\n\\item ad Vigilias: psalmi hebdomadæ II."
+        hebdo_psalt_vigiles = "\n\\item ad Vigilias: psalmi hebdomadæ II; lectiones sumuntur e Nocturnis I et II."
     elif hebdo_psalt_noel == "II" and hebdo_psalterii[((ste_famille_date - datetime.date(2011, 11, 27)).days // 7) % 2] == "II":
-        hebdo_psalt_vigiles = "\n\\item ad Vigilias: psalmi hebdomadæ I."
+        hebdo_psalt_vigiles = "\n\\item ad Vigilias: psalmi hebdomadæ I; lectiones sumuntur e Nocturnis I et II."
     # Antiennes de Bened. et Magnificat:
     if year_letter == "A":
         ste_famille_bened = "\\item ad Benedictus: ø \\textit{Iacob autem} (AM 836)."
