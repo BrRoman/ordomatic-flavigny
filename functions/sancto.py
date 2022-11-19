@@ -2070,7 +2070,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sainte_elisabeth_trinite_date = datetime.date(current_year, 11, 8)
     sainte_elisabeth_trinite = dict_sancto[sainte_elisabeth_trinite_date] = {}
     sainte_elisabeth_trinite["force"] = 40
-    sainte_elisabeth_trinite["header"] = " - \\textsc{Sanctæ Elisabeth a Trinitate}, virginis - memoria minor - \\textit{Vir.}"
+    sainte_elisabeth_trinite["header"] = " - S. Elisabeth a Trinitate, virginis - memoria minor - \\textit{Vir.}"
     sainte_elisabeth_trinite["body"] = "\n\\item ad Benedictus: ø \\textit{O Beata} (AM 1131) ; oratio in supplemento 184.\n\\item \\textit{in ML (Alb.): Missa pro virgine tantum.}\n\\item in MC \\textit{(Alb.)}: collecta propria ; Commune virginum (MR 947)."
 
     dedicace_latran_date = datetime.date(current_year, 11, 9)
