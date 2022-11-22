@@ -823,18 +823,24 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         "II_vesp"] = "\n\\item ad Magnificat: ø \\textit{Non turbetur} (AM 892)." if not even_year else ""
 
     abbes_cluny_date = datetime.date(current_year, 5, 11)
-    # TODO: octave Pentecôte
     abbes_cluny = dict_sancto[abbes_cluny_date] = {}
     abbes_cluny["force"] = 40
     abbes_cluny[
         "header"] = " - \\textsc{Ss. Odonis, Maioli, Odilonis, Hugonis et B. Petri Venerabilis}, abbatum Cluniacensium - \\textbf{memoria maior} - \\textit{Alb.} (olim die 29 aprilis)."
-    abbes_cluny[
-        "body"] = "\n\\item ad Vigilias: ut in breviario, die 29 aprilis ; invitatorium proprium.\n\\item ad Laudes et Horas minores: omnia ut in AM 877.\n\\item ad Benedictus: ø \\textit{O viri misericordiæ} cum \\textit{alleluia} in tono I g (AM 973).\n\\item \\textit{in ML: Missa in supplemento OSB.}\n\\item in MC: collecta in MP ; Commune sanctorum et sanctarum (MR 954) ; lectiones propriæ: Apoc \\textbf{19}, 1. 5-9a / Io \\textbf{15}, 9-17 ; præfatio de sanctis virginibus et religiosis."
+    if is_oct_pent(abbes_cluny_date):
+        if abbes_cluny_date.weekday() in [2, 4]:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+        elif abbes_cluny_date.weekday() == 5:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
+        else:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
+    else:
+        messe_lue = "\n\\item \\textit{in ML: Missa in supplemento OSB.}"
+    abbes_cluny["body"] = "\n\\item ad Vigilias: ut in breviario, die 29 aprilis ; invitatorium proprium.\n\\item ad Laudes et Horas minores: omnia ut in AM 877.\n\\item ad Benedictus: ø \\textit{O viri misericordiæ} cum \\textit{alleluia} in tono I g (AM 973)." + messe_lue + "\n\\item in MC: collecta in MP ; Commune sanctorum et sanctarum (MR 954) ; lectiones propriæ: Apoc \\textbf{19}, 1. 5-9a / Io \\textbf{15}, 9-17 ; præfatio de sanctis virginibus et religiosis."
     abbes_cluny[
         "II_vesp"] = "\n\\item ad Vesperas: omnia ut hucusque in I Vesperis (AM 874)."
 
     nd_fatima_date = datetime.date(current_year, 5, 13)
-    # TODO: octave Pentecôte
     nd_fatima = dict_sancto[nd_fatima_date] = {}
     nd_fatima["force"] = 20
     if nd_fatima_date < paques + datetime.timedelta(days=49):
@@ -843,7 +849,15 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         messe_conv = "\\item in MC: Commune Beatæ Mariæ Virginis (MR 908) ; præfatio I de Beata Maria Virgine."
     else:
         couleur = "\\textit{Vir.}"
-        messe_lue = "\\item \\textit{in ML (Alb): Missa de die 11 februarii.}"
+        if is_oct_pent(nd_fatima_date):
+            if nd_fatima_date.weekday() in [2, 4]:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+            elif nd_fatima_date.weekday() == 5:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
+            else:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
+        else:
+            messe_lue = "\\item \\textit{in ML (Alb): Missa de die 11 februarii.}"
         messe_conv = "\\item in MC \\textit{(Alb.)}: Commune Beatæ Mariæ Virginis (MR 903) ; præfatio I de Beata Maria Virgine."
     nd_fatima["header"] = " - Beatæ Mariæ Virginis de Fatima - \\textit{memoria minor} - " + couleur
     nd_fatima["body"] = "\n\\item ad Benedictus: ø \\textit{Ait Dominus} (AM 765) ; oratio in supplemento 118*." + \
@@ -865,15 +879,22 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         "\\item in MC: lectiones propriæ: Ac \\textbf{1}, 15-17.20a.20c-26 / Io \\textbf{15}, 9-17 ; præfatio II de Apostolis."
 
     saint_pacome_date = datetime.date(current_year, 5, 15)
-    # TODO: octave Pentecôte
     saint_pacome = dict_sancto[saint_pacome_date] = {}
     saint_pacome["force"] = 40
     saint_pacome["header"] = " - \\textsc{S. Pacomii}, abbatis - \\textbf{memoria maior} - \\textit{Alb.}"
+    if is_oct_pent(saint_pacome_date):
+        if saint_pacome_date.weekday() in [2, 4]:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+        elif saint_pacome_date.weekday() == 5:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
+        else:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
+    else:
+        messe_lue = "\n\\item \\textit{in ML: Missa pro abbate.}"
     saint_pacome[
-        "body"] = "\n\\item in Officio: oratio in supplemento 120 vel in variationibus 21.\n\\item ad Vigilias: lectio in supplemento 119.\n\\item \\textit{in ML: Missa pro abbate.}\n\\item in MC: collecta in MP ; Commune sanctorum et sanctarum (MR 958) ; præfatio I de sanctis."
+        "body"] = "\n\\item in Officio: oratio in supplemento 120 vel in variationibus 21.\n\\item ad Vigilias: lectio in supplemento 119." + messe_lue + "\n\\item in MC: collecta in MP ; Commune sanctorum et sanctarum (MR 958) ; præfatio I de sanctis."
 
     saint_jean_Ier_date = datetime.date(current_year, 5, 18)
-    # TODO: octave Pentecôte
     saint_jean_Ier = dict_sancto[saint_jean_Ier_date] = {}
     saint_jean_Ier["force"] = 20
     if saint_jean_Ier_date < paques + datetime.timedelta(days=49):
@@ -883,11 +904,18 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         couleur = "\\textit{Vir.}"
         ant_bened = "\\item ad Benedictus: ø \\textit{Iste Sanctus} (AM 639) ; oratio in supplemento 120."
     saint_jean_Ier["header"] = " - S. Ioannis I, papæ et martyris - \\textit{memoria minor} - " + couleur
-    saint_jean_Ier["body"] = ant_bened + \
-        "\\item \\textit{in ML (Rub.): Missa de Communi summorum pontificum.}\n\\item in MC \\textit{(Rub.)}: Commune pastorum (MR 927)."
+    if is_oct_pent(saint_jean_Ier_date):
+        if saint_jean_Ier_date.weekday() in [2, 4]:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+        elif saint_jean_Ier_date.weekday() == 5:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
+        else:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
+    else:
+        messe_lue = "\n\\item \\textit{in ML (Rub.): Missa de Communi summorum pontificum.}"
+    saint_jean_Ier["body"] = ant_bened + messe_lue + "\n\\item in MC \\textit{(Rub.)}: Commune pastorum (MR 927)."
 
     saint_pierre_celestin_date = datetime.date(current_year, 5, 19)
-    # TODO: octave Pentecôte
     saint_pierre_celestin = dict_sancto[saint_pierre_celestin_date] = {}
     saint_pierre_celestin["force"] = 20
     if saint_pierre_celestin_date < paques + datetime.timedelta(days=49):
@@ -895,13 +923,20 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         messe_lue = ""
         messe_conv = "\\item in MC: collecta in MP ; Commune pastorum (MR 928)."
     else:
+        if is_oct_pent(saint_pierre_celestin_date):
+            if saint_pierre_celestin_date.weekday() in [2, 4]:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+            elif saint_pierre_celestin_date.weekday() == 5:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
+            else:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
+        else:
+            messe_lue = "\n\\item \\textit{in ML: Alb.}"
         couleur = "\\textit{Vir.}"
-        messe_lue = "\\item \\textit{in ML: Alb.}"
         messe_conv = "\\item in MC \\textit{(Alb.)}: collecta in MP ; Commune pastorum (MR 928)."
     saint_pierre_celestin[
         "header"] = " - S. Petri Celestini, papæ et eremitæ - \\textit{memoria minor} - " + couleur
-    saint_pierre_celestin[
-        "body"] = "\n\\item ad Benedictus: ø \\textit{Sacerdos et pontifex} (AM 656)." + messe_lue + messe_conv
+    saint_pierre_celestin["body"] = "\n\\item ad Benedictus: ø \\textit{Sacerdos et pontifex} (AM 656)." + messe_lue + messe_conv
 
     anniv_pere_bernard_date = datetime.date(current_year, 5, 21)
     anniv_pere_bernard = dict_sancto[anniv_pere_bernard_date] = {}
@@ -916,8 +951,10 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         datetime.timedelta(days=49) else ""
     if is_oct_pent(saint_bede_date):
         repons_vigiles = "\n\\item ad Vigilias: post lectionem dicitur ¶ \\textit{In medio} sine Alleluia."
-        if saint_bede_date.weekday() in [2, 4, 5]:
+        if saint_bede_date.weekday() in [2, 4]:
             messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+        elif saint_bede_date.weekday() == 5:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
         else:
             messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
     else:
@@ -928,7 +965,6 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         "\n\\item in MC: Commune doctorum Ecclesiæ (MR 943) ; præfatio de sanctis virginibus et religiosis."
 
     saint_gregoire_VII_date = datetime.date(current_year, 5, 26)
-    # TODO: octave Pentecôte
     saint_gregoire_VII = dict_sancto[saint_gregoire_VII_date] = {}
     saint_gregoire_VII["force"] = 20
     if saint_gregoire_VII_date < paques + datetime.timedelta(days=49):
@@ -936,8 +972,16 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         messe_lue = ""
         messe_conv = "\\item in MC: Commune pastorum (MR 927)."
     else:
+        if is_oct_pent(saint_gregoire_VII_date):
+            if saint_gregoire_VII_date.weekday() in [2, 4]:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+            elif saint_gregoire_VII_date.weekday() == 5:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
+            else:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
+        else:
+            messe_lue = "\n\\item \\textit{in ML}: Alb."
         couleur = "\\textit{Vir.}"
-        messe_lue = "\\item \\textit{in ML}: Alb."
         messe_conv = "\\item in MC \\textit{(Alb.)}: Commune pastorum (MR 927)."
     saint_gregoire_VII["header"] = " - S. Gregorii VII, papæ - \\textit{memoria minor} - \\textit{" + \
         couleur + "} (vide die 25 huius mensis)."
@@ -945,7 +989,6 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         messe_lue + messe_conv
 
     saint_augustin_cantorbery_date = datetime.date(current_year, 5, 27)
-    # TODO: octave Pentecôte
     saint_augustin_cantorbery = dict_sancto[saint_augustin_cantorbery_date] = {
     }
     saint_augustin_cantorbery["force"] = 20
@@ -954,8 +997,17 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         messe_lue = ""
         messe_conv = "\\item in MC: Commune pastorum (MR 938)."
     else:
+        if is_oct_pent(saint_augustin_cantorbery_date):
+            if saint_augustin_cantorbery.weekday() in [2, 4]:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+            elif saint_augustin_cantorbery.weekday() == 5:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
+            else:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
+        else:
+            messe_lue = "\n\\item \\textit{in ML: Alb.}"
         couleur = "\\textit{Vir.}"
-        messe_lue = "\\item \\textit{in ML: Alb.}"
+        messe_lue = ""
         messe_conv = "\\item in MC \\textit{(Alb.)}: Commune pastorum (MR 938)."
     saint_augustin_cantorbery["header"] = " - S. Augustini Cantuariensis, episcopi - \\textit{memoria minor} - \\textit{" + \
         couleur + "} (olim die 26 huius, vel 28 in ML)."
@@ -963,13 +1015,14 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         "body"] = "\n\\item ad Benedictus: ø \\textit{Amavit eum} (AM 663)." + messe_lue + messe_conv
 
     sainte_jeanne_arc_date = datetime.date(current_year, 5, 30)
-    # TODO: octave Pentecôte
     sainte_jeanne_arc = dict_sancto[sainte_jeanne_arc_date] = {}
     sainte_jeanne_arc["force"] = 40
     sainte_jeanne_arc["header"] = " - \\textsc{S. Ioannæ d’Arc}, virginis, patronæ secundariæ Galliæ - \\textbf{memoria maior} - \\textit{Alb.}"
     if is_oct_pent(sainte_jeanne_arc_date):
-        if sainte_jeanne_arc_date.weekday() in [2, 4, 5]:
+        if sainte_jeanne_arc_date.weekday() in [2, 4]:
             messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+        elif sainte_jeanne_arc_date.weekday() == 5:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
         else:
             messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
     else:
@@ -980,14 +1033,21 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sainte_jeanne_arc["II_vesp"] = "\n\\item ad Magnificat: ø \\textit{Hæc est} in variationibus 45."
 
     visitation_date = datetime.date(current_year, 5, 31)
-    # TODO: octave Pentecôte
     visitation = dict_sancto[visitation_date] = {}
     visitation["force"] = 70
     visitation[
         "header"] = " - \\textbf{\\textsc{In Visitatione Beatæ Mariæ Virginis}} - \\textbf{festum} - \\textit{Alb.} (olim die 2 iulii)."
     suppl_vigiles = "\\item ad Vigilias: in supplemento 122 ; invitatorium proprium in supplemento 58. " if visitation_date < paques + \
         datetime.timedelta(days=56) else ""
-    messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)." if is_oct_pent(visitation_date) and visitation_date.weekday() in [2, 4, 5] else ""
+    if is_oct_pent(visitation_date):
+        if visitation_date.weekday() in [2, 4]:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+        elif visitation_date.weekday() == 5:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
+        else:
+            messe_lue = ""
+    else:
+        messe_lue = "\n\\item \\textit{in ML: Missa in PAL ; præfatio de sanctis.}"
     lectures_mc = "Rom \\textbf{12}, 9-16b" if even_year else "Soph \\textbf{3}, 14-18"
     visitation["body"] = suppl_vigiles + messe_lue + "\\item in MC: lectiones propriæ: " + \
         lectures_mc + \
@@ -1002,8 +1062,10 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         "header"] = " - \\textsc{S. Iustini}, martyris - \\textbf{memoria maior} - \\textit{Rub.} (olim die 14 aprilis)."
     if is_oct_pent(saint_justin_date):
         repons_vigiles = " Post lectionem dicitur ¶ \\textit{In medio} sine Alleluia."
-        if saint_justin_date.weekday() in [2, 4, 5]:
+        if saint_justin_date.weekday() in [2, 4]:
             messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+        elif saint_justin_date.weekday() == 5:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
         else:
             messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
     else:
@@ -1024,8 +1086,10 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         couleur = "\\textit{Vir.}"
         ant_bened = "\\item ad Benedictus: ø \\textit{Vestri capilli} (AM 650) ; oratio in supplemento 131."
         if is_oct_pent(saint_pothin_date):
-            if saint_pothin_date.weekday() in [2, 4, 5]:
+            if saint_pothin_date.weekday() in [2, 4]:
                 messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+            elif saint_pothin_date.weekday() == 5:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
             else:
                 messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
         else:
@@ -1038,7 +1102,6 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         messe_conv + "."
 
     saint_charles_lwanga_date = datetime.date(current_year, 6, 3)
-    # TODO: octave Pentecôte
     saint_charles_lwanga = dict_sancto[saint_charles_lwanga_date] = {}
     saint_charles_lwanga["force"] = 40
     saint_charles_lwanga["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus RP Francisci Xavier Mariæ \\textsc{Gaillot-Drevon}, sacerdotis, qui die 3 iunii 2018 obdormivit in Domino."
@@ -1050,8 +1113,10 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     else:
         ant_bened = "\n\\item ad Benedictus: ø \\textit{Et ipsi} (AM 949)."
         if is_oct_pent(saint_charles_lwanga_date):
-            if saint_charles_lwanga_date.weekday() in [2, 4, 5]:
+            if saint_charles_lwanga_date.weekday() in [2, 4]:
                 messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+            elif saint_charles_lwanga_date.weekday() == 5:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
             else:
                 messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
         else:
@@ -1062,15 +1127,16 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_charles_lwanga["II_vesp"] = ant_magnif
 
     saint_boniface_date = datetime.date(current_year, 6, 5)
-    # TODO: octave Pentecôte
     saint_boniface = dict_sancto[saint_boniface_date] = {}
     saint_boniface["force"] = 40
     messe_conv = "(MR 921)" if saint_boniface_date < paques + \
         datetime.timedelta(days=49) else "(MR 915)"
     saint_boniface["header"] = " - \\textsc{S. Bonifatii}, episcopi et martyris - \\textbf{memoria maior} - \\textit{Rub.}"
     if is_oct_pent(saint_boniface_date):
-        if saint_boniface_date.weekday() in [2, 4, 5]:
+        if saint_boniface_date.weekday() in [2, 4]:
             messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+        elif saint_boniface_date.weekday() == 5:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
         else:
             messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
     else:
@@ -1079,7 +1145,6 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         messe_conv + " ; præfatio de sanctis martyribus."
 
     saint_ephrem_date = datetime.date(current_year, 6, 9)
-    # TODO: octave Pentecôte
     saint_ephrem = dict_sancto[saint_ephrem_date] = {}
     saint_ephrem["force"] = 20
     if saint_ephrem_date < paques + datetime.timedelta(days=49):
@@ -1087,8 +1152,16 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         messe_lue = ""
         messe_conv = ""
     else:
+        if is_oct_pent(saint_ephrem_date):
+            if saint_ephrem_date.weekday() in [2, 4]:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+            elif saint_ephrem_date.weekday() == 5:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
+            else:
+                messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
+        else:
+            messe_lue = "\n\\item \\textit{in ML: Alb.}"
         couleur = "\\textit{Vir.}"
-        messe_lue = "\\item \\textit{in ML: Alb.}"
         messe_conv = " \\textit{(Alb.)}"
     saint_ephrem["header"] = " - S. Ephræm, diaconi et Ecclesiæ doctoris - \\textit{memoria minor} - " + \
         couleur + " (olim die 18 iunii)."
@@ -1097,21 +1170,28 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         ": Commune doctorum Ecclesiæ (MR 944)."
 
     saint_barnabe_date = datetime.date(current_year, 6, 11)
-    # TODO: octave Pentecôte
     saint_barnabe = dict_sancto[saint_barnabe_date] = {}
     saint_barnabe["force"] = 40
     saint_barnabe["header"] = " - \\textsc{S. Barnabæ, apostoli} - \\textbf{memoria maior} - \\textit{Rub.}"
     vigiles = "\\item ad Vigilias: invitatorium et hymnus de Communi Apostolorum extra tempus paschale ; lectio in supplemento 132 cum ¶ extra tempus paschale ; in II nocturno lectio brevis in supplemento 133 vel ut ad Sextam in Communi Apostolorum." if saint_barnabe_date < paques + \
         datetime.timedelta(days=56) else "\\item ad Vigilias: lectio in supplemento 132 pro breviario veteri ; in II nocturno lectio brevis in supplemento 133 vel ut ad Sextam in Communi Apostolorum."
+    if is_oct_pent(saint_barnabe_date):
+        if saint_barnabe_date.weekday() in [2, 4]:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+        elif saint_barnabe_date.weekday() == 5:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
+        else:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
+    else:
+        messe_lue = "\n\\item \\textit{in ML: dicitur \\emph{Credo}.}"
     saint_barnabe["body"] = vigiles + \
-        "\\item \\textit{in ML: dicitur \\emph{Credo}.}\n\\item in MC: lectiones propriæ: Act \\textbf{11}, 21b-26 ; \\textbf{13}, 1-3 / Mt \\textbf{10}, 7-13 ; præfatio I de Apostolis."
+        messe_lue + "\n\\item in MC: lectiones propriæ: Act \\textbf{11}, 21b-26 ; \\textbf{13}, 1-3 / Mt \\textbf{10}, 7-13 ; præfatio I de Apostolis."
     ant_magnif = " cum \\textit{alleluia}" if saint_barnabe_date < paques + \
         datetime.timedelta(days=49) else ""
     saint_barnabe["II_vesp"] = "\n\\item ad Magnificat: ø \\textit{Tradent enim vos}" + \
         ant_magnif + " (AM 621)."
 
     saint_antoine_padoue_date = datetime.date(current_year, 6, 13)
-    # TODO: octave Pentecôte
     saint_antoine_padoue = dict_sancto[saint_antoine_padoue_date] = {}
     saint_antoine_padoue["force"] = 40
     messe_conv = "(MR 921)" if saint_antoine_padoue_date < paques + \
@@ -1120,17 +1200,33 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     in_officio = "\\item in Officio: oratio in supplemento 134." if saint_antoine_padoue_date < paques + \
         datetime.timedelta(days=56) else ""
     ant_bened = "\\textit{Exi cito} (AM 558)" if even_year else "\\textit{Quod autem} (AM 324)"
-    saint_antoine_padoue["body"] = in_officio + "\\item ad Vigilias: lectio in supplemento 133.\n\\item ad Benedictus: ø " + ant_bened + \
-        ".\n\\item \\textit{in ML: Missa in proprio sanctorum vel in PAL.}\n\\item in MC: Commune Sanctorum et Sanctarum (MR 962) ; præfatio I de sanctis."
+    if is_oct_pent(saint_antoine_padoue_date):
+        if saint_antoine_padoue_date.weekday() in [2, 4]:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+        elif saint_antoine_padoue_date.weekday() == 5:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
+        else:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
+    else:
+        messe_lue = "\n\\item \\textit{in ML: Missa in proprio sanctorum vel in PAL.}"
+    saint_antoine_padoue["body"] = in_officio + "\\item ad Vigilias: lectio in supplemento 133.\n\\item ad Benedictus: ø " + ant_bened + messe_lue + "\n\\item in MC: Commune Sanctorum et Sanctarum (MR 962) ; præfatio I de sanctis."
 
     saint_romuald_date = datetime.date(current_year, 6, 19)
-    # TODO: octave Pentecôte
     saint_romuald = dict_sancto[saint_romuald_date] = {}
     saint_romuald["force"] = 40
     saint_romuald[
         "header"] = " - \\textsc{S. Romualdi}, abbatis - \\textbf{memoria maior} - \\textit{Alb.} (olim die 7 februarii)."
+    if is_oct_pent(saint_romuald_date):
+        if saint_romuald_date.weekday() in [2, 4]:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes} (Credo)."
+        elif saint_romuald_date.weekday() == 5:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
+        else:
+            messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
+    else:
+        messe_lue = ""
     saint_romuald[
-        "body"] = "\n\\item ad Vigilias: lectio et oratio in supplemento 134.\n\\item in MC: Commune sanctorum et sanctarum (MR 958) ; præfatio de sanctis virginibus et religiosis."
+        "body"] = "\n\\item ad Vigilias: lectio et oratio in supplemento 134." + messe_lue + "\n\\item in MC: Commune sanctorum et sanctarum (MR 958) ; præfatio de sanctis virginibus et religiosis."
     #saint_romuald["II_vesp"] = "\n\\item ad Magnificat: ø \\textit{Hic vir despiciens} (AM 675)."
 
     saint_louis_gonzague_date = datetime.date(current_year, 6, 21)
