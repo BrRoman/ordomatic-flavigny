@@ -2300,6 +2300,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         "body"] = "\n\\item ad Laudes" + var_vesperas + " et Horas minores: antiphonæ propriæ.\n\\item in MC: omnia in MP ; lectiones propriæ: Os \\textbf{2}, 16b.17b.21-22 / Mt \\textbf{25}, 1-13 ; præfatio de sanctis martyribus."
     sainte_cecile["II_vesp"] = "\n\\item ad Magnificat: ø \\textit{Est secretum} (AM 1139)."
 
+    if even_year:
         saint_clement_date = datetime.date(current_year, 11, 23)
         saint_clement = dict_sancto[saint_clement_date] = {}
         saint_clement["force"] = 40
@@ -2309,6 +2310,14 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
             "body"] = "\n\\item ad Laudes" + var_vesperas + " et Horas minores: antiphonæ propriæ.\n\\item in MC: Commune martyrum (MR 917) ; lectiones propriæ: 1~P \\textbf{5}, 1-4 / Mt \\textbf{16}, 13-19; præfatio de sanctis martyribus."
         saint_clement[
             "II_vesp"] = "\n\\item ad Vesperas: a capitulo ut in II Vesperis de Communi unius martyris ; ad Magnificat: ø \\textit{Dedisti} (AM 1148)."
+    else:
+        saint_colomban_date = datetime.date(current_year, 11, 23)
+        saint_colomban = dict_sancto[saint_colomban_date] = {}
+        saint_colomban["force"] = 40
+        saint_colomban["header"] = " - \\textsc{S. Columbani}, abbatis - \\textbf{memoria maior} - \\textit{Alb.}"
+        saint_colomban["body"] = "\\item in Officio : oratio in supplemento 194*.\n\\item ad Vigilias : lectio in supplemento 193*.\n\\item ad Benedictus : ø \\textit{Sancti mei} (AM 878)\n\\item \\textit{in ML : Missa pro abbate.}\n\\item in MC : collecta in MP ; Commune sanctorum et sanctarum (MR 958) ; præfatio de sanctis virginibus et religiosis."
+        saint_colomban["II_vesp"] = "\n\\item ad Magnificat : ø \\textit{Ubi duo} (AM 367)."
+
 
     saint_andre_dung_lac_date = datetime.date(current_year, 11, 24)
     saint_andre_dung_lac = dict_sancto[saint_andre_dung_lac_date] = {}
