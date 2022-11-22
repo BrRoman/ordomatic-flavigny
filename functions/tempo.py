@@ -2,7 +2,7 @@
 
 import datetime
 from functions.lectiones import *
-from functions.various import hebdo_psalterii, ad_omnes_horas, ant_bened_adv_3, ant_bened_adv_4, ant_bened_temps_epiph, ant_magnif_temps_epiph, ant_vepres_vendr_tp, f_num_prefaces, f_mc_bmv, f_num_summer, ant_octave_pentec, mc_bmv,f_symbols, f_transf_month_genitive, f_roman_numbers, f_transf_weekday
+from functions.various import hebdo_psalterii, ad_omnes_horas, ant_bened_adv_3, ant_bened_adv_4, ant_bened_temps_epiph, ant_magnif_temps_epiph, ant_vepres_vendr_tp, f_num_prefaces, f_mc_bmv, f_num_summer, octave_pentec, mc_bmv,f_symbols, f_transf_month_genitive, f_roman_numbers, f_transf_weekday
 
 def dict_tempo_create(current_year, even_year, year_letter):
     even_year_num = 0 if even_year else 1
@@ -888,13 +888,13 @@ def dict_tempo_create(current_year, even_year, year_letter):
                     if j == 0: # Lundi de Pentecôte :
                         new_day["force"] = 50
                         new_day["header"] = " - \\textsc{Beatæ Mariæ Virginis, Ecclesiæ Matris} - \\textbf{memoria maior} - \\textit{Alb.}" 
-                        new_day["generalities"] = "\n\\ApplyParBox{1cm}{\\begin{center}\\large{\\textit{Post Completorium extinguitur cereus paschalis}}\\par\\large{\\textit{et explicit tempus paschale.}}\\end{center}}\n\\newpage\n\\ApplyParBox{1cm}{\\ApplyGenerTitleHuge{Tempus per annum}\n\\medskip\n\\ApplyGenerTitleLarge{ab hebdomada " + start_week + "}}\n\\ApplyGenerList{\n\\item dicitur \\textit{Angelus Domini}.\n\\item ad Completorium : ø \\textit{Salve Regina}.}\n\\ApplyGenerSubTitle{in Ofﬁcio :}\n\\ApplyGenerList{\n\\item in feriis : oratio de octava, nisi aliter notetur.}\n\\ApplyGenerSubTitle{ad mensam :}\n\\ApplyGenerList{\n\\item benedictio de tempore per annum.}" + lectiones_body + "\n\\ApplyGenerList{\n\\item in feriis : præfatio communis " + f_num_prefaces(34 - nb_dim_ap_pentec)[1] + " , nisi aliter notetur.\n\\medskip}"
+                        new_day["generalities"] = "\n\\ApplyParBox{1cm}{\\begin{center}\\large{\\textit{Post Completorium extinguitur cereus paschalis}}\\par\\large{\\textit{et explicit tempus paschale.}}\\end{center}}\n\\newpage\n\\ApplyParBox{1cm}{\\ApplyGenerTitleHuge{Tempus per annum}\n\\medskip\n\\ApplyGenerTitleLarge{ab hebdomada " + start_week + "}}\n\\ApplyGenerList{\n\\item dicitur \\textit{Angelus Domini}.\n\\item ad Completorium : ø \\textit{Salve Regina}.}\n\\ApplyGenerSubTitle{in Ofﬁcio :}\n\\ApplyGenerList{\n\\item in feriis : oratio de octava, nisi aliter notetur.\n\\item infra octavam Pentecostes : antiphonæ de octava, nisi aliter notetur.}\n\\ApplyGenerSubTitle{ad mensam :}\n\\ApplyGenerList{\n\\item benedictio de tempore per annum.}" + lectiones_body + "\n\\ApplyGenerList{\n\\item in feriis : præfatio communis " + f_num_prefaces(34 - nb_dim_ap_pentec)[1] + " , nisi aliter notetur.\n\\medskip}"
                         new_day["body"] = "\n\\item de communi beatæ Mariæ Virginis, præter sequentia.\n\\item oratio propria in supplemento 52* vel in AM 527*.\n\\item ad Vigilias : lectio in supplemento 49*.\n\\item ad Laudes : hymnus proprius (AM 525*); ad Benedictus: ø \\textit{Perseverabant unanimiter} (AM 526*).\n\\item \\textit{in ML (Rub): Missa infra octavam (Credo).}\n\\item in MC : Missa de Beata Maria Ecclesiæ Matre (MR 1172); lectiones propriæ: Act \\textbf{1}, 12-14 / Io \\textbf{19}, 25-34; præfatio I de Beata Maria Virgine."
                         new_day["II_vesp"] = "\n\\item ad Magnificat: ø \\textit{Dixit Dominus} (AM 527*)."
                     elif j != 5: # Autres féries de l'octave de Pentecôte, sauf samedi :
-                        new_day["force"] = 30 # Entre mémoire mineure et majeure.
-                        new_day["body"] = ant_octave_pentec[j]["body"]
-                        new_day["II_vesp"] = ant_octave_pentec[j]["vesp"]
+                        # new_day["force"] = 30 # Entre mémoire mineure et majeure.
+                        new_day["force"] = 10
+                        new_day["body"] = octave_pentec[j]["body"]
                 # Quatre-temps de septembre:
                 if num_summer == " - III septembris" and new_day_date.weekday() in [2, 4, 5]:
                     new_day["body"] = "\n\\item \\textit{in ML (Viol.): Quatuor Temporum Septembris (forma Missæ brevior).}"
