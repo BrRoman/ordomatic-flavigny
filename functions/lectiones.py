@@ -239,8 +239,8 @@ lectiones["hebdo_6_paques"]["header"] = "Hebdomada VI Paschæ: lectiones de temp
 lectiones["hebdo_6_paques"]["dim"] = {}
 lectiones["hebdo_6_paques"]["dim"]["A"] = "Act \\textbf{8}, 5-8.14-17 / 1 Pe \\textbf{3}, 15-18 / Io \\textbf{14}, 15-21"
 lectiones["hebdo_6_paques"]["dim"]["B"] = "Act \\textbf{10}, 25-26.34-35.44-48 / 1 Io \\textbf{4}, 7-10 / Io \\textbf{15}, 9-17"
-lectiones["hebdo_6_paques"]["dim"]["C"] = "Act \\textbf{15}, 1-2.22-29 / Ap \\textbf{21}, 10-14  22-23 / Io \\textbf{14}, 23-29"
-lectiones["hebdo_6_paques"][0] = "Act \\textbf{16}, 11-15 / Io \\textbf{15}, 26–16, 4"
+lectiones["hebdo_6_paques"]["dim"]["C"] = "Act \\textbf{15}, 1-2.22-29 / Ap \\textbf{21}, 10-14.22-23 / Io \\textbf{14}, 23-29"
+lectiones["hebdo_6_paques"][0] = "Act \\textbf{16}, 11-15 / Io \\textbf{15}, 26–\\textbf{16}, 4"
 lectiones["hebdo_6_paques"][1] = "Act \\textbf{16}, 22-34 / Io \\textbf{16}, 5b-11"
 lectiones["hebdo_6_paques"][2] = "Act \\textbf{17}, 15.22–18, 1 / Io \\textbf{16}, 12-15"
 

@@ -844,7 +844,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
             messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
     else:
         messe_lue = "\n\\item \\textit{in ML: Missa in supplemento OSB.}"
-    abbes_cluny["body"] = "\n\\item ad Vigilias: ut in breviario, die 29 aprilis ; invitatorium proprium.\n\\item ad Laudes et Horas minores: omnia ut in AM 877.\n\\item ad Benedictus: ø \\textit{O viri misericordiæ} cum \\textit{alleluia} in tono I g (AM 973)." + messe_lue + "\n\\item in MC: collecta in MP ; Commune sanctorum et sanctarum (MR 954) ; lectiones propriæ: Apoc \\textbf{19}, 1. 5-9a / Io \\textbf{15}, 9-17 ; præfatio de sanctis virginibus et religiosis."
+    abbes_cluny["body"] = "\n\\item ad Vigilias: ut in breviario, die 29 aprilis ; invitatorium proprium.\n\\item ad Laudes et Horas minores: omnia ut in AM 877.\n\\item ad Benedictus: ø \\textit{O viri misericordiæ} cum \\textit{alleluia} in tono I g (AM 973)." + messe_lue + "\n\\item in MC: collecta in MP ; Commune sanctorum et sanctarum (MR 954) ; lectiones propriæ: Apoc \\textbf{19}, 1.5-9a / Io \\textbf{15}, 9-17 ; præfatio de sanctis virginibus et religiosis."
     abbes_cluny[
         "II_vesp"] = "\n\\item ad Vesperas: omnia ut hucusque in I Vesperis (AM 874)."
 
