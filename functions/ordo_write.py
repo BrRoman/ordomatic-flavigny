@@ -280,7 +280,7 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
 
         # Antiennes du dernier dimanche de l'année à caser à la dernière férie libre :
         if new_day_date.day == ult_ant:
-            if new_day_date in dict_sancto and 'body' in dict_sancto[new_day_date] and 'Missa defunctorum pro omnibus benefactoribus nostris defunctis (MR 1225)' in dict_sancto[new_day_date]['body']:
+            if new_day_date in dict_sancto and 'body' in dict_sancto[new_day_date] and 'Missa defunctorum pro omnibus benefactoribus nostris defunctis (MR 1225)' in dict_sancto[new_day_date]['body'] and new_day_date.month in [11,12]:
                 dict_new_day["body"] = "\n\\item ad Benedictus: ø \\textit{Cum videritis} (AM 617)." + dict_new_day["body"] + "\n\\item ad Magnificat: ø \\textit{Amen dico vobis} (AM 618)."
             elif new_day_date.year == current_year and new_day_date.month == 11 and new_day_date.day != 1:
                 dict_new_day["body"] = "\n\\item ad Benedictus: ø \\textit{Cum videritis} (AM 617).\n\\item ad Magnificat: ø \\textit{Amen dico vobis} (AM 618)."
