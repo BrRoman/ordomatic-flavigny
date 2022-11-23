@@ -414,7 +414,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     passion["num_day"] = "\\textbf{" + str(passion_date.day) + "} &"
     passion["symbols"] = "".join(f_symbols(passion_date))
     passion["header"] = " \\textbf{\\textsc{Dominica V in Quadragesima}} (I Passionis) - de ea - \\textit{Viol.}"
-    passion["body"] = "\\item In MC :" + (" tres lectiones Anno A ;" if year_letter != "A" else "") + " præfatio propria. Missa concluditur oratione super populum."
+    passion["body"] = "\\item In MC :" + (" tres lectiones Anno A ;" if year_letter != "A" else "") + " præfatio propria."
     passion["preface_feries"] = "\n\\item In feriis : præfatio I de Passione Domini, nisi aliter notetur."
     current_lectiones = lectiones["hebdo_5_quadr"]
     passion["lectiones_header"] = current_lectiones["header"]
@@ -448,7 +448,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     rameaux["num_day"] = "\\textbf{" + str(rameaux_date.day) + "} &"
     rameaux["symbols"] = "".join(f_symbols(rameaux_date))
     rameaux["header"] = " \\textbf{\\textsc{Dominica in Palmis de Passione Domini}} - de ea - \\textit{Rub.}"
-    rameaux["body"] = "\\item \\textit{in ML (Viol.) : ante lectionem historiæ Passionis omittuntur \\emph{Dominus vobiscum} et cætera (uti indicatur in Missali) ; post lectionem non respondetur \\emph{Laus tibi Christe} et celebrans non osculatur librum (quod servatur etiam feria III et IV) ; legitur in ﬁne (loco Evangelii sancti Ioannis) Evangelium ut in benedictione ramorum.}\n\\item In MC : ante Missam, benedictio et processio palmarum ; omittitur antiphona ad introitum ; circa ﬁnem historiæ Passionis, genuflectitur et pausatur aliquantulum ; præfatio propria. Missa concluditur oratione super populum."
+    rameaux["body"] = "\\item \\textit{in ML (Viol.) : ante lectionem historiæ Passionis omittuntur \\emph{Dominus vobiscum} et cætera (uti indicatur in Missali) ; post lectionem non respondetur \\emph{Laus tibi Christe} et celebrans non osculatur librum (quod servatur etiam feria III et IV) ; legitur in ﬁne (loco Evangelii sancti Ioannis) Evangelium ut in benedictione ramorum.}\n\\item In MC : ante Missam, benedictio et processio palmarum ; omittitur antiphona ad introitum ; circa ﬁnem historiæ Passionis, genuflectitur et pausatur aliquantulum ; præfatio propria."
     rameaux["preface_feries"] = "\n\\item In feriis : præfatio II de Passione Domini, nisi aliter notetur."
     current_lectiones = lectiones["rameaux"]
     rameaux["lectiones_header"] = current_lectiones["header"]
