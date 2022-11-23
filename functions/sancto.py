@@ -2288,7 +2288,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     presentation_bmv["force"] = 40
     presentation_bmv["header"] = " - \\textsc{In Præsentatione Beatæ Mariæ Virginis} - \\textbf{memoria maior} - \\textit{Alb.}"
     presentation_bmv[
-        "body"] = "\n\\item in MC: lectiones propriæ: Zac \\textbf{2}, 14-17 / Mt \\textbf{12}, 46-50 ; præfatio I de Beata Maria Virgine."
+        "body"] = "\n\\item in MC: Commune Beatæ Mariæ Virginis (MR 898) ; lectiones propriæ: Zac \\textbf{2}, 14-17 / Mt \\textbf{12}, 46-50 ; præfatio I de Beata Maria Virgine (\\textit{Et te in Præsentatione})."
     presentation_bmv["II_vesp"] = "\n\\item ad Magnificat: ø \\textit{Beata} (AM 1138)."
 
     sainte_cecile_date = datetime.date(current_year, 11, 22)
