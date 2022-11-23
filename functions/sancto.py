@@ -167,6 +167,10 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     anniv_fr_joseph = dict_sancto[anniv_fr_joseph_date] = {}
     anniv_fr_joseph["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus fratris nostri Ioseph Mariæ \\textsc{Bumat}, qui die 17 decembris 1997 obdormivit in Domino."
 
+    anniv_jean_louis_date = datetime.date(current_year - 1, 12, 21)
+    anniv_jean_louis = dict_sancto[anniv_jean_louis_date] = {}
+    anniv_jean_louis["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus Ioannis Ludovici \\textsc{Dos Santos}, oblati nostri, qui die 21 decembris 2021 obdormivit in Domino."
+
     anniv_dom_marechaux_date = datetime.date(current_year - 1, 12, 24)
     anniv_dom_marechaux = dict_sancto[anniv_dom_marechaux_date] = {}
     anniv_dom_marechaux["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus Reverendissimi Patris Bernardi Mariæ \\textsc{Maréchaux}, abbatis, qui die 24 decembris 1927 in Monasterio Dominæ Nostræ Sanctæ Spei Mesnili obdormivit in Domino."
@@ -746,7 +750,11 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
 
     anniv_pere_debroc_date = datetime.date(current_year, 4, 16)
     anniv_pere_debroc = dict_sancto[anniv_pere_debroc_date] = {}
-    anniv_pere_debroc["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus RP Hervæus de BROC, sacerdotis, qui die 16 aprilis 2020, in abbatia Sancti Petri Solesmensis, obdormivit in Domino."
+    anniv_pere_debroc["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus RP Hervæus \\textsc{de Broc}, sacerdotis, qui die 16 aprilis 2020, in abbatia Sancti Petri Solesmensis, obdormivit in Domino."
+
+    anniv_pere_germain_date = datetime.date(current_year, 4, 18)
+    anniv_pere_germain = dict_sancto[anniv_pere_germain_date] = {}
+    anniv_pere_germain["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus RP Germani \\textsc{Leblond}, sacerdotis, qui die 18 aprilis 2021 in abbatia Dominæ Nostræ de Petra Gyrante obdormivit in Domino."
 
     saint_anselme_date = datetime.date(current_year, 4, 21)
     saint_anselme = dict_sancto[saint_anselme_date] = {}
@@ -836,7 +844,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
             messe_lue = "\n\\item \\textit{in ML (Rub): Missa infra octavam} (Credo)."
     else:
         messe_lue = "\n\\item \\textit{in ML: Missa in supplemento OSB.}"
-    abbes_cluny["body"] = "\n\\item ad Vigilias: ut in breviario, die 29 aprilis ; invitatorium proprium.\n\\item ad Laudes et Horas minores: omnia ut in AM 877.\n\\item ad Benedictus: ø \\textit{O viri misericordiæ} cum \\textit{alleluia} in tono I g (AM 973)." + messe_lue + "\n\\item in MC: collecta in MP ; Commune sanctorum et sanctarum (MR 954) ; lectiones propriæ: Apoc \\textbf{19}, 1. 5-9a / Io \\textbf{15}, 9-17 ; præfatio de sanctis virginibus et religiosis."
+    abbes_cluny["body"] = "\n\\item ad Vigilias: ut in breviario, die 29 aprilis ; invitatorium proprium.\n\\item ad Laudes et Horas minores: omnia ut in AM 877.\n\\item ad Benedictus: ø \\textit{O viri misericordiæ} cum \\textit{alleluia} in tono I g (AM 973)." + messe_lue + "\n\\item in MC: collecta in MP ; Commune sanctorum et sanctarum (MR 954) ; lectiones propriæ: Apoc \\textbf{19}, 1.5-9a / Io \\textbf{15}, 9-17 ; præfatio de sanctis virginibus et religiosis."
     abbes_cluny[
         "II_vesp"] = "\n\\item ad Vesperas: omnia ut hucusque in I Vesperis (AM 874)."
 
@@ -1508,7 +1516,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_ignace_loyola["header"] = " - \\textsc{S. Ignatii de Loyola}, presbyteri - \\textbf{memoria maior} - \\textit{Alb.}"
     var_vesperas = ", Vesperas" if saint_ignace_loyola_date.weekday() != 5 else ""
     saint_ignace_loyola[
-        "body"] = "\n\\item ad Laudes" + var_vesperas + " et Horas minores: antiphonæ e Communi confessoris non pontificis.\n\\item ad Benedictus: ø \\textit{Ignem} (AM 564).\n\\item in MC: lectiones propriæ: 1 Co \\textbf{10}, 31–\\textbf{11}, 1 / Lc \\textbf{14}, 25-33 ; præfatio de sanctis virginibus et religiosis.\n\\item ad Magnificat: ø \\textit{Estote} (AM 628)."
+        "body"] = "\n\\item ad Laudes" + var_vesperas + " et Horas minores: antiphonæ e Communi confessoris non pontificis.\n\\item ad Benedictus: ø \\textit{Ignem} (AM 564).\n\\item in MC: lectiones propriæ: 1 Co \\textbf{10}, 31–\\textbf{11}, 1 / Lc \\textbf{14}, 25-33 ; præfatio de sanctis virginibus et religiosis."
+    saint_ignace_loyola["II_vesp"] = "\n\\item ad Magnificat: ø \\textit{Estote} (AM 628)."
 
     # AOÛT:
 
@@ -1844,7 +1853,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saints_corneille_cyprien["force"] = 40
     saints_corneille_cyprien["header"] = " - \\textsc{Ss. Cornelii}, papæ et \\textsc{Cypriani}, episcopi, martyrum - \\textbf{memoria maior} - \\textit{Rub.}"
     saints_corneille_cyprien[
-        "body"] = "\n\\item in Officio: oratio in supplemento 172 vel in AM 1040.\n\\item ad Vigilias: lectio in supplemento 171.\n\\item ad Benedictus: ø \\textit{Adstiterunt iusti} in tono Ig (AM 929).\n\\item in MC: præfatio de sanctis martyribus."
+        "body"] = "\n\\item in Officio: oratio in supplemento 172 vel in AM 1040.\n\\item ad Vigilias: lectio in supplemento 171.\n\\item ad Benedictus: ø \\textit{Astiterunt iusti} in tono Ig (AM 929).\n\\item in MC: præfatio de sanctis martyribus."
     saints_corneille_cyprien[
         "II_vesp"] = "\n\\item ad Magnificat: ø \\textit{Isti sunt sancti} in tono Id (AM 929)."
 
@@ -2138,8 +2147,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         rajout_dim_ml + "\n\\item in MC \\textit{(1a Missa)}:" + rajout_dim_mc + \
         " lectiones propriæ: Is \\textbf{25}, 6a-9 / 1 Co \\textbf{15}, 51-54.57 ; sequentia \\textit{Dies iræ} (Besnier 53) / Io \\textbf{6}, 51-59 ;" + \
         credo_mc + " præfatio I de defunctis."
-    comm_defunts["II_vesp"] = ("\\item I Vesperæ dominicæ sequentis." if comm_defunts_date.weekday(
-    ) == 5 else "") + ("\\item Completorium pro defunctis: incipitur a \\textit{Confiteor}, post examen conscientiæ ; aspersio de more.") if comm_defunts_date.weekday() in [5, 6] else ""
+    comm_defunts["II_vesp"] = "\\item I Vesperæ dominicæ sequentis." if comm_defunts_date.weekday() == 5 else "\\item Completorium pro defunctis : incipitur a \\textit{Confiteor}, post examen conscientiæ ; aspersio de more."
     # Si 1er vendredi du mois, reporter le jeûne au lendemain:
     if comm_defunts_date.weekday() == 4:
         dict_tempo[comm_defunts_date]["symbols"] = dict_tempo[comm_defunts_date]["symbols"].replace(
@@ -2292,15 +2300,24 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         "body"] = "\n\\item ad Laudes" + var_vesperas + " et Horas minores: antiphonæ propriæ.\n\\item in MC: omnia in MP ; lectiones propriæ: Os \\textbf{2}, 16b.17b.21-22 / Mt \\textbf{25}, 1-13 ; præfatio de sanctis martyribus."
     sainte_cecile["II_vesp"] = "\n\\item ad Magnificat: ø \\textit{Est secretum} (AM 1139)."
 
-    saint_clement_date = datetime.date(current_year, 11, 23)
-    saint_clement = dict_sancto[saint_clement_date] = {}
-    saint_clement["force"] = 40
-    saint_clement["header"] = " - \\textsc{S. Clementis I}, papæ et martyris - \\textbf{memoria maior} - \\textit{Rub.}"
-    var_vesperas = ", Vesperas" if saint_clement_date.weekday() != 5 else ""
-    saint_clement[
-        "body"] = "\n\\item ad Laudes" + var_vesperas + " et Horas minores: antiphonæ propriæ.\n\\item in MC: Commune martyrum (MR 917) ; lectiones propriæ: 1~P \\textbf{5}, 1-4 / Mt \\textbf{16}, 13-19; præfatio de sanctis martyribus."
-    saint_clement[
-        "II_vesp"] = "\n\\item ad Vesperas: a capitulo ut in II Vesperis de Communi unius martyris ; ad Magnificat: ø \\textit{Dedisti} (AM 1148)."
+    if even_year:
+        saint_clement_date = datetime.date(current_year, 11, 23)
+        saint_clement = dict_sancto[saint_clement_date] = {}
+        saint_clement["force"] = 40
+        saint_clement["header"] = " - \\textsc{S. Clementis I}, papæ et martyris - \\textbf{memoria maior} - \\textit{Rub.}"
+        var_vesperas = ", Vesperas" if saint_clement_date.weekday() != 5 else ""
+        saint_clement[
+            "body"] = "\n\\item ad Laudes" + var_vesperas + " et Horas minores: antiphonæ propriæ.\n\\item in MC: Commune martyrum (MR 917) ; lectiones propriæ: 1~P \\textbf{5}, 1-4 / Mt \\textbf{16}, 13-19; præfatio de sanctis martyribus."
+        saint_clement[
+            "II_vesp"] = "\n\\item ad Vesperas: a capitulo ut in II Vesperis de Communi unius martyris ; ad Magnificat: ø \\textit{Dedisti} (AM 1148)."
+    else:
+        saint_colomban_date = datetime.date(current_year, 11, 23)
+        saint_colomban = dict_sancto[saint_colomban_date] = {}
+        saint_colomban["force"] = 40
+        saint_colomban["header"] = " - \\textsc{S. Columbani}, abbatis - \\textbf{memoria maior} - \\textit{Alb.}"
+        saint_colomban["body"] = "\\item in Officio : oratio in supplemento 194*.\n\\item ad Vigilias : lectio in supplemento 193*.\n\\item ad Benedictus : ø \\textit{Sancti mei} (AM 878)\n\\item \\textit{in ML : Missa pro abbate.}\n\\item in MC : collecta in MP ; Commune sanctorum et sanctarum (MR 958) ; præfatio de sanctis virginibus et religiosis."
+        saint_colomban["II_vesp"] = "\n\\item ad Magnificat : ø \\textit{Ubi duo} (AM 367)."
+
 
     saint_andre_dung_lac_date = datetime.date(current_year, 11, 24)
     saint_andre_dung_lac = dict_sancto[saint_andre_dung_lac_date] = {}
