@@ -31,7 +31,7 @@ ant_magnif_temps_epiph = {7: "\n\\item ad Magnificat: ø \\textit{Videntes} (AM 
 ant_vepres_vendr_tp = {0: "\n\\item ad Magnificat: ø \\textit{Quis est iste} cum \\textit{alleluia} (AM 945).", 1: "\n\\item ad Magnificat: ø \\textit{Crucem sanctam} in tono II d (AM 468).", 2: "\n\\item ad Magnificat: ø \\textit{Erit sanguis} cum \\textit{alleluia} (AM 951).", 3: "\n\\item ad Magnificat: ø \\textit{Crucifixus} in tono VI f (AM 471)."}
 
 # Octave de Pentecôte :
-octave_pentec = {1: {"body": "\n\\item ad Vigilias, Laudes et Vesperas : hymni æstivi.\n\\item \\textit{in ML (Rub) : Missa infra octavam \\emph{(Credo)}.}\n\\item in MC : lectiones feriales."}, 2: {"body": "\n\\item \\textit{in ML (Rub) : Quatuor Temporum Pentecostes \\emph{(Credo)}.}"}, 3: {"body": "\n\\item \\textit{in ML (Rub) : Missa infra octavam \\emph{(Credo)}.}"}, 4: {"body": "\n\\item \\textit{in ML (Rub) : Quatuor Temporum Pentecostes \\emph{(Credo)}.}"}} 
+octave_pentec = {1: {"body": "\n\\item ad Vigilias, Laudes et Vesperas : hymni æstivi.\n\\item \\textit{in ML (Rub.) : Missa infra octavam \\emph{(Credo)}.}\n\\item in MC : lectiones feriales."}, 2: {"body": "\n\\item \\textit{in ML (Rub.) : Quatuor Temporum Pentecostes \\emph{(Credo)}.}"}, 3: {"body": "\n\\item \\textit{in ML (Rub.) : Missa infra octavam \\emph{(Credo)}.}"}, 4: {"body": "\n\\item \\textit{in ML (Rub.) : Quatuor Temporum Pentecostes \\emph{(Credo)}.}"}} 
 
 # 1er vendredi du mois per annum :
 first_vendr_mc = {1: "in MC (Alb.) : Missa votiva de Dei Misericordia (MR 1158) ; præfatio communis II (in tono simplici).", 2: "in MC (Alb.) : Missa votiva de sacratissimo Corde Iesu (MR 492 - GR 660) ; præfatio propria."}
@@ -169,8 +169,8 @@ def f_mc_bmv(date_bmv, paques): # Renvoie le "body" de la messe BMV :
 		# Samedi dans l'octave de Pentecôte:
 		if date_bmv > paques + datetime.timedelta(days = 49) and date_bmv < paques + datetime.timedelta(days = 56):
 			if num_sam == 1:
-				return(mc_bmv[current_month][num_sam].replace("\\textit{in ML : Immaculati Cordis Beatæ Mariæ Virginis.}", "\\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."))
+				return(mc_bmv[current_month][num_sam].replace("\\textit{in ML : Immaculati Cordis Beatæ Mariæ Virginis.}", "\\textit{in ML (Rub.): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."))
 			else:
-				return(mc_bmv[current_month][num_sam].replace("\n\\item in MC", "\n\\item \\textit{in ML (Rub): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo).\n\\item in MC"))
+				return(mc_bmv[current_month][num_sam].replace("\n\\item in MC", "\n\\item \\textit{in ML (Rub.): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo).\n\\item in MC"))
 		else:
 			return(mc_bmv[current_month][num_sam])
