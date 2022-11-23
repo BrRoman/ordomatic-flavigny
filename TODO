@@ -14,8 +14,8 @@
 - Toussaint dimanche : vérifier que bon dimanche (per annum, post Pentecosten, dim. de nov).
 - Vérifier les samedis, avec les lectures mariales aux Vigiles. Attention: si le 16/07 tombe un samedi, ce n'est pas la peine (cf. Sancto à ce jour).
 - Féries entre Octave de Noël et Baptême: if new_day_date.day == 7 and new_day_date.weekday() != 6: # TODO: Dans quels cas omet-on les "generalities", et dans quels cas les modifie-t-on ?
-- Féries per annum : new_day["generalities"] = ("\n\\newpage\n\\ApplyParBox{1cm}{\\ApplyGenerTitleHuge{Tempus Per annum}}\n\\ApplyGenerSubTitle{in Ofﬁcio :}\n\\ApplyGenerList{\n\\item in feriis : hebdomada I per annum vel I post Epiphaniam.}\n\\ApplyGenerSubTitle{ad mensam :}\n\\ApplyGenerList{\n\\item benedictio de tempore per annum.}" + lectiones_body + "\n\\ApplyGenerList{\n\\item præfatio communis I, nisi aliter notetur.}\n\\medskip") if i == 0 and j == 0 else "" # TODO : Body = Vigiles… + "in MC : lectiones feriales" à la 1ère férie libre. Pourquoi pas dans le generalities ?
-- Texte spécial pour le 3e samedi de juin, s'il tombe avant la Trinité… :) TODO : Ce cas (rarissime) n'a pas encore été testé. functions/tempo.py-new_day["body"] = "\n\\item ad Vigilias : lectio sabbato 3 (in supplemento 202).\n\\item in MC : Beatæ Mariæ Virginis, Matris et mediatricis gratiæ (CM 30) ; præfatio I de Beata Maria Virgine."
+- Féries per annum : new_day["generalities"] = ("\n\\newpage\n\\ApplyParBox{1cm}{\\ApplyGenerTitleHuge{Tempus Per annum}}\n\\ApplyGenerSubTitle{in Ofﬁcio :}\n\\ApplyGenerList{\n\\item In feriis : hebdomada I per annum vel I post Epiphaniam.}\n\\ApplyGenerSubTitle{ad mensam :}\n\\ApplyGenerList{\n\\item Benedictio de tempore per annum.}" + lectiones_body + "\n\\ApplyGenerList{\n\\item Præfatio communis I, nisi aliter notetur.}\n\\medskip") if i == 0 and j == 0 else "" # TODO : Body = Vigiles… + "in MC : lectiones feriales" à la 1ère férie libre. Pourquoi pas dans le generalities ?
+- Texte spécial pour le 3e samedi de juin, s'il tombe avant la Trinité… :) TODO : Ce cas (rarissime) n'a pas encore été testé. functions/tempo.py-new_day["body"] = "\n\\item Ad Vigilias : lectio sabbato 3 (in supplemento 202).\n\\item In MC : Beatæ Mariæ Virginis, Matris et mediatricis gratiæ (CM 30) ; præfatio I de Beata Maria Virgine."
 - Remplacer partout les tabulations par 4 espaces.
 - Semailles = 1ère férie libre avant l'Ascension (descendre du lundi au mercredi). Récoltes = semaine avant 3e dim. de Septembre (4 temps de sept.) : mercredi ou vendredi, sinon lundi, mardi ou jeudi.
 - Fêtes mobiles de l'année suivante à la fin de l'ordo.
@@ -29,10 +29,10 @@
 - Alterner 1 année sur 2 saint Clément et saint Colomban :
     \ApplyHeader{\textbf{23} & Feria III - \textsc{S. Columbani}, abbatis - \textbf{memoria maior} - \textit{Alb.}}
     \ApplyBody{
-        \item in Officio~: oratio in supplemento 193*.
-        \item ad Vigilias~: lectio in supplemento 193*.
+        \item In Officio~: oratio in supplemento 193*.
+        \item Ad Vigilias~: lectio in supplemento 193*.
         \item \textit{in ML~: Missa pro abbate.}
-        \item in MC~: collecta in MP~; Commune sanctorum et sanctarum (MR 958)~; præfatio de sanctis virginibus et religiosis.}
+        \item In MC~: collecta in MP~; Commune sanctorum et sanctarum (MR 958)~; præfatio de sanctis virginibus et religiosis.}
 * - Dans l’Ordo, pour les MC De Beata, il faudra remplacer «præfatio I/II de BMV» par «præfatio propria».
 * - Dans les textes liturgiques, le j a été remplacé par i depuis Pie XII. Donc, dans l’Ordo, il faudrait remplacer partout les j qui se sont introduits furtivement par un i (sauf Jounel, Jogues et Joly, si possible)…
 - Il faudrait que les abréviations utilisées pour les livres bibliques correspondent avec la table donnée en p. 4 (par exemple Io et non pas Jn).
