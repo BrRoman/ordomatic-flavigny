@@ -1853,7 +1853,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saints_corneille_cyprien["force"] = 40
     saints_corneille_cyprien["header"] = " - \\textsc{Ss. Cornelii}, papæ et \\textsc{Cypriani}, episcopi, martyrum - \\textbf{memoria maior} - \\textit{Rub.}"
     saints_corneille_cyprien[
-        "body"] = "\n\\item in Officio: oratio in supplemento 172 vel in AM 1040.\n\\item ad Vigilias: lectio in supplemento 171.\n\\item ad Benedictus: ø \\textit{Adstiterunt iusti} in tono Ig (AM 929).\n\\item in MC: præfatio de sanctis martyribus."
+        "body"] = "\n\\item in Officio: oratio in supplemento 172 vel in AM 1040.\n\\item ad Vigilias: lectio in supplemento 171.\n\\item ad Benedictus: ø \\textit{Astiterunt iusti} in tono Ig (AM 929).\n\\item in MC: præfatio de sanctis martyribus."
     saints_corneille_cyprien[
         "II_vesp"] = "\n\\item ad Magnificat: ø \\textit{Isti sunt sancti} in tono Id (AM 929)."
 
