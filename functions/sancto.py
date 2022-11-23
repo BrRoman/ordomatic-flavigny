@@ -2146,8 +2146,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         rajout_dim_ml + "\n\\item in MC \\textit{(1a Missa)}:" + rajout_dim_mc + \
         " lectiones propriæ: Is \\textbf{25}, 6a-9 / 1 Co \\textbf{15}, 51-54.57 ; sequentia \\textit{Dies iræ} (Besnier 53) / Io \\textbf{6}, 51-59 ;" + \
         credo_mc + " præfatio I de defunctis."
-    comm_defunts["II_vesp"] = ("\\item I Vesperæ dominicæ sequentis." if comm_defunts_date.weekday(
-    ) == 5 else "") + ("\\item Completorium pro defunctis: incipitur a \\textit{Confiteor}, post examen conscientiæ ; aspersio de more.") if comm_defunts_date.weekday() in [5, 6] else ""
+    comm_defunts["II_vesp"] = "\\item I Vesperæ dominicæ sequentis." if comm_defunts_date.weekday() == 5 else "\\item Completorium pro defunctis : incipitur a \\textit{Confiteor}, post examen conscientiæ ; aspersio de more."
     # Si 1er vendredi du mois, reporter le jeûne au lendemain:
     if comm_defunts_date.weekday() == 4:
         dict_tempo[comm_defunts_date]["symbols"] = dict_tempo[comm_defunts_date]["symbols"].replace(
