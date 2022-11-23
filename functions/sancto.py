@@ -1516,7 +1516,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_ignace_loyola["header"] = " - \\textsc{S. Ignatii de Loyola}, presbyteri - \\textbf{memoria maior} - \\textit{Alb.}"
     var_vesperas = ", Vesperas" if saint_ignace_loyola_date.weekday() != 5 else ""
     saint_ignace_loyola[
-        "body"] = "\n\\item ad Laudes" + var_vesperas + " et Horas minores: antiphonæ e Communi confessoris non pontificis.\n\\item ad Benedictus: ø \\textit{Ignem} (AM 564).\n\\item in MC: lectiones propriæ: 1 Co \\textbf{10}, 31–\\textbf{11}, 1 / Lc \\textbf{14}, 25-33 ; præfatio de sanctis virginibus et religiosis.\n\\item ad Magnificat: ø \\textit{Estote} (AM 628)."
+        "body"] = "\n\\item ad Laudes" + var_vesperas + " et Horas minores: antiphonæ e Communi confessoris non pontificis.\n\\item ad Benedictus: ø \\textit{Ignem} (AM 564).\n\\item in MC: lectiones propriæ: 1 Co \\textbf{10}, 31–\\textbf{11}, 1 / Lc \\textbf{14}, 25-33 ; præfatio de sanctis virginibus et religiosis."
+    saint_ignace_loyola["II_vesp"] = "\n\\item ad Magnificat: ø \\textit{Estote} (AM 628)."
 
     # AOÛT:
 
