@@ -2244,9 +2244,9 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         inv_sem_vigiles + \
         ".\n\\item \\textit{in ML: Missa et præfatio propriæ (olim die 20 novembris).}\n\\item in MC: oratio propria ; Commune martyrum (MR 915) ; lectiones propriæ: 1 Thes \\textbf{2}, 2-8 / Mc \\textbf{16}, 15-18 ; præfatio de sanctis martyribus."
 
-    anniv_fr_joseph_date = datetime.date(current_year, 11, 14)
-    anniv_fr_joseph = dict_sancto[anniv_fr_joseph_date] = {}
-    anniv_fr_joseph["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus Reverendissimi Patris Ioannis \\textsc{Prou}, abbatis, qui die 14 novembris 1999, in Abbatia Sancti Petri Solesmensis, obdormivit in Domino."
+    anniv_dom_prou_date = datetime.date(current_year, 11, 14)
+    anniv_dom_prou = dict_sancto[anniv_dom_prou_date] = {}
+    anniv_dom_prou["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus Reverendissimi Patris Ioannis \\textsc{Prou}, abbatis, qui die 14 novembris 1999, in Abbatia Sancti Petri Solesmensis, obdormivit in Domino."
 
     saint_albert_date = datetime.date(current_year, 11, 15)
     saint_albert = dict_sancto[saint_albert_date] = {}
