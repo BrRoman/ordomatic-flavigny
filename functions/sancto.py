@@ -58,19 +58,19 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     messe_defunts["body"] = "\n\\item in MC (\\textit{Nigr.}) : Missa defunctorum pro omnibus benefactoribus nostris defunctis (MR 1225) ; lectiones propriæ : Rom \\textbf{5}, 5-11 / Mt \\textbf{5}, 1-12a ; præfatio II de defunctis." 
     
     # 2e Messe défunts :
-    messe_defunts_date = datetime.date(current_year, 6, 15)
+    messe_defunts_date = datetime.date(current_year, 6, 12)
     messe_defunts = dict_sancto[messe_defunts_date] = {}
     messe_defunts["force"] = 10
     messe_defunts["body"] = "\n\\item in MC (\\textit{Nigr.}) : Missa defunctorum pro omnibus benefactoribus nostris defunctis (MR 1225) ; lectiones propriæ : Rom \\textbf{8}, 14-23 / Lc \\textbf{12}, 35-40 ; præfatio III de defunctis."
     
     # 3e Messe défunts :
-    messe_defunts_date = datetime.date(current_year, 9, 5)
+    messe_defunts_date = datetime.date(current_year, 9, 4)
     messe_defunts = dict_sancto[messe_defunts_date] = {}
     messe_defunts["force"] = 10
     messe_defunts["body"] = "\n\\item in MC (\\textit{Nigr.}) : Missa defunctorum pro omnibus benefactoribus nostris defunctis (MR 1225) ; lectiones propriæ : 1 Io \\textbf{3}, 14-16 / Io \\textbf{5}, 24-29 ; præfatio IV de defunctis."
     
     # 4e Messe défunts :
-    messe_defunts_date = datetime.date(current_year, 11, 14)
+    messe_defunts_date = datetime.date(current_year, 11, 6)
     messe_defunts = dict_sancto[messe_defunts_date] = {}
     messe_defunts["force"] = 10
     messe_defunts["body"] = "\n\\item in MC (\\textit{Nigr.}) : Missa defunctorum pro omnibus benefactoribus nostris defunctis (MR 1225) ; lectiones propriæ : Ap \\textbf{20}, 11 – \\textbf{21}, 1 / Io \\textbf{14}, 1-6 ; præfatio V de defunctis."
