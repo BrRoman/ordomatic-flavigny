@@ -50,7 +50,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     anniv_pape_date = datetime.date(current_year, 3, 13)
     anniv_pape = dict_sancto[anniv_pape_date] = {}
     anniv_pape[
-        "anniv"] = "Cras recurrit anniversarium electionis S.S. D.N. Francisci, quem Dominus viviﬁcet et beatum faciat (2013)."
+        "anniv"] = "Cras recurrit anniversarium electionis S.S. D.N. Francisci, quem Dominus vivificet et beatum faciat (2013)."
     # 1ère Messe défunts :
     messe_defunts_date = datetime.date(current_year, 2,  1)
     messe_defunts = dict_sancto[messe_defunts_date] = {}
@@ -696,7 +696,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     annonciation["force"] = 110
     annonciation["I_vesp"] = "\\item I Vesperæ sollemnitatis sequentis."
     annonciation["header"] = " - þ \\textbf{\\MakeUppercase{In annuntiatione Domini}} - \\textbf{sollemnitas minor} - \\textit{Alb.}"
-    annonciation["body"] = "\n\\item In MC: lectiones propriæ: Is \\textbf{7}, 10-14 ; \\textbf{8}, 10 / Hebr \\textbf{10}, 4-10 / Lc \\textbf{1}, 26-38 ; ad verba symboli \\textit{Et incarnatus est} omnes genua ﬂectunt ; præfatio propria."
+    annonciation["body"] = "\n\\item In MC: lectiones propriæ: Is \\textbf{7}, 10-14 ; \\textbf{8}, 10 / Hebr \\textbf{10}, 4-10 / Lc \\textbf{1}, 26-38 ; ad verba symboli \\textit{Et incarnatus est} omnes genua flectunt ; præfatio propria."
     annonciation["II_vesp"] = "\n\\item Vesperæ sollemnitatis ; benedictio Sanctissimi Sacramenti."
     # Si vendredi de carême, reporter le jeûne au lendemain:
     if annonciation_date.weekday() == 4 and annonciation_date < paques:
