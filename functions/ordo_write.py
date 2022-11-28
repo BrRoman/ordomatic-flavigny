@@ -177,11 +177,11 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
     text_ordo += "\n\\newpage"
     text_ordo += "\n\\thispagestyle{empty}"
     text_ordo += "\n\\ApplyGenerTitleLarge{Notanda}"
-    text_ordo += "\n\\ApplyGenerSubTitle{in Officio :}"
+    text_ordo += "\n\\ApplyGenerSubTitle{In Officio :}"
     text_ordo += "\n\\ApplyGenerList{\n\\item In dominicis et festis, ad Vigilias, lectiones e Breviario 1962 sumptæ sic distribuuntur, nisi aliter notetur :\\par\t- in Nocturno I : lectiones de Scriptura e Nocturno I.\\par\t- in Nocturno II : anno I, lectiones e Nocturno III; anno II : lectiones e Nocturno II.\\par\t Post ultimam lectionem, aliquantulum servatur sacrum silentium; signo dato a Superiore, dicitur hymnus \\textit{Te Deum}, quem sequitur oratio conveniens.\n\\item In memoriis maioribus a dominica prima novembris usque ad Pascha, post tres psalmos primi nocturni Vigiliarum, leguntur tres lectiones de Scriptura occurrenti (nisi propriæ sint) quibus adiungitur sine mora responsorium sine Gloria Patri ; deinde legitur lectio de sancto, post quam aliquantulum servatur sacrum silentium ; signo dato a Superiore, dicitur responsorium de sancto cum versiculo Gloria Patri.\n\\item In officiis sanctorum, quando sumitur antiphona propria ad Benedictus vel ad Magnificat, dicendum est versiculum e Laudibus vel e II Vesperis de communi sanctorum aut de officio proprio, nisi aliter notetur.}"
-    text_ordo += "\n\\ApplyGenerSubTitle{in ML :}"
+    text_ordo += "\n\\ApplyGenerSubTitle{In ML :}"
     text_ordo += "\n\\ApplyGenerList{\n\\item Paramenta celebrantis debent esse coloris convenientis Missæ diei aut alteræ Missæ celebrandæ (cf. Rubricæ generales Missalis romani n. 117).\n\\item Color paramentorum, in Missis votivis, debet esse cuique Missæ conveniens ; sed in missis votivis lectis IV classis non conventualibus, adhiberi potest etiam color Officii diei, servato tamen colore violaceo et nigro unice pro Missis quibus per se competit (Rubricæ generales Missalis romani n. 323).\n\\item Missa votiva IV classis est Missa votiva quæ celebrari potest tantum in diebus liturgicis IV classis (Rubricæ generales Missalis romani n. 387).\n\\item Præfatio de Martyribus dici potest in Missis festivis et votivis Sanctorum Martyrum, nisi aliter notetur.\n\\item Præfatio de Angelis dici potest in missis festivis et votivis Angelorum.\n\\item Missæ defunctorum IV classis sunt Missæ defunctorum «cotidianæ», quæ celebrari possunt, loco Missæ Officio diei respondentis, in feriis IV classis tantum, extra tempus natalicium. Maxime convenit ut hæ Missæ defunctorum IV classis tunc tantum dicantur cum revera pro defunctis, aut in genere aut certo designatis, applicantur (Rubricæ generales Missalis Romani n. 423). In Missis defunctorum «cotidianæ» nigro colore utendum est.}"
-    text_ordo += "\n\\ApplyGenerSubTitle{in MC :}"
+    text_ordo += "\n\\ApplyGenerSubTitle{In MC :}"
     text_ordo += "\n\\ApplyGenerList{\n\\item In feriis cantatur præfatio in tono simplici, sed in memoriis minoribus in tono sollemni.\n\\item Per hebdomadam dicitur semper eadem præfatio, nisi aliter notetur.\\item Singulis diebus, omnes genuflectant ad consecrationem, et ante Communionem quando sacerdos dicit \\textit{Ecce Agnus Dei}. Diebus ieiunii vero, genuflectandum est ab acclamatione \\textit{Sanctus} expleta usque ad finem Precis eucharisticæ.}"
     text_ordo += "\n\\thispagestyle{empty}"
     text_ordo += "\n\\vspace{2cm}\\ApplyGenerTitleLarge{Advertenda}\\par"
@@ -285,7 +285,7 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
             elif new_day_date.year == current_year and new_day_date.month == 11 and new_day_date.day != 1:
                 dict_new_day["body"] = "\n\\item Ad Benedictus: ø \\textit{Cum videritis} (AM 617).\n\\item Ad Magnificat: ø \\textit{Amen dico vobis} (AM 618)."
             elif new_day_date.year == current_year and new_day_date.month == 12 and new_day_date.day == 1:
-                dict_new_day["body"] = "\n\\item Ad Benedictus: ø \\textit{Cum videritis} (AM 617).\n\\item \\textit{in ML (Alb.) : Missa de sacratissimo Corde Iesu \\emph{(Gloria)}.}\n\\item MC1V\n\\item Ad Magnificat: ø \\textit{Amen dico vobis} (AM 618)."
+                dict_new_day["body"] = "\n\\item Ad Benedictus: ø \\textit{Cum videritis} (AM 617).\n\\item \\textit{In ML (Alb.) : Missa de sacratissimo Corde Iesu \\emph{(Gloria)}.}\n\\item MC1V\n\\item Ad Magnificat: ø \\textit{Amen dico vobis} (AM 618)."
 
         # Enfin on ajoute le dictionnaire courant à l'ordo, en le faisant précéder du mois si besoin :
         text_ordo += "\n" + \
