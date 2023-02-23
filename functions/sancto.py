@@ -545,7 +545,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
 
     sainte_bernadette_date = datetime.date(current_year, 2, 18)
     sainte_bernadette = dict_sancto[sainte_bernadette_date] = {}
-    sainte_bernadette["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus Reverendissimi Patris Irenæi HENRIOT, abbatis Dominæ Nostræ Septem Fontium, qui die 18 februarii 2020 obdormivit in Domino."
+    sainte_bernadette["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus Reverendissimi Patris Irenæi \\textsc{Henriot}, abbatis Dominæ Nostræ Septem Fontium, qui die 18 februarii 2020 obdormivit in Domino."
 
     if is_careme(sainte_bernadette_date):
         sainte_bernadette["force"] = 10
