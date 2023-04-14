@@ -723,7 +723,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
             # Numéro du Dimanche per annum:
             num_dim_per_annum = f_roman_numbers(i + 1)
             # Numéro du Dimanche après l'Épiphanie ou bien Septuagésime, Sexagésime etc. et commentaires :
-            comment_septua = "\\item In Officio: omnia dicuntur sicut in psalterio, præter antiphonas ad Benedictus et Magnificat." + ("\n\\item {\\itshape in ML (Viol.): non dicitur \\emph{Gloria} in Missis de tempore ab hac Dominica usque ad feriam IV Hebdomadæ Sanctæ inclusive.}" if new_dim_date == cendres_date - datetime.timedelta(days = 17) else "\n\\item {\\itshape in ML: Viol.}") 
+            comment_septua = "\\item In Officio: omnia dicuntur sicut in psalterio, præter antiphonas ad Benedictus et Magnificat." + ("\n\\item {\\itshape In ML (Viol.): non dicitur \\emph{Gloria} in Missis de tempore ab hac Dominica usque ad feriam IV Hebdomadæ Sanctæ inclusive.}" if new_dim_date == cendres_date - datetime.timedelta(days = 17) else "\n\\item {\\itshape In ML: Viol.}") 
             if (new_dim_date == cendres_date - datetime.timedelta(days = 17)):
                 forme_extra = "Septuagesima"
                 forme_extra_I_vesp = ". Omnia ut in psalterio, præter ad Magnificat: ø \\textit{Dixit Dominus} (AM 311); dicitur \\textit{Benedicamus Domino} sine \\textit{Alleluia, Alleluia}"
