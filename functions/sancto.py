@@ -1069,7 +1069,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_justin[
         "header"] = " - \\textsc{S. Iustini}, martyris - \\textbf{memoria maior} - \\textit{Rub.} (olim die 14 aprilis)."
     if is_oct_pent(saint_justin_date):
-        repons_vigiles = " Post lectionem dicitur ¶ \\textit{In medio} sine Alleluia."
+        repons_vigiles = " Post lectionem dicitur ¶ \\textit{Testificans} sine Alleluia."
         if saint_justin_date.weekday() in [2, 4]:
             messe_lue = "\n\\item \\textit{In ML (Rub.): Quatuor Temporum Pentecostes} (Credo)."
         elif saint_justin_date.weekday() == 5:
