@@ -668,7 +668,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     pentecote["num_day"] = "\\textbf{" + str(pentecote_date.day) + "} &"
     pentecote["symbols"] = "".join(f_symbols(pentecote_date)) + (" " if f_symbols(pentecote_date) != "" else "")
     pentecote["header"] = "\\textbf{\\MakeUppercase{Dominica Pentecostes}} - \\textbf{sollemnitas major} - \\textit{Rub}."
-    pentecote["body"] = "\n\\item Ad Laudes : ß \\textit{Benedicamus Domino} cum duobus \\textit{Alleluia}\n\\item In MC : sequentia ; præfatio et \\textit{Communicantes} propria ; Missa concluditur benedictione sollemni ; \\textit{Ite Missa est, Alleluia Alleluia} ut in die Paschæ."
+    pentecote["body"] = "\n\\item Ad Vigilias et Laudes : ß \\textit{Benedicamus Domino} cum duobus \\textit{Alleluia}\n\\item In MC : sequentia ; præfatio et \\textit{Communicantes} propria ; Missa concluditur benedictione sollemni ; \\textit{Ite Missa est, Alleluia Alleluia} ut in die Paschæ."
     pentecote["II_vesp"] = "\n\\item Vesperæ sollemnitatis : hymnus \\textit{Veni, Creator}  : indulgentia plenaria ; ß \\textit{Benedicamus Domino} cum duobus \\textit{Alleluia} ; benedictio Sanctissimi Sacramenti."
     pentecote["lectiones_header"] = "Dominica Pentecostes : lectiones"
     pentecote["lectiones_body"] = "\n\\item[Dom.] Act \\textbf{2}, 1-11 / 1 Co \\textbf{12}, 3b-7.12-13 / Io \\textbf{20}, 19-23"
