@@ -1791,7 +1791,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     hebdo_psalt_vigiles = hebdo_psalterii_inv[(
         (sainte_reine_date - datetime.date(2011, 11, 27)).days // 7) % 2]
     ant_bened = "" if even_year else "\\item Ad Benedictus: ø \\textit{Gloriosæ} (AM 1031)."
-    lectures_mc = "Rom \\textbf{8}, 28-30" if even_year else "Mic \\textbf{3}, 1-4"
+    lectures_mc = "Rom \\textbf{8}, 28-30" if even_year else "Mic \\textbf{5}, 1-4a"
     nativite_bmv["body"] = "\n\\item Ad Vigilias: antiphonæ et psalmi hebdomadæ " + hebdo_psalt_vigiles + "." + \
         ant_bened + "\\item In MC: lectiones propriæ: " + lectures_mc + \
         " / Mt \\textbf{1}, 18-23 \\textit{(formula brevior)} ; præfatio I de Beata Maria Virgine."
