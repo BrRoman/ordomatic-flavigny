@@ -1347,7 +1347,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         text_dim = ""
     saints_pierre_et_paul["header"] = text_dim + \
         " - þ \\textbf{\\MakeUppercase{Ss. Petri et Pauli, Apostolorum}} - \\textbf{sollemnitas minor} - \\textit{Rub.}"
-    saints_pierre_et_paul["body"] = "\n\\item Ad Benedictus: ø \\textit{Petrus} (AM 959).\n\\item In MC: lectiones propriæ: Act \\textbf{12}, 1-11 / 2 Tim \\textbf{4}, 6-8.16-18 / Mt \\textbf{16}, 13-19 ; præfatio propria ; Missa concluditur benedictione sollemni."
+    saints_pierre_et_paul["body"] = "\n\\item Ad Benedictus: ø \\textit{Petrus} (AM 959).\n\\item In MC: lectiones propriæ: Act \\textbf{12}, 1-11 / 2 Tim \\textbf{4}, 6-8.17-18 / Mt \\textbf{16}, 13-19 ; præfatio propria ; Missa concluditur benedictione sollemni."
     saints_pierre_et_paul[
         "II_vesp"] = "\n\\item Vesperæ sollemnitatis ut in AM 939, præter antiphonas et capitulum de commemoratione S. Pauli Apostoli (AM 941), cum psalmis ut in II Vesperis de Communi Apostolorum."
 

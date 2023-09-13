@@ -696,7 +696,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     sacre_coeur["num_day"] = "\\textbf{" + str(sacre_coeur_date.day) + "} &" + " Feria VI"
     sacre_coeur["symbols"] = " ł" + f_symbols(sacre_coeur_date)[1]
     sacre_coeur["header"] = " - þ \\textbf{\\MakeUppercase{Sacratissimi Cordis Jesu}} - \\textbf{sollemnitas minor} - \\textit{Alb}."
-    lectiones_sc = {"A": "Deut \\textbf{7}, 6-11 / 1 Io \\textbf{4}, 7-16 / Mt \\textbf{11}, 25-30", "B": "Os \\textbf{11}, 1b 3-4.8c-9 / Ep \\textbf{3}, 8-12.14-19 / Io \\textbf{19}, 31-37", "C": "Ez \\textbf{34}, 11-16 / Rom \\textbf{5}, 5b-11 / Lc \\textbf{15}, 3-7"}
+    lectiones_sc = {"A": "Deut \\textbf{7}, 6-11 / 1 Io \\textbf{4}, 7-16 / Mt \\textbf{11}, 25-30", "B": "Os \\textbf{11}, 1.3-4.8c-9 / Ep \\textbf{3}, 8-12.14-19 / Io \\textbf{19}, 31-37", "C": "Ez \\textbf{34}, 11-16 / Rom \\textbf{5}, 5b-11 / Lc \\textbf{15}, 3-7"}
     sacre_coeur["body"] = "\n\\item In MC: MR 492 ; lectiones: " + lectiones_sc[year_letter] + "; præfatio propria."
     sacre_coeur["II_vesp"] = "\n\\item Vesperæ sollemnitatis ; ad benedictionem Sanctissimi Sacramenti recitetur \\textit{Reparationis actus Sacratissimo Cordi Iesu} : indulgentia plenaria."
     
