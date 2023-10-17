@@ -847,7 +847,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
                 # Numéro du dimanche d'été (août à novembre):
                 num_summer = " - " + f_num_summer(new_dim_date)[0] + f_num_summer(new_dim_date)[1] if (new_dim_date.month >= 8) and (new_dim_date.month <= 11) else ""
                 # Numéros des préfaces:
-                num_pref_dim, num_pref_fer = f_num_prefaces(i + 34 - nb_dim_ap_pentec)
+                num_pref_dim, num_pref_fer = f_num_prefaces(i + 35 - nb_dim_ap_pentec)
 
                 # Création du Dimanche per annum (sous la forme "Dim. X per annum (Y post Pentecosten, Z Augusti)"):
                 new_dim = dict_tempo[new_dim_date] = {}

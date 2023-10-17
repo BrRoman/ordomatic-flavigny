@@ -146,7 +146,7 @@ def f_transf_month_genitive(num_month):
 special_months = ["", "", "", "Sancto Joseph consecratus", "", "Beatæ Mariæ Virgini consecratus", "SS.MO Cordi Jesu consecratus", "", "", "", "", "", ""]
 	
 def f_num_prefaces(i):
-	num_pref_dim = f_roman_numbers((i % 8) + 1) if (i % 8 != 0) else f_roman_numbers(8)
+	num_pref_dim = f_roman_numbers(i % 8) if (i % 8 != 0) else f_roman_numbers(8)
 	num_pref_fer = f_roman_numbers((i + 1) % 6) if ((i + 1) % 6 != 0) else f_roman_numbers(6)
 	return(num_pref_dim, num_pref_fer)
 	
