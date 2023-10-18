@@ -559,13 +559,14 @@ def dict_tempo_create(current_year, even_year, year_letter):
         dim_ap_paques["num_day"] = "\\textbf{" + str(dim_ap_paques_date.day) + "} &"
         dim_ap_paques["symbols"] = "".join(f_symbols(dim_ap_paques_date))
         dim_ap_paques["header"] = (" \\textbf{\\textsc{Dominica " + f_roman_numbers(i + 2) + " Paschæ}} (seu Dominica " + f_roman_numbers(i + 1) + " post Pascha) - de ea - \\textit{Alb.}") if i != 0 else " \\textbf{\\textsc{Dominica II Paschæ}} seu \\textbf{\\textsc{De Divina Misericordia}} (Dominica in Albis) - de ea - \\textit{Alb.}"
+        dim_ap_paques["body"] = ""
         if i == 0:
             dim_ap_paques["body"] = "\n\\item Officium huius diei persolvitur ut in die Paschæ præter ea quæ sequuntur.\n\\item Ad Vigilias : lectiones, ¶ et oratio e dominica \\textit{in Albis}.\n\\item Ad omnes Horas : capitula et oratio e dominica \\textit{in Albis} ; ß \\textit{Hæc dies}.\n\\item Ad Laudes et Vesperas : ß \\textit{Benedicamus Domino} cum duobus \\textit{Alleluia}.\n\\item Ad Benedictus : ø \\textit{Cum esset sero} (AM 475).\n\\item In MC : sequentia ; præfatio paschalis I (\\textit{in hac potissimum die}) ; \\textit{Communicantes} et \\textit{Hanc igitur} propria ; \\textit{Ite Missa est} cum duobus \\textit{Alleluia}.\n\\item Ad Magnificat : ø \\textit{Post dies octo} (AM 477)."
         elif i == 1:
             dim_ap_paques["body"] = "\n\\item Ad Vigilias : in nocturno I : lectiones 3 et 4 (cum titulo : De Actibus Apostolórum) ; ¶ lectionis 4."
+            dim_ap_paques["body"] += "\n\\item In MC: præfatio pascalis III."
         else:
-            dim_ap_paques["body"] = ""
-        dim_ap_paques["body"] += "\n\\item In MC: præfatio pascalis " + (f_roman_numbers(i + 2) if i != 4 else "II") + "."
+            dim_ap_paques["body"] += "\n\\item In MC: præfatio pascalis " + (f_roman_numbers(i + 2) if i != 4 else "II") + "."
         dim_ap_paques["preface_feries"] = ("\n\\item Ad Vigilias : in Officio feriali, lectio brevis \\textit{De Osea}, vel in memoriis, lectio unica de sancto, et sic usque ad dominicam I novembris." if i == 0 else "") + "\n\\item In feriis : præfatio paschalis " + (f_roman_numbers(i + 2) if i != 4 else "II") + ", nisi aliter notetur."
         current_lectiones = lectiones["hebdo_" + str(i + 2) + "_paques"]
         dim_ap_paques["lectiones_header"] = current_lectiones["header"]
