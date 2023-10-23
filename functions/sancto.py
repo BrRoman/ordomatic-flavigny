@@ -1025,9 +1025,9 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         if is_vigile_pent(saint_augustin_cantorbery_date):
             messe_lue = "\n\\item \\textit{In ML (Rub.): Missa de Vigilia Pentecostes.}"
         elif is_oct_pent(saint_augustin_cantorbery_date):
-            if saint_augustin_cantorbery.weekday() in [2, 4]:
+            if saint_augustin_cantorbery_date.weekday() in [2, 4]:
                 messe_lue = "\n\\item \\textit{In ML (Rub.): Quatuor Temporum Pentecostes} (Credo)."
-            elif saint_augustin_cantorbery.weekday() == 5:
+            elif saint_augustin_cantorbery_date.weekday() == 5:
                 messe_lue = "\n\\item \\textit{In ML (Rub.): Quatuor Temporum Pentecostes (forma Missæ brevior)} (Credo)."
             else:
                 messe_lue = "\n\\item \\textit{In ML (Rub.): Missa infra octavam} (Credo)."
