@@ -440,9 +440,10 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         lectures_mc = " Hebr \\textbf{2}, 14-18"
     else:
         lectures_mc = " Mal \\textbf{3}, 1-4"
+    repons_procession = "Obtulerunt" if even_year else "Responsum"
     aspersion = " aspersio omittitur;" if presentation_date.weekday() == 6 else ""
     vepres = "\n\\item Vesperæ Festi." if presentation_date.weekday() == 5 else ""
-    presentation["body"] = "\n\\item In MC: ante Missam conventualem peragitur benedictio ac processio candelarum. Post processionem cantantur introitus Missæ et psalmodia Tertiæ ;" + \
+    presentation["body"] = "\n\\item In MC: ante Missam conventualem peragitur benedictio ac processio candelarum, depromptis Responsoriis \\textit{Adorna} et \\textit{" + repons_procession + "}. Post processionem cantantur introitus Missæ et psalmodia Tertiæ ;" + \
         aspersion + " lectiones propriæ:" + lectures_mc + \
         " / Lc \\textbf{2}, 22-40 ; præfatio propria." + vepres + \
         "\n\\item Post Completorium dicitur ø \\textit{Ave Regina Cælorum}."
