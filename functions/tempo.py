@@ -41,7 +41,8 @@ def dict_tempo_create(current_year, even_year, year_letter):
         
         for j in range(6):
             if i == 0 and j == 0:
-                lectiones_body += "\n\\item[" + f_transf_weekday(j)+ "] " + (current_lectiones[j]["A"] if year_letter == "A" else current_lectiones[j]["BC"])
+                year_letter_a_or_bc = "A" if year_letter == "A" else "BC"
+                lectiones_body += "\n\\item[" + f_transf_weekday(j)+ "] " + current_lectiones[j][year_letter_a_or_bc]
             else:
                 lectiones_body += "\n\\item[" + f_transf_weekday(j)+ "] " + current_lectiones[j]
             new_day_adv_date = new_dim_adv_date + datetime.timedelta(days = j + 1)
