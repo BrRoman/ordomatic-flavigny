@@ -882,7 +882,14 @@ def dict_tempo_create(current_year, even_year, year_letter):
             
         # Féries qui suivent ce Dimanche per annum:
         for j in range(6):
-            lectiones_body += ("\n\\item[" + f_transf_weekday(j) + "] " + current_lectiones[j][even_year_num] + " / " + current_lectiones[j][2]) if i != 0 else ""
+            if i != 0:
+                if num_dim_per_annum == "XVIII" and j in [0, 1]:
+                    year_letter_a_or_bc = "A" if year_letter == "A" else "BC"
+                    lectiones_body += "\n\\item[" + f_transf_weekday(j) + "] " + current_lectiones[j][year_letter_a_or_bc][even_year_num] + " / " + current_lectiones[j][year_letter_a_or_bc][2]
+                else:
+                    lectiones_body += "\n\\item[" + f_transf_weekday(j) + "] " + current_lectiones[j][even_year_num] + " / " + current_lectiones[j][2]
+            else:
+                lectiones_body += ""
             new_day_date = new_dim_date + datetime.timedelta(days = j + 1)
             if new_day_date != fete_dieu_date and new_day_date != sacre_coeur_date and new_day_date != coeur_imm_marie_date:
                 new_day = dict_tempo[new_day_date] = {}
