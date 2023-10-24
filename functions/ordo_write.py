@@ -251,8 +251,12 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
 
         # Cas des féries avant l'Ascension : il faut ajouter dans le body le "Nihil fit de Rogationibus…" même en cas de sancto :
         if new_day_date > paques + datetime.timedelta(days=35) and new_day_date < paques + datetime.timedelta(days=39):
-            comment_rogations = "\n\\item In Officio et in ML nihil fit de Rogationibus, præter antiphonam ad \\textit{Benedictus}." if new_day_date == paques + datetime.timedelta(days=38) else (
-                "\n\\item In Officio et in ML nihil fit de Rogationibus, præter antiphonas ad \\textit{Benedictus} et \\textit{Magnificat}." if "de ea" in dict_new_day["header"] else ("\n\\item In Officio et in ML nihil fit de Rogationibus, præter antiphonam ad \\textit{Magnificat}." if "memoria minor" in dict_new_day["header"] else ""))
+            if new_day_date == paques + datetime.timedelta(days=36):
+                comment_rogations = "\n\\item Hodie fit processio Rogationum.\n\\item In Officio et in ML nihil fit de Rogationibus, præter antiphonas ad \\textit{Benedictus} et \\textit{Magnificat}." if "de ea" in dict_new_day["header"] else ("\n\\item Hodie fit processio Rogationum.\n\\item In Officio et in ML nihil fit de Rogationibus, præter antiphonam ad \\textit{Magnificat}." if "memoria minor" in dict_new_day["header"] else "\n\\item Hodie fit processio Rogationum.")
+            elif new_day_date == paques + datetime.timedelta(days=37):
+                comment_rogations = "\n\\item In Officio et in ML nihil fit de Rogationibus, præter antiphonas ad \\textit{Benedictus} et \\textit{Magnificat}." if "de ea" in dict_new_day["header"] else ("\n\\item In Officio et in ML nihil fit de Rogationibus, præter antiphonam ad \\textit{Magnificat}." if "memoria minor" in dict_new_day["header"] else "")
+            elif new_day_date == paques + datetime.timedelta(days=38):
+                comment_rogations = "\n\\item In Officio et in ML nihil fit de Rogationibus, præter antiphonam ad \\textit{Benedictus}." if "de ea" in dict_new_day["header"] else ""
             dict_new_day["body"] = comment_rogations + dict_new_day["body"]
 
         # Semailles et récoltes : on ajoute le texte après le body éventuellement existant.
