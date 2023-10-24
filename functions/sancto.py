@@ -812,7 +812,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_joseph_artisan["header"] = " - \\textsc{S. Ioseph Opificis} - \\textbf{memoria maior} - \\textit{Alb.}"
     lect_mc = " Col \\textbf{3}, 14-15.17.23-24" if even_year else " Gen \\textbf{1}, 26 – \\textbf{2}, 3"
     var_vesperas = ", Vesperas" if saint_joseph_artisan_date.weekday() != 5 else ""
-    saint_joseph_artisan["body"] = "\n\\item In Officio: oratio \\textit{Rerum conditor} (Officium schema I).\n\\item Ad Vigilias: Officium schema I.\n\\item Ad Laudes" + var_vesperas + " et Horas minores: omnia ut in AM 886, præter orationem ut supra.\n\\item In MC: lectiones propriæ:" + \
+    saint_joseph_artisan["body"] = "\n\\item In Officio: oratio \\textit{Rerum conditor} (Officium schema I).\n\\item Ad Vigilias: Officium schema I, præter sequentia: antiphonæ, psalmi et ß de feria; lectio in supplemento 118; in II nocturno lectio brevis et ß ut ad Sextam (ut in Breviario, schema I).\n\\item \\textit{In ML: non dicitur \\emph{Credo}; præfatio de S. Ioseph \\emph{(Et te in commemoratione)}}.\n\\item Ad Laudes" + var_vesperas + " et Horas minores: omnia ut in AM 886, præter orationem ut supra.\n\\item In MC: lectiones propriæ:" + \
         lect_mc + \
         "/ Mt \\textbf{13}, 54-58 ; præfatio propria \\textit{(Et te in commemoratione)}."
 
