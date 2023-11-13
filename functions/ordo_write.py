@@ -98,7 +98,6 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
     text_ordo += "\n\\small{ML} & \\small{Missæ lectæ 1962.}\\\\"
     text_ordo += "\n\\small{MP} & \\small{Missæ Propriæ OSB 1976.}\\\\"
     text_ordo += "\n\\small{MR} & \\small{Missale romanum 2002.}\\\\"
-    text_ordo += "\n\\small{MS} & \\small{Missel de semaine Jounel.}\\\\"
     text_ordo += "\n\\small{Or.} & \\small{Oratio universalis.}\\\\"
     text_ordo += "\n\\small{SO} & \\small{Lectiones de Scriptura occurenti in I nocturno.}\\\\"
     text_ordo += "\n\\end{tabular}\n"
@@ -260,8 +259,8 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
             dict_new_day["body"] = comment_rogations + dict_new_day["body"]
 
         # Semailles et récoltes : on ajoute le texte après le body éventuellement existant.
-        dict_new_day["body"] = (dict_new_day["body"] if dict_new_day["body"] != "" else "") + ("\n\\item In MC : Missa \\textit{In conserendis agris} (MR 1127 A - MS 2134, n. 27 - GR 654) ; præfatio V de dominicis per annum." if new_day_date == date_semailles else "")
-        dict_new_day["body"] = (dict_new_day["body"] if dict_new_day["body"] != "" else "") + ("\n\\item In MC : Missa \\textit{post collectos fructus terræ} (MR 1129 - MS 2135 - GR 654) ; præfatio V de dominicis per annum." if new_day_date == date_recoltes else "")
+        dict_new_day["body"] = (dict_new_day["body"] if dict_new_day["body"] != "" else "") + ("\n\\item In MC : Missa \\textit{In conserendis agris} (MR 1127 A - GR 654) ; præfatio V de dominicis per annum." if new_day_date == date_semailles else "")
+        dict_new_day["body"] = (dict_new_day["body"] if dict_new_day["body"] != "" else "") + ("\n\\item In MC : Missa \\textit{post collectos fructus terræ} (MR 1129 - GR 654) ; præfatio V de dominicis per annum." if new_day_date == date_recoltes else "")
 
         # Lundi de Pentecôte : "Ad mensam" sans mention de Pentecôte si c'est festum et supra :
         if new_day_date == paques + datetime.timedelta(days=50):
