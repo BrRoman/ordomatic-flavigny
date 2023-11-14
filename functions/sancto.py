@@ -182,21 +182,21 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_etienne = dict_sancto[saint_etienne_date] = {}
     saint_etienne["force"] = 70
     saint_etienne["header"] = " - \\textbf{\\textsc{S. Stephani, protomartyris}} - \\textbf{festum} - \\textit{Rub.}"
-    saint_etienne["body"] = "\n\\item Ad Vigilias: lectiones sumuntur e Nocturnis I et II.\n\\item In MC: lectiones propriæ: Act \\textbf{6}, 8-10 ; \\textbf{7}, 54-60 / Mt \\textbf{10}, 17-22 ; præfatio I de Nativitate."
+    saint_etienne["body"] = "\n\\item Ad Vigilias: lectiones sumuntur e nocturnis I et II.\n\\item In MC: lectiones propriæ: Act \\textbf{6}, 8-10 ; \\textbf{7}, 54-60 / Mt \\textbf{10}, 17-22 ; præfatio I de Nativitate."
     saint_etienne["II_vesp"] = "\n\\item Ad Vesperas (\\textit{Alb.}): antiphonæ et psalmi de Nativitate ; a capitulo de festo."
 
     saint_jean_date = datetime.date(current_year - 1, 12, 27)
     saint_jean = dict_sancto[saint_jean_date] = {}
     saint_jean["force"] = 70
     saint_jean["header"] = " - \\textbf{\\textsc{S. Ioannis, apostoli et evangelistæ}} - \\textbf{festum} - \\textit{Alb.}"
-    saint_jean["body"] = "\n\\item Ad Vigilias: lectiones sumuntur e Nocturnis I et II.\n\\item In MC: lectiones propriæ: 1 Io \\textbf{1}, 1-4 / Io \\textbf{20}, 2-8 ; præfatio I de Nativitate."
+    saint_jean["body"] = "\n\\item Ad Vigilias: lectiones sumuntur e nocturnis I et II.\n\\item In MC: lectiones propriæ: 1 Io \\textbf{1}, 1-4 / Io \\textbf{20}, 2-8 ; præfatio I de Nativitate."
     saint_jean["II_vesp"] = "\n\\item Ad Vesperas: antiphonæ et psalmi de Nativitate ; a capitulo de festo."
 
     saints_innocents_date = datetime.date(current_year - 1, 12, 28)
     saints_innocents = dict_sancto[saints_innocents_date] = {}
     saints_innocents["force"] = 70
     saints_innocents["header"] = " - \\textbf{\\textsc{Ss. Innocentium, martyrum}} - \\textbf{festum} - \\textit{Rub.}"
-    saints_innocents["body"] = "\n\\item Ad Vigilias: lectiones sumuntur e Nocturnis I et II.\n\\item In MC: lectiones propriæ: 1 Io \\textbf{1}, 5 – \\textbf{2}, 2 / Mt \\textbf{2}, 13-18 ; præfatio I de Nativitate."
+    saints_innocents["body"] = "\n\\item Ad Vigilias: lectiones sumuntur e nocturnis I et II.\n\\item In MC: lectiones propriæ: 1 Io \\textbf{1}, 5 – \\textbf{2}, 2 / Mt \\textbf{2}, 13-18 ; præfatio I de Nativitate."
     saints_innocents["II_vesp"] = "\n\\item Ad Vesperas (\\textit{Alb.}): antiphonæ et psalmi de Nativitate ; a capitulo de festo."
 
     # JANVIER:
@@ -2182,8 +2182,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         rajout_dim_ml = ""
         rajout_dim_mc = ""
         credo_mc = ""
-    nocturnes = "psalmi et lectiones sumuntur e Nocturnis I et II." if even_year else "psalmi sumuntur e Nocturnis I et III; lectiones sumuntur e Nocturnis I et II."
-    comm_defunts["body"] = rajout_dimanche + "\n\\item ß \\textit{Gloria Patri} dicitur in fine omnium psalmorum et canticorum. In responsoriis omittitur ß \\textit{Requiem æternam}.\n\\item Ad Vigilias: absolute incipitur ab invitatorio (psalmus 94); " + nocturnes + " Post Nocturnum II dicitur responsorium.\n\\item \\textit{Hodie, licet omnibus sacerdotibus tres Missas celebrare, ea tamen lege, ut unam tantum libere applicare et pro ea stipem percipere queant: tenentur vero, nulla stipe percepta, alteram in suffragium omnium fidelium defunctorum, tertiam ad mentem Summi Pontificis applicare.}\n\\item \\textit{Ritus in Missis servandus: in prima et secunda Missa, si immediate sacerdos aliam Missam sit celebraturus, sumpto divino Sanguine, purificat calicem cum aqua tantum.}" + \
+    nocturnes = "psalmi et lectiones sumuntur e nocturnis I et II." if even_year else "psalmi sumuntur e nocturnis I et III; lectiones sumuntur e nocturnis I et II."
+    comm_defunts["body"] = rajout_dimanche + "\n\\item ß \\textit{Gloria Patri} dicitur in fine omnium psalmorum et canticorum. In responsoriis omittitur ß \\textit{Requiem æternam}.\n\\item Ad Vigilias: absolute incipitur ab invitatorio (psalmus 94); " + nocturnes + " Post nocturnum II dicitur responsorium.\n\\item \\textit{Hodie, licet omnibus sacerdotibus tres Missas celebrare, ea tamen lege, ut unam tantum libere applicare et pro ea stipem percipere queant: tenentur vero, nulla stipe percepta, alteram in suffragium omnium fidelium defunctorum, tertiam ad mentem Summi Pontificis applicare.}\n\\item \\textit{Ritus in Missis servandus: in prima et secunda Missa, si immediate sacerdos aliam Missam sit celebraturus, sumpto divino Sanguine, purificat calicem cum aqua tantum.}" + \
         rajout_dim_ml + "\n\\item In MC \\textit{(1a Missa)}:" + rajout_dim_mc + \
         " lectiones propriæ: Is \\textbf{25}, 6a-9 / 1 Co \\textbf{15}, 51-54.57 ; sequentia \\textit{Dies iræ} (Besnier 53) / Io \\textbf{6}, 51-59 ;" + \
         credo_mc + " præfatio I de defunctis."
