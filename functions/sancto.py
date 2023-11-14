@@ -604,7 +604,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     anniv_premier_mars_date = datetime.date(current_year, 3, 1)
     anniv_premier_mars = dict_sancto[anniv_premier_mars_date] = {}
     anniv_premier_mars[
-        "anniv"] = "Cras recurrit anniversarium fundationis Monasterii Dominæ Nostræ Mayliliensis (1946) ; anniversarium benedictionis Ecclesiæ Sanctissimi Cordis Iesu (1979) ; \\textup{†} anniversarium obitus RP Ludovici Mariæ \\textsc{Barrielle}, benefactoris (1983) ; \\textup{†} anniversarium obitus Eminentissimi Cardinalis Ioannis \\textsc{Balland}, benefactoris (1998)."
+        "anniv"] = "Cras recurrit anniversarium fundationis Monasterii Dominæ Nostræ Mayliliensis (1946) ; anniversarium benedictionis Ecclesiæ Sanctissimi Cordis Iesu (1979) ; \\textup{†} anniversarium obitus R. P. Ludovici Mariæ \\textsc{Barrielle}, benefactoris (1983) ; \\textup{†} anniversarium obitus Eminentissimi Cardinalis Ioannis \\textsc{Balland}, benefactoris (1998)."
 
     saintes_perpetue_felicitee_date = datetime.date(current_year, 3, 7)
     saintes_perpetue_felicitee = dict_sancto[saintes_perpetue_felicitee_date] = {
@@ -754,11 +754,11 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
 
     anniv_pere_debroc_date = datetime.date(current_year, 4, 16)
     anniv_pere_debroc = dict_sancto[anniv_pere_debroc_date] = {}
-    anniv_pere_debroc["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus RP Hervæus \\textsc{de Broc}, sacerdotis, qui die 16 aprilis 2020, in abbatia Sancti Petri Solesmensis, obdormivit in Domino."
+    anniv_pere_debroc["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus R. P. Hervæus \\textsc{de Broc}, sacerdotis, qui die 16 aprilis 2020, in abbatia Sancti Petri Solesmensis, obdormivit in Domino."
 
     anniv_pere_germain_date = datetime.date(current_year, 4, 18)
     anniv_pere_germain = dict_sancto[anniv_pere_germain_date] = {}
-    anniv_pere_germain["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus RP Germani \\textsc{Leblond}, sacerdotis, qui die 18 aprilis 2021 in abbatia Dominæ Nostræ de Petra Gyrante obdormivit in Domino."
+    anniv_pere_germain["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus R. P. Germani \\textsc{Leblond}, sacerdotis, qui die 18 aprilis 2021 in abbatia Dominæ Nostræ de Petra Gyrante obdormivit in Domino."
 
     saint_anselme_date = datetime.date(current_year, 4, 21)
     saint_anselme = dict_sancto[saint_anselme_date] = {}
@@ -962,7 +962,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
 
     anniv_pere_bernard_date = datetime.date(current_year, 5, 21)
     anniv_pere_bernard = dict_sancto[anniv_pere_bernard_date] = {}
-    anniv_pere_bernard["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus RP Bernardi Mariæ \\textsc{Dewilde}, religiosi, qui die 21 maii 2014 obdormivit in Domino."
+    anniv_pere_bernard["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus R. P. Bernardi Mariæ \\textsc{Dewilde}, religiosi, qui die 21 maii 2014 obdormivit in Domino."
 
     saint_bede_date = datetime.date(current_year, 5, 25)
     saint_bede = dict_sancto[saint_bede_date] = {}
@@ -1140,7 +1140,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_charles_lwanga_date = datetime.date(current_year, 6, 3)
     saint_charles_lwanga = dict_sancto[saint_charles_lwanga_date] = {}
     saint_charles_lwanga["force"] = 40
-    saint_charles_lwanga["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus RP Francisci Xavier Mariæ \\textsc{Gaillot-Drevon}, sacerdotis, qui die 3 iunii 2018 obdormivit in Domino."
+    saint_charles_lwanga["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus R. P. Francisci Xavier Mariæ \\textsc{Gaillot-Drevon}, sacerdotis, qui die 3 iunii 2018 obdormivit in Domino."
     saint_charles_lwanga["header"] = " - \\textsc{Ss. Caroli Lwanga et sociorum}, martyrum - \\textbf{memoria maior} - \\textit{Rub.}"
     if saint_charles_lwanga_date < paques + datetime.timedelta(days=49):
         ant_bened = "\n\\item Ad Benedictus: ø \\textit{Lux perpetua} (AM 632)."
@@ -1338,7 +1338,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_jean_baptiste["II_vesp"] = "\n\\item Vesperæ sollemnitatis" + \
         hymne_vepres + "."
 
-    anniv_pere_jean_pouchet_txt = "\\textup{†} Cras recurrit anniversarium obitus RP Ioannis Mariæ \\textsc{Pouchet}, sacerdotis, qui die 25 iunii 2012, in Abbatia Dominæ Nostræ Mayliliensis, obdormivit in Domino."
+    anniv_pere_jean_pouchet_txt = "\\textup{†} Cras recurrit anniversarium obitus R. P. Ioannis Mariæ \\textsc{Pouchet}, sacerdotis, qui die 25 iunii 2012, in Abbatia Dominæ Nostræ Mayliliensis, obdormivit in Domino."
     # Car si Fête-Dieu ou Sacré-Cœur le 24, alors S.J.B le 25, et il ne faut pas écraser la solennité avec l'anniversaire.
     if paques != datetime.date(current_year, 4, 25) and paques != datetime.date(current_year, 4, 17):
         anniv_pere_jean_pouchet_date = datetime.date(current_year, 6, 25)
@@ -1471,7 +1471,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
 
     nd_mont_carmel_date = datetime.date(current_year, 7, 16)
     nd_mont_carmel = dict_sancto[nd_mont_carmel_date] = {}
-    nd_mont_carmel["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus RP Benedicti Mariæ \\textsc{Constantin}, sacerdotis, qui die 16 iulii 1965, in Abbatia Dominæ Nostræ Mayliliensis, obdormivit in Domino."
+    nd_mont_carmel["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus R. P. Benedicti Mariæ \\textsc{Constantin}, sacerdotis, qui die 16 iulii 1965, in Abbatia Dominæ Nostræ Mayliliensis, obdormivit in Domino."
     ant_bened = "\\item Ad Benedictus: ø \\textit{Gloria Libani} (AM 971)." if even_year else "\\item Ad Benedictus: ø \\textit{Caput tuum} (AM 971)."
     if nd_mont_carmel_date.weekday() == 5:
         nd_mont_carmel["force"] = 40
@@ -2275,7 +2275,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_benigne_date = datetime.date(current_year, 11, 13)
     saint_benigne = dict_sancto[saint_benigne_date] = {}
     saint_benigne["force"] = 70
-    saint_benigne["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus RP Lini Mariæ \\textsc{Delbos}, sacerdotis, qui die 13 novembris 2011, in Abbatia Dominæ Nostræ Mayliliensis, obdormivit in Domino."
+    saint_benigne["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus R. P. Lini Mariæ \\textsc{Delbos}, sacerdotis, qui die 13 novembris 2011, in Abbatia Dominæ Nostræ Mayliliensis, obdormivit in Domino."
     saint_benigne["header"] = " - \\textbf{\\textsc{S. Benigni, martyris}} - \\textbf{festum} - \\textit{Rub.}"
     # Si 11/11 et 13/11 appartiennent à la même semaine, on inverse la semaine du psautier pour les Vigiles:
     inv_sem_vigiles = "; antiphonæ et psalmi hebdomadæ " + hebdo_psalterii_inv[(
