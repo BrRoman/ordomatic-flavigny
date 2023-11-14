@@ -2280,9 +2280,9 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     # Si 11/11 et 13/11 appartiennent à la même semaine, on inverse la semaine du psautier pour les Vigiles:
     inv_sem_vigiles = "; antiphonæ et psalmi hebdomadæ " + hebdo_psalterii_inv[(
         (saint_martin_date - datetime.date(2011, 11, 27)).days // 7) % 2] if saint_martin_date.weekday() < 5 else ""
-    saint_benigne["body"] = "\n\\item In Officio: omnia de Communi unius martyris ; oratio in supplemento 188.\n\\item Ad Vigilias: invitatorium proprium in supplemento 59 ; omnia de Communi unius martyris præter hymnum in supplemento 185, lectiones I et II nocturnorum in supplemento 185*" + \
+    saint_benigne["body"] = "\n\\item In Officio: omnia de Communi unius martyris ; oratio in supplemento 188.\n\\item Ad Vigilias: invitatorium proprium in supplemento 59 ; hymnus in supplemento 185, lectiones I et II nocturnorum in supplemento 185*" + \
         inv_sem_vigiles + \
-        ".\n\\item \\textit{In ML: Missa et præfatio propriæ (olim die 20 novembris).}\n\\item In MC: oratio propria ; Commune martyrum (MR 915) ; lectiones propriæ: 1 Thes \\textbf{2}, 2-8 / Mc \\textbf{16}, 15-18 ; præfatio de sanctis martyribus."
+        ".\n\\item \\textit{In ML: Missa et præfatio propriæ (olim die 20 novembris ; non dicitur \\emph{Credo}).}\n\\item In MC: oratio propria ; Commune martyrum (MR 915) ; lectiones propriæ: 1 Thes \\textbf{2}, 2-8 / Mc \\textbf{16}, 15-18 ; præfatio de sanctis martyribus."
 
     anniv_dom_prou_date = datetime.date(current_year, 11, 14)
     anniv_dom_prou = dict_sancto[anniv_dom_prou_date] = {}
