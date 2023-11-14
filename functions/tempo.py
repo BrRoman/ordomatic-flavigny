@@ -564,7 +564,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
         if i == 0:
             dim_ap_paques["body"] = "\n\\item Officium huius diei persolvitur ut in die Paschæ præter ea quæ sequuntur.\n\\item Ad Vigilias : lectiones, ¶ et oratio e dominica \\textit{in Albis}.\n\\item Ad omnes Horas : capitula et oratio e dominica \\textit{in Albis} ; ß \\textit{Hæc dies}.\n\\item Ad Laudes et Vesperas : ß \\textit{Benedicamus Domino} cum duobus \\textit{Alleluia}.\n\\item Ad Benedictus : ø \\textit{Cum esset sero} (AM 475).\n\\item In MC : sequentia ; præfatio paschalis I (\\textit{in hac potissimum die}) ; \\textit{Communicantes} et \\textit{Hanc igitur} propria ; \\textit{Ite Missa est} cum duobus \\textit{Alleluia}.\n\\item Ad Magnificat : ø \\textit{Post dies octo} (AM 477)."
         elif i == 1:
-            dim_ap_paques["body"] = "\n\\item Ad Vigilias : in nocturno I : lectiones 3 et 4 (cum titulo : De Actibus Apostolórum) ; ¶ lectionis 4."
+            dim_ap_paques["body"] = "\n\\item Ad Vigilias : in nocturno I : lectiones 3 et 4 (cum titulo : \\textit{De Actibus Apostolórum}) ; ¶ lectionis 4."
             dim_ap_paques["body"] += "\n\\item In MC: præfatio pascalis III."
         else:
             dim_ap_paques["body"] += "\n\\item In MC: præfatio pascalis " + (f_roman_numbers(i + 2) if i != 4 else "II") + "."
