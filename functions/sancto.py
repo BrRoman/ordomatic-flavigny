@@ -233,7 +233,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         lectures = "\n\\ApplyLectHeader{Lectiones de tempore}\n\\ApplyLectBody{" + lect_nativ + "}"
     else:
         lectures = ""
-    saints_basile_gregoire["generalities"] = "\n\\newpage\n\\ApplyParBox{1cm}{\\ApplyGenerTitleHuge{Tempus Nativitatis I}}\n\\ApplyGenerTitleLarge{Usque ad nonam diei 5 ianuarii}\n\\ApplyGenerSubTitle{In Officio}\n\\ApplyGenerList{\\item Ad Vigilias: omnia ut in ordinario officii ferialis tempore Nativitatis, præter capitulum Hebr. 1, 10 ut in psalterio ; lectiones SO.\n\\item Ad Laudes et Vesperas: antiphonæ et psalmi de feria, reliqua ut in die 1 ianuarii, nisi aliter notetur.\n\\item ß \\textit{Benedicamus Domino}: ad Laudes VI$_2$; ad Vesperas VI$_1$.\n\\item Ad Horas minores: antiphonæ et reliqua ut in die 1 ianuarii.\n\\item Continuatur tonus Nativitatis ad Horas minores et Completorium.}\n\\ApplyGenerSubTitle{In ML}\n\\ApplyGenerList{\\item Præfatio de Nativitate.\n\\item Missæ defunctorum «cotidianæ» non permittuntur.}\n\\ApplyGenerSubTitle{In MC}\n\\ApplyGenerList{\\item Præfatio de Nativitate III, nisi aliter notetur.}\n\\ApplyGenerSubTitle{Ad mensam}\n\\ApplyGenerList{\\item Benedictio de Nativitate.}" + lectures + "\n\\medskip"
+    saints_basile_gregoire["generalities"] = "\n\\newpage\n\\ApplyParBox{1cm}{\\ApplyGenerTitleHuge{Tempus Nativitatis I}}\n\\ApplyGenerTitleLarge{Usque ad nonam diei 5 ianuarii}\n\\ApplyGenerSubTitle{In Officio}\n\\ApplyGenerList{\\item Ad Vigilias: omnia ut in ordinario officii ferialis tempore Nativitatis, præter capitulum Hebr \\textbf{1}, 10 ut in psalterio ; lectiones SO.\n\\item Ad Laudes et Vesperas: antiphonæ et psalmi de feria, reliqua ut in die 1 ianuarii, nisi aliter notetur.\n\\item ß \\textit{Benedicamus Domino}: ad Laudes VI$_2$; ad Vesperas VI$_1$.\n\\item Ad Horas minores: antiphonæ et reliqua ut in die 1 ianuarii.\n\\item Continuatur tonus Nativitatis ad Horas minores et Completorium.}\n\\ApplyGenerSubTitle{In ML}\n\\ApplyGenerList{\\item Præfatio de Nativitate.\n\\item Missæ defunctorum «cotidianæ» non permittuntur.}\n\\ApplyGenerSubTitle{In MC}\n\\ApplyGenerList{\\item Præfatio de Nativitate III, nisi aliter notetur.}\n\\ApplyGenerSubTitle{Ad mensam}\n\\ApplyGenerList{\\item Benedictio de Nativitate.}" + lectures + "\n\\medskip"
     saints_basile_gregoire["header"] = " - \\textsc{Ss. Basilii Magni et Gregorii Nazianzeni}, episcoporum et Ecclesiæ doctorum - \\textbf{memoria maior} - \\textit{Alb.}"
     saints_basile_gregoire["body"] = "\n\\item In Officio: oratio in supplemento 65*.\n\\item Ad Vigilias: hymnus \\textit{Inclitos Christi} in supplemento 66 ; lectiones SO ; lectio de memoria in supplemento 63*.\n\\item Ad Laudes et Vesperas: antiphonæ et psalmi de feria, a capitulo ut in variationibus 26 et sequentibus.\n\\item Ad Benedictus: ø \\textit{Qui sperant} in variationibus 31.\n\\item Ad Horas minores: antiphonæ, capitulum et versiculi ut in variationibus 25.\n\\item \\textit{In ML: Missa plurium confessorum pontificum in PAL.}\n\\item In MC: lectiones feriales ; præfatio de sanctis pastoribus."
     saints_basile_gregoire[
@@ -443,7 +443,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     repons_procession = "Obtulerunt" if even_year else "Responsum"
     aspersion = " aspersio omittitur;" if presentation_date.weekday() == 6 else ""
     vepres = "\n\\item Vesperæ Festi." if presentation_date.weekday() == 5 else ""
-    presentation["body"] = "\n\\item In MC: ante Missam conventualem peragitur benedictio ac processio candelarum, depromptis Responsoriis \\textit{Adorna} et \\textit{" + repons_procession + "}. Post processionem cantantur introitus Missæ et psalmodia Tertiæ ;" + \
+    presentation["body"] = "\n\\item In MC: ante Missam conventualem peragitur benedictio ac processio candelarum, depromptis ¶¶ \\textit{Adorna} et \\textit{" + repons_procession + "}. Post processionem cantantur introitus Missæ et psalmodia Tertiæ ;" + \
         aspersion + " lectiones propriæ:" + lectures_mc + \
         " / Lc \\textbf{2}, 22-40 ; præfatio propria." + vepres + \
         "\n\\item Post Completorium dicitur ø \\textit{Ave Regina Cælorum}."
@@ -1797,7 +1797,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sainte_reine = dict_sancto[sainte_reine_date] = {}
     sainte_reine["force"] = 100
     sainte_reine[
-        "I_vesp"] = "\\item I Vesperæ sollemnitatis sequentis. Responsorium \\textit{Adiuvabit eam} et versiculum in AM 1178."
+        "I_vesp"] = "\\item I Vesperæ sollemnitatis sequentis. ¶ \\textit{Adiuvabit eam} et versiculum in AM 1178."
     # Si tombe un dimanche, on calcule quel dimanche (per annum, post Pentecosten).
     if sainte_reine_date.weekday() == 6:
         num_dim_ap_pentec = (sainte_reine_date - pentecote).days // 7
@@ -1816,7 +1816,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         " - þ \\textbf{\\MakeUppercase{S. Reginæ, virginis et martyris}} - \\textbf{sollemnitas minor} - \\textit{Rub.}"
     sainte_reine[
         "body"] = "\n\\item In Officio: omnia de Communi virginum ; oratio in supplemento 168.\n\\item Ad Vigilias: hymnus proprius et lectiones II nocturni in folio supplemento ; lectio I nocturni de libro Ecclesiastici \\textbf{51}, 1-17 in breviario monastico 172*.\n\\item Ad Laudes: versiculum in AM 1178.\n\\item \\textit{In ML: \\emph{Gloria ; Credo} ; præfatio de sanctis martyribus.}\n\\item In MC: collecta propria ; Commune virginis martyris (MR 924) ; lectiones propriæ: Ct \\textbf{8}, 6-7 / Ep \\textbf{6}, 10-13. 18 / Mt \\textbf{25}, 1-13  ; præfatio de sanctis martyribus."
-    sainte_reine["II_vesp"] = "\n\\item Vesperæ sollemnitatis. Responsorium \\textit{Adiuvabit eam} et versiculum in AM 1178." if sainte_reine_date.weekday(
+    sainte_reine["II_vesp"] = "\n\\item Vesperæ sollemnitatis. ¶ \\textit{Adiuvabit eam} et versiculum in AM 1178." if sainte_reine_date.weekday(
     ) == 5 else "\\item Ad Vesperas, responsorium \\textit{Adiuvabit eam} et versiculum in AM 1178."
     # Si 1er vendredi du mois, reporter le jeûne au lendemain:
     if sainte_reine_date.weekday() == 4:
