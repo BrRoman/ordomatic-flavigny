@@ -2355,7 +2355,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         saint_colomban = dict_sancto[saint_colomban_date] = {}
         saint_colomban["force"] = 40
         saint_colomban["header"] = " - \\textsc{S. Columbani}, abbatis - \\textbf{memoria maior} - \\textit{Alb.}"
-        saint_colomban["body"] = "\\item In Officio : oratio in supplemento 194*.\n\\item Ad Vigilias : lectio in supplemento 193*.\n\\item Ad Benedictus : ø \\textit{Sancti mei} (AM 878)\n\\item \\textit{In ML : Missa pro abbate.}\n\\item In MC : collecta in MP ; Commune sanctorum et sanctarum (MR 958) ; præfatio de sanctis virginibus et religiosis."
+        saint_colomban["body"] = "\\item In Officio : oratio in supplemento 194*.\n\\item Ad Vigilias : lectio in supplemento 193*.\n\\item Ad Benedictus : ø \\textit{Sancti mei} (AM 878)\n\\item \\textit{In ML : Missa pro abbate.}\n\\item In MC : Commune sanctorum et sanctarum (MR 958) ; præfatio de sanctis virginibus et religiosis."
         saint_colomban["II_vesp"] = "\n\\item Ad Magnificat : ø \\textit{Ubi duo} (AM 367)."
 
 
