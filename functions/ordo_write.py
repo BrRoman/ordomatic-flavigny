@@ -326,6 +326,18 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
     text_ordo += "\n\\vspace{1cm}\n\\ApplyHebdoPsalt{\\textbf{Post Nonam explicit}}" + \
         "\n\\ApplyHebdoPsalt{\\textbf{Annus liturgicus " + \
         str(current_year - 1) + "-" + str(current_year) + "}}"
+
+    # Jubilés :
+    text_ordo += "\n\n\\newpage"
+    text_ordo += "\n\n\\thispagestyle{empty}"
+    text_ordo += "\n\\ApplyGenerTitleLarge{Hoc anno celebrabunt iubilæum suum:}}"
+    text_ordo += "\n\\begin{center}"
+    text_ordo += "\n\\medskip\n\\fontsize{12}{12}\\selectfont\n\\setlength{\\parskip}{0.1cm}"
+    text_ordo += "\nDie VIII Decembris 2023: P. Michael Maria (L Prof.)\\par"
+    text_ordo += "\nDie XI Novembris 2024: P. Ioannes Maria (L Prof.)\\par"
+    text_ordo += "\n\\end{center}"
+
+    # End of document :
     text_ordo += "\n\n\\end{document}"
 
     # Espaces avant les signes de ponctuation doubles :
