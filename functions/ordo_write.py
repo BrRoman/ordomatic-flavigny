@@ -330,11 +330,15 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
     # Jubilés :
     text_ordo += "\n\n\\newpage"
     text_ordo += "\n\n\\thispagestyle{empty}"
-    text_ordo += "\n\\ApplyGenerTitleLarge{Hoc anno celebrabunt iubilæum suum:}}"
+    text_ordo += "\n\\ApplyParBox{3cm}{}"
+    text_ordo += "\n\\ApplyGenerTitleHuge{IUBILÆUM}\\vspace{1cm}"
+    text_ordo += "\n\\ApplyGenerTitleLarge{Hoc anno celebrabunt:}"
     text_ordo += "\n\\begin{center}"
     text_ordo += "\n\\medskip\n\\fontsize{12}{12}\\selectfont\n\\setlength{\\parskip}{0.1cm}"
-    text_ordo += "\nDie VIII Decembris 2023: P. Michael Maria (L Prof.)\\par"
-    text_ordo += "\nDie XI Novembris 2024: P. Ioannes Maria (L Prof.)\\par"
+    text_ordo += "\nDie 8 Decembris 2023:\\par"
+    text_ordo += "\nP. Michael Maria \\textsc{Caillaud} (50 Prof.)\\vspace{0.5cm}\\par"
+    text_ordo += "\nDie 11 Novembris 2024:\\par"
+    text_ordo += "\nP. Ioannes Maria \\textsc{Pommarès} (50 Prof.)\\par"
     text_ordo += "\n\\end{center}"
 
     # End of document :
