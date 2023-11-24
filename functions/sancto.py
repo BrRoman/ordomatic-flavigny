@@ -92,8 +92,9 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_andre["header"] = " - \\textbf{\\textsc{S. Andreæ, apostoli}} - \\textbf{festum} - \\textit{Rub.}"
     year = saint_andre_date.year
     even = year % 2 == 0
-    var_benedictus = "\\item Ad Benedictus: ø \\textit{Unus ex duobus} (AM 754)." if even else ""
-    saint_andre["body"] = var_benedictus + \
+    vigiles_lectiones = "\n\\item Ad Vigilias sumuntur lectiones Nocturni III." if even else ""
+    var_benedictus = "\n\\item Ad Benedictus: ø \\textit{Unus ex duobus} (AM 754)." if even else ""
+    saint_andre["body"] = vigiles_lectiones + var_benedictus + \
         "\\item In MC: lectiones propriæ: Rom \\textbf{10}, 9-18 / Mt \\textbf{4}, 18-22 ; præfatio II de Apostolis."
 
     # DÉCEMBRE:
@@ -678,9 +679,11 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_benoit_transitus["force"] = 70
     saint_benoit_transitus["header"] = " - \\textsc{\\textbf{Transitus S.P.N. Benedicti}, abbatis} - \\textbf{festum} - \\textit{Alb.}"
     # Si 19/03 et 21/03 appartiennent à la même semaine, on inverse la semaine du psautier pour les Vigiles:
-    inv_sem_vigiles = "\n\\item Ad Vigilias: antiphonæ et psalmi hebdomadæ " + hebdo_psalterii_inv[(
-        (saint_benoit_transitus_date - datetime.date(2011, 11, 27)).days // 7) % 2] + "." if saint_joseph_date.weekday() <= 4 else ""
-    saint_benoit_transitus["body"] = "\n\\item \\textit{hodie in Ecclesiis ordinis nostri, indulgentia plenaria acquiri una potest pia ecclesiæ visitatione, in qua recitatur oratio dominica et fidei symbolum.}" + inv_sem_vigiles + \
+    inv_sem_vigiles = "\n antiphonæ et psalmi hebdomadæ " + hebdo_psalterii_inv[(
+        (saint_benoit_transitus_date - datetime.date(2011, 11, 27)).days // 7) % 2] if saint_joseph_date.weekday() <= 4 else ""
+    vigiles_lectiones = ((";" if inv_sem_vigiles else "") + " in Nocturno II sumuntur lectiones Nocturni III") if even_year else ""
+    vigiles = "\\item Ad Vigilias: " + inv_sem_vigiles + vigiles_lectiones + "." if inv_sem_vigiles or vigiles_lectiones else ""
+    saint_benoit_transitus["body"] = "\n\\item \\textit{hodie in Ecclesiis ordinis nostri, indulgentia plenaria acquiri una potest pia ecclesiæ visitatione, in qua recitatur oratio dominica et fidei symbolum.}" + vigiles + \
         "\n\\item \\textit{In ML: Missa et præfatio propria in supplemento OSB ; sequentia ; non dicitur \\emph{Credo}.}\n\\item In MC: omnia in MP ; lectiones propriæ: Gen \\textbf{12}, 1-4a / Io \\textbf{17}, 20-26 ; præfatio propria."
     saint_benoit_transitus[
         "II_vesp"] = "\n\\item Ad Vesperas: ¶ breve, tono simplici (AM 961)."
@@ -829,8 +832,9 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sts_philippe_jacques["force"] = 70
     sts_philippe_jacques[
         "header"] = " - \\textbf{\\textsc{Ss. Philippi et Iacobi, apostolorum}} - \\textbf{festum} - \\textit{Rub.} (olim die 1 maii [AM] et 11 maii [ML])."
+    vigiles_lectiones = "\n\\item Ad Vigilias sumuntur lectiones Nocturni III." if even_year else ""
     sts_philippe_jacques[
-        "body"] = "\n\\item In MC: lectiones propriæ: 1 Co \\textbf{15}, 1-8 / Io \\textbf{14}, 6-14 ; præfatio I de Apostolis."
+        "body"] = vigiles_lectiones + "\n\\item In MC: lectiones propriæ: 1 Co \\textbf{15}, 1-8 / Io \\textbf{14}, 6-14 ; præfatio I de Apostolis."
     sts_philippe_jacques[
         "II_vesp"] = "\n\\item Ad Magnificat: ø \\textit{Non turbetur} (AM 892)." if not even_year else ""
 
@@ -1520,7 +1524,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_jacques = dict_sancto[saint_jacques_date] = {}
     saint_jacques["force"] = 70
     saint_jacques["header"] = " - \\textbf{\\textsc{S. Iacobi, apostoli}} - \\textbf{festum} - \\textit{Rub.}"
-    saint_jacques["body"] = "\n\\item Ad Benedictus: ø \\textit{Assumpsit Iesus} (AM 998).\n\\item In MC: lectiones propriæ: 2 Co \\textbf{4}, 7-15 / Mt \\textbf{20}, 20-28 ; præfatio II de Apostolis."
+    vigiles_lectiones = "\n\\item Ad Vigilias sumuntur lectiones Nocturni III." if even_year else ""
+    saint_jacques["body"] = vigiles_lectiones + "\n\\item Ad Benedictus: ø \\textit{Assumpsit Iesus} (AM 998).\n\\item In MC: lectiones propriæ: 2 Co \\textbf{4}, 7-15 / Mt \\textbf{20}, 20-28 ; præfatio II de Apostolis."
 
     saints_joachim_anne_date = datetime.date(current_year, 7, 26)
     saints_joachim_anne = dict_sancto[saints_joachim_anne_date] = {}
@@ -1748,7 +1753,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_barthelemy = dict_sancto[saint_barthelemy_date] = {}
     saint_barthelemy["force"] = 70
     saint_barthelemy["header"] = " - \\textbf{\\textsc{S. Bartholomæi, apostoli}} - \\textbf{festum} - \\textit{Rub.}"
-    saint_barthelemy["body"] = "\n\\item In MC: lectiones propriæ: Apoc \\textbf{21}, 9b-14 / Io \\textbf{1}, 45-51 ; præfatio I de Apostolis."
+    vigiles_lectiones = "\n\\item Ad Vigilias sumuntur lectiones Nocturni III." if even_year else ""
+    saint_barthelemy["body"] = vigiles_lectiones + "\n\\item In MC: lectiones propriæ: Apoc \\textbf{21}, 9b-14 / Io \\textbf{1}, 45-51 ; præfatio I de Apostolis."
     saint_barthelemy[
         "II_vesp"] = "\n\\item Ad Magnificat: \\textit{Tradent enim} (AM 621)."
 
@@ -1870,11 +1876,11 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         text_dim = ""
     sainte_croix["header"] = text_dim + \
         " - \\textbf{\\textsc{In Exaltatione Sanctæ Crucis}} - \\textbf{festum} - \\textit{Rub.}"
+    vigiles_lectiones = "\n\\item Ad Vigilias sumuntur lectiones Nocturni III." if even_year else ""
     lectures_mc = "Nb \\textbf{21}, 4b-9 / " if sainte_croix_date.weekday() == 6 else ""
-    vepres = "\\item Ad Vesperas: omnia ut in I Vesperis præter ad Magnificat: ø \\textit{O Crux benedicta} (AM 1046)." if even_year or sainte_croix_date.weekday(
-    ) == 6 else "\\item Ad Vesperas: omnia ut in I Vesperis."
-    sainte_croix["body"] = "\n\\item In MC: lectiones propriæ: " + lectures_mc + \
-        "Phil \\textbf{2}, 6-11 / Io \\textbf{3}, 13-17 ; præfatio propria." + vepres
+    vepres = "\\item Ad Vesperas: omnia ut in I Vesperis præter ad Magnificat: ø \\textit{O Crux benedicta} (AM 1046)." if even_year or sainte_croix_date.weekday() == 6 else "\\item Ad Vesperas: omnia ut in I Vesperis."
+    sainte_croix["body"] = vigiles_lectiones + "\n\\item In MC: lectiones propriæ: " + lectures_mc + \
+        "Phil \\textbf{2}, 6-11 / Io \\textbf{3}, 13-17 ; præfatio propria.\n" + vepres
 
     sept_douleurs_date = datetime.date(current_year, 9, 15)
     sept_douleurs = dict_sancto[sept_douleurs_date] = {}
@@ -1938,7 +1944,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_matthieu = dict_sancto[saint_matthieu_date] = {}
     saint_matthieu["force"] = 70
     saint_matthieu["header"] = " - \\textbf{\\textsc{S. Matthæi, apostoli et evangelistæ}} - \\textbf{festum} - \\textit{Rub.}"
-    saint_matthieu["body"] = "\n\\item In MC: lectiones propriæ: Ep \\textbf{4}, 1-7.11-13 / Mt \\textbf{9}, 9-13 ; præfatio II de Apostolis."
+    vigiles_lectiones = "\n\\item Ad Vigilias in Nocturno II sumuntur lectiones e Communi Evangelistarum 26*." if even_year else ""
+    saint_matthieu["body"] = vigiles_lectiones + "\n\\item In MC: lectiones propriæ: Ep \\textbf{4}, 1-7.11-13 / Mt \\textbf{9}, 9-13 ; præfatio II de Apostolis."
 
     saint_maurice_date = datetime.date(current_year, 9, 22)
     saint_maurice = dict_sancto[saint_maurice_date] = {}
@@ -2261,8 +2268,9 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_martin = dict_sancto[saint_martin_date] = {}
     saint_martin["force"] = 70
     saint_martin["header"] = " - \\textbf{\\textsc{S. Martini, episcopi}} - \\textbf{festum} - \\textit{Alb.}"
-    lectures_vigiles = "\\item Ad Vigilias: in nocturno I: lectiones 3 et 4 cum ¶ lectionis 4." if even_year else "\\item Ad Vigilias: in nocturno I: lectiones 1 et 2 cum ¶ lectionis 4."
-    saint_martin["body"] = lectures_vigiles + \
+    lectures_vigiles_premier_nocturne = "\\item Ad Vigilias: in nocturno I: lectiones 3 et 4 cum ¶ lectionis 4" if even_year else "\\item Ad Vigilias: in nocturno I: lectiones 1 et 2 cum ¶ lectionis 4"
+    lectiones_vigiles = lectures_vigiles_premier_nocturne + ("; in Nocturno II sumuntur lectiones Nocturni III." if even_year else ".")
+    saint_martin["body"] = lectiones_vigiles + \
         "\\item In MC: lectiones propriæ: Is \\textbf{61}, 1-3a / Mt \\textbf{25}, 31-40 ; præfatio de sanctis pastoribus."
 
     saint_theodore_studite_date = datetime.date(current_year, 11, 12)
@@ -2380,8 +2388,9 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_andre["header"] = " - \\textbf{\\textsc{S. Andreæ, apostoli}} - \\textbf{festum} - \\textit{Rub.}"
     year = saint_andre_date.year
     even = year % 2 == 0
-    var_benedictus = "\\item Ad Benedictus: ø \\textit{Unus ex duobus} (AM 754)." if even else ""
-    saint_andre["body"] = var_benedictus + \
+    vigiles_lectiones = "\n\\item Ad Vigilias sumuntur lectiones Nocturni III." if even else ""
+    var_benedictus = "\n\\item Ad Benedictus: ø \\textit{Unus ex duobus} (AM 754)." if even else ""
+    saint_andre["body"] = vigiles_lectiones + var_benedictus + \
         "\\item In MC: lectiones propriæ: Rom \\textbf{10}, 9-18 / Mt \\textbf{4}, 18-22 ; præfatio II de Apostolis."
 
     return(dict_sancto)
