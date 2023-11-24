@@ -8,8 +8,8 @@ from functions.various import hebdo_psalterii_inv, ult_ant_dict, special_months,
 
 def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, ordo_start, nb_days, paques, christ_roi):
     # Entrer ici les dates des MC votives semailles et récoltes :
-    date_semailles = datetime.date(current_year, 5, 16)
-    date_recoltes = datetime.date(current_year, 9, 22)
+    date_semailles = datetime.date(current_year, 5, 6)
+    date_recoltes = datetime.date(current_year, 9, 18)
 
     text_ordo = "\\input{config.tex}"
     text_ordo += "\n\\fancyhead[CO]{\\textbf{Cyclus liturgicus " + \
