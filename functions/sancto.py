@@ -2379,7 +2379,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sainte_catherine_laboure["force"] = 40
     sainte_catherine_laboure[
         "header"] = " - S. Catharinæ Labouré, virginis - memoria minor - \\textit{Vir.}"
-    sainte_catherine_laboure["body"] = "\n\\item Ad Benedictus: ø \\textit{Veni sponsa} (AM 678) ; oratio in supplemento 192.\n\\item \\textit{In ML (Alb.): Missa pro virgine tantum.}\n\\item In MC \\textit{(Alb.)}: Collecta propria ; Commune virginum (MR 950)."
+    sainte_catherine_laboure["body"] = "\n\\item Ad Benedictus: ø \\textit{Veni sponsa} (AM 678) ; oratio in supplemento 192.\n\\item \\textit{In ML (Alb.): Missa pro virgine tantum.}\n\\item In MC \\textit{(Alb.)}: collecta propria ; Commune virginum (MR 950)."
 
     saint_andre_date = datetime.date(current_year, 11, 30)
     saint_andre = dict_sancto[saint_andre_date] = {}
