@@ -697,7 +697,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     sacre_coeur["I_vesp"] = "\n\\item I Vesperæ sollemnitatis sequentis." 
     sacre_coeur["num_day"] = "\\textbf{" + str(sacre_coeur_date.day) + "} &" + " Feria VI"
     sacre_coeur["symbols"] = " ł" + f_symbols(sacre_coeur_date)[1]
-    sacre_coeur["header"] = " - þ \\textbf{\\MakeUppercase{Sacratissimi Cordis Jesu}} - \\textbf{sollemnitas minor} - \\textit{Alb}."
+    sacre_coeur["header"] = " - þ \\textbf{\\MakeUppercase{Sacratissimi Cordis Iesu}} - \\textbf{sollemnitas minor} - \\textit{Alb}."
     lectiones_sc = {"A": "Deut \\textbf{7}, 6-11 / 1 Io \\textbf{4}, 7-16 / Mt \\textbf{11}, 25-30", "B": "Os \\textbf{11}, 1.3-4.8c-9 / Ep \\textbf{3}, 8-12.14-19 / Io \\textbf{19}, 31-37", "C": "Ez \\textbf{34}, 11-16 / Rom \\textbf{5}, 5b-11 / Lc \\textbf{15}, 3-7"}
     sacre_coeur["body"] = "\n\\item In MC: MR 492 ; lectiones: " + lectiones_sc[year_letter] + "; præfatio propria."
     sacre_coeur["II_vesp"] = "\n\\item Vesperæ sollemnitatis ; ad benedictionem Sanctissimi Sacramenti recitetur \\textit{Reparationis actus Sacratissimo Cordi Iesu} : indulgentia plenaria."
@@ -825,7 +825,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
                 christ_roi["hebdo_psalt"] = "- Hebdomada " + hebdo_psalterii[((new_dim_date - datetime.date(2011, 11, 27)).days // 7) % 2] + " psalterii -"
                 christ_roi["num_day"] = "\\textbf{" + str(christ_roi_date.day) + "} &"
                 num_summer = f_num_summer(christ_roi_date)[0] if f_num_summer(christ_roi_date)[0] == "III" else ("V" if even_year else "IV")
-                christ_roi["header"] = "\\textbf{\\textsc{Dominica XXXIV per annum} - \\MakeUppercase{Domini nostri Jesu Christi Universorum Regis}} (XXIV post Pentecosten - " + num_summer + " novembris) - \\textbf{sollemnitas minor} - \\textit{Alb}."
+                christ_roi["header"] = "\\textbf{\\textsc{Dominica XXXIV per annum} - \\MakeUppercase{Domini nostri Iesu Christi Universorum Regis}} (XXIV post Pentecosten - " + num_summer + " novembris) - \\textbf{sollemnitas minor} - \\textit{Alb}."
                 christ_roi["body"] = "\n\\item Ad Vigilias : in nocturno II : lectiones 5 et 6 cum ¶ lectionis 8 ; in nocturno III : lectiones 11 et 12.\n\\item In MC : præfatio propria."
                 num_pref_dim, num_pref_fer = f_num_prefaces(33)
                 christ_roi["preface_feries"] = "\n\\item In feriis: præfatio communis " + num_pref_fer + ", nisi aliter notetur."
