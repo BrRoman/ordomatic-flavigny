@@ -323,7 +323,7 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
             dict_new_day["preface_feries"] + \
             "}" if dict_new_day["preface_feries"] != "" else ""
 
-    text_ordo += "\n\\vspace{1cm}\n\\ApplyHebdoPsalt{\\textbf{Post Nonam explicit}}" + \
+    text_ordo += "\n\\ApplyParBox{2cm}{}\n\\ApplyHebdoPsalt{\\textbf{Post Nonam explicit}}" + \
         "\n\\ApplyHebdoPsalt{\\textbf{Annus liturgicus " + \
         str(current_year - 1) + "-" + str(current_year) + "}}"
 
