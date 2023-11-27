@@ -33,7 +33,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
         new_dim_adv["num_day"] = "\\textbf{" + str(new_dim_adv_date.day) + "} &"
         new_dim_adv["symbols"] = "".join(f_symbols(new_dim_adv_date))
         new_dim_adv["header"] = " \\textbf{\\textsc{Dominica " + f_roman_numbers(i + 1) + " Adventus}} - de ea - \\textit{Viol.}"
-        new_dim_adv["body"] = ("\\item Ad Vigilias : post lectiones I nocturni, dicitur ¶ lectionis 1 \\textit{Aspiciens a longe}.\n\\item In MC : Missa concluditur benedictione sollemni." if i == 0 else "")
+        new_dim_adv["body"] = ("\\item Ad Vigilias : post lectiones I Nocturni, dicitur ¶ lectionis 1 \\textit{Aspiciens a longe}.\n\\item In MC : Missa concluditur benedictione sollemni." if i == 0 else "")
         current_lectiones = lectiones["hebdo_" + str(i + 1) + "_adv"]
         new_dim_adv["lectiones_header"] = "\n" + current_lectiones["header"]
         lectiones_body = "\n\\item[Dom. " + year_letter + "] " + current_lectiones["dim"][year_letter]
@@ -64,7 +64,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     dim_3_adv["force"] = 120
     if dim_3_adv_date.day == 17:
         dim_3_adv["generalities"] = generalities
-        txt_vigiles = "\\item Ad Vigilias: in I nocturno lectiones e dominica III Adventus."
+        txt_vigiles = "\\item Ad Vigilias: in I Nocturno lectiones e dominica III Adventus."
     elif dim_3_adv_date.day < 16:
         txt_vigiles = "\\item Ad Vigilias: continuatur invitatorium \\textit{Regem venturum} usque ad diem 16 decembris."
     else:
@@ -150,7 +150,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     if dim_4_adv_date.day == 21: ant_bened_special = "\n\\item Ad Benedictus: ø \\textit{Nolite timere (AM 219)}."
     elif dim_4_adv_date.day == 23: ant_bened_special = "\n\\item Ad Benedictus: ø \\textit{Ecce completa sunt (AM 220)}."
     else: ant_bened_special = ""
-    dim_4_adv["body"] = ("\\item Ad Vigilias: in I nocturno lectiones e dominica IV Adventus." + ant_bened_special) if dim_4_adv_date.day != 24 else "\\item Ad Vigilias: Officium fit de Vigilia Nativitatis Domini in dominica præter lectiones I nocturni in supplemento 20 ; invitatorium \\textit{Hodie scietis}.\n\\item Ad Laudes et Horas minores: ø \\textit{Iudæa} (AM 232) cum psalmis festivis.\n\\item \\textit{In ML: Missa de Vigilia.}\n\\item In MC: Missa de dominica IV Adventus ; cantus Missæ \\textit{Hodie} de Vigilia omittuntur."
+    dim_4_adv["body"] = ("\\item Ad Vigilias: in I Nocturno lectiones e dominica IV Adventus." + ant_bened_special) if dim_4_adv_date.day != 24 else "\\item Ad Vigilias: Officium fit de Vigilia Nativitatis Domini in dominica præter lectiones I Nocturni in supplemento 20 ; invitatorium \\textit{Hodie scietis}.\n\\item Ad Laudes et Horas minores: ø \\textit{Iudæa} (AM 232) cum psalmis festivis.\n\\item \\textit{In ML: Missa de Vigilia.}\n\\item In MC: Missa de dominica IV Adventus ; cantus Missæ \\textit{Hodie} de Vigilia omittuntur."
     dim_4_adv["II_vesp"] = "\\item I Vesperæ sollemnitatis sequentis.\n\\item Completorium omittitur ab his qui solemnem Vigiliam et Missam in nocte intersunt." if dim_4_adv_date.day == 24 else ""
     current_lectiones = lectiones["hebdo_4_adv"]
     dim_4_adv["lectiones_header"] = "\n" + current_lectiones["header"]
@@ -232,9 +232,9 @@ def dict_tempo_create(current_year, even_year, year_letter):
     # Hebdo_psalt_vigiles:
     hebdo_psalt_vigiles = ""
     if hebdo_psalt_noel == "I" and hebdo_psalterii[((ste_famille_date - datetime.date(2011, 11, 27)).days // 7) % 2] == "I":
-        hebdo_psalt_vigiles = "\n\\item Ad Vigilias: psalmi hebdomadæ II; lectiones sumuntur e nocturnis I et II."
+        hebdo_psalt_vigiles = "\n\\item Ad Vigilias: psalmi hebdomadæ II; lectiones sumuntur e I et II Nocturnis."
     elif hebdo_psalt_noel == "II" and hebdo_psalterii[((ste_famille_date - datetime.date(2011, 11, 27)).days // 7) % 2] == "II":
-        hebdo_psalt_vigiles = "\n\\item Ad Vigilias: psalmi hebdomadæ I; lectiones sumuntur e nocturnis I et II."
+        hebdo_psalt_vigiles = "\n\\item Ad Vigilias: psalmi hebdomadæ I; lectiones sumuntur e I et II Nocturnis."
     # Antiennes de Bened. et Magnificat:
     if year_letter == "A":
         ste_famille_bened = "\\item Ad Benedictus: ø \\textit{Iacob autem} (AM 836)."
@@ -309,7 +309,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     num_dim_post_nat = "II" if noel_date.weekday() == 6 or noel_date.weekday() == 0 else "III"
     bapteme["header"] = " \\textbf{\\textsc{Dominica " + num_dim_post_nat + " post Nativitatem - Dominica in Baptismate Domini}} (I post Epiphaniam) - \\textbf{festum} - \\textit{Alb}."
     lect_bapteme = {"A": "Is \\textbf{42}, 1-4.6-7 / Act \\textbf{10}, 34-38 / Mt \\textbf{3}, 13-17", "B": "Is \\textbf{55}, 1-11 / 1 Io \\textbf{5}, 1-9 / Mc \\textbf{1}, 7-11", "C": "Is \\textbf{40}, 1-5.9-11 / Tit \\textbf{2}, 11-14 ; \\textbf{3}, 4-7 / Lc \\textbf{3}, 15-16.21-22"}
-    bapteme["body"] = "\n\\item In Officio: omnia dicuntur sicut in festo Epiphaniæ, præter antiphonas in folio separato AM 305* ; oratio AM 304.\n\\item Ad Vigilias: olim die 13 ianuarii ; in I nocturno lectiones e dominica I post Epiphaniam cum responsorio \\textit{Hodie in Iordane} (post lectionem I).\n\\item \\textit{In ML: Missa in Commemoratione Baptismatis Domini Nostri Iesu Christi.}\n\\item In MC: lectiones propriæ: " + lect_bapteme[year_letter] + " ; præfatio propria."
+    bapteme["body"] = "\n\\item In Officio: omnia dicuntur sicut in festo Epiphaniæ, præter antiphonas in folio separato AM 305* ; oratio AM 304.\n\\item Ad Vigilias: olim die 13 ianuarii ; in I Nocturno lectiones e dominica I post Epiphaniam cum responsorio \\textit{Hodie in Iordane} (post lectionem I).\n\\item \\textit{In ML: Missa in Commemoratione Baptismatis Domini Nostri Iesu Christi.}\n\\item In MC: lectiones propriæ: " + lect_bapteme[year_letter] + " ; præfatio propria."
     bapteme["II_vesp"] = "\n}\n\\ApplyParBox{1cm}{\\begin{center}\\large{\\textit{Post Completorium explicit}}\\par\\large{\\textit{tempus Nativitatis.}}\\end{center}"
     
     # Féries entre Octave de Noël et Baptême:
@@ -352,7 +352,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     dict_tempo["fetes_mobiles"]["cendres"] = str(cendres_date.day) + f_transf_month_genitive(cendres_date.month)
     cendres = dict_tempo[cendres_date] = {}
     cendres["force"] = 120
-    cendres["generalities"] = "\n\\ApplyParBox{1cm}{\\begin{center}\\large{\\textit{Post Completorium explicit}}\\par\\large{\\textit{pars prior temporis per annum.}}\\end{center}}\n\\newpage\n\\ApplyParBox{1cm}{\\ApplyGenerTitleHuge{Tempus Quadragesimæ}\n\\medskip\n\\ApplyGenerTitleLarge{Usque ad Sabbatum}\n\\ApplyGenerTitleLarge{Hebdomadæ quartæ}}\n\\ApplyGenerSubTitle{In Officio}\n\\ApplyGenerList{\\item Ab initio Vigiliarum Feriæ IV Cinerum sumitur ordinarium officii ferialis temporis Quadragesimæ (in breviario post Dominicam I in Quadragesima vel in AM 336).\n\\item Item omittitur ubique \\textit{Alleluia} usque ad Sabbatum Sanctum. Post \\textit{Deus in adiutorium}, ubi dicebatur \\textit{Alleluia}, dicitur \\textit{Laus tibi, Domine, Rex æternæ gloriæ}.\n\\item In Officio feriali : \\textit{Kyrie}, \\textit{Pater} et oratio dicuntur ad omnes Horas flexis genibus.\n\\item Ad Vigilias : in dominicis, post quatuor lectiones II vel III nocturni cantatur novissimum ¶; deinde sub congruenti ø dicuntur tria cantica \\textit{Deducant} de tempore Quadragesimæ et Passionis; quibus dictis, et repetita ø, hebdomadarius immediate cantat orationem diei post \\textit{Oremus}. In feriis leguntur tres lectiones de homilia cum ¶ 3.\n\\item Ad Laudes : dicuntur cantica ferialia.\n\\item Ad Benedictus et Magnificat : antiphonæ propriæ.\n\\item Memoriæ obligatoriæ occurentes in feriis Quadragesimæ habendæ sunt uti memoriæ ad libitum. Ad Laudes adduntur post orationem conclusivam, in qua omittitur conclusio \\textit{Per Dominum}, antiphona, versiculus et oratio de sancto.}\n\\ApplyGenerSubTitle{In MC}\n\\ApplyGenerList{\\item Missa propria singulis diebus.\n\\item In feriis Quadragesimæ, occurente memoria alicuius sancti, dicitur collecta de sancto, loco collectæ de feria.\n\\item Tractus dicitur in Feria IV Cinerum, dominicis et sollemnitatibus.\n\\item In feriis : omnia cantantur in tono simplici, præter orationem super oblata, quæ semper in tono solemni cantatur (\\textit{Pater} in tono B).\n\\item Dicitur oratio super populum singulis diebus de tempore. Ad ritum conclusionis missæ, post \\textit{Dominus vobiscum}, diaconus vel ipse sacerdos cantat \\textit{Inclinate vos ad benedictionem}, postquam omnes profunde se inclinant dum sacerdos cantat, manibus extensis super eos, orationem super populum. Hac expleta, omnes surgunt et respondent \\textit{Amen}, postquam iterum se inclinant sub benedictionem sacerdotis, more solito, quam sequitur dimissio.}\n\\ApplyGenerSubTitle{In ML}\n\\ApplyGenerList{\\item Missa propria singulis diebus (Missæ votivæ et Missæ defunctorum «cotidianæ» non permittuntur).\n\\item Dicitur præfatio de Quadragesima in Missis de tempore et in ceteris Missis quæ celebrantur eodem tempore et præfatione propria carent.\n\\medskip\n\\item Cras ieiunium ecclesiasticum cum abstinentia carnium.}\n\\medskip"
+    cendres["generalities"] = "\n\\ApplyParBox{1cm}{\\begin{center}\\large{\\textit{Post Completorium explicit}}\\par\\large{\\textit{pars prior temporis per annum.}}\\end{center}}\n\\newpage\n\\ApplyParBox{1cm}{\\ApplyGenerTitleHuge{Tempus Quadragesimæ}\n\\medskip\n\\ApplyGenerTitleLarge{Usque ad Sabbatum}\n\\ApplyGenerTitleLarge{Hebdomadæ quartæ}}\n\\ApplyGenerSubTitle{In Officio}\n\\ApplyGenerList{\\item Ab initio Vigiliarum Feriæ IV Cinerum sumitur ordinarium officii ferialis temporis Quadragesimæ (in breviario post Dominicam I in Quadragesima vel in AM 336).\n\\item Item omittitur ubique \\textit{Alleluia} usque ad Sabbatum Sanctum. Post \\textit{Deus in adiutorium}, ubi dicebatur \\textit{Alleluia}, dicitur \\textit{Laus tibi, Domine, Rex æternæ gloriæ}.\n\\item In Officio feriali : \\textit{Kyrie}, \\textit{Pater} et oratio dicuntur ad omnes Horas flexis genibus.\n\\item Ad Vigilias : in dominicis, post quatuor lectiones II vel III Nocturni cantatur novissimum ¶; deinde sub congruenti ø dicuntur tria cantica \\textit{Deducant} de tempore Quadragesimæ et Passionis; quibus dictis, et repetita ø, hebdomadarius immediate cantat orationem diei post \\textit{Oremus}. In feriis leguntur tres lectiones de homilia cum ¶ 3.\n\\item Ad Laudes : dicuntur cantica ferialia.\n\\item Ad Benedictus et Magnificat : antiphonæ propriæ.\n\\item Memoriæ obligatoriæ occurentes in feriis Quadragesimæ habendæ sunt uti memoriæ ad libitum. Ad Laudes adduntur post orationem conclusivam, in qua omittitur conclusio \\textit{Per Dominum}, antiphona, versiculus et oratio de sancto.}\n\\ApplyGenerSubTitle{In MC}\n\\ApplyGenerList{\\item Missa propria singulis diebus.\n\\item In feriis Quadragesimæ, occurente memoria alicuius sancti, dicitur collecta de sancto, loco collectæ de feria.\n\\item Tractus dicitur in Feria IV Cinerum, dominicis et sollemnitatibus.\n\\item In feriis : omnia cantantur in tono simplici, præter orationem super oblata, quæ semper in tono solemni cantatur (\\textit{Pater} in tono B).\n\\item Dicitur oratio super populum singulis diebus de tempore. Ad ritum conclusionis missæ, post \\textit{Dominus vobiscum}, diaconus vel ipse sacerdos cantat \\textit{Inclinate vos ad benedictionem}, postquam omnes profunde se inclinant dum sacerdos cantat, manibus extensis super eos, orationem super populum. Hac expleta, omnes surgunt et respondent \\textit{Amen}, postquam iterum se inclinant sub benedictionem sacerdotis, more solito, quam sequitur dimissio.}\n\\ApplyGenerSubTitle{In ML}\n\\ApplyGenerList{\\item Missa propria singulis diebus (Missæ votivæ et Missæ defunctorum «cotidianæ» non permittuntur).\n\\item Dicitur præfatio de Quadragesima in Missis de tempore et in ceteris Missis quæ celebrantur eodem tempore et præfatione propria carent.\n\\medskip\n\\item Cras ieiunium ecclesiasticum cum abstinentia carnium.}\n\\medskip"
     cendres["num_day"] = "\\textbf{" + str(cendres_date.day) + "} &"
     cendres["symbols"] = " µ"
     cendres["header"] = " \\textsc{Feria IV Cinerum} - \\textit{Viol.}"
@@ -449,7 +449,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     rameaux["num_day"] = "\\textbf{" + str(rameaux_date.day) + "} &"
     rameaux["symbols"] = "".join(f_symbols(rameaux_date))
     rameaux["header"] = " \\textbf{\\textsc{Dominica in Palmis de Passione Domini}} - de ea - \\textit{Rub.}"
-    rameaux["body"] = "\\item Ad Vigilias : in II nocturno sumuntur lectiones 7 et 8 cum ¶~8. Cantato ¶, omissis canticis, hebdomadarius immediate cantat orationem diei post \\textit{Oremus}.\\item Ad Laudes : psalmi 148 et 149 omittuntur. \\item \\textit{In ML (Viol.) : ante lectionem historiæ Passionis omittuntur \\emph{Dominus vobiscum} et cætera (uti indicatur in Missali) ; post lectionem non respondetur \\emph{Laus tibi Christe} et celebrans non osculatur librum (quod servatur etiam feria III et IV) ; legitur in fine (loco Evangelii sancti Ioannis) Evangelium ut in benedictione ramorum.}\n\\item In MC : ante Missam, benedictio et processio palmarum ; omittitur antiphona ad introitum ; circa finem historiæ Passionis, genuflectitur et pausatur aliquantulum ; præfatio propria."
+    rameaux["body"] = "\\item Ad Vigilias : in II Nocturno sumuntur lectiones 7 et 8 cum ¶~8. Cantato ¶, omissis canticis, hebdomadarius immediate cantat orationem diei post \\textit{Oremus}.\\item Ad Laudes : psalmi 148 et 149 omittuntur. \\item \\textit{In ML (Viol.) : ante lectionem historiæ Passionis omittuntur \\emph{Dominus vobiscum} et cætera (uti indicatur in Missali) ; post lectionem non respondetur \\emph{Laus tibi Christe} et celebrans non osculatur librum (quod servatur etiam feria III et IV) ; legitur in fine (loco Evangelii sancti Ioannis) Evangelium ut in benedictione ramorum.}\n\\item In MC : ante Missam, benedictio et processio palmarum ; omittitur antiphona ad introitum ; circa finem historiæ Passionis, genuflectitur et pausatur aliquantulum ; præfatio propria."
     rameaux["preface_feries"] = "\n\\item In feriis : præfatio II de Passione Domini, nisi aliter notetur."
     current_lectiones = lectiones["rameaux"]
     rameaux["lectiones_header"] = current_lectiones["header"]
@@ -488,7 +488,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     jeudi_saint["force"] = 120
     jeudi_saint["num_day"] = "\\textbf{" + str(jeudi_saint_date.day) + "} &"
     jeudi_saint["header"] = " \\textbf{\\textsc{Feria V Hebdomadæ Sanctæ}} - de ea - \\textit{Viol.}"
-    jeudi_saint["body"] = "\n\\item A Vigiliis usque ad Nonam : omnia ut in feriis præcedentibus.\n\\item Ad Vigilias : in I nocturno, lectiones de eadem feria V e II nocturno cum ¶ de III nocturno ; in II nocturno, ut in ordinario officii ferialis temporis Passionis.\n\\item Ad Laudes et Horas minores : antiphonæ de feria V in Cena Domini cum psalmis de feria V in psalterio ; reliqua ut in ordinario temporis Passionis.}"# On ferme l'accolade.
+    jeudi_saint["body"] = "\n\\item A Vigiliis usque ad Nonam : omnia ut in feriis præcedentibus.\n\\item Ad Vigilias : in I Nocturno, lectiones de eadem feria V e II Nocturno cum ¶ de III Nocturno ; in II Nocturno, ut in ordinario officii ferialis temporis Passionis.\n\\item Ad Laudes et Horas minores : antiphonæ de feria V in Cena Domini cum psalmis de feria V in psalterio ; reliqua ut in ordinario temporis Passionis.}"# On ferme l'accolade.
     evg_vp = {}
     evg_vp["A"] = "Mt \\textbf{28}, 1-10"
     evg_vp["B"] = "Mc \\textbf{16}, 1-8"
@@ -564,7 +564,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
         if i == 0:
             dim_ap_paques["body"] = "\n\\item Officium huius diei persolvitur ut in die Paschæ præter ea quæ sequuntur.\n\\item Ad Vigilias : lectiones, ¶ et oratio e dominica \\textit{in Albis}.\n\\item Ad omnes Horas : capitula et oratio e dominica \\textit{in Albis} ; ß \\textit{Hæc dies}.\n\\item Ad Laudes et Vesperas : ß \\textit{Benedicamus Domino} cum duobus \\textit{Alleluia}.\n\\item Ad Benedictus : ø \\textit{Cum esset sero} (AM 475).\n\\item In MC : sequentia ; præfatio paschalis I (\\textit{in hac potissimum die}) ; \\textit{Communicantes} et \\textit{Hanc igitur} propria ; \\textit{Ite Missa est} cum duobus \\textit{Alleluia}.\n\\item Ad Magnificat : ø \\textit{Post dies octo} (AM 477)."
         elif i == 1:
-            dim_ap_paques["body"] = "\n\\item Ad Vigilias : in nocturno I : lectiones 3 et 4 (cum titulo : \\textit{De Actibus Apostolórum}) ; ¶ lectionis 4."
+            dim_ap_paques["body"] = "\n\\item Ad Vigilias : in I Nocturno : lectiones 3 et 4 (cum titulo : \\textit{De Actibus Apostolórum}) ; ¶ lectionis 4."
             dim_ap_paques["body"] += "\n\\item In MC: præfatio pascalis III."
         else:
             dim_ap_paques["body"] += "\n\\item In MC: præfatio pascalis " + (f_roman_numbers(i + 2) if i != 4 else "II") + "."
@@ -709,7 +709,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     coeur_imm_marie["num_day"] = "\\textbf{" + str(coeur_imm_marie_date.day) + "} &" + " Sabbato"
     coeur_imm_marie["symbols"] = " µ" if sacre_coeur_date.day < 8 else "" + f_symbols(coeur_imm_marie_date, "")[1]
     coeur_imm_marie["header"] = " - \\textsc{Immaculati Cordis Beatæ Mariæ Virginis} - \\textbf{memoria maior} - \\textit{Alb}."
-    coeur_imm_marie["body"] = "\\item In Officio: omnia de Communi festorum Beatæ Mariæ Virginis, præter sequentia.\n\\item Oratio in supplemento 129.\n\\item Ad Vigilias: lectio et ¶ in supplemento 128 ; in II nocturno lectio brevis et ß ut ad Sextam.\n\\item Ad Benedictus : ø \\textit{Beata es} (AM 1074).\n\\item \\textit{In ML: olim die 22 augusti (non dicitur \\emph{Credo}).}\n\\item In MC: MR 761 ; lectiones propriæ: Is \\textbf{61}, 9-11 / Lc \\textbf{2}, 41-51 ; præfatio de Immaculato Corde Beatæ Mariæ Virginis (CM 28)."
+    coeur_imm_marie["body"] = "\\item In Officio: omnia de Communi festorum Beatæ Mariæ Virginis, præter sequentia.\n\\item Oratio in supplemento 129.\n\\item Ad Vigilias: lectio et ¶ in supplemento 128 ; in II Nocturno lectio brevis et ß ut ad Sextam.\n\\item Ad Benedictus : ø \\textit{Beata es} (AM 1074).\n\\item \\textit{In ML: olim die 22 augusti (non dicitur \\emph{Credo}).}\n\\item In MC: MR 761 ; lectiones propriæ: Is \\textbf{61}, 9-11 / Lc \\textbf{2}, 41-51 ; præfatio de Immaculato Corde Beatæ Mariæ Virginis (CM 28)."
     
     # Christ-Roi:
     noel_next = datetime.date(current_year, 12, 25)
@@ -826,7 +826,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
                 christ_roi["num_day"] = "\\textbf{" + str(christ_roi_date.day) + "} &"
                 num_summer = f_num_summer(christ_roi_date)[0] if f_num_summer(christ_roi_date)[0] == "III" else ("V" if even_year else "IV")
                 christ_roi["header"] = "\\textbf{\\textsc{Dominica XXXIV per annum} - \\MakeUppercase{Domini nostri Iesu Christi Universorum Regis}} (XXIV post Pentecosten - " + num_summer + " novembris) - \\textbf{sollemnitas minor} - \\textit{Alb}."
-                christ_roi["body"] = "\n\\item Ad Vigilias : in nocturno II : lectiones 5 et 6 cum ¶ lectionis 8 ; in nocturno III : lectiones 11 et 12.\n\\item In MC : præfatio propria."
+                christ_roi["body"] = "\n\\item Ad Vigilias : in II Nocturno : lectiones 5 et 6 cum ¶ lectionis 8 ; in III Nocturno : lectiones 11 et 12.\n\\item In MC : præfatio propria."
                 num_pref_dim, num_pref_fer = f_num_prefaces(33)
                 christ_roi["preface_feries"] = "\n\\item In feriis: præfatio communis " + num_pref_fer + ", nisi aliter notetur."
                 current_lectiones = lectiones["hebdo_34_per_annum"]
@@ -854,7 +854,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
                 # Création du Dimanche per annum (sous la forme "Dim. X per annum (Y post Pentecosten, Z Augusti)"):
                 new_dim = dict_tempo[new_dim_date] = {}
                 new_dim["force"] = 80
-                #new_dim["generalities"] = "\n\\medskip\n\\ApplyGenerList{\\item Ad Vigilias: lectiones nocturnorum I et II sumuntur in supplemento 52*. Et sic in feriis hebdomadæ II novembris.}\n\\medskip" if num_summer == " - II novembris" else ("\n\\medskip\n\\ApplyGenerList{\\item Ad Vigilias: in feriis, lectiones SO.}\n\\medskip" if num_summer == " - I novembris" else "")
+                #new_dim["generalities"] = "\n\\medskip\n\\ApplyGenerList{\\item Ad Vigilias: lectiones I et II Nocturnorum sumuntur in supplemento 52*. Et sic in feriis hebdomadæ II novembris.}\n\\medskip" if num_summer == " - II novembris" else ("\n\\medskip\n\\ApplyGenerList{\\item Ad Vigilias: in feriis, lectiones SO.}\n\\medskip" if num_summer == " - I novembris" else "")
                 new_dim["I_vesp"] = "\n\\item I Vesperæ dominicæ sequentis" + (" (hymnus tono hiemali)" if num_summer == " - I octobris" else "") + "." + ("}\n\\medskip\n\\ApplyPrefaceFeries{\n\\item A dominica I octobris usque ad Adventum: dicitur hymnus hiemalis ad Vigilias, Laudes et Vesperas." if num_summer == " - I octobris" else "")
                 new_dim["hebdo_psalt"] = "- Hebdomada " + hebdo_psalterii[((new_dim_date - datetime.date(2011, 11, 27)).days // 7) % 2] + " psalterii -"
                 new_dim["num_day"] = "\\textbf{" + str(new_dim_date.day) + "} &"
@@ -862,9 +862,9 @@ def dict_tempo_create(current_year, even_year, year_letter):
                 new_dim["symbols"] = "".join(f_symbols(new_dim_date))
                 if i == 2: body_special = "\n\\item Officium totum dicitur ut in dominicis per annum, præter antiphonas ad Benedictus et Magnificat in AM 557-558."
                 elif i == 3: body_special = "\n\\item Officium totum dicitur ut in dominicis per annum præter antiphonas ad Benedictus et Magnificat."
-                elif num_summer == " - I augusti": body_special = "\n\\item Ad Vigilias: lectiones nocturnorum I et II sumendæ sunt e dominica I augusti, lectiones nocturni III e dominica post Pentecosten, et sic usque ad Adventum." 
-                elif num_summer == " - V octobris": body_special = "\n\\item Ad Vigilias: lectiones nocturnorum I et II in supplemento 51*." if even_year else "\n\\item Ad Vigilias: lectiones nocturni I in supplemento 51*."
-                elif num_summer == " - II novembris": body_special = "\n\\item Ad Vigilias: lectiones nocturnorum I et II sumuntur in supplemento 52*. Et sic in feriis hebdomadæ II novembris." if even_year else "\n\\item Ad Vigilias: lectiones nocturni I sumuntur in supplemento 52*. Et sic in feriis hebdomadæ II novembris."
+                elif num_summer == " - I augusti": body_special = "\n\\item Ad Vigilias: lectiones I et II Nocturnorum sumendæ sunt e dominica I augusti, lectiones III Nocturni e dominica post Pentecosten, et sic usque ad Adventum." 
+                elif num_summer == " - V octobris": body_special = "\n\\item Ad Vigilias: lectiones I et II Nocturnorum in supplemento 51*." if even_year else "\n\\item Ad Vigilias: lectiones I Nocturni in supplemento 51*."
+                elif num_summer == " - II novembris": body_special = "\n\\item Ad Vigilias: lectiones I et II Nocturnorum sumuntur in supplemento 52*. Et sic in feriis hebdomadæ II novembris." if even_year else "\n\\item Ad Vigilias: lectiones I Nocturni sumuntur in supplemento 52*. Et sic in feriis hebdomadæ II novembris."
                 else: body_special = ""
                 new_dim["body"] = body_special + "\n\\item In MC: præfatio " + num_pref_dim + " de dominicis."
                 new_dim["preface_feries"] = "\n\\item In feriis: præfatio communis " + num_pref_fer + ", nisi aliter notetur."
