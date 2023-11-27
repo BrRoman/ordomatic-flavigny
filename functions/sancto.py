@@ -720,7 +720,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
 
     anniv_pere_ducruet_date = datetime.date(current_year, 4, 5)
     anniv_pere_ducruet = dict_sancto[anniv_pere_ducruet_date] = {}
-    anniv_pere_ducruet["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus Reverendissimi Patris Bernardi DUCRUET, abbatis Sancti Benedicti Floriacensis, qui die 5 aprilis 2020 obdormivit in Domino."
+    anniv_pere_ducruet["anniv"] = "\\textup{†} Cras recurrit anniversarium obitus Reverendissimi Patris Bernardi \\textsc{Ducruet}, abbatis Sancti Benedicti Floriacensis, qui die 5 aprilis 2020 obdormivit in Domino."
 
     saint_jb_de_la_salle_date = datetime.date(current_year, 4, 7)
     saint_jb_de_la_salle = dict_sancto[saint_jb_de_la_salle_date] = {}
