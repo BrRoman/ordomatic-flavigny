@@ -313,7 +313,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_antoine[
         "anniv"] = "Cras recurrit anniversarium erectionis S. Ioseph Claræ Vallis in titulum abbatialem (1992)."
     saint_antoine["header"] = " - \\textsc{S. Antonii}, abbatis - \\textbf{memoria maior} - \\textit{Alb.}"
-    saint_antoine["body"] = "\n\\item In MC: præfatio de sanctis pastoribus."
+    saint_antoine["body"] = "\n\\item In MC: lectiones propriæ: Eph \\textbf{6}, 10-13.18 / Mt \\textbf{19}, 16-21 ; præfatio de sanctis pastoribus."
     saint_antoine[
         "II_vesp"] = "\n\\item Ad Magnificat: ø \\textit{Vos qui reliquistis} (AM 624)."
 
@@ -914,7 +914,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     else:
         messe_lue = "\n\\item \\textit{In ML: Missa pro abbate.}"
     saint_pacome[
-        "body"] = "\n\\item In Officio: oratio in supplemento 120 vel in variationibus 21.\n\\item Ad Vigilias: lectio in supplemento 119." + messe_lue + "\n\\item In MC: collecta in MP ; Commune sanctorum et sanctarum (MR 958) ; præfatio I de sanctis."
+        "body"] = "\n\\item In Officio: oratio in supplemento 120 vel in variationibus 21.\n\\item Ad Vigilias: lectio in supplemento 119." + messe_lue + "\n\\item In MC: collecta in MP ; Commune sanctorum et sanctarum (MR 958) ; lectiones propriæ: Gal \\textbf{5}, 22 – \\textbf{6}, 2 / Mt \\textbf{5}, 1-12a ; præfatio I de sanctis."
 
     saint_jean_Ier_date = datetime.date(current_year, 5, 18)
     saint_jean_Ier = dict_sancto[saint_jean_Ier_date] = {}
@@ -1719,7 +1719,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_bernard_tolomei[
         "header"] = " - \\textsc{S. Bernardi Tolomæi}, abbatis - \\textbf{memoria maior} - \\textit{Alb.} (olim die 21 huius)."
     saint_bernard_tolomei[
-        "body"] = "\n\\item In Officio: oratio in variationibus 22.\n\\item Ad Vigilias: lectio in supplemento 154*.\n\\item Ad Benedictus: ø \\textit{Ex domo} (AM 779).\n\\item \\textit{In ML: Missa in supplemento OSB.}\n\\item In MC: collecta in MP ; Commune pastorum (MR 934) ; præfatio de sanctis pastoribus."
+        "body"] = "\n\\item In Officio: oratio in variationibus 22.\n\\item Ad Vigilias: lectio in supplemento 154*.\n\\item Ad Benedictus: ø \\textit{Ex domo} (AM 779).\n\\item \\textit{In ML: Missa in supplemento OSB.}\n\\item In MC: collecta in MP ; Commune pastorum (MR 934) ; lectiones propriæ: 1 Cor \\textbf{1}, 26-31 / Lc \\textbf{12}, 32-34 ; præfatio de sanctis pastoribus."
     saint_bernard_tolomei[
         "II_vesp"] = "\n\\item Ad Magnificat: ø \\textit{Pastor bonus} (AM 483)."
 
@@ -2363,7 +2363,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         saint_colomban = dict_sancto[saint_colomban_date] = {}
         saint_colomban["force"] = 40
         saint_colomban["header"] = " - \\textsc{S. Columbani}, abbatis - \\textbf{memoria maior} - \\textit{Alb.}"
-        saint_colomban["body"] = "\\item In Officio : oratio in supplemento 194*.\n\\item Ad Vigilias : lectio in supplemento 193*.\n\\item Ad Benedictus : ø \\textit{Sancti mei} (AM 878)\n\\item \\textit{In ML : Missa pro abbate.}\n\\item In MC : Commune sanctorum et sanctarum (MR 958) ; præfatio de sanctis pastoribus."
+        saint_colomban["body"] = "\\item In Officio : oratio in supplemento 194*.\n\\item Ad Vigilias : lectio in supplemento 193*.\n\\item Ad Benedictus : ø \\textit{Sancti mei} (AM 878)\n\\item \\textit{In ML : Missa pro abbate.}\n\\item In MC : Commune sanctorum et sanctarum (MR 958) ; lectiones propriæ: Is \\textbf{52}, 7-10 / Lc \\textbf{9}, 57-62 ; præfatio de sanctis pastoribus."
         saint_colomban["II_vesp"] = "\n\\item Ad Magnificat : ø \\textit{Ubi duo} (AM 367)."
 
 
