@@ -8,8 +8,8 @@ from functions.various import hebdo_psalterii_inv, ult_ant_dict, special_months,
 
 def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, ordo_start, nb_days, paques, christ_roi):
     # Entrer ici les dates des MC votives semailles et récoltes :
-    date_semailles = datetime.date(current_year, 5, 16)
-    date_recoltes = datetime.date(current_year, 9, 22)
+    date_semailles = datetime.date(current_year, 5, 6)
+    date_recoltes = datetime.date(current_year, 9, 18)
 
     text_ordo = "\\input{config.tex}"
     text_ordo += "\n\\fancyhead[CO]{\\textbf{Cyclus liturgicus " + \
@@ -326,6 +326,22 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
     text_ordo += "\n\\vspace{1cm}\n\\ApplyHebdoPsalt{\\textbf{Post Nonam explicit}}" + \
         "\n\\ApplyHebdoPsalt{\\textbf{Annus liturgicus " + \
         str(current_year - 1) + "-" + str(current_year) + "}}"
+
+    # Jubilés :
+    text_ordo += "\n\n\\newpage"
+    text_ordo += "\n\n\\thispagestyle{empty}"
+    text_ordo += "\n\\ApplyParBox{3cm}{}"
+    text_ordo += "\n\\ApplyGenerTitleHuge{IUBILÆUM}\\vspace{1cm}"
+    text_ordo += "\n\\ApplyGenerTitleLarge{Hoc anno celebrabunt:}"
+    text_ordo += "\n\\begin{center}"
+    text_ordo += "\n\\medskip\n\\fontsize{12}{12}\\selectfont\n\\setlength{\\parskip}{0.1cm}"
+    text_ordo += "\nDie 8 Decembris 2023:\\par"
+    text_ordo += "\nP. Michael Maria \\textsc{Caillaud} (50 Prof.)\\vspace{0.5cm}\\par"
+    text_ordo += "\nDie 11 Novembris 2024:\\par"
+    text_ordo += "\nP. Ioannes Maria \\textsc{Pommarès} (50 Prof.)\\par"
+    text_ordo += "\n\\end{center}"
+
+    # End of document :
     text_ordo += "\n\n\\end{document}"
 
     # Espaces avant les signes de ponctuation doubles :

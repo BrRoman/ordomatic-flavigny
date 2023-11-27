@@ -143,7 +143,7 @@ def f_transf_month_genitive(num_month):
 	liste_latin = [" ianuarii", " februarii", " martii", " aprilis", " maii", " iunii", " iulii", " augusti", " septembris", " octobris", " novembris", " decembris"]
 	return(liste_latin[liste_num.index(num_month)])
 	
-special_months = ["", "", "", "Sancto Joseph consecratus", "", "Beatæ Mariæ Virgini consecratus", "SS.MO Cordi Jesu consecratus", "", "", "", "", "", ""]
+special_months = ["", "", "", "Sancto Ioseph consecratus", "", "Beatæ Mariæ Virgini consecratus", "SS.MO Cordi Iesu consecratus", "", "", "", "", "", ""]
 	
 def f_num_prefaces(i):
 	num_pref_dim = f_roman_numbers((i + 1) % 8) if ((i + 1) % 8 != 0) else f_roman_numbers(8)
