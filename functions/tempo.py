@@ -53,7 +53,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
             new_day_adv["header"] = " - de ea - \\textit{Viol.}" if j != 5 else " - de eo - \\textit{Viol.}"
             if new_day_adv_date.day < 8:
                 if new_day_adv_date.weekday() == 4: new_day_adv["body"] = "\n\\item \\textit{In ML (Alb.) : Missa de sacratissimo Corde Iesu \\emph{(Gloria)}.}"
-                if new_day_adv_date.weekday() == 5: new_day_adv["body"] = "\n\\item \\textit{In ML (Alb.)  : Immaculati Cordis Beatæ Mariæ Virginis.}"
+                if new_day_adv_date.weekday() == 5: new_day_adv["body"] = "\n\\item \\textit{In ML (Alb.) : Immaculati Cordis Beatæ Mariæ Virginis.}"
         new_dim_adv["lectiones_body"] = lectiones_body
     
     # Ultimæ feriæ :    
@@ -64,7 +64,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     dim_3_adv["force"] = 120
     if dim_3_adv_date.day == 17:
         dim_3_adv["generalities"] = generalities
-        txt_vigiles = "\\item Ad Vigilias: in I Nocturno lectiones e dominica III Adventus."
+        txt_vigiles = "\\item Ad Vigilias: in I Nocturno lectiones e dominica III Adventus."
     elif dim_3_adv_date.day < 16:
         txt_vigiles = "\\item Ad Vigilias: continuatur invitatorium \\textit{Regem venturum} usque ad diem 16 decembris."
     else:
