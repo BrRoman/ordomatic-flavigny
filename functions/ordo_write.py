@@ -8,8 +8,8 @@ from functions.various import hebdo_psalterii_inv, ult_ant_dict, special_months,
 
 def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, ordo_start, nb_days, paques, christ_roi):
     # Entrer ici les dates des MC votives semailles et récoltes :
-    date_semailles = datetime.date(current_year, 5, 6)
-    date_recoltes = datetime.date(current_year, 9, 18)
+    # date_semailles = datetime.date(current_year, 5, 6)
+    # date_recoltes = datetime.date(current_year, 9, 18)
 
     text_ordo = "\\input{config.tex}"
     text_ordo += "\n\\fancyhead[CO]{\\textbf{Cyclus liturgicus " + \
@@ -259,8 +259,8 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
             dict_new_day["body"] = comment_rogations + dict_new_day["body"]
 
         # Semailles et récoltes : on ajoute le texte après le body éventuellement existant.
-        dict_new_day["body"] = (dict_new_day["body"] if dict_new_day["body"] != "" else "") + ("\n\\item In MC : Missa \\textit{In conserendis agris} (MR 1127 A - GR 654) ; præfatio V de dominicis per annum." if new_day_date == date_semailles else "")
-        dict_new_day["body"] = (dict_new_day["body"] if dict_new_day["body"] != "" else "") + ("\n\\item In MC : Missa \\textit{post collectos fructus terræ} (MR 1129 - GR 654) ; præfatio V de dominicis per annum." if new_day_date == date_recoltes else "")
+        # dict_new_day["body"] = (dict_new_day["body"] if dict_new_day["body"] != "" else "") + ("\n\\item In MC : Missa \\textit{In conserendis agris} (MR 1127 A - GR 654) ; præfatio V de dominicis per annum." if new_day_date == date_semailles else "")
+        # dict_new_day["body"] = (dict_new_day["body"] if dict_new_day["body"] != "" else "") + ("\n\\item In MC : Missa \\textit{post collectos fructus terræ} (MR 1129 - GR 654) ; præfatio V de dominicis per annum." if new_day_date == date_recoltes else "")
 
         # Lundi de Pentecôte : "Ad mensam" sans mention de Pentecôte si c'est festum et supra :
         if new_day_date == paques + datetime.timedelta(days=50):
@@ -323,7 +323,7 @@ def ordo_write(dict_tempo, dict_sancto, current_year, even_year, year_letter, or
             dict_new_day["preface_feries"] + \
             "}" if dict_new_day["preface_feries"] != "" else ""
 
-    text_ordo += "\n\\vspace{1cm}\n\\ApplyHebdoPsalt{\\textbf{Post Nonam explicit}}" + \
+    text_ordo += "\n\\ApplyParBox{2cm}{}\n\\ApplyHebdoPsalt{\\textbf{Post Nonam explicit}}" + \
         "\n\\ApplyHebdoPsalt{\\textbf{Annus liturgicus " + \
         str(current_year - 1) + "-" + str(current_year) + "}}"
 
