@@ -152,7 +152,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sainte_lucie["header"] = " - \\textsc{S. Luciæ}, virginis et martyris - \\textbf{memoria maior} - \\textit{Rub.}"
     var_vesperas = ", vesperas" if sainte_lucie_date.weekday() != 5 else ""
     sainte_lucie[
-        "body"] = "\n\\item Ad Laudes" + var_vesperas + " et Horas minores: antiphonæ propriæ.\n\\item Ad Laudes: hymnus \\textit{Iesu corona} (AM 677).\n\\item In MC: Commune virginis martyris (MR 924) ; præfatio de sanctis martyribus."
+        "body"] = "\n\\item Ad Laudes" + var_vesperas + " et Horas minores: antiphonæ propriæ.\n\\item Ad Laudes: hymnus \\textit{Iesu corona} in AM 677.\n\\item In MC: Commune virginis martyris (MR 924) ; præfatio de sanctis martyribus."
     var_magnif = " ; ad Magnificat: ø \\textit{In tua patientia} (AM 769)" if not even_year else ""
     sainte_lucie["II_vesp"] = "\n\\item Ad Vesperas: hymnus \\textit{Iesu corona} ut supra" + var_magnif + "."
 
