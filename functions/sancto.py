@@ -190,14 +190,14 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_jean = dict_sancto[saint_jean_date] = {}
     saint_jean["force"] = 70
     saint_jean["header"] = " - \\textbf{\\textsc{S. Ioannis, apostoli et evangelistæ}} - \\textbf{festum} - \\textit{Alb.}"
-    saint_jean["body"] = "\n\\item Ad Vigilias: lectiones sumuntur e I et II Nocturnis.\n\\item In MC: lectiones propriæ: 1 Io \\textbf{1}, 1-4 / Io \\textbf{20}, 2-8 ; præfatio I de Nativitate."
+    saint_jean["body"] = "\n\\item In MC: lectiones propriæ: 1 Io \\textbf{1}, 1-4 / Io \\textbf{20}, 2-8 ; præfatio I de Nativitate."
     saint_jean["II_vesp"] = "\n\\item Ad Vesperas: antiphonæ et psalmi de Nativitate ; a capitulo de festo."
 
     saints_innocents_date = datetime.date(current_year - 1, 12, 28)
     saints_innocents = dict_sancto[saints_innocents_date] = {}
     saints_innocents["force"] = 70
     saints_innocents["header"] = " - \\textbf{\\textsc{Ss. Innocentium, martyrum}} - \\textbf{festum} - \\textit{Rub.}"
-    saints_innocents["body"] = "\n\\item Ad Vigilias: lectiones sumuntur e I et II Nocturnis.\n\\item In MC: lectiones propriæ: 1 Io \\textbf{1}, 5 – \\textbf{2}, 2 / Mt \\textbf{2}, 13-18 ; præfatio I de Nativitate."
+    saints_innocents["body"] = "\n\\item In MC: lectiones propriæ: 1 Io \\textbf{1}, 5 – \\textbf{2}, 2 / Mt \\textbf{2}, 13-18 ; præfatio I de Nativitate."
     saints_innocents["II_vesp"] = "\n\\item Ad Vesperas (\\textit{Alb.}): antiphonæ et psalmi de Nativitate ; a capitulo de festo."
 
     # JANVIER:
