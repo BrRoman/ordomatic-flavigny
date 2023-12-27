@@ -183,7 +183,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_etienne = dict_sancto[saint_etienne_date] = {}
     saint_etienne["force"] = 70
     saint_etienne["header"] = " - \\textbf{\\textsc{S. Stephani, protomartyris}} - \\textbf{festum} - \\textit{Rub.}"
-    saint_etienne["body"] = "\n\\item Ad Vigilias: lectiones sumuntur e I et II Nocturnis.\n\\item In MC: lectiones propriæ: Act \\textbf{6}, 8-10 ; \\textbf{7}, 54-60 / Mt \\textbf{10}, 17-22 ; præfatio I de Nativitate."
+    vigiles_lectiones = "\n\\item Ad Vigilias: lectiones sumuntur e I et II Nocturnis." if not even_year else ""
+    saint_etienne["body"] = vigiles_lectiones + "\n\\item In MC: lectiones propriæ: Act \\textbf{6}, 8-10 ; \\textbf{7}, 54-60 / Mt \\textbf{10}, 17-22 ; præfatio I de Nativitate."
     saint_etienne["II_vesp"] = "\n\\item Ad Vesperas (\\textit{Alb.}): antiphonæ et psalmi de Nativitate ; a capitulo de festo."
 
     saint_jean_date = datetime.date(current_year - 1, 12, 27)
