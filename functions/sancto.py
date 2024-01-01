@@ -114,12 +114,6 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_nicolas["force"] = 9
     saint_nicolas["body"] = "\n\\item \\textit{In ML (Alb.): Missa S. Nicolai.}"
 
-    nd_lorette_date = datetime.date(current_year - 1, 12, 10)
-    nd_lorette = dict_sancto[nd_lorette_date] = {}
-    nd_lorette["force"] = 40
-    nd_lorette["header"] = " - Beatæ Mariæ Virginis de Loreto - \\textit{memoria minor} - \\textit{Viol.}"
-    nd_lorette["body"] = "\n\\item Ad Benedictus: ø \\textit{Beatam} (AM 711); oratio in supplemento 60*.\n\\item \\textit{In ML: Alb.}\n\\item In MC \\textit{(Alb.)}: Commune Beatæ Mariæ Virginis (MR 905) ; præfatio I de Beata Maria Virgine."
-
     saint_ambroise_date = datetime.date(current_year - 1, 12, 7)
     saint_ambroise = dict_sancto[saint_ambroise_date] = {}
     saint_ambroise["force"] = 40
@@ -138,6 +132,12 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         "body"] = "\n\\item Ad Vigilias: in II Nocturno: lectiones 5, 6 et 7 cum ¶ lectionis 8 ; in III Nocturno: lectiones 9 et 10.\n\\item In MC: lectiones propriæ: Gen \\textbf{3}, 9-15.20 / Ep \\textbf{1}, 3-6.11-12 / Lc \\textbf{1}, 26-38 ; præfatio propria ; \\textit{Pater} in tono C (GR 814) ; Missa concluditur benedictione sollemni."
     imm_conc["II_vesp"] = "\n\\item Vesperæ sollemnitatis ; benedictio Sanctissimi Sacramenti." if imm_conc_date.weekday(
     ) != 5 else "\n\\item I Vesperæ Dominicæ."
+
+    nd_lorette_date = datetime.date(current_year - 1, 12, 10)
+    nd_lorette = dict_sancto[nd_lorette_date] = {}
+    nd_lorette["force"] = 40
+    nd_lorette["header"] = " - Beatæ Mariæ Virginis de Loreto - \\textit{memoria minor} - \\textit{Viol.}"
+    nd_lorette["body"] = "\n\\item Ad Benedictus: ø \\textit{Beatam} (AM 711); oratio in supplemento 60*.\n\\item \\textit{In ML: Alb.}\n\\item In MC \\textit{(Alb.)}: Commune Beatæ Mariæ Virginis (MR 905) ; præfatio I de Beata Maria Virgine."
 
     nd_guadalupe_date = datetime.date(current_year - 1, 12, 12)
     nd_guadalupe = dict_sancto[nd_guadalupe_date] = {}
