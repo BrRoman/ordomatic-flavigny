@@ -114,12 +114,6 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_nicolas["force"] = 9
     saint_nicolas["body"] = "\n\\item \\textit{In ML (Alb.): Missa S. Nicolai.}"
 
-    nd_lorette_date = datetime.date(current_year - 1, 12, 10)
-    nd_lorette = dict_sancto[nd_lorette_date] = {}
-    nd_lorette["force"] = 40
-    nd_lorette["header"] = " - Beatæ Mariæ Virginis de Loreto - \\textit{memoria minor} - \\textit{Viol.}"
-    nd_lorette["body"] = "\n\\item Ad Benedictus: ø \\textit{Beatam} (AM 711); oratio in supplemento 60*.\n\\item \\textit{In ML: Alb.}\n\\item In MC \\textit{(Alb.)}: Commune Beatæ Mariæ Virginis (MR 905) ; præfatio I de Beata Maria Virgine."
-
     saint_ambroise_date = datetime.date(current_year - 1, 12, 7)
     saint_ambroise = dict_sancto[saint_ambroise_date] = {}
     saint_ambroise["force"] = 40
@@ -139,6 +133,12 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     imm_conc["II_vesp"] = "\n\\item Vesperæ sollemnitatis ; benedictio Sanctissimi Sacramenti." if imm_conc_date.weekday(
     ) != 5 else "\n\\item I Vesperæ Dominicæ."
 
+    nd_lorette_date = datetime.date(current_year - 1, 12, 10)
+    nd_lorette = dict_sancto[nd_lorette_date] = {}
+    nd_lorette["force"] = 40
+    nd_lorette["header"] = " - Beatæ Mariæ Virginis de Loreto - \\textit{memoria minor} - \\textit{Viol.}"
+    nd_lorette["body"] = "\n\\item Ad Benedictus: ø \\textit{Beatam} (AM 711); oratio in supplemento 60*.\n\\item \\textit{In ML: Alb.}\n\\item In MC \\textit{(Alb.)}: Commune Beatæ Mariæ Virginis (MR 905) ; præfatio I de Beata Maria Virgine."
+
     nd_guadalupe_date = datetime.date(current_year - 1, 12, 12)
     nd_guadalupe = dict_sancto[nd_guadalupe_date] = {}
     nd_guadalupe["force"] = 20
@@ -152,7 +152,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sainte_lucie["header"] = " - \\textsc{S. Luciæ}, virginis et martyris - \\textbf{memoria maior} - \\textit{Rub.}"
     var_vesperas = ", vesperas" if sainte_lucie_date.weekday() != 5 else ""
     sainte_lucie[
-        "body"] = "\n\\item Ad Laudes" + var_vesperas + " et Horas minores: antiphonæ propriæ.\n\\item Ad Laudes: hymnus \\textit{Iesu corona} (AM 677).\n\\item In MC: Commune virginis martyris (MR 924) ; præfatio de sanctis martyribus."
+        "body"] = "\n\\item Ad Laudes" + var_vesperas + " et Horas minores: antiphonæ propriæ.\n\\item Ad Laudes: hymnus \\textit{Iesu corona} in AM 677.\n\\item In MC: Commune virginis martyris (MR 924) ; præfatio de sanctis martyribus."
     var_magnif = " ; ad Magnificat: ø \\textit{In tua patientia} (AM 769)" if not even_year else ""
     sainte_lucie["II_vesp"] = "\n\\item Ad Vesperas: hymnus \\textit{Iesu corona} ut supra" + var_magnif + "."
 
@@ -183,21 +183,22 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_etienne = dict_sancto[saint_etienne_date] = {}
     saint_etienne["force"] = 70
     saint_etienne["header"] = " - \\textbf{\\textsc{S. Stephani, protomartyris}} - \\textbf{festum} - \\textit{Rub.}"
-    saint_etienne["body"] = "\n\\item Ad Vigilias: lectiones sumuntur e I et II Nocturnis.\n\\item In MC: lectiones propriæ: Act \\textbf{6}, 8-10 ; \\textbf{7}, 54-60 / Mt \\textbf{10}, 17-22 ; præfatio I de Nativitate."
+    vigiles_lectiones = "\n\\item Ad Vigilias: lectiones sumuntur e I et II Nocturnis." if not even_year else ""
+    saint_etienne["body"] = vigiles_lectiones + "\n\\item In MC: lectiones propriæ: Act \\textbf{6}, 8-10 ; \\textbf{7}, 54-60 / Mt \\textbf{10}, 17-22 ; præfatio I de Nativitate."
     saint_etienne["II_vesp"] = "\n\\item Ad Vesperas (\\textit{Alb.}): antiphonæ et psalmi de Nativitate ; a capitulo de festo."
 
     saint_jean_date = datetime.date(current_year - 1, 12, 27)
     saint_jean = dict_sancto[saint_jean_date] = {}
     saint_jean["force"] = 70
     saint_jean["header"] = " - \\textbf{\\textsc{S. Ioannis, apostoli et evangelistæ}} - \\textbf{festum} - \\textit{Alb.}"
-    saint_jean["body"] = "\n\\item Ad Vigilias: lectiones sumuntur e I et II Nocturnis.\n\\item In MC: lectiones propriæ: 1 Io \\textbf{1}, 1-4 / Io \\textbf{20}, 2-8 ; præfatio I de Nativitate."
+    saint_jean["body"] = "\n\\item In MC: lectiones propriæ: 1 Io \\textbf{1}, 1-4 / Io \\textbf{20}, 2-8 ; præfatio I de Nativitate."
     saint_jean["II_vesp"] = "\n\\item Ad Vesperas: antiphonæ et psalmi de Nativitate ; a capitulo de festo."
 
     saints_innocents_date = datetime.date(current_year - 1, 12, 28)
     saints_innocents = dict_sancto[saints_innocents_date] = {}
     saints_innocents["force"] = 70
     saints_innocents["header"] = " - \\textbf{\\textsc{Ss. Innocentium, martyrum}} - \\textbf{festum} - \\textit{Rub.}"
-    saints_innocents["body"] = "\n\\item Ad Vigilias: lectiones sumuntur e I et II Nocturnis.\n\\item In MC: lectiones propriæ: 1 Io \\textbf{1}, 5 – \\textbf{2}, 2 / Mt \\textbf{2}, 13-18 ; præfatio I de Nativitate."
+    saints_innocents["body"] = "\n\\item In MC: lectiones propriæ: 1 Io \\textbf{1}, 5 – \\textbf{2}, 2 / Mt \\textbf{2}, 13-18 ; præfatio I de Nativitate."
     saints_innocents["II_vesp"] = "\n\\item Ad Vesperas (\\textit{Alb.}): antiphonæ et psalmi de Nativitate ; a capitulo de festo."
 
     # JANVIER:
