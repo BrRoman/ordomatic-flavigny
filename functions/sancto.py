@@ -1221,7 +1221,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saint_barnabe["force"] = 40
     saint_barnabe["header"] = " - \\textsc{S. Barnabæ, apostoli} - \\textbf{memoria maior} - \\textit{Rub.}"
     vigiles = "\\item Ad Vigilias: invitatorium et hymnus de Communi Apostolorum extra tempus paschale ; lectio in supplemento 132 cum ¶ extra tempus paschale ; in II Nocturno lectio brevis in supplemento 133 vel ut ad Sextam in Communi Apostolorum." if saint_barnabe_date < paques + \
-        datetime.timedelta(days=56) else "\\item Ad Vigilias: lectio in supplemento 132 pro breviario veteri ; in II Nocturno lectio brevis in supplemento 133 vel ut ad Sextam in Communi Apostolorum."
+        datetime.timedelta(days=56) else "\\item Ad Vigilias: in II Nocturno lectio brevis in supplemento 133 vel ut ad Sextam in Communi Apostolorum."
     if is_vigile_pent(saint_barnabe_date):
         messe_lue = "\n\\item \\textit{In ML (Rub.): Missa de Vigilia Pentecostes.}"
     elif is_oct_pent(saint_barnabe_date):
