@@ -550,6 +550,8 @@ def dict_tempo_create(current_year, even_year, year_letter):
         #     lectiones_body += "\n\\item[" + f_transf_weekday(i) + "] " + (current_lectiones[i]["C"] if year_letter == "C" else current_lectiones[i]["AB"])
         # else:
         #     lectiones_body += "\n\\item[" + f_transf_weekday(i) + "] " + current_lectiones[i]
+        if i == 1:
+            new_day["body"] = "\n\\item{In MC : lectio prima in forma breviore.}"
         lectiones_body += "\n\\item[" + \
             f_transf_weekday(i) + "] " + current_lectiones[i]
         new_day_date = passion_date + datetime.timedelta(days=i + 1)
