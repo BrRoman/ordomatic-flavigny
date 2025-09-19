@@ -1914,7 +1914,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         ant_bened + \
         "\n\\item \\textit{In ML: sequentia ; non dicitur \\emph{Credo}.}\n\\item In MC: lectiones propriæ: Hebr \\textbf{5}, 7-9 / " + \
         evg_mc + "; sequentia; præfatio I de Beata Maria Virgine."
-    sept_douleurs["II_vesp"] = "" if even_year else "\\item Ad Magnificat: ø \\textit{Nolite me} (AM 1046)."
+    sept_douleurs["II_vesp"] = "" if even_year \
+        else "\\item Ad Magnificat: ø \\textit{Nolite me} (AM 1046)."
 
     saints_corneille_cyprien_date = datetime.date(current_year, 9, 16)
     saints_corneille_cyprien = dict_sancto[saints_corneille_cyprien_date] = {}
