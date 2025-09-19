@@ -405,7 +405,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sainte_bathilde = dict_sancto[sainte_bathilde_date] = {}
     sainte_bathilde["force"] = 20
     sainte_bathilde["header"] = " - S. Bathildis, monialis - \\textit{memoria minor} - \\textit{Vir.} "
-    sainte_bathilde["body"] = "\n\\item Ad Benedictus: ø \\textit{Simile est} (AM 685); oratio in supplemento 91.\n\\item \\textit{In ML (Alb.): Missa pro nec virgine nec martyre.}\n\\item In MC \\textit{(Alb.)}: collecta in MP; Commune sanctorum et sanctarum (MR 960)."
+    sainte_bathilde["body"] = "\n\\item Ad Benedictus: ø \\textit{Simile est} (AM 685); oratio in supplemento 91.\n\\item \\textit{In ML (Alb.): Missa pro nec virgine nec martyre.}\n\\item In MC \\textit{(Alb.)}: omnia in MP."
 
     saint_jean_bosco_date = datetime.date(current_year, 1, 31)
     saint_jean_bosco = dict_sancto[saint_jean_bosco_date] = {}
