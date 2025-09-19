@@ -1672,7 +1672,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sainte_edith_stein["force"] = 70
     sainte_edith_stein["header"] = " - \\textbf{\\textsc{S. Teresiæ Benedictæ a Cruce} (Edith Stein), \\textsc{virginis, martyris et Europæ patronæ}} - \\textbf{festum} - \\textit{Rub.}"
     sainte_edith_stein[
-        "body"] = "\n\\item In Officio: omnia de Communi virginis martyris, præter sequentia.\n\\item Oratio in supplemento 153*.\n\\item Ad Vigilias: lectio I Nocturni de libro Ecclesiastici \\textbf{51}, 1-17 in breviario monastico 172*; lectio II Nocturni in supplemento 151*.\n\\item Ad Benedictus: ø \\textit{Ego sum} (AM 982).\n\\item \\textit{In ML: Missa pro virgine et martyre; præfatio de sanctis.}\n\\item In MC: Commune virginis martyris (MR 924); lectiones propriæ: Os \\textbf{2}, 16b. 17b. 21-22 / Mt \\textbf{25}, 1-13; præfatio de sanctis martyribus."
+        "body"] = "\n\\item In Officio: omnia de Communi virginis martyris, præter sequentia.\n\\item Oratio in supplemento 153*.\n\\item Ad Vigilias: lectio I Nocturni de libro Ecclesiastici \\textbf{51}, 1-17 in breviario monastico 172*; lectio II Nocturni in supplemento 151*.\n\\item Ad Benedictus: ø \\textit{Ego sum} (AM 982).\n\\item \\textit{In ML: Missa pro virgine et martyre; præfatio de sanctis.}\n\\item In MC: lectiones propriæ: Os \\textbf{2}, 16b. 17b. 21-22 / Mt \\textbf{25}, 1-13; præfatio de sanctis martyribus."
     sainte_edith_stein[
         "II_vesp"] = "\n\\item Ad Magnificat: ø \\textit{Elevare} (AM 222)."
 
