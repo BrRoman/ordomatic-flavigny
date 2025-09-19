@@ -1905,13 +1905,16 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sept_douleurs = dict_sancto[sept_douleurs_date] = {}
     sept_douleurs["force"] = 40
     sept_douleurs["header"] = " - \\textsc{Beatæ Mariæ Virginis perdolentis} - \\textbf{memoria maior} - \\textit{Alb.}"
+    var_tonus_capituli = " et Vesperas" if sept_douleurs_date.weekday() != 5 else ""
     ant_bened = "" if even_year else "\n\\item Ad Benedictus: ø \\textit{Tuam ipsius} in tono VI f (AM 867)."
     evg_mc = "Lc \\textbf{2}, 33-35" if even_year else "Io \\textbf{19}, 25-27"
-    ant_magnif = "" if even_year else "\\item Ad Magnificat: ø \\textit{Nolite me} (AM 1046)."
     var_vesperas = ", Vesperas" if sept_douleurs_date.weekday() != 5 else ""
     sept_douleurs["body"] = "\n\\item Ad Laudes" + var_vesperas + " et Horas minores: antiphonæ propriæ." + \
-        ant_bened + "\n\\item \\textit{In ML: sequentia ; non dicitur \\emph{Credo}.}\n\\item In MC: lectiones propriæ: Hebr \\textbf{5}, 7-9 / " + \
-        evg_mc + "; sequentia; præfatio I de Beata Maria Virgine." + ant_magnif
+        "\n\\item Tonus capituli ad Laudes" + var_tonus_capituli + " invenitur in AM 1234." +\
+        ant_bened + \
+        "\n\\item \\textit{In ML: sequentia ; non dicitur \\emph{Credo}.}\n\\item In MC: lectiones propriæ: Hebr \\textbf{5}, 7-9 / " + \
+        evg_mc + "; sequentia; præfatio I de Beata Maria Virgine."
+    sept_douleurs["II_vesp"] = "" if even_year else "\\item Ad Magnificat: ø \\textit{Nolite me} (AM 1046)."
 
     saints_corneille_cyprien_date = datetime.date(current_year, 9, 16)
     saints_corneille_cyprien = dict_sancto[saints_corneille_cyprien_date] = {}
