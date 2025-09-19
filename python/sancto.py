@@ -540,7 +540,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         "header"] = " - \\textsc{\\textbf{Ss. Cyrilli, monachi, et Methodii, episcopi}, Europæ patronorum} - \\textbf{festum} - \\textit{Alb.} (olim die 7 iulii)."
     var_vesperas = ", Vesperas" if saints_cyrille_methode_date.weekday() != 5 else ""
     saints_cyrille_methode[
-        "body"] = "\n\\item Ad Vigilias: de Communi confessoris pontificis, præter lectiones et orationem in supplemento 99.\n\\item Ad Laudes" + var_vesperas + " et Horas minores: ut in variationibus 25 et sequentibus.\n\\item \\textit{In ML: præfatio de sanctis.}\n\\item In MC: lectiones propriæ: Act \\textbf{13}, 46-49 / Lc \\textbf{10}, 1-9; præfatio I de sanctis."
+        "body"] = "\n\\item Ad Vigilias: de Communi confessoris pontificis, præter lectiones et orationem in supplemento 99.\n\\item Ad Laudes" + var_vesperas + " et Horas minores: ut in variationibus 25 et sequentibus.\n\\item \\textit{In ML: præfatio de sanctis.}\n\\item In MC: lectiones propriæ: Act \\textbf{13}, 46-49 / Lc \\textbf{10}, 1-9; præfatio de sanctis pastoribus."
 
     sept_saints_fondateurs_date = datetime.date(current_year, 2, 17)
     sept_saints_fondateurs = dict_sancto[sept_saints_fondateurs_date] = {}
