@@ -1840,7 +1840,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     sainte_reine["header"] = text_dim + \
         " - þ \\textbf{\\MakeUppercase{S. Reginæ, virginis et martyris}} - \\textbf{sollemnitas minor} - \\textit{Rub.}"
     sainte_reine[
-        "body"] = "\n\\item In Officio: omnia de Communi virginum; oratio in supplemento 168.\n\\item Ad Vigilias: hymnus proprius et lectiones II Nocturni in folio supplemento; lectio I Nocturni de libro Ecclesiastici \\textbf{51}, 1-17 in breviario monastico 172*.\n\\item Ad Laudes: versiculum in AM 1178.\n\\item \\textit{In ML: \\emph{Gloria; Credo}; præfatio de sanctis martyribus.}\n\\item In MC: collecta propria; Commune virginis martyris (MR 924); lectiones propriæ: Ct \\textbf{8}, 6-7 / Ep \\textbf{6}, 10-13. 18 / Mt \\textbf{25}, 1-13 ; præfatio de sanctis martyribus."
+        "body"] = "\n\\item In Officio: omnia de Communi virginum; oratio in supplemento 168.\n\\item Ad Vigilias: hymnus proprius et lectiones II Nocturni in folio supplemento; lectio I Nocturni de libro Ecclesiastici \\textbf{51}, 1-17 in breviario monastico 172*.\n\\item Ad Laudes: versiculum in AM 1178.\n\\item \\textit{In ML: dicitur \\emph{Credo}; præfatio de sanctis martyribus.}\n\\item In MC: collecta propria; Commune virginis martyris (MR 924); lectiones propriæ: Ct \\textbf{8}, 6-7 / Ep \\textbf{6}, 10-13. 18 / Mt \\textbf{25}, 1-13 ; præfatio de sanctis martyribus."
     sainte_reine["II_vesp"] = "\n\\item Vesperæ sollemnitatis. ¶ \\textit{Adiuvabit eam} et versiculum in AM 1178." if sainte_reine_date.weekday(
     ) == 5 else "\\item Ad Vesperas, responsorium \\textit{Adiuvabit eam} et versiculum in AM 1178."
     # Si 1er vendredi du mois, reporter le jeûne au lendemain:
