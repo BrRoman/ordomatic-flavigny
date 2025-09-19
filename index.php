@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-	<head>
+    <head>
         <meta charset="utf-8" />
-        <link rel="icon" href="ordomatic.png">
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" href="static/img/ordomatic.png">
+        <link rel="stylesheet" href="static/css/styles.css" />
         <title>Ordomatic</title>
-	</head>
-	<body>
+    </head>
+
+    <body>
         <div id="page">
             <h1>†</h1>
             <h2>
@@ -17,18 +18,19 @@
                 <label for="annee">Année de l'ordo : </label><input id="annee" type="number" name="annee" style='width:70px' value=<?php print(getdate()["month"] == "December" ? getdate()["year"] + 1 : getdate()["year"]); ?> /><input id="go" type="button" value="Go !" />
             </div>
         </div>
+
         <div id="overlay_wait">
-            <img src="wait.gif" style="margin-bottom:20px"></br>
+            <img src="static/img/wait.gif" style="margin-bottom:20px"></br>
             <p>Votre ordo est en cours de préparation…</p>
             <p>Veuillez patienter quelques instants…</p>
         </div>
+
         <form id="overlay_download" action="" target="_blank">
             Votre ordo est prêt !</br>
             <input id="view" type="submit" value="Afficher" style="margin-top:20px" />
         </form>
 
-        <script src="jquery-3.2.1.js"></script>
-        <script src="script.js"></script>
-	</body>
+        <script src="static/js/jquery-3.2.1.js"></script>
+        <script src="static/js/script.js"></script>
+    </body>
 </html>
-
