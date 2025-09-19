@@ -1816,7 +1816,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
         "header"] = " - \\textbf{\\textsc{S. Gregorii I, papæ et Ecclesiæ doctoris}} - \\textbf{festum} - \\textit{Alb.} (olim die 12 martii)."
     var_vesperas = ", Vesperas" if saint_gregoire_date.weekday() != 5 else ""
     saint_gregoire[
-        "body"] = "\n\\item Ad Vigilias: omnia in supplemento 160.\n\\item Ad Laudes" + var_vesperas + " et Horas minores: antiphonæ propriæ.\n\\item \\textit{In ML: Missa \\emph{Si diligis me} (Commune Summorum Pontificum) cum orationibus e die 12 martii.}\n\\item In MC: lectiones propriæ: 2 Co \\textbf{4}, 1-2.5-7 / Lc \\textbf{22}, 24-30; præfatio de sanctis pastoribus."
+        "body"] = "\n\\item Ad Vigilias: omnia in supplemento 160.\n\\item Ad Laudes" + var_vesperas + " et Horas minores: antiphonæ propriæ.\n\\item In MC: lectiones propriæ: 2 Co \\textbf{4}, 1-2.5-7 / Lc \\textbf{22}, 24-30; præfatio de sanctis pastoribus."
 
     sainte_reine_date = datetime.date(current_year, 9, 7)
     sainte_reine = dict_sancto[sainte_reine_date] = {}
