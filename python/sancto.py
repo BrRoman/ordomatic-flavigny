@@ -1950,6 +1950,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
             messe_lue = "\n\\item \\textit{In ML (Viol.): Quatuor Temporum Septembris.}"
         elif saint_seine_date.weekday() == 5:
             messe_lue = "\n\\item \\textit{In ML (Viol.): Quatuor Temporum Septembris (forma Missæ brevior).}"
+        else:
+            messe_lue = "\n\\item \\textit{In ML (Alb.): Missa pro abbate.}"
     else:
         messe_lue = "\n\\item \\textit{In ML (Alb.): Missa pro abbate.}"
     saint_seine["body"] = "\n\\item Ad Benedictus: ø \\textit{Serve bone} (AM 673); oratio in supplemento 172." + \
@@ -1966,6 +1968,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
             messe_lue = "\n\\item \\textit{In ML (Viol.): Quatuor Temporum Septembris.}"
         elif saint_just_breteniere_date.weekday() == 5:
             messe_lue = "\n\\item \\textit{In ML (Viol.): Quatuor Temporum Septembris (forma Missæ brevior).}"
+        else:
+            messe_lue = "\n\\item \\textit{In ML (Rub.): Missa pro martyre non pontifice.}"
     else:
         messe_lue = "\n\\item \\textit{In ML (Rub.): Missa pro martyre non pontifice.}"
     saint_just_breteniere["body"] = "\n\\item Ad Benedictus: ø \\textit{Alias oves} (AM 486); oratio in supplemento 172." + \
@@ -1988,6 +1992,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
             messe_lue = "\n\\item \\textit{In ML (Viol.): Quatuor Temporum Septembris.}"
         elif saint_maurice_date.weekday() == 5:
             messe_lue = "\n\\item \\textit{In ML (Viol.): Quatuor Temporum Septembris (forma Missæ brevior).}"
+        else:
+            messe_lue = "\n\\item \\textit{In ML (Rub.): Missa Ss. Mauritii et sociorum.}"
     else:
         messe_lue = "\n\\item \\textit{In ML (Rub.): Missa Ss. Mauritii et sociorum.}"
     saint_maurice["body"] = messe_lue
@@ -2002,6 +2008,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
             messe_lue = "\n\\item \\textit{In ML (Viol.): Quatuor Temporum Septembris.}"
         elif saint_padre_pio_date.weekday() == 5:
             messe_lue = "\n\\item \\textit{In ML (Viol.): Quatuor Temporum Septembris (forma Missæ brevior).}"
+        else:
+            messe_lue = "\n\\item \\textit{In ML (Alb.): Missa pro confessore non pontifice.}"
     else:
         messe_lue = "\n\\item \\textit{In ML (Alb.): Missa pro confessore non pontifice.}"
     saint_padre_pio["body"] = "\n\\item Ad Benedictus: ø \\textit{Vivo autem} (AM 1128); oratio in supplemento 172*." + \
@@ -2018,6 +2026,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
             messe_lue = "\n\\item \\textit{In ML (Viol.): Quatuor Temporum Septembris.}"
         elif saints_come_damien_date.weekday() == 5:
             messe_lue = "\n\\item \\textit{In ML (Viol.): Quatuor Temporum Septembris (forma Missæ brevior).}"
+        else:
+            messe_lue = "\n\\item \\textit{In ML: Rub.}"
     else:
         messe_lue = "\n\\item \\textit{In ML: Rub.}"
     saints_come_damien[
@@ -2033,6 +2043,8 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
             messe_lue = "\n\\item \\textit{In ML (Viol.): Quatuor Temporum Septembris.}"
         elif saint_vincent_de_paul_date.weekday() == 5:
             messe_lue = "\n\\item \\textit{In ML (Viol.): Quatuor Temporum Septembris (forma Missæ brevior).}"
+        else:
+            messe_lue = "\n\\item \\textit{In ML: Missa in proprio sanctorum vel in PAL.}"
     else:
         messe_lue = "\n\\item \\textit{In ML: Missa in proprio sanctorum vel in PAL.}"
     saint_vincent_de_paul[
