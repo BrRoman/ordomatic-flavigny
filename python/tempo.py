@@ -765,7 +765,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
         ascension_date.day) + f_transf_month_genitive(ascension_date.month)
     ascension = dict_tempo[ascension_date] = {}
     ascension["force"] = 100
-    ascension["I_vesp"] = "\n\\item I Vesperæ solemnitatis sequentis."
+    ascension["I_vesp"] = "\n\\item I Vesperæ sollemnitatis sequentis."
     ascension["generalities"] = "\n\\newpage\n\\ApplyGenerSubTitle{Ad mensam}\n\\ApplyGenerList{\n\\item Benedictio de Ascensione.\n\\vspace{1cm}}"
     ascension["num_day"] = "\\textbf{" + \
         str(ascension_date.day) + "} &" + " Feria V"
@@ -1028,7 +1028,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
                 trinite = dict_tempo[new_dim_date] = {}
                 trinite["force"] = 120
                 trinite[
-                    "I_vesp"] = "\n\\item I Vesperæ solemnitatis sequentis}\n\\ApplyHebdoPsalt{\\textbf{- Pro breviario 1962: tomus alter -}"
+                    "I_vesp"] = "\n\\item I Vesperæ sollemnitatis sequentis}\n\\ApplyHebdoPsalt{\\textbf{- Pro breviario 1962: tomus alter -}"
                 trinite["hebdo_psalt"] = "- Hebdomada " + hebdo_psalterii[(
                     (new_dim_date - datetime.date(2011, 11, 27)).days // 7) % 2] + " psalterii -"
                 trinite["num_day"] = "\\textbf{" + \
