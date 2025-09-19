@@ -49,10 +49,10 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
 
     # Anniversaire de l'élection du Pape :
     # Attention : ça peut être current_year - 1.
-    anniv_pape_date = datetime.date(current_year, 3, 13)
+    anniv_pape_date = datetime.date(current_year, 5, 8)
     anniv_pape = dict_sancto[anniv_pape_date] = {}
     anniv_pape[
-        "anniv"] = "Cras recurrit anniversarium electionis S.S. D.N. Francisci, quem Dominus vivificet et beatum faciat (2013)."
+        "anniv"] = "Cras recurrit anniversarium electionis S.S. D.N. Leonis, quem Dominus vivificet et beatum faciat (2025)."
     # 1ère Messe défunts :
     messe_defunts_date = datetime.date(current_year, 2,  4)
     messe_defunts = dict_sancto[messe_defunts_date] = {}
@@ -2253,7 +2253,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     comm_defunts["II_vesp"] = "\\item I Vesperæ dominicæ sequentis." if comm_defunts_date.weekday(
     ) == 5 else complies
     # Si 1er vendredi du mois, reporter le jeûne au lendemain:
-    #if comm_defunts_date.weekday() == 4:
+    # if comm_defunts_date.weekday() == 4:
     #    dict_tempo[comm_defunts_date]["symbols"] = dict_tempo[comm_defunts_date]["symbols"].replace(
     #        " µ", " ł")
     #    dict_tempo[comm_defunts_date + datetime.timedelta(
