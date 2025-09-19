@@ -372,7 +372,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     conv_saint_paul["force"] = 40
     conv_saint_paul["header"] = " - \\textbf{\\textsc{In Conversione S. Pauli apostoli}} - \\textbf{festum} - \\textit{Alb.}"
     conv_saint_paul[
-        "body"] = "\n\\item Ad Vigilias: in supplemento 74; invitatorium proprium.\n\\item Ad Benedictus: ø \\textit{Vade Anania} (AM 791).\n\\item \\textit{In ML: non dicitur \\emph{Credo}.}\n\\item In MC: lectiones propriæ: Act \\textbf{22}, 3-16 / Mc \\textbf{16}, 15-18; præfatio I de Apostolis."
+        "body"] = "\n\\item Ad Vigilias: in supplemento 74; invitatorium proprium.\n\\item Ad Benedictus: ø \\textit{Vade Anania} (AM 791).\n\\item \\textit{In ML: dicitur \\emph{Credo}.}\n\\item In MC: lectiones propriæ: Act \\textbf{22}, 3-16 / Mc \\textbf{16}, 15-18; præfatio I de Apostolis."
 
     abbes_cist_date = datetime.date(current_year, 1, 26)
     abbes_cist = dict_sancto[abbes_cist_date] = {}
