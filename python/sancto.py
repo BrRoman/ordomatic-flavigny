@@ -264,7 +264,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     epiphanie["header"] = " - ¬ \\textbf{\\MakeUppercase{In Epiphania Domini}} - \\textbf{sollemnitas maior} - \\textit{Alb.}" if epiphanie_date.weekday(
     ) != 6 else " \\textbf{\\textsc{Dominica II post Nativitatem}} - ¬  \\textbf{\\MakeUppercase{In Epiphania Domini}} - \\textbf{sollemnitas maior} - \\textit{Alb.}"
     epiphanie[
-        "body"] = "\n\\item In MC: lectiones propriæ: Is \\textbf{60}, 1-6 / Ep \\textbf{3}, 2-3a 5-6 / Mt \\textbf{2}, 1-12; præfatio et \\textit{Communicantes} de Epiphania; \\textit{Pater} in tono C (GR 814); Missa concluditur benedictione sollemni."
+        "body"] = "\n\\item In MC: lectiones propriæ: Is \\textbf{60}, 1-6 / Ep \\textbf{3}, 2-3a 5-6 / Mt \\textbf{2}, 1-12; post Evangelium fit annuntiatio Paschæ festorumque mobilium; præfatio et \\textit{Communicantes} de Epiphania; \\textit{Pater} in tono C (GR 814); Missa concluditur benedictione sollemni."
     epiphanie["II_vesp"] = "\n\\item Vesperæ sollemnitatis; benedictio Sanctissimi Sacramenti."
     # Si 1er vendredi du mois, reporter le jeûne au lendemain:
     if epiphanie_date.weekday() == 4:
