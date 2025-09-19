@@ -136,7 +136,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     nd_lorette = dict_sancto[nd_lorette_date] = {}
     nd_lorette["force"] = 20
     nd_lorette["header"] = " - Beatæ Mariæ Virginis de Loreto - \\textit{memoria minor} - \\textit{Viol.}"
-    nd_lorette["body"] = "\n\\item Ad Benedictus: ø \\textit{Beatam} (AM 711); oratio in supplemento 60*.\n\\item \\textit{In ML: Alb.}\n\\item In MC \\textit{(Alb.)}: Commune Beatæ Mariæ Virginis (MR 905); præfatio I de Beata Maria Virgine."
+    nd_lorette["body"] = "\n\\item Ad Benedictus: ø \\textit{Beatam} (AM 711); oratio in supplemento 60*.\n\\item \\textit{In ML: Alb.}\n\\item In MC \\textit{(Alb.)}: Commune Beatæ Mariæ Virginis (MR 905); præfatio I de Beata Maria Virgine (\\textit{Et te in commemoratione})."
 
     nd_guadalupe_date = datetime.date(current_year - 1, 12, 12)
     nd_guadalupe = dict_sancto[nd_guadalupe_date] = {}
@@ -873,7 +873,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     if nd_fatima_date < paques + datetime.timedelta(days=49):
         couleur = "\\textit{Alb.}"
         messe_lue = "\\item \\textit{In ML: Missa de die 11 februarii.}"
-        messe_conv = "\\item In MC: Commune Beatæ Mariæ Virginis (MR 908); præfatio I de Beata Maria Virgine."
+        messe_conv = "\\item In MC: Commune Beatæ Mariæ Virginis (MR 908); præfatio I de Beata Maria Virgine (\\textit{Et te in commemoratione})."
     else:
         couleur = "\\textit{Vir.}"
         if is_vigile_pent(nd_fatima_date):
@@ -1615,7 +1615,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     dedicace_nd_neiges["force"] = 20
     dedicace_nd_neiges[
         "header"] = " - Dedicatio basilicæ S. Mariæ - \\textit{memoria minor} - \\textit{Vir.}"
-    dedicace_nd_neiges["body"] = "\n\\item Ad Benedictus: ø \\textit{Beata es, Maria} (AM 709).\n\\item \\textit{In ML: Alb.}\n\\item In MC \\textit{(Alb.)}: Commune Beatæ Mariæ Virginis (MR 898); præfatio I de Beata Maria Virgine."
+    dedicace_nd_neiges["body"] = "\n\\item Ad Benedictus: ø \\textit{Beata es, Maria} (AM 709).\n\\item \\textit{In ML: Alb.}\n\\item In MC \\textit{(Alb.)}: Commune Beatæ Mariæ Virginis (MR 898); præfatio I de Beata Maria Virgine (\\textit{Et te in commemoratione})."
 
     transfiguration_date = datetime.date(current_year, 8, 6)
     transfiguration = dict_sancto[transfiguration_date] = {}
