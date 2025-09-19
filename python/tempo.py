@@ -385,6 +385,8 @@ def dict_tempo_create(current_year, even_year, year_letter):
     bapteme["I_vesp"] = "\\item I Vesperæ festi sequentis: omnia ut in festo Epiphaniæ, præter antiphonas in folio separato AM 305* ; oratio AM 304."
     bapteme["hebdo_psalt"] = "- Hebdomada " + hebdo_psalterii[(
         (bapteme_date - datetime.date(2011, 11, 27)).days // 7) % 2] + " psalterii -"
+    hebdo_psalt_vigiles = "; psalmi anni {}".format(
+        hebdo_psalterii_inv[even_year])
     bapteme["num_day"] = "\\textbf{" + str(bapteme_date.day) + "} &"
     bapteme["symbols"] = "".join(
         f_symbols(bapteme_date)) + (" " if f_symbols(bapteme_date) != "" else "")
@@ -394,7 +396,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
         " post Nativitatem - Dominica in Baptismate Domini}} (I post Epiphaniam) - \\textbf{festum} - \\textit{Alb}."
     lect_bapteme = {"A": "Is \\textbf{42}, 1-4.6-7 / Act \\textbf{10}, 34-38 / Mt \\textbf{3}, 13-17", "B": "Is \\textbf{55}, 1-11 / 1 Io \\textbf{5}, 1-9 / Mc \\textbf{1}, 7-11",
                     "C": "Is \\textbf{40}, 1-5.9-11 / Tit \\textbf{2}, 11-14; \\textbf{3}, 4-7 / Lc \\textbf{3}, 15-16.21-22"}
-    bapteme["body"] = "\n\\item In Officio: omnia dicuntur sicut in festo Epiphaniæ, præter antiphonas in folio separato AM 305* ; oratio AM 304.\n\\item Ad Vigilias: olim die 13 ianuarii; in I Nocturno lectiones e dominica I post Epiphaniam cum responsorio \\textit{Hodie in Iordane} (post lectionem I).\n\\item \\textit{In ML: Missa in Commemoratione Baptismatis Domini Nostri Iesu Christi.}\n\\item In MC: lectiones propriæ: " + lect_bapteme[
+    bapteme["body"] = "\n\\item In Officio: omnia dicuntur sicut in festo Epiphaniæ, præter antiphonas in folio separato AM 305* ; oratio AM 304.\n\\item Ad Vigilias: olim die 13 ianuarii" + hebdo_psalt_vigiles + "; in I Nocturno lectiones e dominica I post Epiphaniam cum responsorio \\textit{Hodie in Iordane} (post lectionem I).\n\\item \\textit{In ML: Missa in Commemoratione Baptismatis Domini Nostri Iesu Christi.}\n\\item In MC: lectiones propriæ: " + lect_bapteme[
         year_letter] + " ; præfatio propria."
     bapteme["II_vesp"] = "\n}\n\\ApplyParBox{1cm}{\\begin{center}\\large{\\textit{Post Completorium explicit}}\\par\\large{\\textit{tempus Nativitatis.}}\\end{center}"
 
