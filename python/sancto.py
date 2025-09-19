@@ -185,7 +185,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     vigiles_lectiones = "\n\\item Ad Vigilias: lectiones sumuntur e I et II Nocturnis." if not even_year else ""
     saint_etienne["body"] = vigiles_lectiones + \
         "\n\\item In MC: lectiones propriæ: Act \\textbf{6}, 8-10; \\textbf{7}, 54-60 / Mt \\textbf{10}, 17-22; præfatio I de Nativitate."
-    saint_etienne["II_vesp"] = "\n\\item Ad Vesperas (\\textit{Alb.}): antiphonæ et psalmi de Nativitate; a capitulo de festo."
+    saint_etienne["II_vesp"] = "\n\\item Ad Vesperas (\\textit{Rub.}): antiphonæ et psalmi de Nativitate; a capitulo de festo."
 
     saint_jean_date = datetime.date(current_year - 1, 12, 27)
     saint_jean = dict_sancto[saint_jean_date] = {}
@@ -199,7 +199,7 @@ def dict_sancto_create(current_year, even_year, year_letter, dict_tempo, paques,
     saints_innocents["force"] = 70
     saints_innocents["header"] = " - \\textbf{\\textsc{Ss. Innocentium, martyrum}} - \\textbf{festum} - \\textit{Rub.}"
     saints_innocents["body"] = "\n\\item In MC: lectiones propriæ: 1 Io \\textbf{1}, 5 – \\textbf{2}, 2 / Mt \\textbf{2}, 13-18; præfatio I de Nativitate."
-    saints_innocents["II_vesp"] = "\n\\item Ad Vesperas (\\textit{Alb.}): antiphonæ et psalmi de Nativitate; a capitulo de festo."
+    saints_innocents["II_vesp"] = "\n\\item Ad Vesperas (\\textit{Rub.}): antiphonæ et psalmi de Nativitate; a capitulo de festo."
 
     # JANVIER:
 
