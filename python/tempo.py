@@ -263,7 +263,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
     noel[
         "body"] = "\\item Hodie omnes sacerdotes tres Missas celebrare possunt, dummodo hæ suo tempore celebrentur.\n\\item \\textit{In ML: præfatio et \\emph{Communicantes} de Nativitate per totam octavam.}\n\\item In omnibus Missis Nativitatis ad verba symboli \\textit{Et incarnatus est} omnes genua flectunt.\n\\item Ad Missam in nocte: ad hymnum \\textit{Gloria} pulsantur campanæ; præfatio I de Nativitate Domini; \\textit{Communicantes} proprium hodie et per totam octavam; \\textit{Pater} in tono C (GR 814).\n\\item Laudes in aurora celebrantur; psalmi 148 et 149 omittuntur.\n\\item Ad Missam in die: præfatio II de Nativitate Domini; \\textit{Pater} in tono C; Missa concluditur benedictione sollemni.\n\\item Vesperæ sollemnitatis; benedictio Sanctissimi Sacramenti."
     noel["lectiones_header"] = "\nIn Nativitate Domini Nostri: lectiones de tempore"
-    lectiones_body = "\n\\item[In nocte] Is \\textbf{9}, 2-4.6-7 / Tit \\textbf{2}, 11-14 / Lc \\textbf{2}, 1-14"
+    lectiones_body = "\n\\item[In nocte] Is \\textbf{9}, 1-6 / Tit \\textbf{2}, 11-14 / Lc \\textbf{2}, 1-14"
     lectiones_body += "\n\\item[In aurora] Is \\textbf{62}, 11-12 / Tit \\textbf{3}, 4-7 / Lc \\textbf{2}, 15-20"
     lectiones_body += "\n\\item[In die] Is \\textbf{52}, 7-10 / Hebr \\textbf{1}, 1-6 / Io \\textbf{1}, 1-18"
     # Cas où la Ste Famille va tomber le 30 ou le 31, on met ici les lectiones du 29 au 31, sauf celles de la Ste Famille :
