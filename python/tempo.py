@@ -1188,7 +1188,7 @@ def dict_tempo_create(current_year, even_year, year_letter):
                             "\n\\ApplyGenerList{\n\\item In officio feriali: oratio et antiphonæ de octava, nisi aliter notetur.\n\\item In feriis: præfatio communis " + f_num_prefaces(
                                 34 - nb_dim_ap_pentec)[1] + ", nisi aliter notetur.\\vspace{0.5cm}}"
                         new_day[
-                            "body"] = "\n\\item De communi beatæ Mariæ Virginis, præter sequentia.\n\\item Oratio propria in supplemento 52* vel in AM 527*.\n\\item Ad Vigilias : lectio in supplemento 49*.\n\\item Ad Laudes : hymnus proprius (AM 525*); ad Benedictus: ø \\textit{Perseverabant unanimiter} (AM 526*).\n\\item \\textit{In ML (Rub.): Missa infra octavam (Credo).}\n\\item In MC : Missa de Beata Maria Ecclesiæ Matre (MR 1172); lectiones propriæ: Act \\textbf{1}, 12-14 / Io \\textbf{19}, 25-34; præfatio I de Beata Maria Virgine."
+                            "body"] = "\n\\item De communi beatæ Mariæ Virginis, præter sequentia.\n\\item Oratio propria in supplemento 52* vel in AM 527*.\n\\item Ad Vigilias : lectio in supplemento 49*.\n\\item Ad Laudes : hymnus proprius (AM 525*); ad Benedictus: ø \\textit{Perseverabant unanimiter} (AM 526*).\n\\item \\textit{In ML (Rub.): Missa infra octavam (Credo).}\n\\item In MC : Missa de Beata Maria Ecclesiæ Matre (MR 1172); lectiones propriæ: Act \\textbf{1}, 12-14 / Io \\textbf{19}, 25-34; præfatio propria (CM 25)."
                         new_day[
                             "II_vesp"] = "\n\\item Ad Magnificat: ø \\textit{Dixit Dominus} (AM 527*)."
                     elif j != 5:  # Autres féries de l'octave de Pentecôte, sauf samedi :
